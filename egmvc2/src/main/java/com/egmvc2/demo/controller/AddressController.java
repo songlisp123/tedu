@@ -27,6 +27,16 @@ public class AddressController {
         return "addComplete";
     }
 
+    /**
+     * 查询所有的地址信息的函数
+     * @return {@code list}s视图模板
+     */
+    @GetMapping("/adress/list")
+    public String list() {
+        System.out.println("打印出所有的信息列表");
+        return "list";
+    }
+
 
 
 
