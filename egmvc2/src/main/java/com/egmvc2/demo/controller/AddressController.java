@@ -1,6 +1,7 @@
 package com.egmvc2.demo.controller;
 
 import com.egmvc2.demo.pojo.dto.addressInfo;
+import com.egmvc2.demo.pojo.vo.adressInfoVO1;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,6 +47,17 @@ public class AddressController {
     public String deleteComplete(Integer id) {
         System.out.println("删除成功");
         return "delete_complete";
+    }
+
+    @GetMapping("/adress/update/confirm")
+    public String updateConfirm() {
+        return "update_confirm";
+    }
+
+    @PostMapping("/adress/update/complete")
+    public String updateComplete(adressInfoVO1 adressInfoVO1) {
+        System.out.println(adressInfoVO1);
+        return "update_complete";
     }
 
 
