@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改员工信息</title>
+</head>
+<body>
+    <h1>亲按照以下格式修改员工信息</h1>
+    <form method="post" action="http://localhost:8080/emp/updateInformationView/complete">
+        <p>
+            <span>员工Id：</span>
+            <br />
+            <input type="text" name="id" placeholder="请输入员工ID：" />
+        </p>
+        <p>
+            <span>员工姓名：</span>
+            <br />
+            <input type="text" name="name" placeholder="请输入员工姓名：" />
+        </p>
+        <p>
+            <span>员工薪水：</span>
+            <br />
+            <input type="text" name="salary" placeholder="请输入员工薪水：" />
+        </p>
+        <p>
+            <span>员工职位：</span>
+            <br />
+            <input type="text" name="job" placeholder="请输入员工职位：" />
+        </p>
+        <p>
+            <input type="submit" name="更新信息">
+        </p>
+    </form>
+</body>
+</html>
