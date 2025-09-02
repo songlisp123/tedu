@@ -1,4 +1,4 @@
-package com.eg1.demo;
+package com.eg1.demo.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
