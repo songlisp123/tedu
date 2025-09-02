@@ -37,7 +37,16 @@ public class AddressController {
         return "list";
     }
 
+    @GetMapping("/adress/delete/confirm")
+    public String delete_confirm() {
+        return "confirm";
+    }
 
+    @PostMapping("/adress/delete/complete")
+    public String deleteComplete(Integer id) {
+        System.out.println("删除成功");
+        return "delete_complete";
+    }
 
 
 }
