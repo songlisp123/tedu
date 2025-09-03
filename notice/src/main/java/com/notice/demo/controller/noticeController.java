@@ -2,6 +2,7 @@ package com.notice.demo.controller;
 
 import com.notice.demo.mapper.noticeMapper;
 import com.notice.demo.pojo.dto.NoticeListQuery;
+import com.notice.demo.pojo.dto.NoticeUpdateParam;
 import com.notice.demo.pojo.dto.noticeDto;
 import com.notice.demo.pojo.entity.Notice;
 import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
@@ -61,5 +62,21 @@ public class noticeController {
     public String delete(Integer id) {
         noticeMapper.deleteNoticeById(id);
         return "删除成功！";
+    }
+
+    @PostMapping("/v1/notice/update")
+    @ResponseBody
+    public String update(NoticeUpdateParam noticeUpdateParam) {
+        Long id  = noticeUpdateParam.getId();
+        Notice notice = sigal(Math.toIntExact(id));
+        BeanUtils.copyProperties(noticeUpdateParam,notice);
+        noticeMapper.updateNotice(notice);
+        return "更新成功！";
+    }
+
+    @GetMapping("/v1/notice/sigal")
+    @ResponseBody
+    public Notice sigal(Integer id) {
+       return noticeMapper.selectById(id);
     }
 }

@@ -17,4 +17,8 @@ public interface noticeMapper {
     NoticeDetailInfoVO selectNoticeById(Integer id);
 
     int deleteNoticeById(Integer id);
+
+    Notice selectById(Integer id);
+
+    int updateNotice(Notice notice);
 }

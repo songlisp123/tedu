@@ -44,4 +44,31 @@
         DELETE FROM notice
         where id = #{id}
     </delete>
+
+    <select id="selectById" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT
+        id,
+        title,
+        content,
+        create_time as createTime,
+        update_time as updateTime,
+        type,
+        status,
+        user_id as userId
+        FROM notice
+        WHERE id=#{id}
+    </select>
+
+    <update id="updateNotice">
+        UPDATE notice
+        SET id=#{id},
+        title=#{title},
+        content=#{content},
+        create_time=#{createTime},
+        update_time=#{updateTime},
+        type=#{type},
+        status=#{status},
+        user_id=#{userId}
+        WHERE id = #{id}
+    </update>
 </mapper>
