@@ -4,6 +4,7 @@ import com.notice.demo.mapper.noticeMapper;
 import com.notice.demo.pojo.dto.NoticeListQuery;
 import com.notice.demo.pojo.dto.noticeDto;
 import com.notice.demo.pojo.entity.Notice;
+import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
 import com.notice.demo.pojo.vo.NoticeListVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +48,18 @@ public class noticeController {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
         return list;
+    }
+
+    @GetMapping("/v1/notice/detail")
+    @ResponseBody
+    public NoticeDetailInfoVO detail(Integer id) {
+        return noticeMapper.selectNoticeById(id);
+    }
+
+    @PostMapping("/v1/notice/detele")
+    @ResponseBody
+    public String delete(Integer id) {
+        noticeMapper.deleteNoticeById(id);
+        return "删除成功！";
     }
 }

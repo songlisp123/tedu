@@ -26,4 +26,22 @@
             </if>
         </where>
     </select>
+
+    <select id="selectNoticeById" resultType="com.notice.demo.pojo.vo.NoticeDetailInfoVO">
+        SELECT
+        id,
+        title,
+        content,
+        create_time as createTime,
+        type,
+        status,
+        user_id as userId
+        FROM notice
+        WHERE id=#{id}
+    </select>
+
+    <delete id="deleteNoticeById">
+        DELETE FROM notice
+        where id = #{id}
+    </delete>
 </mapper>
