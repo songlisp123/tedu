@@ -3,4 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.notice.demo.mapper.noticeMapper">
+    <insert id="insertNotice">
+        INSERT INTO notice(title, content, type, user_id, create_time, update_time, status)
+        VALUES(#{title}, #{content}, #{type}, #{userId}, #{createTime}, #{updateTime}, #{status})
+    </insert>
 </mapper>
