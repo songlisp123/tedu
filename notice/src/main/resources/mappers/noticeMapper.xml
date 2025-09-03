@@ -7,4 +7,23 @@
         INSERT INTO notice(title, content, type, user_id, create_time, update_time, status)
         VALUES(#{title}, #{content}, #{type}, #{userId}, #{createTime}, #{updateTime}, #{status})
     </insert>
+
+    <select id="selectNoticeByTitleAndType" resultType="com.notice.demo.pojo.vo.NoticeListVO">
+        SELECT
+        id,
+        title,
+        create_time as createTime,
+        type,
+        status,
+        user_id as userId
+        FROM notice
+        <where>
+            <if test="title!=null and title!=''">
+                AND title like CONCAT('%',#{title},'%')
+            </if>
+            <if test="type!=null">
+                AND type=#{type}
+            </if>
+        </where>
+    </select>
 </mapper>

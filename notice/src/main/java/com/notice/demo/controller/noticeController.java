@@ -1,8 +1,10 @@
 package com.notice.demo.controller;
 
 import com.notice.demo.mapper.noticeMapper;
+import com.notice.demo.pojo.dto.NoticeListQuery;
 import com.notice.demo.pojo.dto.noticeDto;
 import com.notice.demo.pojo.entity.Notice;
+import com.notice.demo.pojo.vo.NoticeListVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class noticeController {
@@ -19,6 +23,12 @@ public class noticeController {
     @Autowired
     private noticeMapper noticeMapper;
 
+
+    /**
+     * 插入资讯
+     * @param noticeDto 资讯视图对象
+     * @return 字符串
+     */
     @PostMapping("/v1/notice/add")
     @ResponseBody
     public String add(noticeDto noticeDto) {
@@ -29,5 +39,13 @@ public class noticeController {
         notice.setUserId(1L);
         noticeMapper.insertNotice(notice);
         return "添加成功！";
+    }
+
+    @GetMapping("/v1/notice/list")
+    @ResponseBody
+    public List<NoticeListVO> list(NoticeListQuery noticeListQuery) {
+        List<NoticeListVO> list =
+                noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
+        return list;
     }
 }
