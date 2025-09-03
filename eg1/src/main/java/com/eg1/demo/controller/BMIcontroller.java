@@ -29,20 +29,4 @@ public class BMIcontroller {
             answer = "偏瘦";
         return "bmiTemplates/bmiCalucator";
     }
-
-    @GetMapping("/bmi/{height}/{weight}/")
-    @ResponseBody
-    public String BMI(@PathVariable double height,@PathVariable double weight) {
-        double result = weight / (height*height);
-        String answer;
-        if (result>=27)
-            answer = "该减肥了";
-        else if (result>24)
-            answer = "偏胖";
-        else if (result>18.5)
-            answer = "正常";
-        else
-            answer = "偏瘦";
-        return answer;
-    }
 }
