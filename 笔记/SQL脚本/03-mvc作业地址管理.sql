@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS mvcdb DEFAULT CHARSET=UTF8;
+USE mvcdb;
+DROP TABLE IF EXISTS address;
+CREATE TABLE address
+(
+    id       INT PRIMARY KEY AUTO_INCREMENT,
+    receiver VARCHAR(20),
+    address  VARCHAR(255),
+    email    VARCHAR(255),
+    mobile   CHAR(11),
+    tag      VARCHAR(10)
+)CHARSET=UTF8;
