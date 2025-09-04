@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
+//reponsebody+controller
 @RestController
+
 @RequestMapping("/v1/user/")
 public class UserController {
 

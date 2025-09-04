@@ -8,6 +8,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -33,7 +34,8 @@ public class insertUserTestDemo {
                 .param("nickname","大哥"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
-                    //获取请求体
+                    //springMVC原理
+
                     MockHttpServletRequest mockHttpServletRequest = result.getRequest();
                     Map<String, String[]> map = mockHttpServletRequest.getParameterMap();
 
