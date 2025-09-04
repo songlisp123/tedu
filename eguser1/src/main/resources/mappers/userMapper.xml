@@ -3,4 +3,63 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.eguser1.demo.mapper.userMapper">
+    <insert id="insertUser">
+        INSERT INTO user(
+        username,
+        nickname,
+        password,
+        create_time,
+        update_time
+        )
+        VALUES(
+        #{username},
+        #{nickname},
+        #{password},
+        #{createTime},
+        #{updateTime}
+        )
+    </insert>
+    
+    <select id="selectAll" resultType="com.eguser1.demo.pojo.VO.UserListVO">
+        SELECT
+        username,
+        password
+        FROM user
+    </select>
+    
+    <delete id="deleteUserById">
+        DELETE FROM user
+        where id = #{id}
+    </delete>
+
+    <select id="selectUserById" resultType="com.eguser1.demo.pojo.eitity.User">
+        SELECT id
+        username,
+        password,
+        nickname,
+        create_time as createTime,
+        update_time as updateTime
+        WHERE id = #{id}
+    </select>
+
+    <update id="updateUserInfo">
+        UPDATE user
+        SET id=#{id},
+        <if test="username!=null and username!=''">
+            username=#{username}
+        </if>
+        <if test="password!=null and password!=''">
+            password=#{password}
+        </if>
+        <if test="nickname!=null and nickname!=''">
+            nickname=#{nickname}
+        </if>
+        <if test="createTime!=null">
+            create_time=#{createTime}
+        </if>
+        <if test="updateTime!=null">
+            update_time=#{updateTime}
+        </if>
+        WHERE id = #{id}
+    </update>
 </mapper>
