@@ -2,6 +2,17 @@ package com.notice.demo.pojo.vo;
 
 import java.util.Date;
 
+
+/**
+ * 用来向客户端响应的数据：<br />
+ * {@code id} <br />
+ * {@code title} <br />
+ * {@code content} <br />
+ * {@code createTime} <br />
+ * {@code type} <br />
+ * {@code status} <br />
+ * {@code userId}
+ */
 public class NoticeDetailInfoVO {
     private Long id;
     private String title;

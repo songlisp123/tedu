@@ -2,6 +2,13 @@ package com.notice.demo.pojo.dto;
 
 import java.util.Date;
 
+/**
+ * {@code notice}视图对象，用来从客户端接受以下数据：<br />
+ * {@code title} <br />
+ * {@code content} <br />
+ * {@code type} <br />
+ * {@code status}
+ */
 public class noticeDto {
     private String title;
     private String content;

@@ -10,15 +10,51 @@ import java.util.List;
 
 @Mapper
 public interface noticeMapper {
+
+    /**
+     * 插入咨询
+     * @param notice 具体的咨询对象
+     * @return {@code 0} 插入失败<br />
+     * {@code other} 插入成功
+     */
     int insertNotice(Notice notice);
 
+    /**
+     * 从客户端接受的数据{@code noticeListQuery}，并且返回包含<br />
+     * {@code NoticeListVO}的{@code list}对象
+     * @param noticeListQuery 根据客户端参数而构建的{@code notice}的视图对象
+     * @return {@code noticeListQuery}的{@code list}对象，其中<br />
+     * {@code NoticeListVO}对象是服务端将要给客户端的数据
+     */
     List<NoticeListVO> selectNoticeByTitleAndType(NoticeListQuery noticeListQuery);
 
+    /**
+     * 根据id值检索特定的对象
+     * @param id 用户将要检索的对象
+     * @return {@code NoticeDetailInfoVO}视图对象
+     */
     NoticeDetailInfoVO selectNoticeById(Integer id);
 
+    /**
+     * 删除特定咨询
+     * @param id 咨询的id
+     * @return  {@code 0} 删除失败<br />.
+     * {@code other} 插入成功
+     */
     int deleteNoticeById(Integer id);
 
+    /**
+     * 根据id检索咨询条目
+     * @param id 将要检索的咨询条目id号码
+     * @return {@code notice}对象
+     */
     Notice selectById(Integer id);
 
+    /**
+     * 更新咨询对象
+     * @param notice {@code notice} 对象
+     * @return {@code 0} 插入失败<br />
+     * {@code other} 插入成功
+     */
     int updateNotice(Notice notice);
 }

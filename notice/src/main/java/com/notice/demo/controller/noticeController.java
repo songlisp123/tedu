@@ -57,12 +57,22 @@ public class noticeController {
         return list;
     }
 
+    /**
+     * 查询特定ID的咨询信息
+     * @param id 咨询ID
+     * @return {@code NoticeDetailInfoVO}视图
+     */
     @GetMapping("/v1/notice/detail")
     @ResponseBody
     public NoticeDetailInfoVO detail(Integer id) {
         return noticeMapper.selectNoticeById(id);
     }
 
+    /**
+     * 根据id删除咨询条目
+     * @param id 将要删除的咨询条目
+     * @return 条件字符串，表示删除成功或者失败
+     */
     @PostMapping("/v1/notice/detele")
     @ResponseBody
     public String delete(Integer id) {
@@ -72,6 +82,13 @@ public class noticeController {
         return "该咨询不存在！删除失败";
     }
 
+    /**
+     * 从{@code noticeUpdateParam}中更新条目
+     * @param noticeUpdateParam {@code notice} 的{@code DTO}视图对象，接受客户端传入的参数
+     * @return {@code id==null} -- 返回id错误<br />
+     * {@code notice == null} -- 返回暂无咨询<br />
+     * 如果以上满足，则返回{@code 更新成功}或者{@code 更新失败}
+     */
     @PostMapping("/v1/notice/update")
     @ResponseBody
     public String update(NoticeUpdateParam noticeUpdateParam) {
@@ -89,6 +106,11 @@ public class noticeController {
         return "更新失败！";
     }
 
+    /**
+     * 根据ID查找{@code notice}对象
+     * @param id 咨询条目id
+     * @return 一个具体的咨询条目
+     */
     @GetMapping("/v1/notice/sigal")
     @ResponseBody
     public Notice sigal(Integer id) {
