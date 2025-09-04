@@ -9,18 +9,13 @@ import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
 import com.notice.demo.pojo.vo.NoticeListVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @RestController
+@RequestMapping("/v1/notice/")
 public class noticeController {
 
     @Autowired
@@ -32,7 +27,7 @@ public class noticeController {
      * @param noticeDto 资讯视图对象
      * @return 字符串
      */
-    @PostMapping("/v1/notice/add")
+    @PostMapping("add")
     public String add(noticeDto noticeDto) {
         Notice notice = new Notice();
         BeanUtils.copyProperties(noticeDto,notice);
@@ -49,7 +44,7 @@ public class noticeController {
      * 封装title和content的对象
      * @return {@code NoticeListVO}的集合视图
      */
-    @GetMapping("/v1/notice/list")
+    @GetMapping("list")
     public List<NoticeListVO> list(NoticeListQuery noticeListQuery) {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
@@ -61,7 +56,7 @@ public class noticeController {
      * @param id 咨询ID
      * @return {@code NoticeDetailInfoVO}视图
      */
-    @GetMapping("/v1/notice/detail")
+    @GetMapping("detail")
     public NoticeDetailInfoVO detail(Integer id) {
         return noticeMapper.selectNoticeById(id);
     }
@@ -71,7 +66,7 @@ public class noticeController {
      * @param id 将要删除的咨询条目
      * @return 条件字符串，表示删除成功或者失败
      */
-    @PostMapping("/v1/notice/detele")
+    @PostMapping("detele")
     public String delete(Integer id) {
         int i =noticeMapper.deleteNoticeById(id);
         if (i>0)
@@ -86,7 +81,7 @@ public class noticeController {
      * {@code notice == null} -- 返回暂无咨询<br />
      * 如果以上满足，则返回{@code 更新成功}或者{@code 更新失败}
      */
-    @PostMapping("/v1/notice/update")
+    @PostMapping("update")
     public String update(NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
         if (id == null)
@@ -107,7 +102,7 @@ public class noticeController {
      * @param id 咨询条目id
      * @return 一个具体的咨询条目
      */
-    @GetMapping("/v1/notice/sigal")
+    @GetMapping("sigal")
     public Notice sigal(Integer id) {
        return noticeMapper.selectById(id);
     }
