@@ -1,15 +1,21 @@
 package com.notice.demo;
 
 
+import org.assertj.core.data.MapEntry;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Map;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -28,9 +34,36 @@ public class TestDeleteId {
     public void  test() throws Exception {
         String urlPath = "/v1/notice/detele";
         mockMvc.perform(post(urlPath)
-                        .queryParam("id","16"))
+                        .queryParam("id","1"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
+                    //获取请求体
+                    MockHttpServletRequest mockHttpServletRequest = result.getRequest();
+                    Map<String, String[]> map = mockHttpServletRequest.getParameterMap();
+
+                    //获取请求方法
+                    String method = mockHttpServletRequest.getMethod();
+                    System.out.println("请求方法："+method);
+
+                    //获取请求代理
+                    String protocol = mockHttpServletRequest.getProtocol();
+                    System.out.println("请求协议："+protocol);
+
+                    //获取请求路径
+                    String pathInfo = mockHttpServletRequest.getPathInfo();
+                    System.out.println("请求资源路径："+pathInfo);
+
+                    //请求体
+                    for(Map.Entry<String,String[]> entry : map.entrySet()) {
+                        String key  = entry.getKey();
+                        String[] values = entry.getValue();
+                        Arrays.stream(values).forEach(r->{
+                            System.out.println("请求参数");
+                            System.out.println("键:"+key+"\t"+"值:"+r);
+                        });
+                    }
+
+                    //获取响应
                     MockHttpServletResponse mockHttpServletResponse = result.getResponse();
 
                     //获取状态吗

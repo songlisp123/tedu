@@ -60,8 +60,10 @@ public class noticeController {
     @PostMapping("/v1/notice/detele")
     @ResponseBody
     public String delete(Integer id) {
-        noticeMapper.deleteNoticeById(id);
-        return "删除成功！";
+        int i =noticeMapper.deleteNoticeById(id);
+        if (i>0)
+            return "删除成功！";
+        return "该咨询不存在！删除失败";
     }
 
     @PostMapping("/v1/notice/update")
@@ -70,7 +72,10 @@ public class noticeController {
         Long id  = noticeUpdateParam.getId();
         Notice notice = sigal(Math.toIntExact(id));
         BeanUtils.copyProperties(noticeUpdateParam,notice);
-        noticeMapper.updateNotice(notice);
+        notice.setUpdateTime(new Date());
+        int i = noticeMapper.updateNotice(notice);
+        if (i>0)
+            return "更新成功!";
         return "更新成功！";
     }
 
