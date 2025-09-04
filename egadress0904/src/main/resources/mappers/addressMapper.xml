@@ -29,4 +29,9 @@
         DELETE FROM address
         WHERE id=#{addressId}
     </delete>
+
+    <select id="sortAllId" resultType="java.lang.Integer">
+        SELECT id FROM address
+    </select>
+
 </mapper>

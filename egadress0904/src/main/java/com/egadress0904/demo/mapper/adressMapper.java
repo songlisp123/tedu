@@ -10,5 +10,7 @@ public interface adressMapper {
 
     List<addressVO> selectALL();
 
-    int deleteById(Long addressId);
+    int deleteById(Integer addressId);
+
+    Integer[] sortAllId();
 }

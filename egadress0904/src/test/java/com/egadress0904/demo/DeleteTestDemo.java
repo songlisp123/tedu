@@ -26,7 +26,7 @@ public class DeleteTestDemo {
 
     @Test
     public void  test() throws Exception {
-        String urlPath = "/v1/address/del/1/";
+        String urlPath = "/v1/address/del/2/";
         mockMvc.perform(post(urlPath))
                 .andExpect(status().isOk())
                 .andExpect(result -> {

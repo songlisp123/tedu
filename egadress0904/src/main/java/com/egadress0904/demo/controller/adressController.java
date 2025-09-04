@@ -8,7 +8,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/v1/address/")
@@ -33,10 +35,15 @@ public class adressController {
     }
 
     @PostMapping("del/{addressId}/")
-    public String del(@PathVariable Long addressId) {
+    public String del(@PathVariable Integer addressId) {
+        Integer[] ids = adressMapper.sortAllId();
+        if (Arrays.stream(ids).noneMatch(e-> Objects.equals(e,addressId)))
+            return "暂无此ID号码";
         int num = adressMapper.deleteById(addressId);
         if (num >0)
             return "删除成功！";
         return "删除失败";
     }
+
+
 }
