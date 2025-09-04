@@ -33,12 +33,14 @@
     </delete>
 
     <select id="selectUserById" resultType="com.eguser1.demo.pojo.eitity.User">
-        SELECT id
+        SELECT
+        id,
         username,
         password,
         nickname,
         create_time as createTime,
         update_time as updateTime
+        FROM user
         WHERE id = #{id}
     </select>
 
@@ -46,16 +48,16 @@
         UPDATE user
         SET id=#{id},
         <if test="username!=null and username!=''">
-            username=#{username}
+            username=#{username},
         </if>
         <if test="password!=null and password!=''">
-            password=#{password}
+            password=#{password},
         </if>
         <if test="nickname!=null and nickname!=''">
-            nickname=#{nickname}
+            nickname=#{nickname},
         </if>
         <if test="createTime!=null">
-            create_time=#{createTime}
+            create_time=#{createTime},
         </if>
         <if test="updateTime!=null">
             update_time=#{updateTime}

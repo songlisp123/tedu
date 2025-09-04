@@ -55,9 +55,11 @@ public class UserController {
         User user = userMapper.selectUserById(id);
         if (user == null)
             return "暂无此人";
+        System.out.println(user);
         BeanUtils.copyProperties(userUpdateParam,user);
         user.setUpdateTime(new Date());
         int i = userMapper.updateUserInfo(user);
+        System.out.println(user);
         if (i>0)
             return "更新成功";
         return "更新失败";

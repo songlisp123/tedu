@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@Transactional
+//@Transactional
 public class insertUserTestDemo {
 
     @Autowired
@@ -28,9 +28,9 @@ public class insertUserTestDemo {
     void test() throws Exception {
         String urlPath = "/v1/user/add/";
         mockMvc.perform(post(urlPath)
-                .param("username","赵云")
-                .param("password","A0116659")
-                .param("nickname","四弟"))
+                .param("username","刘备")
+                .param("password","A0116658")
+                .param("nickname","大哥"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体

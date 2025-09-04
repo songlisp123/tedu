@@ -27,9 +27,10 @@ public class updateUserTest {
     public void  test() throws Exception {
         String urlPath = "/v1/user/update/";
         mockMvc.perform(post(urlPath)
-                        .param("username","刘备")
-                        .param("password","A0116658")
-                        .param("nickname","爱哭鬼"))
+                        .param("id","2")
+                        .param("username","常山赵子龙")
+                        .param("password","changshan")
+                        .param("nickname","一生肝胆"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
 
@@ -59,7 +60,7 @@ public class updateUserTest {
                     }
                     MockHttpServletResponse mockHttpServletResponse = result.getResponse();
 
-                    //获取状态吗
+                    //获取响应状态吗
                     int status = mockHttpServletResponse.getStatus();
                     System.out.println("状态吗："+status);
 
