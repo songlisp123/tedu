@@ -43,6 +43,12 @@ public class noticeController {
         return "添加成功！";
     }
 
+    /**
+     * 根据用户传入的参数查询符合条件的咨询
+     * @param noticeListQuery {@code notice}的DTO视图，用来接收<br />
+     * 封装title和content的对象
+     * @return {@code NoticeListVO}的集合视图
+     */
     @GetMapping("/v1/notice/list")
     @ResponseBody
     public List<NoticeListVO> list(NoticeListQuery noticeListQuery) {
@@ -70,13 +76,17 @@ public class noticeController {
     @ResponseBody
     public String update(NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
+        if (id == null)
+            return "ID错误！请检查传入参数！";
         Notice notice = sigal(Math.toIntExact(id));
+        if (notice == null)
+            return "暂无咨询！";
         BeanUtils.copyProperties(noticeUpdateParam,notice);
         notice.setUpdateTime(new Date());
         int i = noticeMapper.updateNotice(notice);
         if (i>0)
             return "更新成功!";
-        return "更新成功！";
+        return "更新失败！";
     }
 
     @GetMapping("/v1/notice/sigal")

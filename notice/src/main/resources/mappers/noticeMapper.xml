@@ -61,14 +61,14 @@
 
     <update id="updateNotice">
         UPDATE notice
-        SET id=#{id},
-        title=#{title},
-        content=#{content},
-        create_time=#{createTime},
-        update_time=#{updateTime},
-        type=#{type},
-        status=#{status},
-        user_id=#{userId}
+        SET
+        <if test="title!=null and title!=''">title=#{title},</if>
+        <if test="content!=null and content!=''">content=#{content},</if>
+        <if test="createTime!=null">create_time=#{createTime},</if>
+        <if test="updateTime!=null">update_time=#{updateTime},</if>
+        <if test="type!=null" >type=#{type},</if>
+        <if test="status!=null">status=#{status},</if>
+        <if test="userId">user_id=#{userId}</if>
         WHERE id = #{id}
     </update>
 </mapper>
