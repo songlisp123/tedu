@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,18 +20,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class insertUserTestDemo {
+public class loginTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     void test() throws Exception {
-        String urlPath = "/v1/user/add/";
+        String urlPath = "/v1/user/login/";
         mockMvc.perform(post(urlPath)
-                .param("username","刘备")
-                .param("password","A0116658")
-                .param("nickname","大哥"))
+                        .content("""
+                                {"username":"jack","password":"123456"}
+                                """)
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体
@@ -57,6 +59,10 @@ public class insertUserTestDemo {
                             System.out.println("请求参数键:"+key+"\t"+"参数值:"+r);
                         });
                     }
+
+                    //json请求
+                    String s = mockHttpServletRequest.getContentAsString();
+                    System.out.println("请求json参数："+s);
                     MockHttpServletResponse mockHttpServletResponse = result.getResponse();
 
                     //获取状态吗

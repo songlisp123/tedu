@@ -3,6 +3,7 @@ package com.eguser1.demo.controller;
 import com.eguser1.demo.mapper.userMapper;
 import com.eguser1.demo.pojo.DTO.UserAddParam;
 import com.eguser1.demo.pojo.DTO.UserUpdateParam;
+import com.eguser1.demo.pojo.DTO.loginDto;
 import com.eguser1.demo.pojo.VO.UserListVO;
 import com.eguser1.demo.pojo.eitity.User;
 import org.springframework.beans.BeanUtils;
@@ -68,6 +69,12 @@ public class UserController {
     @GetMapping("get/")
     public User get(Long id) {
         return userMapper.selectUserById(id);
+    }
+
+    @PostMapping("login/")
+    public String login(@RequestBody loginDto loginDto) {
+        System.out.println(loginDto);
+        return "登录成功";
     }
 
 }
