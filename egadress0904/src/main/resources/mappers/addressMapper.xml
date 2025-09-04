@@ -19,4 +19,14 @@
         #{tag}
         )
     </insert>
+
+    <select id="selectALL" resultType="com.egadress0904.demo.pojo.VO.addressVO">
+        SELECT receiver,address,mobile
+        FROM address
+    </select>
+
+    <delete id="deleteById">
+        DELETE FROM address
+        WHERE id=#{addressId}
+    </delete>
 </mapper>
