@@ -13,13 +13,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Controller
+@RestController
 public class noticeController {
 
     @Autowired
@@ -32,7 +33,6 @@ public class noticeController {
      * @return 字符串
      */
     @PostMapping("/v1/notice/add")
-    @ResponseBody
     public String add(noticeDto noticeDto) {
         Notice notice = new Notice();
         BeanUtils.copyProperties(noticeDto,notice);
@@ -50,7 +50,6 @@ public class noticeController {
      * @return {@code NoticeListVO}的集合视图
      */
     @GetMapping("/v1/notice/list")
-    @ResponseBody
     public List<NoticeListVO> list(NoticeListQuery noticeListQuery) {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
@@ -63,7 +62,6 @@ public class noticeController {
      * @return {@code NoticeDetailInfoVO}视图
      */
     @GetMapping("/v1/notice/detail")
-    @ResponseBody
     public NoticeDetailInfoVO detail(Integer id) {
         return noticeMapper.selectNoticeById(id);
     }
@@ -74,7 +72,6 @@ public class noticeController {
      * @return 条件字符串，表示删除成功或者失败
      */
     @PostMapping("/v1/notice/detele")
-    @ResponseBody
     public String delete(Integer id) {
         int i =noticeMapper.deleteNoticeById(id);
         if (i>0)
@@ -90,7 +87,6 @@ public class noticeController {
      * 如果以上满足，则返回{@code 更新成功}或者{@code 更新失败}
      */
     @PostMapping("/v1/notice/update")
-    @ResponseBody
     public String update(NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
         if (id == null)
@@ -112,7 +108,6 @@ public class noticeController {
      * @return 一个具体的咨询条目
      */
     @GetMapping("/v1/notice/sigal")
-    @ResponseBody
     public Notice sigal(Integer id) {
        return noticeMapper.selectById(id);
     }
