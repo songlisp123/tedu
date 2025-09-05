@@ -70,5 +70,10 @@ public interface noticeMapper {
      */
     List<Notice> selectByType(Integer type);
 
+    /**
+     * 从前端接收表示state参数
+     * @param state 前端传入的查询路径的参数
+     * @return 咨询列表或者返回{@code null}
+     */
     List<Notice> selectByStatus(Integer state);
 }

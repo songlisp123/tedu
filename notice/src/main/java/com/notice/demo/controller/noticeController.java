@@ -123,9 +123,15 @@ public class noticeController {
         return JsonResult.ok(notices);
     }
 
+    /**
+     * 按照咨询的状态进行查询
+     * @param state 咨询的状态，整数类型
+     * @return json对象
+     */
     @GetMapping("status")
     public JsonResult status(Integer state) {
         List<Notice> notices = noticeMapper.selectByStatus(state);
+        return JsonResult.ok(notices);
     }
 
     /**

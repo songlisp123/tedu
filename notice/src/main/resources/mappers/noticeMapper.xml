@@ -96,4 +96,17 @@
         FROM notice
         WHERE type=#{type}
     </select>
+
+    <select id="selectByStatus" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT id,
+        title,
+        content,
+        create_time as createTime,
+        status,
+        type,
+        update_time as updateTime,
+        user_id as userId
+        FROM notice
+        WHERE status=#{state}
+    </select>
 </mapper>
