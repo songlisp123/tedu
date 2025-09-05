@@ -135,6 +135,17 @@ public class noticeController {
     }
 
     /**
+     * 获取查询路径参数userId
+     * @param userId 用户id参数
+     * @return json对象
+     */
+    @GetMapping("userId")
+    public JsonResult user(Long userId) {
+        List<Notice> notices = noticeMapper.selectByUserId(userId);
+        return JsonResult.ok(notices);
+    }
+
+    /**
      * 搜索所有的咨询信息条目
      * @return 前端接受的json信息格式的消息
      */
@@ -143,6 +154,7 @@ public class noticeController {
         List<Notice> list = noticeMapper.selectAll();
         return JsonResult.ok(list);
     }
+
 
 
 }

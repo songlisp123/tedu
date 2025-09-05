@@ -76,4 +76,11 @@ public interface noticeMapper {
      * @return 咨询列表或者返回{@code null}
      */
     List<Notice> selectByStatus(Integer state);
+
+    /**
+     * 接收userId参数，按照参数查找咨询
+     * @param userId 长整数型参数
+     * @return {@code Notice}对象列表或者{@code null}
+     */
+    List<Notice> selectByUserId(Long userId);
 }
