@@ -109,4 +109,10 @@ public class noticeController {
     public Notice sigal(Integer id) {
        return noticeMapper.selectById(id);
     }
+
+    @GetMapping("all")
+    public JsonResult all() {
+        List<Notice> list = noticeMapper.selectAll();
+        return JsonResult.ok(list);
+    }
 }

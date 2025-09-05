@@ -71,4 +71,16 @@
         <if test="userId">user_id=#{userId}</if>
         WHERE id = #{id}
     </update>
+
+    <select id="selectAll" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT id,
+        title,
+        content,
+        create_time as createTime,
+        status,
+        type,
+        update_time as updateTime,
+        user_id as userId
+        FROM notice
+    </select>
 </mapper>

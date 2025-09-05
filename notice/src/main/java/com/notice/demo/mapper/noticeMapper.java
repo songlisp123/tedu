@@ -56,4 +56,6 @@ public interface noticeMapper {
      * {@code other} 插入成功
      */
     int updateNotice(Notice notice);
+
+    List<Notice> selectAll();
 }
