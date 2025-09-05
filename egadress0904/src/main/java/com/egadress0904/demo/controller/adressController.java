@@ -40,7 +40,7 @@ public class adressController {
         if (Arrays.stream(ids).noneMatch(e-> Objects.equals(e,addressId)))
             return "暂无此ID号码";
         int num = adressMapper.deleteById(addressId);
-        if (num >0)
+        if ( num > 0 )
             return "删除成功！";
         return "删除失败";
     }

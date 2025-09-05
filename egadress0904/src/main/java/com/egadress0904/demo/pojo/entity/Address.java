@@ -56,4 +56,15 @@ public class Address {
         this.tag = tag;
     }
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", receiver='" + receiver + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", tag='" + tag + '\'' +
+                '}';
+    }
 }
