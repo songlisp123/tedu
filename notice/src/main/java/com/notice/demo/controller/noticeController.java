@@ -9,6 +9,7 @@ import com.notice.demo.pojo.dto.noticeDto;
 import com.notice.demo.pojo.entity.Notice;
 import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
 import com.notice.demo.pojo.vo.NoticeListVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/v1/notice/")
 public class noticeController {
@@ -110,9 +112,31 @@ public class noticeController {
        return noticeMapper.selectById(id);
     }
 
+    /**
+     * 按照咨询的{@code type}参数查询
+     * @param type 咨询的参数
+     * @return Json对象
+     */
+    @GetMapping("{type}")
+    public JsonResult selectByType(@PathVariable Integer type) {
+        List<Notice> notices = noticeMapper.selectByType(type);
+        return JsonResult.ok(notices);
+    }
+
+    @GetMapping("status")
+    public JsonResult status(Integer state) {
+        List<Notice> notices = noticeMapper.selectByStatus(state);
+    }
+
+    /**
+     * 搜索所有的咨询信息条目
+     * @return 前端接受的json信息格式的消息
+     */
     @GetMapping("all")
     public JsonResult all() {
         List<Notice> list = noticeMapper.selectAll();
         return JsonResult.ok(list);
     }
+
+
 }

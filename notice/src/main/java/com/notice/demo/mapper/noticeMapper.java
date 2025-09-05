@@ -57,5 +57,18 @@ public interface noticeMapper {
      */
     int updateNotice(Notice notice);
 
+    /**
+     * 选择所有的咨询对象
+     * @return 返回一个包含所有咨询的列表对象，否则返回{@code null}
+     */
     List<Notice> selectAll();
+
+    /**
+     * 按照咨询的类型进行选择
+     * @param type 咨询类型
+     * @return 包含所有的符合条件的咨询对象的列表，或者返回{@code null}
+     */
+    List<Notice> selectByType(Integer type);
+
+    List<Notice> selectByStatus(Integer state);
 }
