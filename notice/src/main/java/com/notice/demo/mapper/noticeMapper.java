@@ -85,4 +85,6 @@ public interface noticeMapper {
     List<Notice> selectByUserId(Long userId);
 
     List<Notice> selectContent(String content);
+
+    List<Notice> selectTitle(String title);
 }

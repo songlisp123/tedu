@@ -133,4 +133,16 @@
         FROM notice
         WHERE content like CONCAT('%',#{content},'%')
     </select>
+    <select id="selectTitle" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT id,
+        title,
+        content,
+        create_time as createTime,
+        status,
+        type,
+        update_time as updateTime,
+        user_id as userId
+        FROM notice
+        WHERE title like CONCAT('%',#{title},'%')
+    </select>
 </mapper>
