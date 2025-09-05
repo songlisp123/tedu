@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Objects;
-
 /**
  * 全局配置类
  */
@@ -25,5 +23,19 @@ public class JsonResult {
     public JsonResult(StatusCode statusCode) {
         this.status = statusCode.getStatus();
         this.message = statusCode.getMessage();
+    }
+
+    /**
+     * 创建两个静态方法，制定用于操作成功的场景
+     * 1、无返回值
+     * 2、有返回值
+     */
+
+    public static JsonResult ok() {
+        return new JsonResult(StatusCode.OPERATION_SUCCESS);
+    }
+
+    public static JsonResult ok(Object data) {
+        return new JsonResult(StatusCode.OPERATION_SUCCESS,data);
     }
 }

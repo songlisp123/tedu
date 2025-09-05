@@ -37,7 +37,7 @@ public class noticeController {
         notice.setUpdateTime(new Date());
         notice.setUserId(1L);
         noticeMapper.insertNotice(notice);
-        return new JsonResult(StatusCode.OPERATION_SUCCESS);
+        return JsonResult.ok();
     }
 
     /**
@@ -50,7 +50,7 @@ public class noticeController {
     public JsonResult list(NoticeListQuery noticeListQuery) {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
-        return new JsonResult(StatusCode.OPERATION_SUCCESS,list);
+        return JsonResult.ok(list);
     }
 
     /**
@@ -61,7 +61,7 @@ public class noticeController {
     @GetMapping("detail")
     public JsonResult detail(Integer id) {
         var notice =  noticeMapper.selectNoticeById(id);
-        return new JsonResult(StatusCode.OPERATION_SUCCESS,notice);
+        return JsonResult.ok(notice);
     }
 
     /**
@@ -73,7 +73,7 @@ public class noticeController {
     public JsonResult delete(Integer id) {
         int i =noticeMapper.deleteNoticeById(id);
         if (i>0)
-            return new JsonResult(StatusCode.OPERATION_SUCCESS);
+            return JsonResult.ok();
         return new JsonResult(StatusCode.OPERATION_FAILED);
     }
 
@@ -96,14 +96,14 @@ public class noticeController {
         notice.setUpdateTime(new Date());
         int i = noticeMapper.updateNotice(notice);
         if (i>0)
-            return new JsonResult(StatusCode.OPERATION_SUCCESS);
+            return JsonResult.ok();
         return new JsonResult(StatusCode.OPERATION_FAILED);
     }
 
     /**
-     * 根据ID查找{@code notice}对象
-     * @param id 咨询条目id
-     * @return 一个具体的咨询条目
+     * 根据{@code id}查找{@code notice}对象
+     * @param id 咨询条目{@code id}
+     * @return {@code notice}对象或者{@code null}
      */
     @GetMapping("sigal")
     public Notice sigal(Integer id) {
