@@ -155,6 +155,10 @@ public class noticeController {
         return JsonResult.ok(list);
     }
 
-
+    @GetMapping("content")
+    public JsonResult content(String content) {
+        List<Notice> list = noticeMapper.selectContent(content);
+        return JsonResult.ok(list);
+    }
 
 }

@@ -83,4 +83,6 @@ public interface noticeMapper {
      * @return {@code Notice}对象列表或者{@code null}
      */
     List<Notice> selectByUserId(Long userId);
+
+    List<Notice> selectContent(String content);
 }
