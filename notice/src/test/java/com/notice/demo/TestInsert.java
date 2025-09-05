@@ -26,8 +26,8 @@ public class TestInsert {
     public void test() throws Exception {
         String path = "/v1/notice/add";
         mockMvc.perform(post(path)
-                .param("title","喜洋洋与灰太狼")
-                .param("content","狼样练手")
+                .param("title","懒洋洋")
+                .param("content","小兰")
                 .param("type","1")
                 .param("status","2"))
                 .andExpect(status().isOk())
@@ -38,9 +38,12 @@ public class TestInsert {
                     int status = mockHttpServletResponse.getStatus();
                     System.out.println("状态吗："+status);
 
-                    //获取请求体
+                    //获取返回给客户端的信息
                     String message = mockHttpServletResponse.getContentAsString(StandardCharsets.UTF_8);
                     System.out.println("message："+message);
+
+                    byte[] contentAsByteArray = mockHttpServletResponse.getContentAsByteArray();
+
                 });
     }
 }

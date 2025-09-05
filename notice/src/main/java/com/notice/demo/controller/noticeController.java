@@ -1,5 +1,7 @@
 package com.notice.demo.controller;
 
+import com.notice.demo.base.response.JsonResult;
+import com.notice.demo.base.response.StatusCode;
 import com.notice.demo.mapper.noticeMapper;
 import com.notice.demo.pojo.dto.NoticeListQuery;
 import com.notice.demo.pojo.dto.NoticeUpdateParam;
@@ -25,17 +27,17 @@ public class noticeController {
     /**
      * 插入资讯
      * @param noticeDto 资讯视图对象
-     * @return 字符串
+     * @return {@code JsonResult}对象
      */
     @PostMapping("add")
-    public String add(noticeDto noticeDto) {
+    public JsonResult add(noticeDto noticeDto) {
         Notice notice = new Notice();
         BeanUtils.copyProperties(noticeDto,notice);
         notice.setCreateTime(new Date());
         notice.setUpdateTime(new Date());
         notice.setUserId(1L);
         noticeMapper.insertNotice(notice);
-        return "添加成功！";
+        return new JsonResult(StatusCode.OPERATION_SUCCESS);
     }
 
     /**
@@ -45,10 +47,10 @@ public class noticeController {
      * @return {@code NoticeListVO}的集合视图
      */
     @GetMapping("list")
-    public List<NoticeListVO> list(NoticeListQuery noticeListQuery) {
+    public JsonResult list(NoticeListQuery noticeListQuery) {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
-        return list;
+        return new JsonResult(StatusCode.OPERATION_SUCCESS,list);
     }
 
     /**
@@ -57,8 +59,9 @@ public class noticeController {
      * @return {@code NoticeDetailInfoVO}视图
      */
     @GetMapping("detail")
-    public NoticeDetailInfoVO detail(Integer id) {
-        return noticeMapper.selectNoticeById(id);
+    public JsonResult detail(Integer id) {
+        var notice =  noticeMapper.selectNoticeById(id);
+        return new JsonResult(StatusCode.OPERATION_SUCCESS,notice);
     }
 
     /**
@@ -67,11 +70,11 @@ public class noticeController {
      * @return 条件字符串，表示删除成功或者失败
      */
     @PostMapping("detele")
-    public String delete(Integer id) {
+    public JsonResult delete(Integer id) {
         int i =noticeMapper.deleteNoticeById(id);
         if (i>0)
-            return "删除成功！";
-        return "该咨询不存在！删除失败";
+            return new JsonResult(StatusCode.OPERATION_SUCCESS);
+        return new JsonResult(StatusCode.OPERATION_FAILED);
     }
 
     /**
@@ -82,19 +85,19 @@ public class noticeController {
      * 如果以上满足，则返回{@code 更新成功}或者{@code 更新失败}
      */
     @PostMapping("update")
-    public String update(NoticeUpdateParam noticeUpdateParam) {
+    public JsonResult update(NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
         if (id == null)
-            return "ID错误！请检查传入参数！";
+            return new JsonResult(StatusCode.OPERATION_FAILED);
         Notice notice = sigal(Math.toIntExact(id));
         if (notice == null)
-            return "暂无咨询！";
+            return new JsonResult(StatusCode.OPERATION_FAILED);
         BeanUtils.copyProperties(noticeUpdateParam,notice);
         notice.setUpdateTime(new Date());
         int i = noticeMapper.updateNotice(notice);
         if (i>0)
-            return "更新成功!";
-        return "更新失败！";
+            return new JsonResult(StatusCode.OPERATION_SUCCESS);
+        return new JsonResult(StatusCode.OPERATION_FAILED);
     }
 
     /**
