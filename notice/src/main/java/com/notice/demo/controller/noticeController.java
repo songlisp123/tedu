@@ -11,6 +11,7 @@ import com.notice.demo.pojo.entity.Notice;
 import com.notice.demo.pojo.vo.NoticeListVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -37,7 +38,13 @@ public class noticeController {
     @PostMapping("add")
     @Operation(summary = "01添加咨询功能")
     @ApiOperationSupport(order = 10)
-    @Parameter(name = "noticeDto",description = "资讯视图对象",example = "???")
+    @Parameters(value = {
+            @Parameter(name = "title",description = "标题"),
+            @Parameter(name = "content",description = "内容"),
+            @Parameter(name = "type",description = "类型"),
+            @Parameter(name = "status",description = "状态"),
+            @Parameter(name = "noticeDto",hidden = true)
+    })
     public JsonResult add(noticeDto noticeDto) {
         Notice notice = new Notice();
         BeanUtils.copyProperties(noticeDto,notice);
@@ -102,7 +109,7 @@ public class noticeController {
     @PostMapping("update")
     @ApiOperationSupport(order = 30)
     @Operation(summary = "01更新咨询功能")
-    public JsonResult update(NoticeUpdateParam noticeUpdateParam) {
+    public JsonResult update(@RequestBody NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
         if (id == null)
             return new JsonResult(StatusCode.OPERATION_FAILED);

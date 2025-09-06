@@ -4,7 +4,6 @@ import com.notice.demo.pojo.dto.NoticeListQuery;
 import com.notice.demo.pojo.entity.Notice;
 import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
 import com.notice.demo.pojo.vo.NoticeListVO;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -26,6 +25,7 @@ public interface noticeMapper {
      * {@code NoticeListVO}对象是服务端将要给客户端的数据
      */
     List<NoticeListVO> selectNoticeByTitleAndType(NoticeListQuery noticeListQuery);
+//    <T> List<? extends T> selectNoticeByTitleAndType(T t);
 
     /**
      * 根据id值检索特定的对象
@@ -87,6 +87,7 @@ public interface noticeMapper {
     List<Notice> selectContent(String content);
 
     List<Notice> selectTitle(String title);
+//    <T extends Notice> List<? extends T> selectTitle(T t);
 
     List<Notice> sortByUpdateTime();
 
