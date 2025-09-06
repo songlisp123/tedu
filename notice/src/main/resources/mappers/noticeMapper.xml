@@ -145,4 +145,30 @@
         FROM notice
         WHERE title like CONCAT('%',#{title},'%')
     </select>
+    <select id="sortByUpdateTime" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT id,
+        title,
+        content,
+        create_time as createTime,
+        status,
+        type,
+        update_time as updateTime,
+        user_id as userId
+        FROM notice
+        ORDER BY update_time desc
+    </select>
+    <select id="sortByCreateTime" resultType="com.notice.demo.pojo.entity.Notice">
+        SELECT id,
+        title,
+        content,
+        create_time as createTime,
+        status,
+        type,
+        update_time as updateTime,
+        user_id as userId
+        FROM notice
+        ORDER BY create_time desc
+    </select>
+
+
 </mapper>

@@ -87,4 +87,8 @@ public interface noticeMapper {
     List<Notice> selectContent(String content);
 
     List<Notice> selectTitle(String title);
+
+    List<Notice> sortByUpdateTime();
+
+    List<Notice> sortByCreateTime();
 }

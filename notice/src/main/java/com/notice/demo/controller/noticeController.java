@@ -1,5 +1,6 @@
 package com.notice.demo.controller;
 
+import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.notice.demo.base.response.JsonResult;
 import com.notice.demo.base.response.StatusCode;
 import com.notice.demo.mapper.noticeMapper;
@@ -7,8 +8,10 @@ import com.notice.demo.pojo.dto.NoticeListQuery;
 import com.notice.demo.pojo.dto.NoticeUpdateParam;
 import com.notice.demo.pojo.dto.noticeDto;
 import com.notice.demo.pojo.entity.Notice;
-import com.notice.demo.pojo.vo.NoticeDetailInfoVO;
 import com.notice.demo.pojo.vo.NoticeListVO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +22,12 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@Tag(name = "01-咨询模块")
 @RequestMapping("/v1/notice/")
 public class noticeController {
 
     @Autowired
     private noticeMapper noticeMapper;
-
 
     /**
      * 插入资讯
@@ -32,6 +35,9 @@ public class noticeController {
      * @return {@code JsonResult}对象
      */
     @PostMapping("add")
+    @Operation(summary = "01添加咨询功能")
+    @ApiOperationSupport(order = 10)
+    @Parameter(name = "noticeDto",description = "资讯视图对象",example = "???")
     public JsonResult add(noticeDto noticeDto) {
         Notice notice = new Notice();
         BeanUtils.copyProperties(noticeDto,notice);
@@ -49,6 +55,8 @@ public class noticeController {
      * @return {@code NoticeListVO}的集合视图
      */
     @GetMapping("list")
+    @Operation(summary = "01咨询列表")
+    @ApiOperationSupport(order = 40)
     public JsonResult list(NoticeListQuery noticeListQuery) {
         List<NoticeListVO> list =
                 noticeMapper.selectNoticeByTitleAndType(noticeListQuery);
@@ -61,6 +69,8 @@ public class noticeController {
      * @return {@code NoticeDetailInfoVO}视图
      */
     @GetMapping("detail")
+    @Operation(summary = "01资讯详情")
+    @ApiOperationSupport(order = 50)
     public JsonResult detail(Integer id) {
         var notice =  noticeMapper.selectNoticeById(id);
         return JsonResult.ok(notice);
@@ -72,6 +82,9 @@ public class noticeController {
      * @return 条件字符串，表示删除成功或者失败
      */
     @PostMapping("detele")
+    @Operation(summary = "01删除咨询功能")
+    @ApiOperationSupport(order = 20)
+    @Parameter(name = "id",description = "资讯ID",required = true,example = "实例：1")
     public JsonResult delete(Integer id) {
         int i =noticeMapper.deleteNoticeById(id);
         if (i>0)
@@ -87,6 +100,8 @@ public class noticeController {
      * 如果以上满足，则返回{@code 更新成功}或者{@code 更新失败}
      */
     @PostMapping("update")
+    @ApiOperationSupport(order = 30)
+    @Operation(summary = "01更新咨询功能")
     public JsonResult update(NoticeUpdateParam noticeUpdateParam) {
         Long id  = noticeUpdateParam.getId();
         if (id == null)
@@ -167,9 +182,26 @@ public class noticeController {
         return JsonResult.ok(list);
     }
 
-    //说实话，最难的就是排序了
     /*
-    根据咨询的id排序
+    根据最近更新排序
      */
+    @GetMapping("recent")
+    public JsonResult recent() {
+        List<Notice> list = noticeMapper.sortByUpdateTime();
+        return JsonResult.ok(list);
+    }
 
+    /*
+    按照创建时间排序
+     */
+    @GetMapping("create")
+    public JsonResult create() {
+        List<Notice> list = noticeMapper.sortByCreateTime();
+        return JsonResult.ok(list);
+    }
+
+    /*
+    按照双重模糊查询
+     */
+    
 }
