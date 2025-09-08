@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
@@ -80,7 +81,10 @@ public class carController {
             return new JsonResult(StatussCode.NOT_LOGIN);
         }
         Long userId = userVO.getId();
-        List<Car> cars = carMapper.selectAllCar(vehicleListQuery,userId);
+        List<Car> cars = carMapper.selectAllCar(vehicleListQuery,userId)
+                .stream()
+                .filter(e->e.getIdDelete()!=1)
+                .toList();
         return JsonResult.ok(cars);
     }
 
@@ -99,6 +103,5 @@ public class carController {
         if (i>0)
             return JsonResult.ok();
         return new JsonResult(StatussCode.CAR_NOT_EXISTS);
-
     }
 }

@@ -35,7 +35,7 @@
     <select id="selectAllCar" resultType="com.cloudCar.demo.pojo.entity.Car">
         SELECT id,battery_type as batteryType,brand,code,color,
         create_time as createTime,displacement,license,model,
-        type,update_time as updateTime,user_id as userId
+        type,update_time as updateTime,user_id as userId,id_delete as idDelete
         FROM vehicle
         <where>
             <if test="query.brand!=null and query.brand!=''">
