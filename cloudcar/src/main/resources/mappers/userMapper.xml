@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloudCar.demo.mapper.userMapper">
+    <select id="findUserByUsernameAndPassword" resultType="java.lang.Long">
+        SELECT id
+        FROM user
+        WHERE username=#{username}
+        AND password=#{password}
+    </select>
+
+    <insert id="insertUser">
+        INSERT INTO user(
+        username,
+        password,
+        email,
+        phone,
+        create_time,
+        update_time
+        )
+        VALUES(
+        #{username},
+        #{password},
+        #{email},
+        #{phone},
+        #{createTime},
+        #{updateTime}
+        )
+    </insert>
+
+    <select id="Login" resultType="com.cloudCar.demo.pojo.vo.userVO">
+        SELECT id,
+        username
+        FROM user
+        WHERE username=#{username}
+        AND password=#{password}
+    </select>
+    <select id="selectAllUsers" resultType="com.cloudCar.demo.pojo.entity.user">
+        SELECT id,
+        username,
+        password,
+        email,
+        create_time as createTime,
+        update_time as updateTime,
+        phone
+        FROM user
+    </select>
+</mapper>
