@@ -3,4 +3,51 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cloudCar.demo.mapper.carMapper">
+    <insert id="insertCar">
+        INSERT INTO vehicle(
+        model,
+        brand,
+        color,
+        battery_type,
+        code,
+        displacement,
+        license,
+        type,
+        create_time,
+        update_time,
+        user_id
+        )
+        VALUES(
+        #{model},
+        #{brand},
+        #{color},
+        #{batteryType},
+        #{code},
+        #{displacement},
+        #{license},
+        #{type},
+        #{createTime},
+        #{updateTime},
+        #{userId}
+        )
+    </insert>
+
+    <select id="selectAllCar" resultType="com.cloudCar.demo.pojo.entity.Car">
+        SELECT id,battery_type as batteryType,brand,code,color,
+        create_time as createTime,displacement,license,model,
+        type,update_time as updateTime,user_id as userId
+        FROM vehicle
+        <where>
+            <if test="query.brand!=null and query.brand!=''">
+                AND brand LIKE CONCAT('%',#{query.brand},'%')
+            </if>
+            <if test="query.license!=null and query.license!=''">
+                AND license LIKE CONCAT('%',#{query.license},'%')
+            </if>
+            <if test="userId!=null">
+                AND user_id=#{userId}
+            </if>
+        </where>
+    </select>
+
 </mapper>

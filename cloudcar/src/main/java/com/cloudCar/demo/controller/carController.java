@@ -1,23 +1,95 @@
 package com.cloudCar.demo.controller;
 
 import com.cloudCar.demo.base.response.JsonResult;
-import com.cloudCar.demo.pojo.DTO.UserRegParam;
+import com.cloudCar.demo.base.response.StatussCode;
+import com.cloudCar.demo.mapper.carMapper;
+import com.cloudCar.demo.pojo.DTO.VehicleAddParam;
+import com.cloudCar.demo.pojo.DTO.VehicleListQuery;
+import com.cloudCar.demo.pojo.entity.Car;
+import com.cloudCar.demo.pojo.vo.userVO;
+import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
+import java.util.List;
 
 @Slf4j
 @RestController
+@Tag(name = "02汽车管理模块")
 @RequestMapping("/v1/car/")
 public class carController {
+
+    @Autowired
+    private carMapper carMapper;
     @PostMapping("add")
-    public JsonResult add() {
-        return new JsonResult();
+    @Operation(summary = "添加车辆")
+    @ApiOperationSupport(order = 100)
+    public JsonResult add(@RequestBody VehicleAddParam vehicleAddParam, HttpSession session) {
+        log.debug("添加车辆业务");
+        userVO userVO = (userVO) session.getAttribute("user");
+        if (userVO == null) {
+            log.debug("用户未登录");
+            return new JsonResult(StatussCode.NOT_LOGIN);
+        }
+        Car car = new Car();
+        BeanUtils.copyProperties(vehicleAddParam,car);
+        car.setCreateTime(new Date());
+        car.setUpdateTime(new Date());
+        car.setUserId(userVO.getId());
+        int i = carMapper.insertCar(car);
+        if (i>0) {
+            log.debug("添加车辆成功");
+            return JsonResult.ok();
+        }
+        log.debug("发生未知错误，请重试");
+        return new JsonResult(StatussCode.OPERATION_FAILED);
     }
+
     @PostMapping("login")
+    @Operation(summary = "查询车辆")
+    @ApiOperationSupport(order = 200)
     public JsonResult login() {
         return JsonResult.ok();
+    }
+
+    @GetMapping("list")
+    @Operation(summary = "列出车辆")
+    @ApiOperationSupport(order = 201)
+    @Parameters(value = {
+            @Parameter(name = "brand"),
+            @Parameter(name = "license"),
+            @Parameter(name = "VehicleListQuery",hidden = true),
+    })
+    public JsonResult list(
+            VehicleListQuery vehicleListQuery,
+            HttpSession session)
+    {
+        log.debug("汽车查询服务");
+        log.debug(vehicleListQuery.toString());
+        userVO userVO = (userVO) session.getAttribute("user");
+        if (userVO == null) {
+            log.debug("用户尚未登陆");
+            return new JsonResult(StatussCode.NOT_LOGIN);
+        }
+        Long userId = userVO.getId();
+        List<Car> cars = carMapper.selectAllCar(vehicleListQuery,userId);
+        return JsonResult.ok(cars);
+    }
+
+    @PostMapping("del/{id}")
+    @Operation(summary = "删除车辆")
+    @ApiOperationSupport(order = 400)
+    public JsonResult del(@PathVariable Long id) {
+        //判断id的范围
+        //判断id的
+        return new JsonResult();
     }
 }

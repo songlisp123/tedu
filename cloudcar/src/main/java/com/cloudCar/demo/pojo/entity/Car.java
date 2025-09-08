@@ -7,10 +7,10 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-public class car {
+public class Car {
     private Long id;
     private String model;
-    private String band;
+    private String brand;
     private String color;
     private String batteryType;
     private String code;
@@ -20,5 +20,4 @@ public class car {
     private Date createTime;
     private Date updateTime;
     private Long userId;
-
 }

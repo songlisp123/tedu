@@ -16,4 +16,8 @@ public interface userMapper {
     userVO Login(UserLoginParam userLoginParam);
 
     List<user> selectAllUsers();
+
+    List<userVO> searchUserByUserName(String username);
+
+    user selectUserById(Long id);
 }

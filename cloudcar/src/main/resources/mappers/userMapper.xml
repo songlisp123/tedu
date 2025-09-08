@@ -46,4 +46,24 @@
         phone
         FROM user
     </select>
+    <select id="searchUserByUserName" resultType="com.cloudCar.demo.pojo.vo.userVO">
+        SELECT id,username
+        From user
+        <where>
+            <if test="username!=null and username!=''">
+                username like CONCAT('%',#{username},'%')
+            </if>
+        </where>
+    </select>
+    <select id="selectUserById" resultType="com.cloudCar.demo.pojo.entity.user">
+        SELECT id,
+        username,
+        password,
+        create_time as createTime,
+        update_time as updateTime,
+        email,
+        phone
+        FROM user
+        WHERE id = #{id}
+    </select>
 </mapper>

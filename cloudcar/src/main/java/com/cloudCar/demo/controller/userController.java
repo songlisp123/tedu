@@ -7,6 +7,10 @@ import com.cloudCar.demo.pojo.DTO.UserLoginParam;
 import com.cloudCar.demo.pojo.DTO.UserRegParam;
 import com.cloudCar.demo.pojo.entity.user;
 import com.cloudCar.demo.pojo.vo.userVO;
+import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +21,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@Tag(name = "01用户模块")
 @RequestMapping("/v1/user/")
 public class userController {
 
@@ -24,6 +29,8 @@ public class userController {
     private userMapper userMapper;
 
     @PostMapping("add")
+    @Operation(summary = "添加用户")
+    @ApiOperationSupport(order = 100)
     public JsonResult add( @RequestBody UserRegParam userRegParam) {
         Long[] result =
                 userMapper.Login(userRegParam);
@@ -38,11 +45,18 @@ public class userController {
     }
 
     @PostMapping("login")
-    public JsonResult login(@RequestBody UserLoginParam userLoginParam) {
+    @Operation(summary = "登录模块")
+    @ApiOperationSupport(order = 200)
+    public JsonResult login(
+            @RequestBody UserLoginParam userLoginParam,
+            HttpSession httpSession)
+    {
         userVO result =
                 userMapper.Login(userLoginParam);
-        if (result != null)
+        if (result != null) {
+            httpSession.setAttribute("user",result);
             return JsonResult.ok(result);
+        }
         return new JsonResult(StatussCode.USERNAME_PASSWORD_ERROR);
     }
 
@@ -55,9 +69,51 @@ public class userController {
      */
     //首先完成用户列表
     @GetMapping("userList")
+    @Operation(summary = "列表 功能")
+    @ApiOperationSupport(order = 300)
     public JsonResult list() {
         List<user> users = userMapper.selectAllUsers();
         return JsonResult.ok(users);
     }
+
+    //获取当前用户
+    @GetMapping("currentUser")
+    @Operation(summary="获取当前用户")
+    @ApiOperationSupport(order = 201)
+    public JsonResult currentUer(HttpSession session) {
+        var userVo = session.getAttribute("user");
+        return JsonResult.ok(userVo);
+    }
+
+    //退出登录成功
+    @GetMapping("logout")
+    @Operation(summary = "退出登录")
+    @ApiOperationSupport(order = 110)
+    public JsonResult logout(HttpSession session) {
+        session.removeAttribute("user");
+        return JsonResult.ok();
+    }
+
+    //搜索用户功能
+    @GetMapping("search")
+    @Operation(summary = "搜索用户功能")
+    @ApiOperationSupport(order = 130)
+    public JsonResult search(String username) {
+        List<userVO> list = userMapper.searchUserByUserName(username);
+        return JsonResult.ok(list);
+    }
+
+    //搜索特定ID的用户，采用路径参数的形式
+    @GetMapping("search/{id}")
+    @Operation(summary = "查询ID")
+    @ApiOperationSupport(order = 131)
+    public JsonResult searchId(@PathVariable Long id)
+    {
+        user user = userMapper.selectUserById(id);
+        if (user==null)
+            return new JsonResult(StatussCode.USERNAME_NPT_EXISTS);
+        return JsonResult.ok(user);
+    }
+
 
 }
