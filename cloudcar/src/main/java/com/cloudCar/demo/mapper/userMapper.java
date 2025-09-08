@@ -20,4 +20,8 @@ public interface userMapper {
     List<userVO> searchUserByUserName(String username);
 
     user selectUserById(Long id);
+
+    List<userVO> sortById();
+
+    List<userVO> sortByTime();
 }

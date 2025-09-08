@@ -66,4 +66,14 @@
         FROM user
         WHERE id = #{id}
     </select>
+    <select id="sortById" resultType="com.cloudCar.demo.pojo.vo.userVO">
+        SELECT id,username
+        FROM user
+        ORDER BY id desc
+    </select>
+    <select id="sortByTime" resultType="com.cloudCar.demo.pojo.vo.userVO">
+        SELECT id,username
+        FROM user
+        ORDER BY create_time desc
+    </select>
 </mapper>

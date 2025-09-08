@@ -20,4 +20,6 @@ public class Car {
     private Date createTime;
     private Date updateTime;
     private Long userId;
+    //新增删除功能
+    private Integer idDelete;
 }

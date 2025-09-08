@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -114,6 +115,37 @@ public class userController {
             return new JsonResult(StatussCode.USERNAME_NPT_EXISTS);
         return JsonResult.ok(user);
     }
+
+    //排序用户列表
+    /*
+    根据用户id排序，显示最先创建的用户
+     */
+    @GetMapping("sortById")
+    @Operation(summary = "按照用户id排序")
+    @ApiOperationSupport(order = 150)
+    public JsonResult sortById() {
+        List<userVO> list = userMapper.sortById();
+        if (list==null)
+            return new JsonResult(StatussCode.USERNAME_NPT_EXISTS);
+        return JsonResult.ok(list);
+    }
+
+    /*
+    按照创建时间排序
+     */
+    @GetMapping("sortByTime")
+    @Operation(summary = "按照创建时间片排序")
+    @ApiOperationSupport(order = 151)
+    public JsonResult sortByTime() {
+        List<userVO> list = userMapper.sortByTime();
+        if (list==null)
+            return new JsonResult(StatussCode.USERNAME_NPT_EXISTS);
+        return JsonResult.ok(list);
+    }
+
+    /*
+    按照最近的三个月显示
+     */
 
 
 }

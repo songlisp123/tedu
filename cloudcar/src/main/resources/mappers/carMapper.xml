@@ -49,5 +49,10 @@
             </if>
         </where>
     </select>
-
+    <update id="deleteCarById">
+        UPDATE vehicle
+        set id_delete=1
+        Where id=#{id}
+        AND user_id=#{userId}
+    </update>
 </mapper>

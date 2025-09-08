@@ -87,9 +87,18 @@ public class carController {
     @PostMapping("del/{id}")
     @Operation(summary = "删除车辆")
     @ApiOperationSupport(order = 400)
-    public JsonResult del(@PathVariable Long id) {
+    public JsonResult del(@PathVariable Long id,HttpSession session) {
         //判断id的范围
         //判断id的
-        return new JsonResult();
+        log.debug("删除id"+id);
+        userVO userVO = (userVO) session.getAttribute("user");
+        if (userVO==null)
+            return new JsonResult(StatussCode.NOT_LOGIN);
+        Long userId = userVO.getId();
+        int i = carMapper.deleteCarById(id,userId);
+        if (i>0)
+            return JsonResult.ok();
+        return new JsonResult(StatussCode.CAR_NOT_EXISTS);
+
     }
 }

@@ -12,4 +12,6 @@ public interface carMapper {
     List<Car> selectAllCar(
             @Param("query") VehicleListQuery vehicleListQuery,
             @Param("userId") Long userId);
+
+    int deleteCarById(Long id, Long userId);
 }
