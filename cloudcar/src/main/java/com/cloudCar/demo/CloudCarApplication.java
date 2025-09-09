@@ -14,6 +14,7 @@ public class CloudCarApplication {
 	private static final Logger logger = Logger.getLogger("car");
 	private static final windowHandler windowHandler = new windowHandler();
 	private static final CustonFormatter formatter = new CustonFormatter();
+
 	static {
 		logger.setLevel(Level.ALL);
 		windowHandler.setFormatter(formatter);
