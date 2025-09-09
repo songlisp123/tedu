@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -32,7 +33,7 @@ public class userController {
     @PostMapping("add")
     @Operation(summary = "添加用户")
     @ApiOperationSupport(order = 100)
-    public JsonResult add( @RequestBody UserRegParam userRegParam) {
+    public JsonResult add( @RequestBody @Validated UserRegParam userRegParam) {
         Long[] result =
                 userMapper.Login(userRegParam);
         if (result.length != 0)

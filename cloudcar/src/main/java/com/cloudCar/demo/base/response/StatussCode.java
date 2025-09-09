@@ -15,6 +15,7 @@ public enum StatussCode {
     USERNAME_NPT_EXISTS(1002,"用户不存在"),
     CAR_NOT_EXISTS(1005,"车辆不存在"),
     USERNAME_PASSWORD_ERROR(1001,"用户名或者密码失败"),
+    VALIDATED_ERROR(9998,"参数校验异常"),
     NOT_LOGIN(1002,"未登录");
     private Integer state;
     private String message;

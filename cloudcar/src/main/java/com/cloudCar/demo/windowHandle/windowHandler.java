@@ -16,7 +16,7 @@ public class windowHandler extends StreamHandler
    private JFrame frame;
    private JToolBar jToolBar;
    private JTextArea output;
-   private JMenuBar menuBar;
+   private Jmenu menuBar;
 
    public windowHandler()
    {
@@ -24,7 +24,7 @@ public class windowHandler extends StreamHandler
       创建一个顶级窗口
        */
       frame = new JFrame();
-      menuBar = new JMenuBar();
+      menuBar = new Jmenu();
       setLevel(Level.ALL);
       jToolBar = new JToolBar();
       jToolBar.add(new Myaction("蓝色", Color.BLUE));
@@ -65,8 +65,9 @@ public class windowHandler extends StreamHandler
       frame.add(new JScrollPane(output));
       frame.add(jToolBar,BorderLayout.NORTH);
       //setFocusableWindowState:用来描述窗口的聚焦形态，一般来说，作为第二窗口，设置为假
-      frame.setFocusableWindowState(false);
+      frame.setFocusableWindowState(true);
       frame.setVisible(true);
+      frame.setTitle("控制台输出");
       frame.setJMenuBar(menuBar);
 
       /*
