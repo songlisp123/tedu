@@ -23,4 +23,16 @@
         AND password=#{password}
     </select>
 
+    <update id="updateUserInfo">
+        UPDATE user
+        Set username=#{userDto.username},
+        nickname=#{userDto.nickname}
+        WHERE id = #{userId}
+    </update>
+
+    <update id="updateUserPassWord">
+        UPDATE user
+        SET password=#{password}
+        WHERE id=#{userId}
+    </update>
 </mapper>
