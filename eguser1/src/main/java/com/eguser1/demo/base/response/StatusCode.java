@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public enum StatusCode {
     OPERATION_SUCCESS(5000,"操作成功"),
+    USER_NOT_EXISTS(7000,"用户不存在"),
     OPERATION_FAILED(6000,"操作失败");
     @Schema(description = "响应状态码",example = "2001")
     private Integer state;

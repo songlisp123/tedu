@@ -96,6 +96,8 @@ public class UserController {
     public JsonResults get(Long id) {
         log.debug("删除用户id:"+id);
         User user =  userMapper.selectUserById(id);
+        if (user==null)
+            return new JsonResults(StatusCode.USER_NOT_EXISTS);
         return JsonResults.ok(user);
     }
 
