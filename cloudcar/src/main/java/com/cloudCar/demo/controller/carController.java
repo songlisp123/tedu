@@ -14,8 +14,10 @@ import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -24,6 +26,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Validated
 @RestController
 @Tag(name = "02汽车管理模块")
 @RequestMapping("/v1/car/")
@@ -100,7 +103,9 @@ public class carController {
     @PostMapping("del/{id}")
     @Operation(summary = "删除车辆")
     @ApiOperationSupport(order = 400)
-    public JsonResult del(@PathVariable Long id,HttpSession session) {
+    public JsonResult del(
+            @PathVariable @Range(min = 1L,max = 500L,message = "参数值必须在1-500之间") Long id,
+            HttpSession session) {
         //判断id的范围
         //判断id的
         log.debug("删除id"+id);

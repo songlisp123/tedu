@@ -107,7 +107,7 @@ public class windowHandler extends StreamHandler
       public Myaction(String name ,Color c) {
          this.name = name;
          this.c = c;
-         putValue(Action.NAME,name);
+         putValue(Action.NAME,this.name);
          putValue("color",c);
          putValue(Action.SHORT_DESCRIPTION,"将背景设置为%s".formatted(c));
       }

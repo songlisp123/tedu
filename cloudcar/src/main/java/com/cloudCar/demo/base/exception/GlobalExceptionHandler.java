@@ -3,6 +3,7 @@ package com.cloudCar.demo.base.exception;
 
 import com.cloudCar.demo.base.response.JsonResult;
 import com.cloudCar.demo.base.response.StatussCode;
+import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -49,12 +50,12 @@ public class GlobalExceptionHandler {
         return new JsonResult(StatussCode.OPERATION_FAILED, data);
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public JsonResult doHandleRuntimeException(RuntimeException ex){
-        String data = ex.getMessage();
-        log.error("RuntimeException:" + data);
-        return new JsonResult(StatussCode.OPERATION_FAILED, data);
-    }
+//    @ExceptionHandler(RuntimeException.class)
+//    public JsonResult doHandleRuntimeException(RuntimeException ex){
+//        String data = ex.getMessage();
+//        log.error("RuntimeException:" + data);
+//        return new JsonResult(StatussCode.OPERATION_FAILED, data);
+//    }
 
     /**
      * 能够处理所有异常的异常处理方法;
@@ -75,6 +76,13 @@ public class GlobalExceptionHandler {
             logger.warning(e.getDefaultMessage());
             message.put(e,e.getDefaultMessage());
         });
+        return new JsonResult(StatussCode.VALIDATED_ERROR,message);
+    }
+    @ExceptionHandler(ConstraintViolationException.class)
+    public JsonResult doHandleRuntimeException(ConstraintViolationException ConstraintViolationException)
+    {
+        String message = ConstraintViolationException.getMessage().split(": ")[1];
+        logger.warning("报错："+message);
         return new JsonResult(StatussCode.VALIDATED_ERROR,message);
     }
 }
