@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com._06article.demo.mapper.userMapper">
+    <select id="selectUser" resultType="com._06article.demo.pojo.VO.userVo">
+        SELECT id,username
+        FROM user
+        WHERE username=#{username}
+        AND password=#{password}
+    </select>
+
+    <insert id="insertArticle">
+        INSERT INTO article(title,content,user_id)
+        VALUES(#{userArticleParam.title},#{userArticleParam.content},#{userId})
+    </insert>
+
+    <select id="selectArticleById" resultType="com._06article.demo.pojo.VO.articleVO">
+        SELECT a.title,a.content,u.nickname
+        FROM article as a
+        JOIN user as u ON a.user_id=u.id
+        WHERE a.id=#{id}
+    </select>
+
+    <delete id="deleteArticleById">
+        DELETE FROM article
+        WHERE user_id = #{userId}
+        AND id=#{id}
+    </delete>
+</mapper>

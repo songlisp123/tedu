@@ -1,4 +1,4 @@
-package com.cloudCar.demo.windowHandle;
+package com._06article.demo.windowHandle;
 
 import javax.swing.*;
 import java.awt.*;

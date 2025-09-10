@@ -1,19 +1,16 @@
-package com.cloudCar.demo;
+package com._06article.demo;
 
-import com.cloudCar.demo.windowHandle.CustonFormatter;
-import com.cloudCar.demo.windowHandle.windowHandler;
+import com._06article.demo.windowHandle.CustonFormatter;
+import com._06article.demo.windowHandle.windowHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@ServletComponentScan
 @SpringBootApplication
-public class CloudCarApplication {
-
-	private static final Logger logger = Logger.getLogger("car");
+public class Application {
+	private static final Logger logger = Logger.getLogger("article");
 	private static final windowHandler windowHandler = new windowHandler();
 	private static final CustonFormatter formatter = new CustonFormatter();
 
@@ -23,9 +20,8 @@ public class CloudCarApplication {
 		logger.setUseParentHandlers(false);
 		logger.addHandler(windowHandler);
 	}
-
 	public static void main(String[] args) {
-		SpringApplication.run(CloudCarApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
