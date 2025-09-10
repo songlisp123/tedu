@@ -46,11 +46,6 @@ public class carController {
         log.debug("添加车辆业务");
         logger.info("添加车辆业务");
         userVO userVO = (userVO) session.getAttribute("user");
-        if (userVO == null) {
-            log.debug("用户未登录");
-            logger.warning("用户尚未登录");
-            return new JsonResult(StatussCode.NOT_LOGIN);
-        }
         Car car = new Car();
         BeanUtils.copyProperties(vehicleAddParam,car);
         car.setCreateTime(new Date());
@@ -89,11 +84,6 @@ public class carController {
         log.debug("汽车查询服务");
         logger.info("汽车查询服务");
         userVO userVO = (userVO) session.getAttribute("user");
-        if (userVO == null) {
-            log.debug("用户尚未登陆");
-            logger.info("用户尚未登录");
-            return new JsonResult(StatussCode.NOT_LOGIN);
-        }
         Long userId = userVO.getId();
         List<Car> cars = carMapper.selectAllCar(vehicleListQuery,userId)
                 .stream()
@@ -113,10 +103,6 @@ public class carController {
         //判断id的
         log.debug("删除id"+id);
         userVO userVO = (userVO) session.getAttribute("user");
-        if (userVO==null) {
-            logger.warning("用户未登录");
-            return new JsonResult(StatussCode.NOT_LOGIN);
-        }
         Long userId = userVO.getId();
         int i = carMapper.deleteCarById(id,userId);
         if (i>0) {
