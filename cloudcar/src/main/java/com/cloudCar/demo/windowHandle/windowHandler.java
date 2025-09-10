@@ -17,6 +17,8 @@ public class windowHandler extends StreamHandler
    private JToolBar jToolBar;
    private JTextArea output;
    private Jmenu menuBar;
+   private static final int WEIGHT = 800;
+   private static final int HEIGHT = 600;
 
    public windowHandler()
    {
@@ -38,11 +40,10 @@ public class windowHandler extends StreamHandler
       int screenHeight = d.height;
 
       //这是一个妈蛋的
-      int x = (screenWidth - 800) / 2;
-      int y = (screenHeight - 600) / 2;
-      frame.setBounds(x, y, 800, 600);
+      int x = (screenWidth - WEIGHT) / 2;
+      int y = (screenHeight - HEIGHT) / 2;
+      frame.setBounds(x, y, WEIGHT, HEIGHT);
 
-//      jPanel = new JPanel();
       /*
       设置一个文本区域块
        */
@@ -118,7 +119,7 @@ public class windowHandler extends StreamHandler
          int green = c.getGreen();
          int blue = c.getBlue();
          Color c1 = new Color(255-red,255-green,255-blue);
-         output.setForeground(c1);
+         output.setBackground(c1);
       }
    }
 }

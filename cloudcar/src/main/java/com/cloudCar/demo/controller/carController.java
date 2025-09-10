@@ -39,7 +39,10 @@ public class carController {
     @PostMapping("add")
     @Operation(summary = "添加车辆")
     @ApiOperationSupport(order = 100)
-    public JsonResult add(@RequestBody VehicleAddParam vehicleAddParam, HttpSession session) {
+    public JsonResult add(
+            @RequestBody VehicleAddParam vehicleAddParam,
+            HttpSession session)
+    {
         log.debug("添加车辆业务");
         logger.info("添加车辆业务");
         userVO userVO = (userVO) session.getAttribute("user");
@@ -56,9 +59,11 @@ public class carController {
         int i = carMapper.insertCar(car);
         if (i>0) {
             log.debug("添加车辆成功");
+            logger.info("添加车辆成功");
             return JsonResult.ok();
         }
         log.debug("发生未知错误，请重试");
+        logger.warning("发生未知错误，请重试");
         return new JsonResult(StatussCode.OPERATION_FAILED);
     }
 
@@ -83,7 +88,6 @@ public class carController {
     {
         log.debug("汽车查询服务");
         logger.info("汽车查询服务");
-        log.debug(vehicleListQuery.toString());
         userVO userVO = (userVO) session.getAttribute("user");
         if (userVO == null) {
             log.debug("用户尚未登陆");
@@ -96,7 +100,6 @@ public class carController {
                 .filter(e->e.getIdDelete()!=1)
                 .toList();
         logger.info("查询成功！");
-        logger.info(cars.toString());
         return JsonResult.ok(cars);
     }
 
@@ -110,12 +113,17 @@ public class carController {
         //判断id的
         log.debug("删除id"+id);
         userVO userVO = (userVO) session.getAttribute("user");
-        if (userVO==null)
+        if (userVO==null) {
+            logger.warning("用户未登录");
             return new JsonResult(StatussCode.NOT_LOGIN);
+        }
         Long userId = userVO.getId();
         int i = carMapper.deleteCarById(id,userId);
-        if (i>0)
+        if (i>0) {
+            logger.info("汽车删除成功");
             return JsonResult.ok();
+        }
+        logger.warning("发生未知错误，请重试");
         return new JsonResult(StatussCode.CAR_NOT_EXISTS);
     }
 }

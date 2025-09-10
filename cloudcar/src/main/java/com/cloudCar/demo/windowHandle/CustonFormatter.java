@@ -14,7 +14,8 @@ public class CustonFormatter extends Formatter {
     public String format(LogRecord record) {
         messageId++;
         LocalDateTime now = LocalDateTime.now();
-        String time = now.toLocalTime()+"  "+now.toLocalTime();
+        String time = now.toLocalDate().toString().substring(0,10)+"  "
+                +now.toLocalTime().toString().substring(0,8);
         String method = record.getSourceClassName() + record.getSourceMethodName();
         String level = record.getLevel().toString().toLowerCase();
         String message = record.getMessage();

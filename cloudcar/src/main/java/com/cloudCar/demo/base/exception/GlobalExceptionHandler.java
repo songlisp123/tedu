@@ -50,12 +50,12 @@ public class GlobalExceptionHandler {
         return new JsonResult(StatussCode.OPERATION_FAILED, data);
     }
 
-//    @ExceptionHandler(RuntimeException.class)
-//    public JsonResult doHandleRuntimeException(RuntimeException ex){
-//        String data = ex.getMessage();
-//        log.error("RuntimeException:" + data);
-//        return new JsonResult(StatussCode.OPERATION_FAILED, data);
-//    }
+    @ExceptionHandler(RuntimeException.class)
+    public JsonResult doHandleRuntimeException(RuntimeException ex){
+        String data = ex.getMessage();
+        log.error("RuntimeException:" + data);
+        return new JsonResult(StatussCode.OPERATION_FAILED, data);
+    }
 
     /**
      * 能够处理所有异常的异常处理方法;
