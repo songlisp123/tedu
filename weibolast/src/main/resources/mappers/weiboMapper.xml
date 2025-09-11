@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiboLast.demo.mapper.weiboMapper">
+    <insert id="insertWeiBo">
+        INSERT INTO weibo(title,content,create_time,update_time,user_id)
+        VALUES(#{title},#{content},#{createTime},#{updateTime},#{userId})
+    </insert>
+    <select id="selectWeiBo" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        SELECT w.id,w.title,w.content,w.create_time as createTime,
+        w.update_time as updateTime,u.nickname
+        FROM weibo as w
+        JOIN user as u ON w.user_id=u.id
+        ORDER BY w.update_time DESC,w.id DESC
+        LIMIT #{pageNumber},3
+    </select>
+    <select id="countAllWeiBo" resultType="java.lang.Long">
+        SELECT count(id)
+        FROM weibo
+    </select>
+    <select id="selectWeiBoById" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        SELECT w.id,w.title,w.content,w.create_time as createTime,
+        w.update_time as updateTime,u.nickname
+        FROM weibo as w
+        JOIN user as u ON w.user_id=u.id
+        WHERE w.id=#{id}
+    </select>
+    <select id="countAllWeiBoIds" resultType="java.lang.Long">
+        SELECT id
+        FROM weibo
+    </select>
+</mapper>
