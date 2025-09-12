@@ -3,8 +3,10 @@ package com.weiboLast.demo.mapper;
 import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.dto.updateUserInfo;
+import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
+import com.weiboLast.demo.pojo.vo.UserVO2;
 import jakarta.validation.constraints.Positive;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,7 +17,7 @@ public interface userMapper {
 
     int insertUser(User user);
 
-    UserVO selectUser(UserLoginParam userLoginParam);
+    UserVO2 selectUser(UserLoginParam userLoginParam);
 
     Long collectAllUserNumber();
 
@@ -28,4 +30,8 @@ public interface userMapper {
             @Param("userId") Long userId);
 
     int deleteUserById(Long id);
+
+    int updateUserPassword(
+            @Param("pwd") userChangePassword pwd,
+            @Param("userID") Long userId);
 }

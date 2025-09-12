@@ -10,6 +10,7 @@ import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
+import com.weiboLast.demo.pojo.vo.UserVO2;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -69,14 +70,14 @@ public class userController {
             HttpSession session)
     {
         logger.info("进入用户登录界面……");
-        UserVO userVo = userMapper.selectUser(userLoginParam);
-        if (userVo==null) {
+        UserVO2 user = userMapper.selectUser(userLoginParam);
+        if (user==null) {
             logger.warning("用户名或者密码错误");
             return new JsonResult(StatusCode.USERNAME_PASSWORD_ERROR);
         }
-        session.setAttribute("user",userVo);
+        session.setAttribute("user",user);
         logger.info("登录成功");
-        return JsonResult.ok(userVo);
+        return JsonResult.ok(user);
     }
 
     @GetMapping("currentUser")
@@ -188,7 +189,28 @@ public class userController {
     public JsonResult changePwd(@RequestBody userChangePassword pwd,
                                 HttpSession session)
     {
-        UserVO user = (UserVO) session.getAttribute("user");
+        logger.info("进入到修改密码阶段……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();
+        int i = userMapper.updateUserPassword(pwd,userId);
+        if (i>0) {
+            logger.info("修改密码成功");
+            return JsonResult.ok();
+        }
+        logger.info("修改密码失败！");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
+
+    //用户发表文章
+    /*
+    接下来需要的是用户排序
+    1、按照用户id排序
+     */
+    @GetMapping("sortById")
+    @Operation(summary = "按照用户id排序")
+    @ApiOperationSupport(order = 500)
+    public JsonResult sortById() {
         return JsonResult.ok();
     }
+
 }

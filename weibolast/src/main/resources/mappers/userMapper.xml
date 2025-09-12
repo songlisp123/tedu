@@ -12,8 +12,8 @@
         VALUES(#{username},#{gender.id},#{password},#{nickname},#{createTime})
     </insert>
 
-    <select id="selectUser" resultType="com.weiboLast.demo.pojo.vo.UserVO">
-        SELECT id,username
+    <select id="selectUser" resultType="com.weiboLast.demo.pojo.vo.UserVO2">
+        SELECT id,username,nickname,password
         FROM user
         WHERE username=#{username}
         AND password=#{password}
@@ -47,5 +47,10 @@
         UPDATE user
         SET is_alive=false
         WHERE id=#{id}
+    </update>
+    <update id="updateUserPassword">
+        UPDATE user
+        SET password=#{pwd.confirmNewPassword}
+        WHERE id=#{userId}
     </update>
 </mapper>
