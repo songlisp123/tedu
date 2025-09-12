@@ -1,25 +1,21 @@
 package com.weiboLast.demo.pojo.dto;
 
 import com.weiboLast.demo.pojo.entity.Gender;
-import io.micrometer.common.lang.Nullable;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRegParam {
+public class updateUserInfo {
     @Schema(description = "用户名称",required = true,example = "赵云")
     private String username;
-    @Size(min=8,max = 15,message = "密码不符合规范！")
-    @Schema(description = "密码",required = true,example = "xxxxxxxxxx")
-    private String password;
-    @Schema(description = "昵称",required = true,example = "子龙")
+    @Schema(description = "昵称",required = false,example = "小赵")
     private String nickname;
-    @Schema(description = "用户性别",required = false,example = "男")
+    @Schema(description = "性别",required = false,example = "男")
     private Gender gender;
 }

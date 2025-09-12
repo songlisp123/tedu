@@ -2,6 +2,7 @@ package com.weiboLast.demo.mapper;
 
 import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
+import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import jakarta.validation.constraints.Positive;
@@ -21,4 +22,8 @@ public interface userMapper {
     List<UserVO> showUserLists(
             @Positive @Param("pageNumber") Long pageNumber,
             @Param("number") int number);
+
+    int updateInfo(
+            @Param("userInfo") updateUserInfo updateUserInfo,
+            @Param("userId") Long userId);
 }

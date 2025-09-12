@@ -13,6 +13,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/v1/user/logout",
                         "/v1/weibo/insert",
                         "/v1/comment/insert",
-                        "/v1/comment/del/{id}");
+                        "/v1/comment/del/{id}",
+                        "/v1/user/update");
     }
 }

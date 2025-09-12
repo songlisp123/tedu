@@ -6,6 +6,7 @@ import com.weiboLast.demo.base.response.StatusCode;
 import com.weiboLast.demo.mapper.userMapper;
 import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
+import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -133,5 +134,31 @@ public class userController {
 //    @Operation(summary = "更改个人信息")
 //    @ApiOperationSupport(order = 102)
 //    public JsonResult update() {}
-    //用户头像？
+    //用户头像
+    //用户性别ok
+    //用户更新信息
+
+    /*
+    更新个人信息，需要验证用户是否登录
+     */
+    @PostMapping("update")
+    @Operation(summary="更新个人资料")
+    @ApiOperationSupport(order = 150)
+    public JsonResult update(
+            @RequestBody updateUserInfo updateUserInfo,
+            HttpSession session
+    )
+    {
+        logger.info("更新个人资料界面……");
+        UserVO user = (UserVO) session.getAttribute("user");
+        Long userId = user.getId();
+        int i =
+                userMapper.updateInfo(updateUserInfo,userId);
+        if (i>0){
+            logger.info("个人资料更新成功！");
+            return JsonResult.ok();
+        }
+        logger.info("资料更新失败");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
 }

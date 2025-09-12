@@ -8,8 +8,8 @@
         WHERE username=#{username} AND password=#{password}
     </select>
     <insert id="insertUser">
-        INSERT INTO user(username,password,nickname,create_time)
-        VALUES(#{username},#{password},#{nickname},#{createTime})
+        INSERT INTO user(username,gender,password,nickname,create_time)
+        VALUES(#{username},#{gender.id},#{password},#{nickname},#{createTime})
     </insert>
 
     <select id="selectUser" resultType="com.weiboLast.demo.pojo.vo.UserVO">
@@ -28,4 +28,19 @@
         ORDER BY create_time DESC,id DESC
         LIMIT #{pageNumber},#{number}
     </select>
+    <update id="updateInfo">
+        UPDATE user
+        <set>
+            <if test="#{userInfo.username}!=null and #{userInfo.username}!=''">
+                username=#{userInfo.username},
+            </if>
+            <if test="#{userInfo.nickname}!=null and #{userInfo.nickname}!=''">
+                nickname=#{userInfo.nickname},
+            </if>
+            <if test="#{userInfo.gender.id}!=null and #{userInfo.gender.id}!=''">
+                gender=#{userInfo.gender.id}
+            </if>
+        </set>
+        WHERE id=#{userId}
+    </update>
 </mapper>
