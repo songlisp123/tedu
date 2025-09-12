@@ -4,10 +4,12 @@ import com.weiboLast.demo.windowHandle.CustonFormatter;
 import com.weiboLast.demo.windowHandle.windowHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@ServletComponentScan
 @SpringBootApplication
 public class WeiboLastApplication {
 

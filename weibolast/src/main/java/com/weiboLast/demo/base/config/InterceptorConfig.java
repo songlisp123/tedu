@@ -14,6 +14,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
                         "/v1/weibo/insert",
                         "/v1/comment/insert",
                         "/v1/comment/del/{id}",
-                        "/v1/user/update");
+                        "/v1/user/update",
+                        "/v1/user/del/{id}",
+                        "/v1/user/changePassword");
     }
 }

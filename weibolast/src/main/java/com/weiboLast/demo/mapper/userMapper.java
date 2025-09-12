@@ -26,4 +26,6 @@ public interface userMapper {
     int updateInfo(
             @Param("userInfo") updateUserInfo updateUserInfo,
             @Param("userId") Long userId);
+
+    int deleteUserById(Long id);
 }

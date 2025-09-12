@@ -43,4 +43,9 @@
         </set>
         WHERE id=#{userId}
     </update>
+    <update id="deleteUserById">
+        UPDATE user
+        SET is_alive=false
+        WHERE id=#{id}
+    </update>
 </mapper>

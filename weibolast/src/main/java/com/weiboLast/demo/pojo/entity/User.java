@@ -18,4 +18,5 @@ public class User {
     private String nickname;
     private Date createTime;
     private Gender gender;
+    private Boolean isAlive;
 }

@@ -7,6 +7,7 @@ import com.weiboLast.demo.mapper.userMapper;
 import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.dto.updateUserInfo;
+import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -160,5 +161,34 @@ public class userController {
         }
         logger.info("资料更新失败");
         return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
+
+    @GetMapping("del/{id}")
+    @Operation(summary = "删除用户")
+    @ApiOperationSupport(order = 120)
+    public JsonResult del(
+            @Schema(description = "路径参数",required = true,example = "10")
+            @PathVariable Long id) {
+        logger.info("进入到删除用户功能块……");
+        int i = userMapper.deleteUserById(id);
+        if (i>0) {
+            logger.info("删除成功");
+            return JsonResult.ok();
+        }
+        logger.warning("删除失败");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
+
+    /*
+    修改用户密码模块
+     */
+    @PostMapping("changePassword")
+    @Operation(summary = "修改用户密码")
+    @ApiOperationSupport(order = 160)
+    public JsonResult changePwd(@RequestBody userChangePassword pwd,
+                                HttpSession session)
+    {
+        UserVO user = (UserVO) session.getAttribute("user");
+        return JsonResult.ok();
     }
 }
