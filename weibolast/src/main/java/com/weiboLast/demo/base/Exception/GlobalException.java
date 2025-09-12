@@ -6,6 +6,7 @@ import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @Slf4j
 @RestControllerAdvice
@@ -24,5 +25,13 @@ public class GlobalException  {
     {
         String wrongMessage = constraintViolationException.getMessage().split(": ")[1];
         return new JsonResult(StatusCode.VALIDATION_ERROR,wrongMessage);
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public JsonResult doHandlerException(MethodArgumentTypeMismatchException
+                                         mismatchException)
+    {
+        String exceptionMessage = mismatchException.getMessage();
+        return new JsonResult(StatusCode.VALIDATION_ERROR,exceptionMessage);
     }
 }

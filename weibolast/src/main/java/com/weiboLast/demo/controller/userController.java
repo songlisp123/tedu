@@ -9,14 +9,17 @@ import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.constraints.Positive;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Logger;
 
 @Slf4j
@@ -28,6 +31,7 @@ public class userController {
     @Autowired
     private userMapper userMapper;
     private static final Logger logger = Logger.getLogger("weibo");
+    private static final int MAX_USERS_IN_ONE_PAGE = 2;
 
     @PostMapping("reg")
     @Operation(summary = "注册用户")
@@ -99,5 +103,35 @@ public class userController {
         return JsonResult.ok();
     }
 
+    @GetMapping("userList")
+    @Operation(summary = "用户列表")
+    @ApiOperationSupport(order = 101)
+    public JsonResult listAllUsers(
+            @Positive
+            @Schema(description = "查询路径参数",example = "10")
+            Long pageNumber)
+    {
+        logger.info("用户列表");
+        Long users = userMapper.collectAllUserNumber();
+        Long l;
+        if (users%MAX_USERS_IN_ONE_PAGE==0)
+            l = users / MAX_USERS_IN_ONE_PAGE;
+        else
+            l=users / MAX_USERS_IN_ONE_PAGE + 1;
+        if (pageNumber > l) {
+            logger.info("超出范围，将重定向到最后一页");
+            pageNumber=l;//如果超出范围，则定向到最后一页
+        }
+        logger.info("一共 %d 页,当前第 %d 页".formatted(l,pageNumber));
+        pageNumber = MAX_USERS_IN_ONE_PAGE * (pageNumber-1);
+        List<UserVO> list = userMapper.showUserLists(pageNumber, MAX_USERS_IN_ONE_PAGE);
+        return JsonResult.ok(list);
+    }
 
+    //用户修改信息
+//    @PostMapping("update")
+//    @Operation(summary = "更改个人信息")
+//    @ApiOperationSupport(order = 102)
+//    public JsonResult update() {}
+    //用户头像？
 }

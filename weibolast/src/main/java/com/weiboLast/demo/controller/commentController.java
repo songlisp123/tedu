@@ -7,6 +7,7 @@ import com.weiboLast.demo.mapper.commentMapper;
 import com.weiboLast.demo.pojo.dto.CommentAddParam;
 import com.weiboLast.demo.pojo.entity.comment;
 import com.weiboLast.demo.pojo.vo.UserVO;
+import com.weiboLast.demo.pojo.vo.commentVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Logger;
 
 @Slf4j
@@ -69,5 +71,19 @@ public class commentController {
         }
         logger.info("删除失败！请重试！");
         return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
+
+    @GetMapping("selectByWeiboId")
+    @Operation(summary = "获取评论列表")
+    @ApiOperationSupport(order = 300)
+    public JsonResult list(
+            @Schema(description = "微博id",example = "200")
+            Long id)
+    {
+        logger.info("获取微博文章评论");
+        List<commentVO> list =
+                commentMapper.listAllCommentsByWeiBoId(id);
+
+        return JsonResult.ok(list);
     }
 }

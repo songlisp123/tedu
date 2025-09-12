@@ -12,4 +12,10 @@
         WHERE id=#{id}
         AND user_id=#{userId}
     </delete>
+    <select id="listAllCommentsByWeiBoId" resultType="com.weiboLast.demo.pojo.vo.commentVO" >
+        SELECT c.id,c.content,c.create_time as createTime,u.nickname
+        FROM comment as c
+        JOIN user as u ON c.user_id=u.id
+        WHERE c.weibo_id=#{id}
+    </select>
 </mapper>

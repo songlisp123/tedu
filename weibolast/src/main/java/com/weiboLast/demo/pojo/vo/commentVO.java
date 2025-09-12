@@ -1,4 +1,4 @@
-package com.weiboLast.demo.pojo.entity;
+package com.weiboLast.demo.pojo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,13 +7,11 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@NoArgsConstructor
+public class commentVO {
     private Long id;
-    private String username;
-    private String password;
-    private String nickname;
+    private String content;
     private Date createTime;
-//    private
+    private String nickname;
 }
