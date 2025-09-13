@@ -1,5 +1,6 @@
 package com.weiboLast.demo.pojo.vo;
 
+import com.weiboLast.demo.pojo.entity.tag;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,4 +25,6 @@ public class weiboIndexVo {
     private Date createTime;
     @Schema(description = "最后一次修改")
     private Date updateTime;
+    @Schema(description = "文章标签")
+    private List<tag> tags;
 }

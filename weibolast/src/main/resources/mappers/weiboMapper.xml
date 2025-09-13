@@ -3,19 +3,37 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weiboLast.demo.mapper.weiboMapper">
+
     <insert id="insertWeiBo" useGeneratedKeys="true"
         keyProperty="id">
         INSERT INTO weibo(title,content,create_time,update_time,user_id)
         VALUES(#{title},#{content},#{createTime},#{updateTime},#{userId})
     </insert>
-    <select id="selectWeiBo" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+
+    <resultMap id="detailMap" type="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="nickname" column="nickname" />
+        <result property="createTime" column="createTime" />
+        <result property="updateTime" column="updateTime" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
+            <result property="message" column="message" />
+            <result property="description" column="description" />
+        </collection>
+    </resultMap>
+    <select id="selectWeiBo" resultMap="detailMap">
         SELECT w.id,w.title,w.content,w.create_time as createTime,
-        w.update_time as updateTime,u.nickname
+        w.update_time as updateTime,u.nickname,
+        t.tag as message,t.description
         FROM weibo as w
-        JOIN user as u ON w.user_id=u.id
+        LEFT JOIN user as u ON w.user_id=u.id
+        LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id
+        LEFT JOIN tag as t ON wt.tag_id=t.id
         ORDER BY w.update_time DESC,w.id DESC
         LIMIT #{pageNumber},#{maxMessageInOnePage}
     </select>
+
     <select id="countAllWeiBo" resultType="java.lang.Long">
         SELECT count(id)
         FROM weibo
