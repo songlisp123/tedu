@@ -32,7 +32,7 @@ import java.util.logging.Logger;
 public class userController {
 
     @Autowired
-    private userMapper userMapper;
+    private  userMapper userMapper;
     private static final Logger logger = Logger.getLogger("weibo");
     private static final int MAX_USERS_IN_ONE_PAGE = 2;
 
@@ -132,10 +132,6 @@ public class userController {
     }
 
     //用户修改信息
-//    @PostMapping("update")
-//    @Operation(summary = "更改个人信息")
-//    @ApiOperationSupport(order = 102)
-//    public JsonResult update() {}
     //用户头像
     //用户性别ok
     //用户更新信息
@@ -213,4 +209,17 @@ public class userController {
         return JsonResult.ok();
     }
 
+
+    //测试一个静态方法
+    @GetMapping("test")
+    @Operation(summary = "测试程序")
+    @ApiOperationSupport(order = 700)
+    public  JsonResult qualified(HttpSession session) {
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long id = user.getId();
+        String[] strings = userMapper.selectPermession(id);
+        if (strings==null)
+            return new JsonResult(StatusCode.OPERATION_ERROR);
+        return JsonResult.ok(strings);
+    }
 }

@@ -34,4 +34,6 @@ public interface userMapper {
     int updateUserPassword(
             @Param("pwd") userChangePassword pwd,
             @Param("userID") Long userId);
+
+    String[] selectPermession(Long id);
 }

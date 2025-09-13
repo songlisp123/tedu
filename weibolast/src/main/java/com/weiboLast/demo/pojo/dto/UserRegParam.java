@@ -1,7 +1,6 @@
 package com.weiboLast.demo.pojo.dto;
 
 import com.weiboLast.demo.pojo.entity.Gender;
-import io.micrometer.common.lang.Nullable;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -22,4 +21,5 @@ public class UserRegParam {
     private String nickname;
     @Schema(description = "用户性别",required = false,example = "男")
     private Gender gender;
+
 }

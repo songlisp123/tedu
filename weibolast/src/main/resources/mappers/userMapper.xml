@@ -53,4 +53,14 @@
         SET password=#{pwd.confirmNewPassword}
         WHERE id=#{userId}
     </update>
+
+    <select id="selectPermession" resultType="java.lang.String">
+        SELECT p.permession_code
+        FROM user as u
+        JOIN user_of_roles as ur ON u.id=ur.user_id
+        JOIN roles as r ON ur.role_id=r.id
+        JOIN role_have_permessions as pr ON r.id=pr.permession_id
+        JOIN permession as p ON pr.permession_id=p.id
+        WHERE u.id=#{id}
+    </select>
 </mapper>
