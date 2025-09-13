@@ -7,6 +7,7 @@ import com.weiboLast.demo.mapper.commentMapper;
 import com.weiboLast.demo.pojo.dto.CommentAddParam;
 import com.weiboLast.demo.pojo.entity.comment;
 import com.weiboLast.demo.pojo.vo.UserVO;
+import com.weiboLast.demo.pojo.vo.UserVO2;
 import com.weiboLast.demo.pojo.vo.commentVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -37,13 +38,13 @@ public class commentController {
             @RequestBody CommentAddParam commentAddParam,
             HttpSession session)
     {
-        UserVO userVO = (UserVO) session.getAttribute("user");
-        logger.info("评论文章，当前用户:%s".formatted(userVO.getUsername()));
+        UserVO2 userVO = (UserVO2) session.getAttribute("user");
         Long userId = userVO.getId();
         comment comment = new comment();
         BeanUtils.copyProperties(commentAddParam,comment);
         comment.setUserId(userId);
         comment.setCreateTime(new Date());
+        logger.info("用户 %s 评论了此篇文章".formatted(userVO.getUsername()));
         int i = commentMapper.insertComment(comment);
         if (i>0) {
             logger.info("评论成功！");

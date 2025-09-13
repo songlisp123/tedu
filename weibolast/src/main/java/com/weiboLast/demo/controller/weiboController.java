@@ -5,13 +5,21 @@ import com.weiboLast.demo.base.response.JsonResult;
 import com.weiboLast.demo.base.response.StatusCode;
 import com.weiboLast.demo.mapper.weiboMapper;
 import com.weiboLast.demo.pojo.dto.WeiboAddParam;
+import com.weiboLast.demo.pojo.dto.weiBoEditPara;
+import com.weiboLast.demo.pojo.entity.tag;
 import com.weiboLast.demo.pojo.entity.weiBo;
-import com.weiboLast.demo.pojo.vo.UserVO;
+import com.weiboLast.demo.pojo.entity.weiBoTag;
+import com.weiboLast.demo.pojo.vo.UserVO2;
+import com.weiboLast.demo.pojo.vo.weiBoDetailVO;
 import com.weiboLast.demo.pojo.vo.weiboIndexVo;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.BeanUtils;
@@ -19,6 +27,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -43,7 +52,14 @@ public class weiboController {
             HttpSession session)
     {
         logger.info("进入到发布文章的页面……");
-        UserVO user = (UserVO) session.getAttribute("user");
+        List<tag> tags = weiboAddParam.getTags();
+        List<Integer> tagIds = new ArrayList<>();
+        tags.forEach(result->{
+            String message = result.getMessage();
+            Integer tagId = weiboMapper.selectTagId(message);
+            tagIds.add(tagId);
+        });
+        UserVO2 user = (UserVO2) session.getAttribute("user");
         Long userId = user.getId();
         logger.info("当前用户：%s".formatted(user.getUsername()));
         weiBo weiBo = new weiBo();
@@ -54,6 +70,11 @@ public class weiboController {
         int i = weiboMapper.insertWeiBo(weiBo);
         if (i>0) {
             logger.info("发布成功");
+            logger.info("主键id=%d".formatted(weiBo.getId()));
+            tagIds.forEach(e->{
+                weiBoTag weiBoTag = new weiBoTag(weiBo.getId(),e);
+                weiboMapper.insertWeiAndTag(weiBoTag);
+            });
             return JsonResult.ok();
         }
         logger.warning("发生未知错误！文章发布失败");
@@ -61,7 +82,7 @@ public class weiboController {
     }
 
     @GetMapping("selectIndex")
-    @Operation(summary = "微博详情页面")
+    @Operation(summary = "微博主页面")
     @ApiOperationSupport(order = 300)
     public JsonResult list(
             @Schema(description = "主页面第几页",example = "10")
@@ -70,10 +91,10 @@ public class weiboController {
         logger.info("进入到微博主页面……");
         Long number = weiboMapper.countAllWeiBo();
         Long l;
-        if (number%3==0)
-            l = number / 3;
+        if (number%MAX_MESSAGE_IN_ONE_PAGE==0)
+            l = number / MAX_MESSAGE_IN_ONE_PAGE;
         else
-            l=number /3 +1;
+            l=number /MAX_MESSAGE_IN_ONE_PAGE +1;
         if (pageNumber>l) {
             logger.info("暂无文章资源");
             return new JsonResult(StatusCode.ARTICLES_NOT_EXISTS);
@@ -81,7 +102,7 @@ public class weiboController {
         logger.info("当前在[%d]页,一共[%d]页".formatted(pageNumber,l));
         pageNumber = MAX_MESSAGE_IN_ONE_PAGE*(pageNumber-1);
         if (pageNumber!=0) pageNumber++;
-        List<weiboIndexVo> list = weiboMapper.selectWeiBo(pageNumber);
+        List<weiboIndexVo> list = weiboMapper.selectWeiBo(pageNumber,MAX_MESSAGE_IN_ONE_PAGE);
         return JsonResult.ok(list);
     }
 
@@ -99,11 +120,64 @@ public class weiboController {
             logger.info("文章不存在");
             return new JsonResult(StatusCode.ARTICLES_NOT_EXISTS);
         }
-        weiboIndexVo weiboDetail = weiboMapper.selectWeiBoById(id);
+        weiBoDetailVO weiboDetail = weiboMapper.selectWeiBoById(id);
         logger.info("找到文章，标题:《%s》".formatted(
                 weiboDetail.getTitle()
         ));
         return JsonResult.ok(weiboDetail);
+    }
+
+    //需要验证用户是否登录而且修改的文章必须是用户的文章
+    @PostMapping("edit")
+    @Operation(summary = "更新微博信息")
+    @ApiOperationSupport(order = 500)
+    public JsonResult edit(
+            @RequestBody weiBoEditPara weiBoEditPara,
+            HttpSession  session)
+    {
+        logger.info("进入到用户更新微博界面……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();
+        int i = weiboMapper.updateWeiBo(weiBoEditPara,userId);
+        if (i>0) {
+            logger.info("更新成功");
+            return JsonResult.ok();
+        }
+        logger.warning("发送未知错误，请重试！");
+        return new JsonResult(StatusCode.VALIDATION_ERROR);
+    }
+
+    @GetMapping("del")
+    @Operation(summary = "删除微博文章")
+    @ApiOperationSupport(order = 200)
+    public JsonResult del(
+            @Schema(description = "微博id数组",required = true,example = "[1,2,3]")
+            @Size(min = 1,message = "索引不能为负")
+            Long[] ids,
+            HttpSession session)
+    {
+        logger.info("进入到删除微博文章的页面");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();;
+        weiboMapper.delete(ids,userId);
+        logger.info("删除成功！");
+        return JsonResult.ok();
+    }
+
+    @PostMapping("searchWeiBo")
+    @Operation(summary = "搜索微博")
+    @ApiOperationSupport(order = 800)
+    @Parameter(name = "title",required = false)
+    public JsonResult search(
+            @NotBlank(message = "标题不能为空！")
+            String title) {
+        logger.info("进入搜索框……");
+        List<weiboIndexVo> list =
+                weiboMapper.searchWeiBo(title);
+        logger.info("搜索完成，共发现 %d 篇帖子".formatted(
+                list.size()
+        ));
+        return JsonResult.ok(list);
     }
 
 }

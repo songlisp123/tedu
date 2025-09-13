@@ -63,4 +63,18 @@
         JOIN permession as p ON pr.permession_id=p.id
         WHERE u.id=#{id}
     </select>
+    <select id="selectAllArticlesByUserId" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        SELECT w.id,w.title,w.content,u.nickname,w.create_time as createTime,
+        w.update_time as updateTime
+        FROM weibo as  w
+        JOIN user as u ON u.id=w.user_id
+        WHERE u.id=#{userId}
+    </select>
+    <select id="countAllArticles" resultType="com.weiboLast.demo.pojo.vo.userHasWeiBoVO">
+        SELECT u.username,u.nickname,COUNT(w.id) as count
+        FROM user as u
+        JOIN weibo as w ON u.id=w.user_id
+        WHERE u.id=#{user_id}
+    </select>
+
 </mapper>

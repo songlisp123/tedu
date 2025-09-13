@@ -7,6 +7,8 @@ import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import com.weiboLast.demo.pojo.vo.UserVO2;
+import com.weiboLast.demo.pojo.vo.userHasWeiBoVO;
+import com.weiboLast.demo.pojo.vo.weiboIndexVo;
 import jakarta.validation.constraints.Positive;
 import org.apache.ibatis.annotations.Param;
 
@@ -36,4 +38,8 @@ public interface userMapper {
             @Param("userID") Long userId);
 
     String[] selectPermession(Long id);
+
+    List<weiboIndexVo> selectAllArticlesByUserId(Long userId);
+
+    userHasWeiBoVO countAllArticles(Long userId);
 }

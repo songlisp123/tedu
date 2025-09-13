@@ -1,9 +1,12 @@
 package com.weiboLast.demo.pojo.dto;
 
+import com.weiboLast.demo.pojo.entity.tag;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -13,4 +16,6 @@ public class WeiboAddParam {
     private String title;
     @Schema(description = "文章内容 ",required = true,example = "haokan ")
     private String content;
+    @Schema(description = "博客标签",required = true,example = "科技")
+    private List<tag> tags;
 }

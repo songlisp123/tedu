@@ -3,7 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weiboLast.demo.mapper.weiboMapper">
-    <insert id="insertWeiBo">
+    <insert id="insertWeiBo" useGeneratedKeys="true"
+        keyProperty="id">
         INSERT INTO weibo(title,content,create_time,update_time,user_id)
         VALUES(#{title},#{content},#{createTime},#{updateTime},#{userId})
     </insert>
@@ -13,21 +14,87 @@
         FROM weibo as w
         JOIN user as u ON w.user_id=u.id
         ORDER BY w.update_time DESC,w.id DESC
-        LIMIT #{pageNumber},3
+        LIMIT #{pageNumber},#{maxMessageInOnePage}
     </select>
     <select id="countAllWeiBo" resultType="java.lang.Long">
         SELECT count(id)
         FROM weibo
     </select>
-    <select id="selectWeiBoById" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
-        SELECT w.id,w.title,w.content,w.create_time as createTime,
-        w.update_time as updateTime,u.nickname
+
+    <resultMap id="myMap" type="com.weiboLast.demo.pojo.vo.weiBoDetailVO">
+        <id property="id" column="wid" />
+        <result property="title" column="title" />
+        <result property="content" column="wContent" />
+        <result property="nickname" column="publisher" />
+        <result property="createTime" column="wCreateTime" />
+        <result property="updateTime" column="update_time" />
+        <collection property="comments" ofType="com.weiboLast.demo.pojo.vo.commentVO">
+            <id property="id" column="cid" />
+            <result property="content" column="cContent" />
+            <result property="createTime" column="cCreateTime" />
+            <result property="nickname" column="commentUser" />
+        </collection>
+    </resultMap>
+    <select id="selectWeiBoById" resultMap="myMap">
+        SELECT w.id as wid<!--发布文章id-->,w.title,w.content as wContent<!--发布文章内容-->,
+        w.create_time as wCreateTime<!--文章创建时间-->,
+        w.update_time<!--文章修改时间-->,u.nickname as publisher<!--发布者昵称-->,
+        c.id as cid<!--评论id-->,c.content as cContent<!--评论内容-->,c.create_time as cCreateTime<!--评论创建时间-->,
+        u.nickname as commentUser<!--评论人的昵称-->
         FROM weibo as w
         JOIN user as u ON w.user_id=u.id
+        JOIN comment as c ON w.id=c.weibo_id
         WHERE w.id=#{id}
     </select>
+
     <select id="countAllWeiBoIds" resultType="java.lang.Long">
         SELECT id
         FROM weibo
     </select>
+
+    <update id="updateWeiBo">
+        UPDATE weibo
+        <set>
+            update_time=CURRENT_TIMESTAMP(2),
+            <if test="#{weiBoEditPara.title}!=null and #{weiBoEditPara.title}!=''">
+                title=#{weiBoEditPara.title},
+            </if>
+            <if test="#{weiBoEditPara.content}!=null and #{weiBoEditPara.content}!=''">
+                content=#{weiBoEditPara.content}
+            </if>
+        </set>
+        WHERE id=#{weiBoEditPara.id}
+        AND user_id=#{userId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM weibo
+        WHERE id in (
+        <foreach collection="ids" item="id" separator=",">
+            #{id}
+        </foreach>
+        )
+        AND user_id=#{userId}
+    </delete>
+
+    <select id="searchWeiBo" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        SELECT w.id,w.title,w.content,u.nickname,
+        w.create_time as createTime,w.update_time as updateTime
+        FROM weibo as w
+        JOIN user as u ON w.user_id=u.id
+        WHERE w.title like CONCAT('%',#{title},'%')
+        OR w.content like CONCAT('%',#{title},'%')
+    </select>
+
+    <select id="selectTagId" resultType="java.lang.Integer">
+        SELECT id
+        FROM tag
+        WHERE tag=#{message}
+    </select>
+
+    <insert id="insertWeiAndTag" >
+        INSERT INTO weibo_tag(weibo_id,tag_id)
+        VALUES(#{weiboId},#{tagId})
+    </insert>
+
 </mapper>

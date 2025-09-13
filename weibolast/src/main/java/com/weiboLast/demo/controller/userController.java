@@ -11,6 +11,8 @@ import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import com.weiboLast.demo.pojo.vo.UserVO2;
+import com.weiboLast.demo.pojo.vo.userHasWeiBoVO;
+import com.weiboLast.demo.pojo.vo.weiboIndexVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -53,6 +55,7 @@ public class userController {
         BeanUtils.copyProperties(userRegParam,user);
         user.setCreateTime(new Date());
         int i = userMapper.insertUser(user);
+        System.out.println(i);
         if (i>0) {
             logger.info("注册用户成功！");
             logger.info("新用户:%s".formatted(user.getUsername()));
@@ -197,18 +200,31 @@ public class userController {
         return new JsonResult(StatusCode.OPERATION_ERROR);
     }
 
+    //根据用户id选择用户发表的帖子
+    @GetMapping("selectArticleByUserId")
+    @Operation(summary = "根据用户id挑选用户发表的帖子")
+    @ApiOperationSupport(order = 175)
+    public JsonResult sel(
+            @Schema(description = "用户id",required = true,example = "12")
+            Long userId)
+    {
+        logger.info("进入到微博个人用户界面……查询个人用户发表的帖子");
+        userHasWeiBoVO userHasWeiBoVO = userMapper.countAllArticles(userId);
+        logger.info("当前用户 %s 一共发表了 %d 篇帖子".formatted(
+                userHasWeiBoVO.getUsername(),
+                userHasWeiBoVO.getCount()
+        ));
+        List<weiboIndexVo> weiBos =
+                userMapper.selectAllArticlesByUserId(userId);
+        logger.info("查询成功！");
+        return JsonResult.ok(weiBos);
+    }
+
     //用户发表文章
     /*
     接下来需要的是用户排序
     1、按照用户id排序
      */
-    @GetMapping("sortById")
-    @Operation(summary = "按照用户id排序")
-    @ApiOperationSupport(order = 500)
-    public JsonResult sortById() {
-        return JsonResult.ok();
-    }
-
 
     //测试一个静态方法
     @GetMapping("test")
@@ -222,4 +238,5 @@ public class userController {
             return new JsonResult(StatusCode.OPERATION_ERROR);
         return JsonResult.ok(strings);
     }
+
 }
