@@ -4,6 +4,7 @@ import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
+import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import com.weiboLast.demo.pojo.vo.UserVO2;
@@ -42,4 +43,8 @@ public interface userMapper {
     List<weiboIndexVo> selectAllArticlesByUserId(Long userId);
 
     userHasWeiBoVO countAllArticles(Long userId);
+
+    int insertUserAndTag(
+            @Param("a") CustomTag e,
+            @Param("userId") int i);
 }

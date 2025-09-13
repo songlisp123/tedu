@@ -27,7 +27,7 @@
         w.update_time as updateTime,u.nickname,
         t.tag as message,t.description
         FROM weibo as w
-        LEFT JOIN user as u ON w.user_id=u.id
+        INNER JOIN user as u ON w.user_id=u.id
         LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id
         LEFT JOIN tag as t ON wt.tag_id=t.id
         ORDER BY w.update_time DESC,w.id DESC
@@ -46,6 +46,10 @@
         <result property="nickname" column="publisher" />
         <result property="createTime" column="wCreateTime" />
         <result property="updateTime" column="update_time" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
+            <result property="message" column="message" />
+            <result property="description" column="description" />
+        </collection>
         <collection property="comments" ofType="com.weiboLast.demo.pojo.vo.commentVO">
             <id property="id" column="cid" />
             <result property="content" column="cContent" />
@@ -57,11 +61,15 @@
         SELECT w.id as wid<!--发布文章id-->,w.title,w.content as wContent<!--发布文章内容-->,
         w.create_time as wCreateTime<!--文章创建时间-->,
         w.update_time<!--文章修改时间-->,u.nickname as publisher<!--发布者昵称-->,
-        c.id as cid<!--评论id-->,c.content as cContent<!--评论内容-->,c.create_time as cCreateTime<!--评论创建时间-->,
-        u.nickname as commentUser<!--评论人的昵称-->
+        c.id as cid<!--评论id-->,c.content as cContent<!--评论内容-->,
+        c.create_time as cCreateTime<!--评论创建时间-->,
+        u.nickname as commentUser<!--评论人的昵称-->,
+        t.tag as message<!--标签信息-->,t.description<!--标签描述-->
         FROM weibo as w
-        JOIN user as u ON w.user_id=u.id
-        JOIN comment as c ON w.id=c.weibo_id
+        INNER JOIN user as u ON w.user_id=u.id<!--连接用户表-->
+        LEFT JOIN comment as c ON w.id=c.weibo_id<!--连接评论表-->
+        LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id<!--连接微博标签表-->
+        LEFT JOIN tag as t ON wt.tag_id=t.id<!--连接标签表-->
         WHERE w.id=#{id}
     </select>
 

@@ -3,13 +3,20 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weiboLast.demo.mapper.userMapper">
+
     <select id="selectUserByUserNameAndPassword" resultType="java.lang.Long">
         SELECT id FROM user
         WHERE username=#{username} AND password=#{password}
     </select>
-    <insert id="insertUser">
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO user(username,gender,password,nickname,create_time)
         VALUES(#{username},#{gender.id},#{password},#{nickname},#{createTime})
+    </insert>
+
+    <insert id="insertUserAndTag">
+        INSERT INTO customTag(message,user_id)
+        VALUES(#{a.message},#{userId})
     </insert>
 
     <select id="selectUser" resultType="com.weiboLast.demo.pojo.vo.UserVO2">
@@ -18,16 +25,19 @@
         WHERE username=#{username}
         AND password=#{password}
     </select>
+
     <select id="collectAllUserNumber" resultType="java.lang.Long">
         SELECT COUNT(id)
         FROM user
     </select>
+
     <select id="showUserLists" resultType="com.weiboLast.demo.pojo.vo.UserVO">
         SELECT id,username
         FROM user
         ORDER BY create_time DESC,id DESC
         LIMIT #{pageNumber},#{number}
     </select>
+
     <update id="updateInfo">
         UPDATE user
         <set>
@@ -43,11 +53,13 @@
         </set>
         WHERE id=#{userId}
     </update>
+
     <update id="deleteUserById">
         UPDATE user
         SET is_alive=false
         WHERE id=#{id}
     </update>
+
     <update id="updateUserPassword">
         UPDATE user
         SET password=#{pwd.confirmNewPassword}
@@ -63,6 +75,7 @@
         JOIN permession as p ON pr.permession_id=p.id
         WHERE u.id=#{id}
     </select>
+
     <select id="selectAllArticlesByUserId" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
         SELECT w.id,w.title,w.content,u.nickname,w.create_time as createTime,
         w.update_time as updateTime
@@ -70,6 +83,7 @@
         JOIN user as u ON u.id=w.user_id
         WHERE u.id=#{userId}
     </select>
+
     <select id="countAllArticles" resultType="com.weiboLast.demo.pojo.vo.userHasWeiBoVO">
         SELECT u.username,u.nickname,COUNT(w.id) as count
         FROM user as u

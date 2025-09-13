@@ -7,11 +7,13 @@ import org.apache.logging.log4j.util.Chars;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class
+User {
     private Long id;
     private String username;
     private String password;
@@ -19,4 +21,5 @@ public class User {
     private Date createTime;
     private Gender gender;
     private Boolean isAlive;
+    private List<CustomTag> tags;
 }

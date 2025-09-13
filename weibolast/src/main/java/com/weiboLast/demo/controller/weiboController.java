@@ -126,8 +126,7 @@ public class weiboController {
         ));
         return JsonResult.ok(weiboDetail);
     }
-
-    //需要验证用户是否登录而且修改的文章必须是用户的文章
+        //需要验证用户是否登录而且修改的文章必须是用户的文章
     @PostMapping("edit")
     @Operation(summary = "更新微博信息")
     @ApiOperationSupport(order = 500)

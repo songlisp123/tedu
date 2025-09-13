@@ -8,6 +8,7 @@ import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
+import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.UserVO;
 import com.weiboLast.demo.pojo.vo.UserVO2;
@@ -23,6 +24,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -45,6 +47,7 @@ public class userController {
             @RequestBody UserRegParam userRegParam) {
         //首先验证用户是否存在
         logger.info("进入用户注册界面……");
+        List<CustomTag> tags = userRegParam.getTags();
         Long id  =
                 userMapper.selectUserByUserNameAndPassword(userRegParam);
         if (id!=null) {
@@ -55,10 +58,12 @@ public class userController {
         BeanUtils.copyProperties(userRegParam,user);
         user.setCreateTime(new Date());
         int i = userMapper.insertUser(user);
-        System.out.println(i);
         if (i>0) {
             logger.info("注册用户成功！");
             logger.info("新用户:%s".formatted(user.getUsername()));
+            tags.forEach(e->{
+                userMapper.insertUserAndTag(e,i);
+            });
             return JsonResult.ok();
         }
         logger.warning("发生未知异常，导致注册失败，请重试！");
