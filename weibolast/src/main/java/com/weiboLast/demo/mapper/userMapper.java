@@ -52,4 +52,8 @@ public interface userMapper {
     UserDetailInfo selectUserInfo(Long userId);
 
     int unFolllowers(Long id, Long userId);
+
+    int insertIntoArticleAndLikes(Long userId,Long weiboId, int action1);
+
+    int insertIntoUserAndComment(Long userId,Long commentId, int action1);
 }

@@ -17,6 +17,8 @@
         <result property="nickname" column="nickname" />
         <result property="createTime" column="createTime" />
         <result property="updateTime" column="updateTime" />
+        <result property="totalLikes" column="totalLikes" />
+        <result property="totalUnLikes" column="totalUnLikes" />
         <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
             <result property="message" column="message" />
             <result property="description" column="description" />
@@ -25,11 +27,16 @@
     <select id="selectWeiBo" resultMap="detailMap">
         SELECT w.id,w.title,w.content,w.create_time as createTime,
         w.update_time as updateTime,u.nickname,
-        t.tag as message,t.description
+        t.tag as message<!--标签-->,t.description,
+        al.action as totalLikes<!--总喜欢-->,
+        al.action  as totalUnLikes<!--踩-->
+        <!--好吧，现在来说我有点不太会总喜欢和踩的集合函数-->
         FROM weibo as w
         INNER JOIN user as u ON w.user_id=u.id
+        LEFT JOIN Article_likes as al ON w.id=al.weibo_id
         LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id
         LEFT JOIN tag as t ON wt.tag_id=t.id
+        GROUP BY w.id
         ORDER BY w.update_time DESC,w.id DESC
         LIMIT #{pageNumber},#{maxMessageInOnePage}
     </select>
@@ -46,6 +53,8 @@
         <result property="nickname" column="publisher" />
         <result property="createTime" column="wCreateTime" />
         <result property="updateTime" column="update_time" />
+        <result property="totalLikes" column="totalLikes" />
+        <result property="totalUnLikes" column="totalUnLikes" />
         <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
             <result property="message" column="message" />
             <result property="description" column="description" />
@@ -64,9 +73,12 @@
         c.id as cid<!--评论id-->,c.content as cContent<!--评论内容-->,
         c.create_time as cCreateTime<!--评论创建时间-->,
         cu.nickname as commentUser<!--评论人的昵称-->,
-        t.tag as message<!--标签信息-->,t.description<!--标签描述-->
+        t.tag as message<!--标签信息-->,t.description<!--标签描述-->,
+        al.action as totalLikes<!--总喜欢-->,
+        al.action  as totalUnLikes<!--踩-->
         FROM weibo as w
         INNER JOIN user as u ON w.user_id=u.id<!--连接用户表-->
+        LEFT JOIN Article_likes as al ON w.id=al.weibo_id<!--连接喜欢表-->
         LEFT JOIN comment as c ON w.id=c.weibo_id<!--连接评论表-->
         LEFT JOIN user as cu ON c.user_id=cu.id<!--以防万一，重新设计用户表-->
         LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id<!--连接微博标签表-->

@@ -102,7 +102,7 @@ public class weiboController {
         }
         logger.info("当前在[%d]页,一共[%d]页".formatted(pageNumber,l));
         pageNumber = MAX_MESSAGE_IN_ONE_PAGE*(pageNumber-1);
-        if (pageNumber!=0) pageNumber++;
+//        if (pageNumber!=0) pageNumber++;
         List<weiboIndexVo> list = weiboMapper.selectWeiBo(pageNumber,MAX_MESSAGE_IN_ONE_PAGE);
         return JsonResult.ok(list);
     }
@@ -182,7 +182,7 @@ public class weiboController {
 
     //通过标签查找文章
     //不过这里面会有几个问题，该怎么设置多个标签呢？
-    //最简单的一种情况是设置单个标签
+    //最简单的一种情况是设置单个标签,至于多标签的实力，我暂时还不会，以后修补
     @GetMapping("selectweibotag")
     @Operation(summary = "根据微博id挑选微博")
     @ApiOperationSupport(order = 900)
@@ -193,4 +193,7 @@ public class weiboController {
         logger.info("找到 %d 篇文章".formatted(list.size()));
         return JsonResult.ok(list);
     }
+
+    //下一个，对微博表进行喜欢统计
+
 }

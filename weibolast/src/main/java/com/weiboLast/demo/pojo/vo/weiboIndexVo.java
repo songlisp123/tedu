@@ -27,4 +27,8 @@ public class weiboIndexVo {
     private Date updateTime;
     @Schema(description = "文章标签")
     private List<tag> tags;
+    @Schema(description = "喜欢人数")
+    private Long totalLikes;
+    @Schema(description = "不喜欢人数")
+    private Long totalUnLikes;
 }

@@ -14,4 +14,6 @@ public class commentVO {
     private String content;
     private Date createTime;
     private String nickname;
+//    private Long totalLikes;
+//    private Long totalUnLikes;
 }

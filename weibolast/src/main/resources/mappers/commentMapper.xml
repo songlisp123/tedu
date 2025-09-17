@@ -3,19 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weiboLast.demo.mapper.commentMapper">
+
     <insert id="insertComment">
         INSERT INTO comment(content,create_time,user_id,weibo_id)
         VALUES(#{content},#{createTime},#{userId},#{weiboId})
     </insert>
+
     <delete id="deleteById">
         DELETE FROM comment
         WHERE id=#{id}
         AND user_id=#{userId}
     </delete>
+
     <select id="listAllCommentsByWeiBoId" resultType="com.weiboLast.demo.pojo.vo.commentVO" >
         SELECT c.id,c.content,c.create_time as createTime,u.nickname
         FROM comment as c
-        JOIN user as u ON c.user_id=u.id
+        INNER JOIN user as u ON c.user_id=u.id
         WHERE c.weibo_id=#{id}
     </select>
+
 </mapper>

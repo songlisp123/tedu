@@ -165,4 +165,14 @@
         AND following_user_id=#{userId}
     </delete>
 
+    <insert id="insertIntoArticleAndLikes">
+        INSERT INTO Article_likes(user_id,weibo_id,action)
+        VALUES(#{userId},#{weiboId},#{action1})
+    </insert>
+
+    <insert id="insertIntoUserAndComment">
+        INSERT INTO user_comments(user_id,comment_id,action)
+        VALUES(#{userId},#{commentId},#{action1})
+    </insert>
+
 </mapper>

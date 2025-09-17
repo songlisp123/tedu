@@ -1,5 +1,6 @@
 package com.weiboLast.demo.controller;
 
+import com.fasterxml.jackson.databind.annotation.EnumNaming;
 import  com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.weiboLast.demo.base.response.JsonResult;
 import com.weiboLast.demo.base.response.StatusCode;
@@ -8,10 +9,12 @@ import com.weiboLast.demo.pojo.dto.UserLoginParam;
 import com.weiboLast.demo.pojo.dto.UserRegParam;
 import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
+import com.weiboLast.demo.pojo.entity.Action;
 import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.User;
 import com.weiboLast.demo.pojo.vo.*;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
@@ -300,5 +303,58 @@ public class userController {
         return JsonResult.ok(userDetailInfo);
     }
 
+
+    //喜欢或者不喜欢或不在乎这篇文章？
+    @GetMapping("action")
+    @Operation(summary = "用户评价")
+    @ApiOperationSupport(order = 1200)
+    public JsonResult likes(
+            @Schema(description = "用户操作")
+            Action action,
+            @Positive(message = "微博id不能为负")
+            @Schema(description = "操作的微博id",required = true,example = "200")
+            Long weiboId,
+            HttpSession session)
+    {
+        logger.info("进入到用户操作界面……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();
+        int action1 = action.getAction();
+        int i =
+                userMapper.insertIntoArticleAndLikes(userId,weiboId,action1);
+        if (i>0) {
+            logger.info("用户喜欢这篇帖子");
+            return JsonResult.ok();
+        }
+        logger.warning("用户操作失败，请重试！");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+
+    }
+
+    //喜欢或者不喜欢这条评论？
+    @GetMapping("likeComment")
+    @Operation(summary = "喜欢评论")
+    @ApiOperationSupport(order = 1200)
+    public JsonResult comment(
+            @Schema(description = "对此评论进行的操作")
+            Action action,
+            @Schema(description = "评论id",example = "300")
+            @Positive(message = "评论文章id错误！")
+            Long commentId,
+            HttpSession session
+    ) {
+        logger.info("进入到评论操作界面……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();
+        int action1 = action.getAction();
+        int i =
+                userMapper.insertIntoUserAndComment(userId,commentId,action1);
+        if (i>0) {
+            logger.info("用户喜欢这个评论");
+            return JsonResult.ok();
+        }
+        logger.info("用户不喜欢这条评论");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
 
 }
