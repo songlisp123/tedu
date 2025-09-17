@@ -248,6 +248,27 @@ public class userController {
         return new JsonResult(StatusCode.OPERATION_ERROR);
     }
 
+    @PostMapping("unfollow")
+    @Operation(summary = "取消跟随")
+    @ApiOperationSupport(order = 900)
+    public JsonResult unfollow(
+            @Positive(message = "用户id不能为负")
+            @Schema(description = "要取消跟随的用户id",required = true,example = "10")
+            Long userId,
+            HttpSession session
+    ) {
+        logger.info("进入到用户取消跟随的操作……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long id = user.getId();
+        int i = userMapper.unFolllowers(id,userId);
+        if (i>0) {
+            logger.info("取消关注成功！");
+            return JsonResult.ok();
+        }
+        logger.info("取消关注失败！");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
+
     /*
     接下来需要的是用户排序
     1、按照用户id排序
@@ -278,4 +299,6 @@ public class userController {
                 userMapper.selectUserInfo(userId);
         return JsonResult.ok(userDetailInfo);
     }
+
+
 }

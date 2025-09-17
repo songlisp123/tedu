@@ -50,4 +50,6 @@ public interface userMapper {
     int insertIntoFollows(Long userId, Long followsUserId);
 
     UserDetailInfo selectUserInfo(Long userId);
+
+    int unFolllowers(Long id, Long userId);
 }

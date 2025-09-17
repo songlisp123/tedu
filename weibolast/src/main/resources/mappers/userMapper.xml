@@ -159,4 +159,10 @@
         WHERE u.id=#{userId}
     </select>
 
+    <delete id="unFolllowers">
+        DELETE FROM user_followings
+        WHERE user_id=#{id}
+        AND following_user_id=#{userId}
+    </delete>
+
 </mapper>
