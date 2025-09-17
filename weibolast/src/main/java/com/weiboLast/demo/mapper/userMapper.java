@@ -46,4 +46,8 @@ public interface userMapper {
             @Param("userId") Long i);
 
     UserVO3 selectUserByUser(UserVO2 user);
+
+    int insertIntoFollows(Long userId, Long followsUserId);
+
+    UserDetailInfo selectUserInfo(Long userId);
 }

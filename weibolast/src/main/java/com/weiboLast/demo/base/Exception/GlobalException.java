@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
+import java.sql.SQLIntegrityConstraintViolationException;
+
 @Slf4j
 @RestControllerAdvice
 public class GlobalException  {
@@ -33,5 +35,12 @@ public class GlobalException  {
     {
         String exceptionMessage = mismatchException.getMessage();
         return new JsonResult(StatusCode.VALIDATION_ERROR,exceptionMessage);
+    }
+
+    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+    public JsonResult doHandlerException (SQLIntegrityConstraintViolationException exception)
+    {
+        String wrongMessage = exception.getLocalizedMessage();
+        return new JsonResult(StatusCode.VALIDATION_ERROR,wrongMessage);
     }
 }

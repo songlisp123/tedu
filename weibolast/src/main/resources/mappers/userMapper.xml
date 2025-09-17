@@ -122,4 +122,41 @@
         WHERE u.id=#{id}
     </select>
 
+    <insert id="insertIntoFollows" >
+        INSERT INTO user_followings(user_id,following_user_id)
+        VALUES(#{userId},#{followsUserId})
+    </insert>
+
+    <resultMap id="UserDetailMapper" type="com.weiboLast.demo.pojo.vo.UserDetailInfo">
+        <id property="id" column="uid" />
+        <result property="username" column="username" />
+        <result property="nickname" column="nickname" />
+        <result property="createTime" column="createTime" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.CustomTag">
+            <result property="message" column="message" />
+        </collection>
+        <collection property="followers" ofType="com.weiboLast.demo.pojo.vo.UserVO">
+            <id property="id" column="followersId" />
+            <result property="username" column="followerName" />
+        </collection>
+        <collection property="followings" ofType="com.weiboLast.demo.pojo.vo.UserVO" >
+            <id property="id" column="followingsId" />
+            <result property="username" column="followingName" />
+        </collection>
+    </resultMap>
+    <select id="selectUserInfo" resultMap="UserDetailMapper" >
+        SELECT u.id as uid<!--用户id-->,u.username<!--当前用户名称-->,
+        u.nickname<!--当前用户的昵称-->,u.create_time as createTime<!--当前用户创建时间-->,
+        followers.id as followersId<!--跟随的用户id-->,followers.username as followerName<!--用户跟随名称-->,
+        u2.id as followingsId<!--跟随者id号-->,u2.username as followingName<!--跟随着名称-->,
+        c.message
+        FROM user as u
+        LEFT JOIN user_followings as uf ON u.id=uf.user_id
+        LEFT JOIN user as followers ON uf.following_user_id=followers.id
+        LEFT JOIN user_followings as uf_2 ON u.id=uf_2.following_user_id
+        LEFT JOIN user as u2 ON uf_2.user_id=u2.id
+        LEFT JOIN customtag as c ON u.id=c.user_id
+        WHERE u.id=#{userId}
+    </select>
+
 </mapper>

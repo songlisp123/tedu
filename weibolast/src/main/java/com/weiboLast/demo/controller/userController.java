@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 @Slf4j
@@ -220,7 +221,32 @@ public class userController {
         return JsonResult.ok(weiBos);
     }
 
-    //用户发表文章
+    //接下来是用户的跟随系统
+    @PostMapping("follows")
+    @Operation(summary = "跟随用户")
+    @ApiOperationSupport(order = 900)
+    public JsonResult follows(
+            @Positive(message = "用户名不能为负")
+            @Schema(description = "用户id",required = true,example = "10")
+            Long follows_user_id,
+            HttpSession session
+    ) {
+        logger.info("进入到用户跟随界面……");
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        Long userId = user.getId();
+        if (Objects.equals(userId,follows_user_id)) {
+            logger.warning("不能关注自己");
+            return new JsonResult(StatusCode.OPERATION_ERROR);
+        }
+        int i =
+                userMapper.insertIntoFollows(userId,follows_user_id);
+        if (i>0) {
+            logger.info("用户 %s 跟随成功".formatted(user.getUsername()));
+            return JsonResult.ok();
+        }
+        logger.warning("用户跟随失败！请稍后再试");
+        return new JsonResult(StatusCode.OPERATION_ERROR);
+    }
 
     /*
     接下来需要的是用户排序
@@ -240,4 +266,16 @@ public class userController {
         return JsonResult.ok(strings);
     }
 
+    @GetMapping("info")
+    @Operation(summary = "用户详情")
+    @ApiOperationSupport(order = 1000)
+    public JsonResult info(
+            @Schema(description = "用户id",required = true,example = "100")
+            Long userId
+    ) {
+        logger.info("进入到用户详情页");
+        UserDetailInfo userDetailInfo =
+                userMapper.selectUserInfo(userId);
+        return JsonResult.ok(userDetailInfo);
+    }
 }
