@@ -1,14 +1,11 @@
 package com.weiboLast.demo.pojo.dto;
 
-import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.Gender;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 
 @Data
@@ -24,6 +21,4 @@ public class UserRegParam {
     private String nickname;
     @Schema(description = "用户性别",required = false,example = "男")
     private Gender gender;
-    @Schema(description = "用户标签",required = true,example = "高兴")
-    private List<CustomTag> tags;
 }

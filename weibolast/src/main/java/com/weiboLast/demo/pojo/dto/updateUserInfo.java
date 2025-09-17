@@ -1,5 +1,6 @@
 package com.weiboLast.demo.pojo.dto;
 
+import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.Gender;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -18,4 +20,6 @@ public class updateUserInfo {
     private String nickname;
     @Schema(description = "性别",required = false,example = "男")
     private Gender gender;
+    @Schema(description = "个性标签",example = "活力满满")
+    private List<CustomTag> tags;
 }

@@ -1,9 +1,11 @@
 package com._09secutity.demo.base.config;
 
+import com._09secutity.demo.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.SecurityFilterChain;
 
 /**
@@ -12,13 +14,19 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailsServiceImpl();
+    }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         //配置http的请求规则;
         http.
                 authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/api/public/**").permitAll() //不认证
-                        .anyRequest().authenticated() //认证
+                        .anyRequest().authenticated() //认证，跳转到登录界面
                 )
                 .formLogin(form -> form
                         .permitAll() //登录请求不认证

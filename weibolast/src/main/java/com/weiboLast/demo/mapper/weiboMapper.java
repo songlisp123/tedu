@@ -37,4 +37,6 @@ public interface weiboMapper {
     Integer selectTagId(String message);
 
     int insertWeiAndTag(weiBoTag e);
+
+    List<weiboIndexVo> selectWeiBoByTag(@Param("tag") String string);
 }

@@ -1,6 +1,6 @@
 package com.weiboLast.demo.controller;
 
-import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
+import  com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.weiboLast.demo.base.response.JsonResult;
 import com.weiboLast.demo.base.response.StatusCode;
 import com.weiboLast.demo.mapper.userMapper;
@@ -10,10 +10,7 @@ import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.User;
-import com.weiboLast.demo.pojo.vo.UserVO;
-import com.weiboLast.demo.pojo.vo.UserVO2;
-import com.weiboLast.demo.pojo.vo.userHasWeiBoVO;
-import com.weiboLast.demo.pojo.vo.weiboIndexVo;
+import com.weiboLast.demo.pojo.vo.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -47,7 +44,6 @@ public class userController {
             @RequestBody UserRegParam userRegParam) {
         //首先验证用户是否存在
         logger.info("进入用户注册界面……");
-        List<CustomTag> tags = userRegParam.getTags();
         Long id  =
                 userMapper.selectUserByUserNameAndPassword(userRegParam);
         if (id!=null) {
@@ -61,9 +57,6 @@ public class userController {
         if (i>0) {
             logger.info("注册用户成功！");
             logger.info("新用户:%s".formatted(user.getUsername()));
-            tags.forEach(e->{
-                userMapper.insertUserAndTag(e,i);
-            });
             return JsonResult.ok();
         }
         logger.warning("发生未知异常，导致注册失败，请重试！");
@@ -95,13 +88,11 @@ public class userController {
             HttpSession session
     ) {
         logger.info("进入到用户登录认证界面……");
-        UserVO user = (UserVO) session.getAttribute("user");
-        if (user==null) {
-            logger.warning("暂未登录");
-            return new JsonResult(StatusCode.NOT_LOGIN);
-        }
+        UserVO2 user = (UserVO2) session.getAttribute("user");
+        UserVO3 userVO3 = userMapper.selectUserByUser(user);
+
         logger.info("用户已登录，用户：%s".formatted(user.getUsername()));
-        return JsonResult.ok(user);
+        return JsonResult.ok(userVO3);
     }
 
     @GetMapping("logout")
@@ -139,10 +130,10 @@ public class userController {
         return JsonResult.ok(list);
     }
 
-    //用户修改信息
-    //用户头像
+    //用户修改信息ok
+    //用户头像--不ok
     //用户性别ok
-    //用户更新信息
+    //用户更新信息ok
 
     /*
     更新个人信息，需要验证用户是否登录
@@ -156,8 +147,12 @@ public class userController {
     )
     {
         logger.info("更新个人资料界面……");
-        UserVO user = (UserVO) session.getAttribute("user");
+        List<CustomTag> tags = updateUserInfo.getTags();
+        UserVO2 user = (UserVO2) session.getAttribute("user");
         Long userId = user.getId();
+        tags.forEach(tag->{
+            userMapper.insertUserAndTag(tag,userId);
+        });
         int i =
                 userMapper.updateInfo(updateUserInfo,userId);
         if (i>0){
@@ -226,6 +221,7 @@ public class userController {
     }
 
     //用户发表文章
+
     /*
     接下来需要的是用户排序
     1、按照用户id排序

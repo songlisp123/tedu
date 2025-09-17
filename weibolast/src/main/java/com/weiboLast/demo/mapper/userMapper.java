@@ -6,10 +6,7 @@ import com.weiboLast.demo.pojo.dto.updateUserInfo;
 import com.weiboLast.demo.pojo.dto.userChangePassword;
 import com.weiboLast.demo.pojo.entity.CustomTag;
 import com.weiboLast.demo.pojo.entity.User;
-import com.weiboLast.demo.pojo.vo.UserVO;
-import com.weiboLast.demo.pojo.vo.UserVO2;
-import com.weiboLast.demo.pojo.vo.userHasWeiBoVO;
-import com.weiboLast.demo.pojo.vo.weiboIndexVo;
+import com.weiboLast.demo.pojo.vo.*;
 import jakarta.validation.constraints.Positive;
 import org.apache.ibatis.annotations.Param;
 
@@ -46,5 +43,7 @@ public interface userMapper {
 
     int insertUserAndTag(
             @Param("a") CustomTag e,
-            @Param("userId") int i);
+            @Param("userId") Long i);
+
+    UserVO3 selectUserByUser(UserVO2 user);
 }

@@ -76,11 +76,25 @@
         WHERE u.id=#{id}
     </select>
 
-    <select id="selectAllArticlesByUserId" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+    <resultMap id="detailMap" type="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="nickname" column="nickname" />
+        <result property="createTime" column="createTime" />
+        <result property="updateTime" column="updateTime" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
+            <result property="message" column="message" />
+            <result property="description" column="description" />
+        </collection>
+    </resultMap>
+    <select id="selectAllArticlesByUserId" resultMap="detailMap">
         SELECT w.id,w.title,w.content,u.nickname,w.create_time as createTime,
-        w.update_time as updateTime
+        w.update_time as updateTime,t.tag as message,t.description
         FROM weibo as  w
         JOIN user as u ON u.id=w.user_id
+        LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id
+        LEFT JOIN tag as t ON wt.tag_id=t.id
         WHERE u.id=#{userId}
     </select>
 
@@ -89,6 +103,23 @@
         FROM user as u
         JOIN weibo as w ON u.id=w.user_id
         WHERE u.id=#{user_id}
+    </select>
+
+    <resultMap id="selectUserMap" type="com.weiboLast.demo.pojo.vo.UserVO3">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+        <result property="nickname" column="nickname" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.CustomTag">
+            <result property="message" column="message" />
+        </collection>
+    </resultMap>
+    <select id="selectUserByUser" resultMap="selectUserMap">
+        SELECT u.id,u.username,u.password,
+        u.nickname,c.message
+        FROM user as u
+        LEFT JOIN customtag as c ON u.id=c.user_id
+        WHERE u.id=#{id}
     </select>
 
 </mapper>

@@ -18,6 +18,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
                         "/v1/user/update",
                         "/v1/user/del/{id}",
                         "/v1/user/changePassword",
+                        "/v1/user/currentUser",
                         "/v1/user/test",
                         "/v1/weibo/edit",
                         "/v1/weibo/del");

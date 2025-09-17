@@ -20,6 +20,7 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.BeanUtils;
@@ -180,4 +181,16 @@ public class weiboController {
     }
 
     //通过标签查找文章
+    //不过这里面会有几个问题，该怎么设置多个标签呢？
+    //最简单的一种情况是设置单个标签
+    @GetMapping("selectweibotag")
+    @Operation(summary = "根据微博id挑选微博")
+    @ApiOperationSupport(order = 900)
+    public JsonResult selectweibotag(tag tag) {
+        logger.info("进入到标签界面……");
+        List<weiboIndexVo> list =
+                weiboMapper.selectWeiBoByTag(tag.toString());
+        logger.info("找到 %d 篇文章".formatted(list.size()));
+        return JsonResult.ok(list);
+    }
 }

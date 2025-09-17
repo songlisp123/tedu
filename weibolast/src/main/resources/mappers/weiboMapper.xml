@@ -63,11 +63,12 @@
         w.update_time<!--文章修改时间-->,u.nickname as publisher<!--发布者昵称-->,
         c.id as cid<!--评论id-->,c.content as cContent<!--评论内容-->,
         c.create_time as cCreateTime<!--评论创建时间-->,
-        u.nickname as commentUser<!--评论人的昵称-->,
+        cu.nickname as commentUser<!--评论人的昵称-->,
         t.tag as message<!--标签信息-->,t.description<!--标签描述-->
         FROM weibo as w
         INNER JOIN user as u ON w.user_id=u.id<!--连接用户表-->
         LEFT JOIN comment as c ON w.id=c.weibo_id<!--连接评论表-->
+        LEFT JOIN user as cu ON c.user_id=cu.id<!--以防万一，重新设计用户表-->
         LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id<!--连接微博标签表-->
         LEFT JOIN tag as t ON wt.tag_id=t.id<!--连接标签表-->
         WHERE w.id=#{id}
@@ -103,11 +104,26 @@
         AND user_id=#{userId}
     </delete>
 
-    <select id="searchWeiBo" resultType="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+    <resultMap id="weiboIndex" type="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="nickname" column="nickname" />
+        <result property="createTime" column="createTime" />
+        <result property="updateTime" column="updateTime" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
+            <result property="message" column="message" />
+            <result property="description" column="description" />
+        </collection>
+    </resultMap>
+    <select id="searchWeiBo" resultMap="weiboIndex">
         SELECT w.id,w.title,w.content,u.nickname,
-        w.create_time as createTime,w.update_time as updateTime
+        w.create_time as createTime,w.update_time as updateTime,
+        t.tag as message,t.description
         FROM weibo as w
         JOIN user as u ON w.user_id=u.id
+        LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id<!--连接微博标签表-->
+        LEFT JOIN tag as t ON wt.tag_id=t.id<!--连接标签表-->
         WHERE w.title like CONCAT('%',#{title},'%')
         OR w.content like CONCAT('%',#{title},'%')
     </select>
@@ -122,5 +138,28 @@
         INSERT INTO weibo_tag(weibo_id,tag_id)
         VALUES(#{weiboId},#{tagId})
     </insert>
+
+    <resultMap id="selectweibotag" type="com.weiboLast.demo.pojo.vo.weiboIndexVo">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="nickname" column="nickname" />
+        <result property="createTime" column="createTime" />
+        <result property="updateTime" column="updateTime" />
+        <collection property="tags" ofType="com.weiboLast.demo.pojo.entity.tag">
+            <result property="message" column="message" />
+            <result property="description" column="description" />
+        </collection>
+    </resultMap>
+    <select id="selectWeiBoByTag" resultMap="selectweibotag">
+        SELECT w.id,w.title,w.content,u.nickname,
+        w.create_time as createTime,w.update_time as updateTime,
+        t.tag as message,t.description
+        FROM weibo as w
+        JOIN user as u ON w.user_id=u.id
+        LEFT JOIN weibo_tag as wt ON w.id=wt.weibo_id<!--连接微博标签表-->
+        LEFT JOIN tag as t ON wt.tag_id=t.id<!--连接标签表-->
+        WHERE t.tag in (#{tag})
+    </select>
 
 </mapper>

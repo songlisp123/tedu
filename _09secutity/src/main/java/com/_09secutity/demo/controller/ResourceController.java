@@ -1,5 +1,6 @@
 package com._09secutity.demo.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ public class ResourceController {
     /**
      * 2.需要认证后才能访问的资源;
      */
+    @PreAuthorize("hasAuthority('sys:private:view')")
     @GetMapping("/private/hello")
     public String helloPrivate(){
         return "private";
