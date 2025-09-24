@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目收货</title>
+    <style>
+        .contanier {
+            background-color: lightcoral;
+            display: flex;
+        }
+        .eg , .item
+        {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 0.25px solid grey;
+            text-align: center;
+            color: blueviolet;
+            line-height: 100px;
+        }
+
+        .a1 {
+            flex-grow: 1;
+        }
+        .a2 {
+            flex-grow: 2;
+        }
+        .a3 {
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>这是一个测试条件</h1>
+    <div class="eg">参照物</div>
+    <div class="contanier">
+        <div class="item a1">1</div>
+        <div class="item a2">2</div>
+        <div class="item a3">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <button onclick="alert('请登录')">点击即玩？</button>
+    <script>
+        console.log('你好世界');
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+      /*子绝父相：子元素使用绝对定位后，可以给父元素设置相对定位来作为参照物*/
+      .fu {
+        background-color: lightcoral;
+        position: relative;
+      }
+
+      .fu>div {
+        width: 300px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+      }
+
+      .z1 {
+        background-color: aqua;
+      }
+
+      .z2 {
+        background-color: lightseagreen;
+        /*使用绝对定位*/
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .z3 {
+        background-color:  rgb(17, 255, 0);
+      }
+    </style>
+</head>
+<body>
+    <h1>定位训练</h1>
+    <div class="fu">
+      <div class="z1">z1</div>
+      <div class="z2">z2</div>
+      <div class="z3">z3</div>
+    </div>
+</body>
+</html>

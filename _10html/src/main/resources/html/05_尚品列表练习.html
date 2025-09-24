@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尚品列表练习</title>
+    <style>
+        table {
+            border: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>商品列表练习</h1>
+    <table class="table" border="1">
+        <caption>商品列表</caption>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品库存</th>
+        </tr>
+    </table>
+    <script>
+        const arr = [
+            {title:'小米手机',price:5000,num:100},
+            {title:'华为手机',price:8000,num:200},
+            {title:'三星手机',price:12000,num:150},
+            {title:'苹果手机',price:5000,num:125},
+            {title:'oppo手机',price:9000,num:500}
+        ];
+        
+        let table = document.querySelector('.table')
+        for(let i =0;i<arr.length;i++) {
+            let tr = document.createElement('tr');
+            let titleId = document.createElement('td');
+            let priceId = document.createElement('td');
+            let numId = document.createElement('td');
+            titleId.innerHTML = arr[i].title;
+            priceId.innerHTML = arr[i].price;
+            numId.innerHTML = arr[i].num;
+            tr.append(titleId,priceId,numId);
+            table.append(tr);
+        }
+        
+    </script>
+</body>
+</html>

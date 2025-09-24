@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+      .fu {
+        background-color: lightcoral;
+      }
+
+      .fu>div {
+        width: 300px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+      }
+      .z1 {
+        background-color: aqua;
+      }
+      .z2 {
+        background-color: lightseagreen;
+        /*相对定位*/
+        position: relative;
+        /*与本身左上角的点为单位移动*/
+        left: 50px;
+      }
+      .z3 {
+        background-color:  rgb(17, 255, 0);
+        position: relative;
+        left: 150px;
+        /*调整元素的优先级别，默认为0，数字越大，优先级别越高*/
+        z-index: none;
+      }
+    </style>
+</head>
+<body>
+    <h1>定位训练</h1>
+    <div class="fu">
+      <div class="z1">z1</div>
+      <div class="z2">z2</div>
+      <div class="z3">z3</div>
+    </div>
+</body>
+</html>

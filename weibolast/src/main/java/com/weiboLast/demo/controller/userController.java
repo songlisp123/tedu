@@ -290,6 +290,7 @@ public class userController {
         return JsonResult.ok(strings);
     }
 
+
     @GetMapping("info")
     @Operation(summary = "用户详情")
     @ApiOperationSupport(order = 1000)

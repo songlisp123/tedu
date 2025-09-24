@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom操作</title>
+</head>
+<body>
+    <button onclick="alert('警告框')">1</button>
+    <button onclick="confirm('确定与否？')">2</button>
+    <button onclick="prompt('输入指令：')">3</button>
+    <!-- dom属性 -->
+     <!-- 获取类属性的值 -->
+      <p>这是一个<span class="span">测试</span>，用来获取类的值</p>
+      <button onclick="f1()">点击就送</button>
+      <input type="text" id="i1"> <br />
+      <input type="text" id="i2">  
+      <script>
+        function f1() {
+            let s = document.querySelector(".span");
+            console.log(s,typeof(s));
+            s='你好世界';
+            console.log(s);
+        }
+        function f2() {
+            let value1 = document.querySelector("#i1");
+            let value2 = document.getElementById("i2");
+            console.log()
+        }
+      </script>
+</body>
+</html>

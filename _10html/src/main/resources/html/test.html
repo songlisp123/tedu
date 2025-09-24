@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style>
+        * {
+            background-color: rgb(40, 40, 40);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            color: aliceblue;
+        
+        }
+        .header {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            background-color: rgb(12,75, 51);
+        }
+        .left {
+            height: 200px;
+            width: 20%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-left: 100px;
+            background-color: rgb(12,75, 51);
+            align-content: center;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            height: 200px;
+            gap: 30px;
+            background-color: rgb(12,75, 51);
+            justify-content: space-between;
+            align-items: center;
+        }
+        .right {
+            height: 200px;
+            width: 20%;
+            background-color: rgb(12,75, 51);
+        }
+        div img {
+            height: 60px;
+        }
+        .text>nav span {
+            background-color: rgb(12,75, 51)
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+            background-color: rgb(12,75, 51)
+        }
+         nav span a {
+            text-decoration: none;
+            font-size: 20px;
+            background-color: rgb(12,75, 51);
+            transition: 0.5s;
+        }
+
+        nav span a:hover {
+            color: rgb(68, 183, 139);
+            transform: scale(0.75);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="left"><img src="../images/4.jpg"></div>
+            <div class="text">
+                <nav class="nav">
+                    <span><a href="#">概论</a></span>
+                    <span><a href="#">下载</a></span>
+                    <span><a href="#">文档</a></span>
+                    <span><a href="#">信息</a></span>
+                    <span><a href="#">社区</a></span>
+                    <span><a href="#">代码</a></span>
+                    <span><a href="#">问题</a></span>
+                    <span><a href="#">关于</a></span>
+                    <span><a href="#">捐赠</a></span>
+                </nav>
+            </div>
+            <div class="right"></div>
+        </div>
+    </header>
+</body>
+</html>

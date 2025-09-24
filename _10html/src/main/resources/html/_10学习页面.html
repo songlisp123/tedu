@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="宋宁龙" author="作者">
+    <title>学习页面</title>
+    <link rel="png" href="../images/icon.png">
+    <style>
+        /************公共css*******************/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        .center {
+            width: 1000px;
+            margin: 0 auto;
+        }
+         
+        /************  一楼 *******************/
+        .f1 {
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        /*************一楼坐侧******************/
+        .f1>.left {
+            width: 611px;
+            height: 376px;
+            float: left;
+            margin-right: 10px;
+            position: relative;
+            background-color: lightgray;
+        }
+        .f1>.left>.text {
+            width: 245px;
+            height: 232px;
+            margin-top: 68px;
+            margin-left: 36px;
+            /* background-color: palevioletred; */
+        }
+         .f1>.left>.text>.p_title {
+            color: #333;
+            font-size: 32px;
+            font-weight: lighter;
+            margin-bottom: 12px;
+         }
+         .f1>.left>.text>.p_intro {
+            font-size: 12px;
+            color: #666;
+            font-weight: lighter;
+            margin-bottom: 24px;
+         }
+         .f1>.left>.text>.p_price {
+            font-size: 24px;
+            font-weight: bold;
+            color: lightskyblue;
+            margin-bottom: 12px;
+         }
+         .f1>.left>.text a {
+            display: block;
+            width: 132px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            color: #fff;
+            background-color:#0aa1ed; 
+         }
+         .f1>.left img {
+            display: block;
+            width: 318px;
+            height: 319px;
+            position: absolute;
+            top: 35px;
+            left: 265px;
+         }
+        /****************一楼右侧***************/
+        .f1>.right {
+            width: 375px;
+            height: 376px;
+            float: left;
+            position: relative;
+            background-color: #e8e8e8;
+        }
+        .f1>.right>.text {
+            width: 245px;
+            height: 232px;
+            margin-top: 39px;
+            margin-left: 25px;
+        }
+        .f1>.right>.text>.p_title {
+            font-size: 32px;
+            color: #333;
+            font-weight: lighter;
+            margin-bottom: 12px;
+        }
+        .f1>.right>.text>.p_intro {
+            font-size: 12px;
+            color: #666;
+            font-weight: lighter;
+            margin-bottom: 24px;
+        }
+        .f1>.right>.text>.p_price {
+            font-size: 24px;
+            color: #0aa1ed;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .f1>.right>.text a {
+            display: block;
+            width: 132px;
+            height: 40px;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: #0aa1ed;
+        }
+        .f1>.right img {
+            width: 292px;
+            height: 232px;
+            position: absolute;
+            left: 75px;
+            top: 130px;
+
+        }
+        /************** 二楼 *******************/
+        .f2 {
+            overflow: hidden;
+        }
+        /***************二楼左侧****************/
+          .f2>.left {
+            width: 366px;
+            height: 233px;
+            float: left;
+            margin-right: 20px;
+            background-color: #e8e8e8;
+        }
+        .f2>.left>.title {
+            background-color: #0aa1ed;
+            height: 35px;
+            position: relative;
+            font-family: "simhei";
+            color: #fff;
+        }
+        .f2>.left>.title img {
+            width: 29px;
+            height: 20px;
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        .f2>.left>.title span {
+            position: absolute;
+            left: 49px;
+            line-height: 35px;
+        }
+        .f2>.left>.all_items {
+            padding-left: 12px;
+        }
+        .f2>.left>.all_items p {
+            font-size: 12px;
+            color: #62b5ec;
+            margin-top: 17px;
+            margin-bottom: 7px;
+        }
+        .f2>.left>.all_items>nav>ul {
+            overflow: hidden;
+        }
+        .f2>.left>.all_items>nav>ul>li {
+            float: left;
+            margin-right: 10px;
+        }
+        .f2>.left>.all_items>nav>ul>li>a {
+            font-size: 12px;
+            color: #0aa1ed;
+        }
+        /*****************二楼右侧**************/
+          .f2>.card {
+            width: 198px;
+            height: 233px;
+            float: left;
+            margin-right: 8px;
+            text-align: center;
+            background-color: #e8e8e8;
+        }
+        .f2>.card3 {
+            margin: 0;
+        }
+        .f2>.card img {
+            width: 100%;
+        }
+        .f2>.card>.p_intro {
+            font-size: 12px;
+            color: #000;
+            font-weight: lighter;
+            margin-bottom: 6px;
+        }
+        .f2>.card>.p_price {
+            font-size: 12px;
+            color: #e8e8e8;
+            margin: 0 6px;
+            background-color: purple;
+            border-radius: 5px;
+            margin-bottom: 6px;
+        }
+        .f2>.card a {
+            display: block;
+            font-size: 12px;
+            color: #fff;
+            width: 100px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: #0aa1ed;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+      <div class="main">
+          <div class="center">
+              <div class="f1">
+                  <div class="left">
+                    <div class="text">
+                        <p class="p_title">灵越 燃7000系列</p>
+                        <p class="p_intro">
+                            酷睿双核i5处理器|256GB SSD| 8GB内存 <br />
+                                英特尔HD显卡620含共享显卡内存
+                        </p>
+                        <p class="p_price">￥4999.00</p>
+                        <a href="#">查看详情</a>
+                    </div>
+                    <img src="../images/computer1.png" alt="图片未加载" />
+                  </div>
+                  <div class="right">
+                    <div class="text">
+                        <p class="p_title">颜值 框不住</p>
+                        <p class="p_intro">
+                            酷睿双核i5处理器|256GB SSD| 8GB内存<br />
+                                英特尔HD显卡620含共享显卡内存
+                        </p>
+                        <p class="p_price">￥6888.00</p>
+                        <a href="#">查看详情</a>
+                    </div>
+                    <img src="../images/computer2.png" alt="图片未加载" />
+                  </div>
+              </div>
+              <div class="f2">
+                  <div class="left">
+                    <div class="title">
+                        <img src="../images/icon.png" alt="图片未加载" />
+                        <span>电脑,办公/1F</span>
+                    </div>
+                    <div class="all_items">
+                        <nav>
+                            <p>电脑整机</p>
+                            <ul>
+                                <li><a href="#">游戏机</a></li>
+                                <li><a href="#">台式机</a></li>
+                                <li><a href="#">一体机</a></li>
+                                <li><a href="#">服务器</a></li>
+                                <li><a href="#">联想</a></li>
+
+                            </ul>
+                            <p>电脑配件</p>
+                            <ul>
+                                <li><a href="#">CPU</a></li>
+                                <li><a href="#">SSD硬盘</a></li>
+                                <li><a href="#">显示器</a></li>
+                                <li><a href="#">机箱</a></li>
+                                <li><a href="#">组装电脑</a></li>
+                                
+                            </ul>
+                            <p>
+外设/游戏</p>
+                            <ul>
+                                <li><a href="#" target="_self">键盘</a></li>
+                                <li><a href="#">鼠标</a></li>
+                                <li><a href="#">U盘</a></li>
+                                <li><a href="#">移动硬盘</a></li>
+                                <li><a href="#">游戏设备</a></li>
+                                <li><a href="#">智能单车</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="../images/computer3.png" alt="图片未加载" />
+                    <p class="p_intro">
+                        戴尔(DELL)XPS13-9360-R1609 13.3英<br>
+                            寸微边框笔记本电脑
+                    </p>
+                    <p class="p_price">￥4600.00</p>
+                    <a href="#" alt="链接哦">好康的</a>
+                  </div>
+                  <div class="card">
+                    <img src="../images/computer4.png" alt="图片未加载" />
+                    <p class="p_intro">
+                        联想(Lenovo) YOGA900 多彩版 13.3 <br>
+                                    英寸微边框笔记本电脑
+                    </p>
+                    <p class="p_price">￥6600.00</p>
+                    <a href="#" alt="链接哦">好康的</a>
+                  </div>
+                  <div class="card card3">
+                    <img src="../images/computer3.png" alt="图片未加载" />
+                    <p class="p_intro">
+                          14.8mm超轻薄笔记本电脑 航海王版<br>
+                                13.3英寸微边框笔记本电脑
+                    </p>
+                    <p class="p_price">￥5600.00</p>
+                    <a href="#" alt="链接哦">好康的</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </main>
+<footer></footer>
+</body>
+</html>
+
+
+
+
+
+
+  
+
+
+
+
+
+     
+
+
+

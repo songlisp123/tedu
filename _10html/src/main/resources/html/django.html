@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>django</title>
+  <style>
+    * {
+      background-color: rgb(30,30,30);
+      margin: 0;
+      padding: 0;
+    }
+    .center {
+      width: 80%;
+      margin: 0 auto;
+      background-color: lightcoral;
+    }
+
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bolder;
+      font-size: 15px;
+      transition: 0.5s;
+      background-color: rgb(12, 75, 51);
+    }
+
+    a:hover {
+      color: rgb(24, 127, 88);
+      transform: scale(0.75);
+    }
+
+    
+
+    /*全局属性完成！*/
+    /*页眉设计*/
+
+    header>.top {
+      height: 60px;
+      background-color:rgb(12, 75, 51);
+      line-height: 60px;
+    }
+
+    header>.top>.center {
+      width: 80%;
+      overflow: hidden;
+    }
+
+    header>.top>.center li,header>.top>.center p {
+      background-color: rgb(12, 75, 51);
+    }
+
+
+    header>.top>.center>nav>ul {
+      overflow: hidden;
+      background-color: rgb(12, 75, 51);
+    }
+    header>.top>.center p {
+      color: #fff;
+      font-weight: bolder;
+      width: 100px;
+      font-size: 25px;
+      background-color:rgb(12, 75, 51);
+      float: left;
+      padding-right: 200px;
+    }
+    header>.top>.center li {
+      float: left;
+      padding-right: 45px;
+      background-color:rgb(12, 75, 51);
+    }
+
+
+    /* .center>header>.top>.logo {
+      color: #fff;
+      font-weight: bolder;
+      width: 100px;
+      font-size: 25px;
+      background-color:rgb(12, 75, 51);
+      float: left;
+      margin-right: 200px;
+    } */
+
+    /* .center>header>.top>.nav>nav>ul {
+      overflow: hidden;
+    }
+
+    .center>header>.top>.nav li {
+      float: left;
+      padding-right: 45px;
+      background-color:rgb(12, 75, 51);
+    } */
+/* 
+    .bottom {
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    } */
+    /* .center>header>.bottom p {
+      color: rgb(201, 238, 210);
+      font-size: 30px;
+      font-weight: lighter;
+      font-family: '楷体';
+      background-color: rgb(24, 127, 88);
+    } */
+    /* .center>header>.bottom>.searchbar {
+      color: aliceblue;
+      font-size: 12px;
+    } */
+     /* .center>header>.bottom>.searchbar {
+      width: 840px;
+      height: 30px;
+      border-radius: 2px;
+      border: 1px solid #fff;
+      background-color: rgb(14, 17, 23);
+      text-align: left;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     } */
+
+     /* .center>header>.bottom>.searchbar span {
+      margin-left: 20px;
+     }
+     .center>header>.bottom>.searchbar a {
+      margin-right: 20px;
+     } */
+
+
+     header>.bottom {
+      height:75px;
+      background-color: rgb(24, 127, 88);
+     }
+
+     header>.bottom>.center {
+      width: 80%;
+      background-color: rgb(24, 127, 88);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 75px;
+     }
+
+     header>.bottom>.center p {
+      color: rgb(201, 238, 210);
+      font-size: 30px;
+      font-weight: lighter;
+      font-family: '楷体';
+      background-color: rgb(24, 127, 88);
+     }
+
+     header>.bottom>.center .searchbar {
+      color: aliceblue;
+      font-size: 12px;
+      width: 840px;
+      height: 30px;
+      border-radius: 2px;
+      border: 1px solid #fff;
+      background-color: rgb(14, 17, 23);
+      text-align: left;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+
+     .searchbar span {
+      margin-left: 20px;
+     }
+
+     .searchbar a {
+      margin-right: 20px;
+     }
+     /****************** 网站主要内容区域******************* */
+
+     main {
+      display: flex;
+      justify-content: space-between;
+     }
+     .left {
+      width: 60%;
+      height: 500px;
+      border: 1px solid black;
+     }
+     .right {
+      width: 40%;
+      height: 500px;
+      border: 1px solid black;
+     }
+
+     /*************** 网站页脚 *************/
+
+     footer>.footer_top {
+      height: 300px;
+      background-color: rgb(24, 127, 88);
+     }
+
+     footer>.footer_top>.center {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(24, 127, 88);
+     }
+    
+     footer>.footer_top>.center>.item {
+      background-color: rgb(24, 127, 88);
+     }
+
+     footer>.footer_top>.center>.item>.text {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 20px;
+      background-color: rgb(24, 127, 88);
+      margin-bottom: 20px;
+     }
+
+     footer>.footer_top>.center>.item li {
+      padding-bottom: 10px;
+     }
+     footer>.footer_top>.center>.item li , footer>.footer_top>.center>.item a {
+      background-color: rgb(24, 127, 88);
+     }
+     footer .item li a {
+      font-size: 15px;
+      font-weight:350;
+     }
+
+     footer .item li a:hover {
+      color: #fff;
+      text-decoration-line: underline;
+     }
+      /* .footer_top>.item {
+        background-color: rgb(24, 127, 88);
+      } */
+
+     /* .footer_top>.item>.text {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 20px;
+      background-color: rgb(24, 127, 88);
+      margin-bottom: 20px;
+     } */
+      /* .footer_top>.item li {
+      padding-bottom: 10px;
+     } */
+     /* .footer_top>.item li,.footer_top>.item li a {
+      background-color: rgb(24, 127, 88);
+     } */
+
+     /* .footer_top>.item li a {
+      font-size: 15px;
+      font-weight:350;
+     } */
+     /* .footer_top>.item li a:hover {
+      color: #fff;
+      text-decoration-line: underline;
+     } */
+
+
+
+
+     /*尾部的声明框*/
+     footer>.footer_buttom {
+      min-height: 150px;
+      background-color: rgb(12, 75, 51);
+     }
+
+     footer>.footer_buttom>.center {
+      width: 80%;
+      background-color: rgb(12, 75, 51);
+     }
+
+      footer>.footer_buttom>.center>p  {
+      text-align: center;
+      padding-top: 15px;
+      margin-top: 20px;
+      border-top: 1px solid rgb(24, 127, 88);
+      font-weight: lighter;
+      font-size: small;
+      color: rgb(24, 127, 88);
+      background-color: rgb(12, 75, 51);
+     }
+
+     footer>.footer_buttom>.center>.top  {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: rgb(12, 75, 51);
+      padding-top: 20px;
+     }
+
+    footer>.footer_buttom>.center>.top p {
+      background-color: rgb(12, 75, 51);
+    }
+
+     footer>.footer_buttom>.center .logo {
+      color: #fff;
+      font-size: 30px;
+     }
+
+     footer>.footer_buttom>.center .des,footer>.footer_buttom>.center .designers {
+      font-size: 12px;
+      color: rgb(33, 158, 110);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 300;
+     }
+     footer>.footer_buttom>.center .des span {
+      font-size: 24px;
+      color: rgb(24, 127, 88);
+      font-family: fantasy;
+      font-weight: 600;
+      background-color: rgb(12, 75, 51);
+     }
+      footer>.footer_buttom>.center .designers span {
+        font-family: 'Curlz MT','HARNGTON';
+        font-size: 20px;
+        color: rgb(29, 171, 117);
+        font-style: italic;
+        background-color: rgb(12, 75, 51);
+        font-weight: lighter;
+      }
+     /* footer>.footer_buttom {
+      min-height: 150px;
+      background-color: rgb(12, 75, 51);
+     } */
+     /* .footer_buttom>.top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;      
+     } */
+     /* .footer_buttom p {
+      color:rgb(147, 215, 183);
+      background-color: rgb(12, 75, 51);
+     } */
+
+     /* .footer_buttom>.top>.logo {
+      color: #fff;
+      font-size: 30px;
+     } */
+
+     /* .footer_buttom>p {
+      margin-top: 40px;
+      color: rgb(24, 127, 88);
+     } */
+
+  </style>
+</head>
+<body>
+  <header>
+      <div class="top">
+        <div class="center">
+            <p class="logo">Blog</p>
+            <nav>
+              <ul>
+                <li><a href="#">概论</a></li>
+                <li><a href="#">下载</a></li>
+                <li><a href="#">文档</a></li>
+                <li><a href="#">信息</a></li>
+                <li><a href="#">社区</a></li>
+                <li><a href="#">代码</a></li>
+                <li><a href="#">问题</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">💗捐赠💗</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="center">
+            <p>文档</p>
+            <div class="searchbar">
+              <span>搜索(版本号:xxxxx)</span>
+              <a href="#">🔍</a>
+            </div>
+          </div>
+        </div>
+  </header>
+  <div class="main">
+    <div class="center">
+      <!-- <header>
+        <div class="top">
+          <p class="logo">Blog</p>
+          <div class="nav">
+            <nav>
+              <ul>
+                <li><a href="#">概论</a></li>
+                <li><a href="#">下载</a></li>
+                <li><a href="#">文档</a></li>
+                <li><a href="#">信息</a></li>
+                <li><a href="#">社区</a></li>
+                <li><a href="#">代码</a></li>
+                <li><a href="#">问题</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">💗捐赠💗</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>文档</p>
+          <div class="searchbar">
+            <span>搜索(版本号:xxxxx)</span>
+            <a href="#">🔍</a>
+          </div>
+        </div>
+      </header> -->
+      <!-- 网站主要内容 -->
+      <main>
+        <div class="left"></div>
+        <div class="right"></div>
+      </main>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_top">
+      <div class="center">
+        <div class="item">
+          <p class="text">学习更多</p>
+          <nav>
+            <ul>
+              <li><a href="#">关于</a></li>
+              <li><a href="#">快速入门</a></li>
+              <li><a href="#">团队合作</a></li>
+              <li><a href="#">软件基础</a></li>
+              <li><a href="#">代码规范</a></li>
+              <li><a href="#">多样性声明</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="item">
+          <p class="text">参与</p>
+          <nav>
+            <ul>
+              <li><a href="#">加入团队</a></li>
+              <li><a href="#">捐赠</a></li>
+              <li><a href="#">提交bug</a></li>
+              <li><a href="#">报告安全问题</a></li>
+              <li><a href="#">关系</a></li>
+              <!-- <li><a href="#">多样性声明</a></li> -->
+            </ul>
+          </nav>
+        </div>
+        <div class="item">
+          <p class="text">获取帮助</p>
+          <nav>
+            <ul>
+              <li><a href="#">获取FAQ</a></li>
+              <li><a href="#">QQ群</a></li>
+              <li><a href="#">微信群</a></li>
+              <li><a href="#">官方论坛</a></li>
+              <!-- <li><a href="#">代码规范</a></li>
+              <li><a href="#">多样性声明</a></li> -->
+            </ul>
+          </nav>
+        </div>
+        <div class="item">
+          <p class="text">关注我们</p>
+          <nav>
+            <ul>
+              <li><a href="#">github</a></li>
+              <li><a href="#">QQ</a></li>
+              <li><a href="#">微信</a></li>
+              <li><a href="#">官方</a></li>
+              <li><a href="#">Gitee</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="item">
+          <p class="text">支持</p>
+          <nav>
+            <ul>
+              <li><a href="#">捐赠</a></li>
+              <li><a href="#">商业合作</a></li>
+              <li><a href="#">官方合作</a></li>
+              <li><a href="#">慈善捐赠计划</a></li>
+              <!-- <li><a href="#">代码规范</a></li>
+              <li><a href="#">多样性声明</a></li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="footer_buttom">
+      <div class="center">
+        <div class="top">
+          <p class="logo">django</p>
+          <p class="des">
+            账管人：<br /><span>宋宁龙</span>
+          </p>
+          <p class="designers">
+            设计师：<br /><span>songninglong & 我的爱人</span>
+          </p>
+        </div>
+        <p>@adasdasdadasdasdasfdffasdfasdfadsfasdfsad
+          <br>
+          版权归@snl所有
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

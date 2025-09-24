@@ -18,9 +18,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.BeanUtils;
@@ -127,7 +125,8 @@ public class weiboController {
         ));
         return JsonResult.ok(weiboDetail);
     }
-        //需要验证用户是否登录而且修改的文章必须是用户的文章
+
+    //需要验证用户是否登录而且修改的文章必须是用户的文章
     @PostMapping("edit")
     @Operation(summary = "更新微博信息")
     @ApiOperationSupport(order = 500)

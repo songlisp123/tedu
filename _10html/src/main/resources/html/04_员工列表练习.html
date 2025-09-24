@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表练习</title>
+    <style>
+        table {
+            text-align: center;
+        }
+        table th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>员工列表练习</h1>
+    <label for="name">姓名：</label>
+    <input type="text" id="name"> <br>
+    <label for="salary">薪水：</label>
+    <input type="text" id="salary"> <br />
+    <label for="job">工作岗位：</label>
+    <input type="text" id="job" > <br />
+    <button onclick="f1()">添加</button>
+    <hr />
+    <table border="1" class="table">
+        <tr>
+            <th>员工姓名</th>
+            <th>员工工资</th>
+            <th>员工岗位</th>
+        </tr>
+    </table>
+    <script>
+        //创建员工数组
+        let arr=[];
+        function f1() {
+            let name = document.getElementById('name');
+            let salary = document.getElementById('salary');
+            let job = document.getElementById('job');
+            let table = document.querySelector('.table');
+            console.log(name.value);
+            console.log(salary.value);
+            console.log(job.value);
+            console.log(table,typeof(table));
+            if (name.value.trim()==''||salary.value.trim()==''||job.value.trim()=='') {
+                console.log('信息不完整！');
+                alert('信息不完整！');
+                return;
+            }
+            let tr = document.createElement('tr');
+            let nameTd = document.createElement('td');
+            let salaryTd = document.createElement('td');
+            let jobTd = document.createElement('td');
+            nameTd.innerHTML = name.value;
+            salaryTd.innerHTML = salary.value;
+            jobTd.innerHTML = job.value;
+            tr.append(nameTd,salaryTd,jobTd);
+            table.append(tr);
+            //清空输入框
+            document.getElementById('name').value='';
+            document.getElementById('salary').value='';
+            document.getElementById('job').value='';
+            //搜集信息向后端传递
+            arr.push({
+                username:name.value,
+                usersalary:salary.value,
+                userjob:job.value
+            });
+            console.log(arr);
+        }
+    </script>
+</body>
+</html>
