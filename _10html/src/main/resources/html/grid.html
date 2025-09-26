@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格布局</title>
+    <style>
+        :root {
+            --bg-color: #659494;
+            --text-color: #fff;
+            --size-large: 100px;
+            --size-small: 20px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: auto auto auto  auto;
+        }
+        div {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            margin: var(--size-small);
+            padding: var(--size-large);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </section>
+</body>
+</html>

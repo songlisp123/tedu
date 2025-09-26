@@ -8,6 +8,7 @@
       background-color: rgb(30,30,30);
       margin: 0;
       padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
     }
     .center {
       width: 80%;
@@ -178,20 +179,14 @@
      }
      /****************** 网站主要内容区域******************* */
 
-     main {
-      display: flex;
-      justify-content: space-between;
-     }
      .left {
-      width: 60%;
-      height: 500px;
       border: 1px solid black;
      }
-     .right {
+     /* .right {
       width: 40%;
       height: 500px;
       border: 1px solid black;
-     }
+     } */
 
      /*************** 网站页脚 *************/
 
@@ -284,6 +279,7 @@
       font-size: small;
       color: rgb(24, 127, 88);
       background-color: rgb(12, 75, 51);
+      padding-bottom: 20px;
      }
 
      footer>.footer_buttom>.center>.top  {
@@ -294,6 +290,7 @@
       flex-wrap: wrap;
       background-color: rgb(12, 75, 51);
       padding-top: 20px;
+      padding-bottom: 20px;
      }
 
     footer>.footer_buttom>.center>.top p {
@@ -351,6 +348,82 @@
       color: rgb(24, 127, 88);
      } */
 
+     /***************中心区域************************/
+
+     #i1>p {
+      font-size: 25px;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: aquamarine;
+     }
+
+     #i1 a {
+      background-color: rgb(66, 65, 65);
+      color: lightgray;
+      transition: 0.5s;
+     }
+
+     #i1 a:hover {
+      color: rgb(29, 171, 117);
+      text-decoration: underline;
+     }
+     #i1 .pictureWall {
+      margin-left: 15px;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+     }
+     #i1 .pictureWall>.item {
+      width: 275px;
+      /* height: 300px; */
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      background-color: rgb(66, 65, 65);
+      margin-bottom: 20px;
+     }
+
+     video {
+      width: 100%;
+      margin-bottom: 15px;  
+     }
+     .item>p {
+      background-color: rgb(65,66,65);
+      margin-bottom: 20px;
+     }
+     .item .text {
+      font-weight: 700;
+     }
+     .item .text>a {
+      background-color: rgb(65,66,65);
+      text-decoration: underline;
+      color: aquamarine;
+     }
+     .contributor {
+      padding-top: 10px;
+      border-top: 1px solid #a4a4a4;
+      opacity: 0.5;
+      text-align: left;
+      padding-left: 15px;
+     }
+     .contributor>span {
+      padding-left: 25px;
+      background-color: rgb(66, 65, 65);
+      font-style: italic;
+      font-weight: 600;
+     }
+     #tag {
+      opacity: 0.75;
+      font-size: 15px;
+      font-weight: 600;
+      font-style: italic;
+     }
+     #score {
+      background-color: rgb(24, 127, 88);
+      font-size: 15px;
+      font-weight: bold;
+      font-style: italic;
+     }
   </style>
 </head>
 <body>
@@ -414,8 +487,118 @@
       </header> -->
       <!-- 网站主要内容 -->
       <main>
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class="left">
+          <section id="i1">
+            <p>💗站长推荐💗</p>
+            <div class="pictureWall">
+                <div class="item p1">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p2">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p3">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p4">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p4">
+                 <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p4">
+                 <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p4">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+                <div class="item p4">
+                  <p id="score">#1</p>
+                  <video src="../audio/wdsj.mp4" controls muted></video>
+                  <p class="text">😭夏日炎炎的乡间，大哥出差，提前放假的🚀我与
+                    👄最喜欢的的一人在家的🔥嫂子🔥充满汗液💦的……
+                    <br>😍<a href="#">你懂的</a></p>
+                  <p id="tag">#标签：<a href="">夏日</a>，<a href="#">乡间</a>
+                    、<a href="#">嫂子</a>、<a href="#">汗液交织</a>、<a href="#">友情</a></p>
+                  <p>评分：⭐️⭐️⭐️⭐️</p>
+                  <p class="contributor">特别感谢：<br>
+                    <span>😊波多野结衣 & 加藤鹰 倾亲💗💗主演</span>
+                  </p>
+                </div>
+            </div>
+          </section>
+        </div>
+        <!-- <div class="right"></div> -->
       </main>
     </div>
   </div>
@@ -497,7 +680,7 @@
             账管人：<br /><span>宋宁龙</span>
           </p>
           <p class="designers">
-            设计师：<br /><span>songninglong & 我的爱人</span>
+            设计师：<br /><span>songninglong & john pack</span>
           </p>
         </div>
         <p>@adasdasdadasdasdasfdffasdfasdfadsfasdfsad

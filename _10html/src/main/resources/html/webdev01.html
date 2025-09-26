@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档</title>
+    <style>
+        .awesome {
+          text-transform: uppercase;
+          font-size: 5rem;
+          font-weight: 700;
+          line-height: 1;
+          border: 5px solid;
+          padding: 2rem;
+                
+          /* The important extrinsic width */
+          width: 320px;
+        }
+        
+        .awesome[data-sizing="intrinsic"] {
+          width: min-content;
+        }
+        
+        /*
+        
+        
+        Presentational styles 
+        */
+        .awesome {
+          --flow-space: 2rem;
+        }
+
+        a::before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 1.2em;
+          height: 1.2em;
+          background-size: 100%;
+          margin-inline-end: 0.5em;
+          opacity: 0.8;
+        }
+        a[href$=".png"]::before {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"/></svg>');
+        }
+        li::marker {
+            color: aqua;
+        }
+        ::selection {
+            background-color: #666;
+            color: bisque;
+        }
+        .ford::before {
+            content: "<>";
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<h1>今天的练习</h1>
+<main>
+<div class="wrapper">
+    <article class="flow">
+      <h1>Extrinsic sizing vs intrinsic sizing</h1>
+      <figure class="callout">
+        <p>
+          Notice that when the box is using <strong>extrinsic sizing</strong>, there’s
+          a limit of how much content you can add before it overflows out of the box’s
+          bounds. This makes the word, “awesome”, overflow.
+        </p>
+      </figure>
+      <label class="toggle" for="intrinsic-switch">
+        <span class="toggle__label">Turn on intrinsic sizing</span>
+        <input type="checkbox" role="switch" class="toggle__element" id="intrinsic-switch" />
+        <div class="toggle__decor" aria-hidden="true">
+          <div class="toggle__thumb"></div>
+        </div>
+      </label>
+      <p class="awesome" data-element="awesome">CSS is awesome</p>
+    </article>
+  </div>
+  <nav>
+    <ul>
+        <li>
+            <a href="my_image.png">照片</a>
+
+        </li>
+        <li>
+            <a href="my_image.png">av?</a>
+        </li>
+        <li>
+                        <!-- <a href="my_image.png">av</a> -->
+            <a href="my_image.png">av?</a>
+        </li>
+    </ul>
+  </nav>
+  <p class="ford">你好，世界！</p>
+</main>
+<script>
+    const awesome = document.querySelector('[data-element="awesome"]');
+    const intrinsicSwitch = document.querySelector("#intrinsic-switch");
+
+    // Set sizing attribute based on switch
+    intrinsicSwitch.addEventListener("change", () => {
+    awesome.setAttribute(
+    "data-sizing",
+    intrinsicSwitch.checked ? "intrinsic" : "extrinsic"
+  );
+});
+
+</script>
+</body>
+</html>
