@@ -1,0 +1,353 @@
+2025-10-01T04:41:31.810+08:00  WARN 4604 --- [_01web] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h57m59s904ms540µs700ns).
+2025-10-01T08:50:02.867+08:00  INFO 20440 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 20440 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T08:50:02.868+08:00 DEBUG 20440 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T08:50:02.869+08:00  INFO 20440 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:50:03.812+08:00  INFO 20440 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T08:50:03.822+08:00  INFO 20440 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:50:03.822+08:00  INFO 20440 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T08:50:03.873+08:00  INFO 20440 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:50:03.874+08:00  INFO 20440 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
+2025-10-01T08:50:04.138+08:00  INFO 20440 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T08:50:04.316+08:00  INFO 20440 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d40a3b4
+2025-10-01T08:50:04.317+08:00  INFO 20440 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T08:50:04.675+08:00  INFO 20440 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T08:50:04.681+08:00  INFO 20440 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.228 seconds (process running for 2.556)
+2025-10-01T08:50:15.159+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T08:50:15.161+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T08:50:15.163+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-01T08:50:15.504+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0226659)
+2025-10-01T08:50:15.508+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户名称：赵云
+2025-10-01T08:50:15.544+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : ==>  Preparing: select id,username,password,nickname,phone,email from user_table where username=? OR email=?
+2025-10-01T08:50:15.598+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : ==> Parameters: 赵云(String), 赵云(String)
+2025-10-01T08:50:15.698+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : <==      Total: 1
+2025-10-01T08:59:53.114+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T08:59:53.114+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 用户名称：user
+2025-10-01T08:59:53.116+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.findByUserName      : ==>  Preparing: select id,username,password,nickname,phone,email from user_table where username=? OR email=?
+2025-10-01T08:59:53.116+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.findByUserName      : ==> Parameters: user(String), user(String)
+2025-10-01T08:59:53.126+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.findByUserName      : <==      Total: 0
+2025-10-01T08:59:53.126+08:00  WARN 20440 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 尚未有此用户
+2025-10-01T08:59:53.129+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-2] c._.demo.base.exception.globalException  : 异常：用户不存在
+2025-10-01T09:00:01.999+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:00:01.999+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户名称：user
+2025-10-01T09:00:02.001+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.userMapper.findByUserName      : ==>  Preparing: select id,username,password,nickname,phone,email from user_table where username=? OR email=?
+2025-10-01T09:00:02.003+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.userMapper.findByUserName      : ==> Parameters: user(String), user(String)
+2025-10-01T09:00:02.008+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.userMapper.findByUserName      : <==      Total: 0
+2025-10-01T09:00:02.009+08:00  WARN 20440 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 尚未有此用户
+2025-10-01T09:00:02.009+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-1] c._.demo.base.exception.globalException  : 异常：用户不存在
+2025-10-01T09:00:04.811+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:00:04.812+08:00  INFO 20440 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户名称：宋宁龙
+2025-10-01T09:00:04.813+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : ==>  Preparing: select id,username,password,nickname,phone,email from user_table where username=? OR email=?
+2025-10-01T09:00:04.813+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : ==> Parameters: 宋宁龙(String), 宋宁龙(String)
+2025-10-01T09:00:04.816+08:00 DEBUG 20440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.userMapper.findByUserName      : <==      Total: 1
+2025-10-01T09:00:34.294+08:00  INFO 20440 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:00:34.301+08:00  INFO 20440 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:01:10.266+08:00  INFO 30796 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 30796 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:01:10.269+08:00 DEBUG 30796 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:01:10.270+08:00  INFO 30796 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:01:11.218+08:00  INFO 30796 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:01:11.227+08:00  INFO 30796 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:01:11.227+08:00  INFO 30796 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:01:11.282+08:00  INFO 30796 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:01:11.283+08:00  INFO 30796 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 970 ms
+2025-10-01T09:01:11.520+08:00  INFO 30796 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:01:11.700+08:00  INFO 30796 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47b269c4
+2025-10-01T09:01:11.702+08:00  INFO 30796 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:01:12.084+08:00  INFO 30796 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:01:12.094+08:00  INFO 30796 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.158 seconds (process running for 2.466)
+2025-10-01T09:01:23.376+08:00  INFO 30796 --- [_01web] [http-nio-8085-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T09:01:23.377+08:00  INFO 30796 --- [_01web] [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T09:01:23.379+08:00  INFO 30796 --- [_01web] [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-01T09:01:23.834+08:00  INFO 30796 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:02:24.319+08:00  INFO 30796 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:02:24.324+08:00  INFO 30796 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:02:34.918+08:00  INFO 11052 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 11052 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:02:34.920+08:00 DEBUG 11052 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:02:34.923+08:00  INFO 11052 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:02:37.954+08:00  INFO 11052 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:02:37.981+08:00  INFO 11052 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:02:37.981+08:00  INFO 11052 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:02:38.177+08:00  INFO 11052 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:02:38.179+08:00  INFO 11052 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3101 ms
+2025-10-01T09:02:39.300+08:00  INFO 11052 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:02:39.789+08:00  INFO 11052 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4391a2d8
+2025-10-01T09:02:39.792+08:00  INFO 11052 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:02:41.272+08:00  INFO 11052 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:02:41.297+08:00  INFO 11052 --- [_01web] [main] com._01web.demo.Application              : Started Application in 7.276 seconds (process running for 8.727)
+2025-10-01T09:02:52.416+08:00  INFO 11052 --- [_01web] [http-nio-8085-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T09:02:52.416+08:00  INFO 11052 --- [_01web] [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T09:02:52.418+08:00  INFO 11052 --- [_01web] [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-01T09:02:52.638+08:00  INFO 11052 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:03:05.556+08:00  INFO 11052 --- [_01web] [http-nio-8085-exec-5] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:04:08.360+08:00  INFO 11052 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:04:08.361+08:00  INFO 11052 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:04:11.195+08:00  INFO 26824 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 26824 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:04:11.197+08:00 DEBUG 26824 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:04:11.197+08:00  INFO 26824 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:04:12.154+08:00  INFO 26824 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:04:12.163+08:00  INFO 26824 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:04:12.163+08:00  INFO 26824 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:04:12.212+08:00  INFO 26824 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:04:12.212+08:00  INFO 26824 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 972 ms
+2025-10-01T09:04:12.427+08:00  INFO 26824 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:04:12.606+08:00  INFO 26824 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@629a9f26
+2025-10-01T09:04:12.607+08:00  INFO 26824 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:04:12.954+08:00  INFO 26824 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:04:12.961+08:00  INFO 26824 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.147 seconds (process running for 2.43)
+2025-10-01T09:04:21.662+08:00  INFO 26824 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:04:21.668+08:00  INFO 26824 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:04:24.490+08:00  INFO 18440 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 18440 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:04:24.492+08:00 DEBUG 18440 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:04:24.493+08:00  INFO 18440 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:04:25.466+08:00  INFO 18440 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:04:25.473+08:00  INFO 18440 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:04:25.473+08:00  INFO 18440 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:04:25.527+08:00  INFO 18440 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:04:25.527+08:00  INFO 18440 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2025-10-01T09:04:25.764+08:00  INFO 18440 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:04:25.933+08:00  INFO 18440 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1983b48a
+2025-10-01T09:04:25.934+08:00  INFO 18440 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:04:26.307+08:00  INFO 18440 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:04:26.314+08:00  INFO 18440 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.166 seconds (process running for 2.49)
+2025-10-01T09:04:39.806+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T09:04:39.808+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T09:04:39.810+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-01T09:04:40.124+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:04:40.126+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:04:40.173+08:00  WARN 18440 --- [_01web] [http-nio-8085-exec-1] c._.demo.base.exception.globalException  : 异常：
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+2025-10-01T09:05:01.785+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0226659)
+2025-10-01T09:05:01.785+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0226659)
+2025-10-01T09:05:01.786+08:00  WARN 18440 --- [_01web] [http-nio-8085-exec-3] c._.demo.base.exception.globalException  : 异常：
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+2025-10-01T09:05:05.458+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-7] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:05:05.460+08:00  INFO 18440 --- [_01web] [http-nio-8085-exec-7] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:05:05.462+08:00  WARN 18440 --- [_01web] [http-nio-8085-exec-7] c._.demo.base.exception.globalException  : 异常：
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'username' in 'class com._01web.demo.user.pojo.dto.UserLoginParam'
+2025-10-01T09:05:43.803+08:00  INFO 18440 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:05:43.807+08:00  INFO 18440 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:05:45.444+08:00  INFO 18000 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 18000 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:05:45.452+08:00 DEBUG 18000 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:05:45.456+08:00  INFO 18000 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:05:46.424+08:00  INFO 18000 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:05:46.433+08:00  INFO 18000 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:05:46.433+08:00  INFO 18000 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:05:46.485+08:00  INFO 18000 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:05:46.486+08:00  INFO 18000 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2025-10-01T09:05:46.710+08:00  INFO 18000 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:05:46.885+08:00  INFO 18000 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b791a81
+2025-10-01T09:05:46.886+08:00  INFO 18000 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:05:47.265+08:00  INFO 18000 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:05:47.275+08:00  INFO 18000 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.187 seconds (process running for 2.602)
+2025-10-01T09:05:54.376+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T09:05:54.377+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T09:05:54.378+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-01T09:05:54.611+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:05:54.612+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:05:54.662+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:05:54.762+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0226659(String)
+2025-10-01T09:05:54.999+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:05:58.467+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0226659)
+2025-10-01T09:05:58.467+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0226659)
+2025-10-01T09:05:58.468+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:05:58.469+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0226659(String)
+2025-10-01T09:05:58.470+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:06:01.391+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:06:01.392+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-4] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:06:01.393+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:06:01.394+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 赵云(String), 赵云(String), A0116659(String)
+2025-10-01T09:06:01.400+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:06:46.413+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-5] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:06:46.414+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-5] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:06:46.417+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:06:46.418+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 赵云(String), 赵云(String), A0116659(String)
+2025-10-01T09:06:46.421+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:07:17.297+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-6] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=1978719130@qq.com, password=A0116659)
+2025-10-01T09:07:17.298+08:00  INFO 18000 --- [_01web] [http-nio-8085-exec-6] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=1978719130@qq.com, password=A0116659)
+2025-10-01T09:07:17.299+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-6] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:07:17.300+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-6] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 1978719130@qq.com(String), 1978719130@qq.com(String), A0116659(String)
+2025-10-01T09:07:17.303+08:00 DEBUG 18000 --- [_01web] [http-nio-8085-exec-6] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:08:08.410+08:00  INFO 18000 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T09:08:08.411+08:00  INFO 18000 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T09:08:11.157+08:00  INFO 19532 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 19532 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T09:08:11.158+08:00 DEBUG 19532 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T09:08:11.159+08:00  INFO 19532 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T09:08:12.159+08:00  INFO 19532 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T09:08:12.168+08:00  INFO 19532 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T09:08:12.168+08:00  INFO 19532 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T09:08:12.216+08:00  INFO 19532 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T09:08:12.216+08:00  INFO 19532 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
+2025-10-01T09:08:12.458+08:00  INFO 19532 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T09:08:12.620+08:00  INFO 19532 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b791a81
+2025-10-01T09:08:12.621+08:00  INFO 19532 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T09:08:12.982+08:00  INFO 19532 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T09:08:12.988+08:00  INFO 19532 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.152 seconds (process running for 2.425)
+2025-10-01T09:08:19.378+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T09:08:19.379+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T09:08:19.381+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-01T09:08:19.627+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=admin, password=A0226659)
+2025-10-01T09:08:19.628+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=admin, password=A0226659)
+2025-10-01T09:08:19.663+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:08:19.714+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: admin(String), admin(String), A0226659(String)
+2025-10-01T09:08:19.871+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:08:19.884+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T09:08:57.209+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:08:57.210+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:08:57.210+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:08:57.212+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0226659(String)
+2025-10-01T09:08:57.213+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:08:57.213+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T09:09:12.167+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:09:12.168+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:09:12.169+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:09:12.169+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116659(String)
+2025-10-01T09:09:12.173+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:09:12.174+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 查询参数：UserVo(id=4, username=宋宁龙, password=A0116659, phone=19892353293, email=1978719150@qq.com)
+2025-10-01T09:10:16.367+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-7] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:10:16.368+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-7] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:10:16.369+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:10:16.370+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 赵云(String), 赵云(String), A0116659(String)
+2025-10-01T09:10:16.372+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:10:16.373+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-7] c._.d.u.userController.userController    : 查询参数：UserVo(id=1, username=赵云, password=A0116659, phone=19892353293, email=1978719130@qq.com)
+2025-10-01T09:10:40.680+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-5] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0226659)
+2025-10-01T09:10:40.680+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-5] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0226659)
+2025-10-01T09:10:40.681+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:10:40.682+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 赵云(String), 赵云(String), A0226659(String)
+2025-10-01T09:10:40.684+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-5] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:10:40.684+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-5] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T09:10:44.121+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:10:44.121+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=赵云, password=A0116659)
+2025-10-01T09:10:44.123+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:10:44.124+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 赵云(String), 赵云(String), A0116659(String)
+2025-10-01T09:10:44.126+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:10:44.127+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 查询参数：UserVo(id=1, username=赵云, password=A0116659, phone=19892353293, email=1978719130@qq.com)
+2025-10-01T09:11:09.176+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:11:09.177+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:11:09.178+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:11:09.179+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116659(String)
+2025-10-01T09:11:09.184+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:11:09.185+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 查询参数：UserVo(id=4, username=宋宁龙, password=A0116659, phone=19892353293, email=1978719150@qq.com)
+2025-10-01T09:11:30.398+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:11:30.399+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:11:30.402+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:11:30.402+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0226659(String)
+2025-10-01T09:11:30.404+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:11:30.404+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T09:11:35.658+08:00  WARN 19532 --- [_01web] [http-nio-8085-exec-7] c._.demo.base.exception.globalException  : 错误：用户密码不能为空！
+2025-10-01T09:12:29.931+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:12:29.932+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T09:12:29.933+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:12:29.934+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116659(String)
+2025-10-01T09:12:29.936+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T09:12:29.937+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 查询参数：UserVo(id=4, username=宋宁龙, password=A0116659, phone=19892353293, email=1978719150@qq.com)
+2025-10-01T09:40:43.176+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-10] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:40:43.176+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-10] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0116659)
+2025-10-01T09:40:43.178+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-10] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:40:43.179+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-10] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0116659(String)
+2025-10-01T09:40:43.182+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-10] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:40:43.182+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-10] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T09:43:18.062+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:43:18.064+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0226659)
+2025-10-01T09:43:18.065+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T09:43:18.066+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0226659(String)
+2025-10-01T09:43:18.069+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T09:43:18.070+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T10:30:33.317+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=user, password=A0226659)
+2025-10-01T10:30:33.321+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=user, password=A0226659)
+2025-10-01T10:30:33.324+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T10:30:33.328+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: user(String), user(String), A0226659(String)
+2025-10-01T10:30:33.329+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T10:30:33.329+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T10:30:43.623+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=1978719130@qq.com, password=A0116659)
+2025-10-01T10:30:43.624+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=1978719130@qq.com, password=A0116659)
+2025-10-01T10:30:43.625+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T10:30:43.626+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 1978719130@qq.com(String), 1978719130@qq.com(String), A0116659(String)
+2025-10-01T10:30:43.630+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T10:30:43.631+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 查询参数：UserVo(id=1, username=赵云, password=A0116659, phone=19892353293, email=1978719130@qq.com)
+2025-10-01T10:42:15.765+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T10:42:15.766+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T10:42:15.768+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T10:42:15.769+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116659(String)
+2025-10-01T10:42:15.771+08:00 DEBUG 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T10:42:15.771+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 查询参数：UserVo(id=4, username=宋宁龙, password=A0116659, phone=19892353293, email=1978719150@qq.com)
+2025-10-01T10:46:03.474+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-8] c._.d.u.userController.userController    : 用户正在修改密码……
+2025-10-01T10:46:03.474+08:00  INFO 19532 --- [_01web] [http-nio-8085-exec-8] c._.d.u.userController.userController    : 接受参数：UserDtoV2(id=4, password=A0116658)
+2025-10-01T10:51:02.746+08:00  INFO 19532 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T10:51:02.750+08:00  INFO 19532 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T10:51:06.576+08:00  INFO 29864 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 29864 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T10:51:06.578+08:00 DEBUG 29864 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T10:51:06.579+08:00  INFO 29864 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T10:51:07.717+08:00  INFO 29864 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T10:51:07.728+08:00  INFO 29864 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T10:51:07.728+08:00  INFO 29864 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T10:51:07.781+08:00  INFO 29864 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T10:51:07.782+08:00  INFO 29864 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1155 ms
+2025-10-01T10:51:08.063+08:00  INFO 29864 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T10:51:08.263+08:00  INFO 29864 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b791a81
+2025-10-01T10:51:08.264+08:00  INFO 29864 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T10:51:08.637+08:00  INFO 29864 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T10:51:08.645+08:00  INFO 29864 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.439 seconds (process running for 2.832)
+2025-10-01T10:51:36.773+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T10:51:36.773+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T10:51:36.778+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-10-01T10:51:37.017+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 用户正在修改密码……
+2025-10-01T10:51:37.017+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] c._.d.u.userController.userController    : 接受参数：UserDtoV2(id=4, password=A0116658)
+2025-10-01T10:51:37.017+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 进入到业务层面……
+2025-10-01T10:51:37.044+08:00 DEBUG 29864 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE user_table SET password=? WHERE id=?
+2025-10-01T10:51:37.100+08:00 DEBUG 29864 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116658(String), 4(Long)
+2025-10-01T10:51:37.118+08:00 DEBUG 29864 --- [_01web] [http-nio-8085-exec-2] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-01T10:51:37.120+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] c._.demo.user.service.userServiceImpl    : 发生未知错误！请重新是！
+2025-10-01T10:51:37.124+08:00  INFO 29864 --- [_01web] [http-nio-8085-exec-2] c._.demo.base.exception.globalException  : 异常：操作失败
+2025-10-01T10:52:20.852+08:00  INFO 29864 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T10:52:20.857+08:00  INFO 29864 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T10:52:23.840+08:00  INFO 30280 --- [_01web] [main] com._01web.demo.Application              : Starting Application using Java 17.0.16 with PID 30280 (I:\20250820\jsd2507-ssm-advance\_01web\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-01T10:52:23.843+08:00 DEBUG 30280 --- [_01web] [main] com._01web.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-01T10:52:23.844+08:00  INFO 30280 --- [_01web] [main] com._01web.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T10:52:24.834+08:00  INFO 30280 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-10-01T10:52:24.841+08:00  INFO 30280 --- [_01web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T10:52:24.842+08:00  INFO 30280 --- [_01web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-01T10:52:24.895+08:00  INFO 30280 --- [_01web] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T10:52:24.895+08:00  INFO 30280 --- [_01web] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1005 ms
+2025-10-01T10:52:25.138+08:00  INFO 30280 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T10:52:25.336+08:00  INFO 30280 --- [_01web] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4391a2d8
+2025-10-01T10:52:25.337+08:00  INFO 30280 --- [_01web] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T10:52:25.739+08:00  INFO 30280 --- [_01web] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-10-01T10:52:25.748+08:00  INFO 30280 --- [_01web] [main] com._01web.demo.Application              : Started Application in 2.284 seconds (process running for 2.6)
+2025-10-01T11:05:42.609+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T11:05:42.610+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T11:05:42.611+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-01T11:05:42.791+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] c._.d.u.userController.userController    : 用户正在修改密码……
+2025-10-01T11:05:42.791+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] c._.d.u.userController.userController    : 接受参数：UserDtoV2(id=4, password=A0116659)
+2025-10-01T11:05:42.793+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-7] c._.demo.user.service.userServiceImpl    : 进入到业务层面……
+2025-10-01T11:05:42.817+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE user_table SET password=? WHERE id=?
+2025-10-01T11:05:42.912+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116659(String), 4(Long)
+2025-10-01T11:05:42.927+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-7] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-01T11:12:04.656+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 用户正在修改密码……
+2025-10-01T11:12:04.658+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-9] c._.d.u.userController.userController    : 接受参数：UserDtoV2(id=4, password=A0116658)
+2025-10-01T11:12:04.658+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-9] c._.demo.user.service.userServiceImpl    : 进入到业务层面……
+2025-10-01T11:12:04.659+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE user_table SET password=? WHERE id=?
+2025-10-01T11:12:04.660+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116658(String), 4(Long)
+2025-10-01T11:12:04.669+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-9] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-01T11:12:24.917+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T11:12:24.918+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-1] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116659)
+2025-10-01T11:12:24.922+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T11:12:24.924+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116659(String)
+2025-10-01T11:12:24.990+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-1] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T11:12:25.000+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-1] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T11:12:31.970+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=A0116659, password=A0116658)
+2025-10-01T11:12:31.971+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-4] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=A0116659, password=A0116658)
+2025-10-01T11:12:31.971+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T11:12:31.973+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: A0116659(String), A0116659(String), A0116658(String)
+2025-10-01T11:12:31.974+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-4] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 0
+2025-10-01T11:12:31.974+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-4] c._.d.u.userController.userController    : 查询参数：null
+2025-10-01T11:12:48.423+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 处理器处理请求：UserLoginParam(auth=宋宁龙, password=A0116658)
+2025-10-01T11:12:48.424+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-3] c._.demo.user.service.userServiceImpl    : 用户登录模块,UserLoginParam(auth=宋宁龙, password=A0116658)
+2025-10-01T11:12:48.425+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==>  Preparing: SELECT id,username,password,nickname,phone,email from user_table where (username=? OR email=?) AND password=?
+2025-10-01T11:12:48.425+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : ==> Parameters: 宋宁龙(String), 宋宁龙(String), A0116658(String)
+2025-10-01T11:12:48.428+08:00 DEBUG 30280 --- [_01web] [http-nio-8085-exec-3] c._.d.u.m.u.selectByUsernameAndPassword  : <==      Total: 1
+2025-10-01T11:12:48.429+08:00  INFO 30280 --- [_01web] [http-nio-8085-exec-3] c._.d.u.userController.userController    : 查询参数：UserVo(id=4, username=宋宁龙, password=A0116658, phone=19892353293, email=1978719150@qq.com)
+2025-10-01T12:09:51.172+08:00  WARN 30280 --- [_01web] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m54s933ms235µs600ns).
+2025-10-01T13:04:39.672+08:00  INFO 30280 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T13:04:39.683+08:00  INFO 30280 --- [_01web] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

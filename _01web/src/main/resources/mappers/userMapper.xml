@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com._01web.demo.user.mapper.userMapper">
+    <select id="findByUserName" resultType="com._01web.demo.user.pojo.vo.UserVo">
+        select id,username,password,nickname,phone,email
+        from user_table
+        where username=#{username} OR email=#{username}
+    </select>
+
+    <select id="findUsers" resultType="com._01web.demo.user.pojo.vo.UserVo" >
+        select id,username,password,nickname,phone
+        from user_table
+    </select>
+    <insert id="insertUser">
+        INSERT INTO user_table(username,password,nickname,phone,email)
+        VALUES(#{username},#{password},#{nickname},#{phone},#{email})
+    </insert>
+
+    <select id="selectByUsernameAndPassword" resultType="com._01web.demo.user.pojo.vo.UserVo" >
+        SELECT id,username,password,nickname,phone,email
+        from user_table
+        where (username=#{auth} OR email=#{auth})
+        AND password=#{password}
+    </select>
+
+    <update id="updatePassword">
+        UPDATE user_table
+        SET password=#{password}
+        WHERE id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>表单验证：</h1>
+    <form id="form">
+        <input type="text" placeholder="输入您的信息？" id="info">
+        <br>
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        let form = document.getElementById('form');
+        form.addEventListener("submit",(e)=>{
+            let input = document.getElementById('info');
+            if (!input.value.trim()) {
+                console.log("信息验证失败！");
+                alert("信息验证失败！");
+            };
+            console.log("验证成功！")
+        });
+    </script>
+</body>
+</html>

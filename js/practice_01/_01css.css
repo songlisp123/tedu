@@ -1,0 +1,175 @@
+:root {
+    --text-color:#01940b;
+    --background-color:#fff;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    align-content: center;
+}
+
+main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    text-align: center;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+h3 {
+    padding: 20px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+fieldset {
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+fieldset:hover {
+    transform: scale(1.05);
+}
+
+.custom-wrapper {
+    width: 70%;
+    padding: 0 25px 40px;
+    position: relative;
+    left: 63px;
+    
+}
+
+.price-input-container {
+    width: 100%;
+}
+
+.price-input {
+    width: 100%;
+    font-size: 19px;
+    color: #555;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.item label {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.item input {
+    flex: 1;
+    height: 35px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    border-radius: 9px;
+    text-align: center;
+    border: 0px;
+    background: #e4e4e4;
+}
+
+
+/* 移除数值框中的选择按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.slider {
+    width: 100%;
+}
+
+.slider {
+    height: 6px;
+    position: relative;
+    background: #e4e4e4;
+    border-radius: 5px;
+}
+
+.slider .price-slider {
+    height: 100%;
+    left: 25%;
+    right: 15%;
+    position: absolute;
+    border-radius: 5px;
+    background: #01940b;
+}
+
+.sliderbar {
+    position: relative;
+}
+
+.sliderbar input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+/* Styles for the range thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background: #555;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+
+
+/* 媒体查询 */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .custom-wrapper {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .projtitle {
+        width: 100%;
+        position: relative;
+        right: 26px;
+    }
+
+    .price-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-field {
+        margin-bottom: 10px;
+    }
+}

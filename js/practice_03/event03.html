@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态内容</title>
+</head>
+<body>
+    <h2>动态内容</h2>
+    <button  id="info">提交</button>
+
+    <!-- 此区域将会被填充！ -->
+     <script>
+        // let body = document.querySelector('body');
+        document.getElementById("info").addEventListener("click",(e)=>{
+            //用户按下按钮的时候 ，将会填充body区域。
+            let div = document.createElement('div');
+            div.innerHTML = "这是新增的内容，傻逼们！";
+            div.style.backgroundColor='red';
+            // body.append(div);
+            //这是另一种讲元素标签内嵌到html里面
+            document.body.appendChild(div);
+        });
+     </script>
+</body>
+</html>

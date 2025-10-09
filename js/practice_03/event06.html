@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指数检查起</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .contanier {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0; 
+            border: 1px solid #ccc;
+            border-radius: 5px;   
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:#45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-style: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <p>检查是否是质数：</p>
+        <input type="number" placeholder="请输入您的数字：">
+        <button>提交</button>
+        <!-- 显示内容     -->
+         <!-- 判断结果在这里面？ -->
+          <p id="result"></p>
+    </div>
+    <script>
+        //第一步我们要获取p的id
+        let result = document.getElementById('result');
+        let input = document.querySelector("input");
+        let button = document.querySelector('button');
+
+        button.addEventListener("click",(e)=>{
+            //获取值
+            let value = input.value;
+            result.innerHTML=(value%2==0)?value+"是偶数":value+"是奇数";
+        });
+    </script>
+</body>
+</html>

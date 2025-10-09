@@ -23,10 +23,12 @@
             margin: 0;
             padding: 0;
         }
+
         h1 {
             text-align: center;
             margin-top: 75px;
         }
+        
         div {
             margin-bottom: 30px;
         }
@@ -38,6 +40,7 @@
         label span {
             color: red;
         }
+
         input,
         textarea {
             border: 0;
@@ -80,6 +83,7 @@
             margin: 0 auto;
             margin-top: 50px;
         }
+
         fieldset {
             display: flex;
             flex-direction: column;
@@ -96,7 +100,6 @@
             transition: 0.5s;
             text-transform: uppercase;
         }
-
 
         button:hover {
             background-color: orange;
@@ -136,10 +139,10 @@
                 <label for="gender">性别：</label><br>
                 <div class="wrapper">
                     <select name="gender" id="gender">
-                        <option value="none">-请选择您的性别-</option>
-                        <option value="dog">出生</option>
-                        <option value="cat">猫娘</option>
-                        <option value="男">男</option>
+                        <!-- <option value="none">-请选择您的性别-</option> -->
+                        <!-- <option value="dog">出生</option>
+                        <option value="cat">猫娘</option> -->
+                        <option value="男" selected>男</option>
                         <option value="女">女</option>
                     </select>
                 </div>

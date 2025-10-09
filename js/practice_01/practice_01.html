@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./_01css.css">
+    <title>练习01</title>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <p>测试程序</p>
+            
+            <div class="custom-wrapper">
+                <h3>价格滑动块</h3>
+                <div class="price-input-contanier">
+                    <div class="price-input">
+                        <div class="item">
+                            <label for="min-range">最小价格</label>
+                            <input type="number" id="min-range" value="2500">
+                        </div>
+                        <div class="item">
+                            <label for="max-range">最小价格</label>
+                            <input type="number" id="max-range" value="7500">
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="price-slider"></div>
+                    </div>
+                </div>
+                <div class="sliderbar">
+                    <input type="range" class="min_range" min="0" max="10000" value="2500" step="1">
+                    <input type="range" class="max_range" min="0" max="10000" value="8500" step="1">
+                </div>
+            </div>
+        </fieldset>
+    </main>
+</body>
+</html>

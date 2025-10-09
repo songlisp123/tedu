@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .clicks {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="counter">
+            <p id="count">0</p>
+        </div>
+        <div>
+            <button onclick="inc()">+</button>
+            <button onclick="dec()">-</button>
+        </div>
+        <div class="clicks">
+            <p>增加：<span id="incCount">0</span></p>
+            <p>减少：<span id="decCount">0</span></p>
+        </div>
+    </div>
+    <script>
+        let c = 0, ci = 0, cd = 0;
+        const count = document.getElementById("count");
+        const incCount = document.getElementById("incCount");
+        const decCount = document.getElementById("decCount");
+        function inc() {
+            c++;
+            ci = (ci >= 10) ? 0 : ci + 1;
+            update();
+        }
+        function dec() {
+            c = c > 0 ? c - 1 : 0;
+            cd = (cd >= 10) ? 0 : cd + 1;
+            update();
+        }
+        function update() {
+            count.innerHTML = c;
+            incCount.innerHTML = ci;
+            decCount.innerHTML = cd;
+        }
+    </script>
+</body>
+</html>

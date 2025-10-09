@@ -1,0 +1,49 @@
+/* 这是操作成功的提示信息 */
+.message {
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--info-message);
+    border: 1px solid var(--bord-color);
+    color:var(--text-color);
+    font-size: 15px;
+    line-height: 50px;
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    position: fixed;
+    right: 30%;
+    top: 20%;   
+}
+/* 这是错误提示的信息 */
+.error {
+    background-color: var(--error-message);
+    border: 0.5px solid var(--invalid-color);
+    color: rgb(172, 142, 142);
+}
+/*在错误信息提示前面设置伪元素*/
+.error::before {
+    content: '❗';
+    color: var(--invalid-color);
+    font-size: x-large;
+    position: relative;
+    right: 20px;
+}
+
+/* 这个是警告信息模版 */
+
+.warning {
+    background-color: var(--warning-message);
+    border: 0.5px solid var(--bord-color);
+    color: var(--text-color);
+    top: 22%;
+}
+
+.warning::before {
+    content: '⚠️';
+    font-size: x-large;
+    position: relative;
+    right: 0px;
+}
+
+
+/*这个是页面的提示信息*/

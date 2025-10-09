@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unicode字符值</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff1a;
+            border-radius: 12px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+        input::placeholder {
+            color: #ccc;
+        }
+        button {
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1b5bbf;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>字符转换器</h1>
+        <label for="char">输入您的字符：</label> <br>
+        <input type="text" id="char" placeholder="请输入您的字符：比如😄"><br>
+        <button>提交</button>
+        <p id="output"></p>
+    </div>
+    <script>
+        //需要使用codeAt函数
+        document.querySelector('button').addEventListener('click',()=>{
+            let value = document.querySelector('input').value;
+            const output = document.getElementById('output');
+            if (value.length === 0) {
+                output.innerHTML="输入错误！请重试！";
+                return;
+            };
+            const unicode = value.codePointAt(0);
+            output.innerHTML = `${value}的unicode：${unicode}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+//1.引入element-plus组件库与其样式
+import ElementPlus, { ElMessage } from 'element-plus'
+import 'element-plus/dist/index.css'
+//2.引入element-plus图标库,并起别名为ElementPlusIconsVue
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+//6.1修改elementPlus默认中文
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+
+const app = createApp(App)/* 创建vue实例,并起名为app */
+
+//配置服务器ip地址
+const BASE_URL = 'http://localhost:8080'
+
+//配置属性，可以再全局script中使用
+window.BASE_URL = BASE_URL;
+
+//配置模版属性，方便模版调用
+app.config.globalProperties.BASE_URL = BASE_URL;
+//3.将所有导入的图标组件变为键值对数组,并依次遍历取出每一个图标组件[key, component]
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    // 4.将当前遍历到的图标组件注册为当前vue实例的全局组件
+    app.component(key, component)
+}
+//5.为前vue实例应用element-plus组件库
+//6.2 app.use(ElementPlus,{ locale: zhCn })将El本地化为中文
+app.use(ElementPlus,{ locale: zhCn }).use(store).use(router).mount('#app')
+
+//7.解决ResizeObserver Error
+const debounce = (fn, delay) => {
+    let timer = null;
+    return function () {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+    }
+}
+const _ResizeObserver = window.ResizeObserver;
+window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
+    constructor(callback) {
+        callback = debounce(callback, 16);
+        super(callback);
+    }
+}
+
+//配置路由守卫
+//to参数：当前的路径
+// form参数：即将定向的路径
+//next : 放行函数，必须调用才能用此函数
+router.beforeEach((to,from,next) => {
+    //当用户未登录且尝试访问需要登录的界面的时候，重定向到登录界面
+    let user = localStorage.user;
+    if (to.path !== '/login' && !user) {
+        next({path:'/login'},ElMessage.error('请先登录！'));
+    } 
+    //如果用户已经登录，则放行
+    else {
+        next();
+    }
+});

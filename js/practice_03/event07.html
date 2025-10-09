@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入输出密码隐藏</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <label for="password">输入密码：</label>
+        <div class="input-contanier">
+            <input type="password" placeholder="输入您的密码：" id="password">
+            <span class="eye-icon" id="eye-icon"></span>
+        </div>
+        <div>
+            <input type="password" placeholder="测试">
+        </div>
+    </div>
+    <script>
+        let password = document.getElementById('password');
+        let eye = document.getElementById('eye-icon');
+        //第二部，添加事件监听器
+        eye.addEventListener('click',(e)=>{
+            if (password.type === 'password') {
+                password.type = 'text';
+            } else {
+                password.type = 'password';
+            }
+        });
+    </script>
+</body>
+</html>

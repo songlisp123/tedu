@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件触发机制</title>
+</head>
+<body>
+    <h1>大标题</h1>
+    <h2>小标题</h2>
+    <script>
+        // document.addEventListener('mousemove',(e)=>{
+        //     console.log(`鼠标的位置：(${e.clientX},${e.clientY})`)
+        // });
+        document.body.addEventListener('keydown',(e)=>{
+            // 对于键盘事件来说，我需要了解什么键被按下去了
+            console.log(`按下【${e.key}】`)
+        });
+        document.addEventListener('click',(e)=>{
+            console.log(`鼠标的位置：(${e.clientX},${e.clientY})`)
+        });
+    </script>
+</body>
+</html>

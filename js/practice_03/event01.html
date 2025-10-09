@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+</head>
+<body>
+<!--  事件分为：鼠标，键盘，表单，窗口-->
+    <h1>这是事件委托</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        //首先需要寻找特定的标签
+        let u = document.querySelector("ul");
+        u.addEventListener("click",(event)=>{
+            if (event.target.tagName==="LI") {
+                console.log("你是一个傻逼!");
+            }
+        });
+    </script>
+</body>
+</html>

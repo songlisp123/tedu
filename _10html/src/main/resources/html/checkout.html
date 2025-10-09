@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检查你的表单</title>
+    <!-- <link rel="stylesheet" href="../css/resetcomplete.css"> -->
+    <style>
+        fieldset {
+            padding: 0;
+            border: 0;
+        }
+        fieldset > div {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        label span {
+            color: red;
+        }
+        input {
+            padding: 20px;
+            width: 200px;
+            border: 1px solid #666;
+        }
+        .single input {
+            width: 439px;
+        }
+        .double_input {
+            display: flex;
+            flex-direction: row;
+        }
+        .double_input > div {
+            margin-right: 15px;
+        }
+        button {
+            background: green;
+            border: 0;
+            color: white;
+            width: 224px;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>检查表单炎症</h1>   
+    <form action="#" method="get" >
+        <fieldset>
+            <h2>订单：</h2>
+            <div class="double_input">
+                <div>
+                    <label for="username">收件人:<span>*</span></label><br>
+                    <input type="text" name="username" id="username"
+                    required>
+                </div>
+                <div>
+                    <label for="phone">电话:<span>*</span></label><br>
+                    <input type="text" name="phone" id="phone"
+                    required>
+                </div>
+            </div>
+            <div class="single">
+                <label for="address">收件人地址:<span>*</span></label><br>
+                    <input type="text" name="address" id="address"
+                    required>
+            </div>
+            <div class="double_input">
+                <div>
+                    <label for="post">邮政编码:<span>*</span></label><br>
+                    <input type="text" name="post" id="post"
+                    required>
+                </div>
+                <div>
+                    <label for="country">城市:<span>*</span></label><br>
+                    <input type="text" name="country" id="country"
+                    required>
+                </div>
+            </div>
+            <h2>发送时间：</h2>
+            <div class="radio">
+                <input type="radio" name="radio" id="standard" value="standard">
+                <label for="standard">即刻送达</label>
+            </div>
+            <div>
+                <input type="radio" name="radio" id="next" value="next">
+                <label for="next">择日再送</label>
+            </div>
+            <button type="submit">提交</button>
+        </fieldset>
+    </form>
+</body>
+</html>

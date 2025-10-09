@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_02css.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>一些无意义的废话！</h1>
+    </header>
+    <main>
+        <div class="options">
+            <div class="paragraphs">
+                <label for="paragraphs">段落：</label>
+                <input type="range" 
+                id="paragraphs"
+                min="1" max="50"
+                value="1">
+                <span id="paragraphsValue">
+                    1
+                </span>
+            </div>
+            <div class="words">
+                <label for="words">文字：</label>
+                <input type="range"
+                id="words" min="1" max="5000"
+                value="10">
+                <span id="wordsValue">
+                    10
+                </span>
+            </div>
+            <div class="tags">
+                <label for="tags">标签：</label>
+                <select  id="tags"></select>
+            </div>
+            <div class="include">
+                <label for="include">包含：</label>
+                <select  id="include">
+                    <option value="yes">是</option>
+                    <option value="no">否</option>
+                </select>
+            </div>
+            <button id="generate">生成废话</button>
+        </div>
+        <div class="output">
+            <!-- 这些将是废话的主要地区 -->
+
+        </div>
+    </main>
+    <script src="./_02.js"></script>
+</body>
+</html>

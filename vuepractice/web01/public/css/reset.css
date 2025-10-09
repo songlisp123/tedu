@@ -1,0 +1,118 @@
+/* 全局属性css样式调整 */
+:root {
+    --valid-color: green;
+    --invalid-color: red;
+    --info-message: rgb(101, 168, 206);
+    --error-message:rgba(167, 34, 34,0.3);
+    --warning-message: rgba(167, 152, 34, 0.3);
+    
+    --bord-color:#fff;
+    --text-color:#fff;
+    --web-color: rgb(30,30,30);
+    --font-weight:bolder;
+    --font-famliy:Arial, Helvetica, sans-serif;
+    --header-color:rgb(12, 75, 51);
+    --headerbottom-color:rgb(24, 127, 88);
+    --footer-color:rgb(24, 127, 88);
+    --footerbottom-color:rgb(12, 75, 51);
+    --font-size:15px;
+}
+
+* {
+  background-color: var(--web-color);
+  margin: 0;
+  color:var(--text-color);
+  padding: 0;
+  font-family: var(--font-famliy);
+}
+.center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  font-size: var(--fon);
+  transition: 0.5s;
+  background-color:var(--header-color);
+}
+
+a:hover {
+  color: rgb(24, 127, 88);
+  transform: scale(0.75);
+}
+
+
+input:valid,
+textarea:valid {
+    border-bottom-color: var(--valid-color);
+}
+
+input:invalid,
+textarea:invalid {
+    border-bottom-color: var(--invalid-color);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+fieldset>div {
+    margin-bottom: 50px;
+}
+
+input {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid gray;
+    width: 200px;
+}
+
+input:hover {
+    border-color: lightskyblue;
+}
+
+fieldset {
+    width: 500px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+fieldset>.top {
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+label span {
+    color: var(--invalid-color);
+}
+
+
+/* 按钮样式调整 */
+button:hover {
+    background-color: orange;
+    cursor:pointer;
+}

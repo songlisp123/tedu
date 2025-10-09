@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .car {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+        .img-wrap {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .img-wrap img {
+            width: 100%;
+            height: auto;
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.1);
+            color: #000;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+        .previous {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <div class="img-wrap">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20241228102812942963/0_ilw552fVUGbwIzbE.jpg"
+                alt="1">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20241128161121752603/what-is-javascript.webp"
+                alt="2">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240829155421/Amazing-new-Javascript-features-in-ES15.webp"
+                alt="3">
+        </div>
+        <button class="button previous"><</button>
+        <button class="button next">></button>
+    </div>
+    <script>
+        //需要获取需要的图片，按钮的便签
+        let pre = document.querySelector('.previous');
+        let next = document.querySelector('.next');
+        let imagWrap = document.querySelector('.img-wrap');
+        let images = document.querySelector('.img-wrap img');
+
+        //图片索引
+        let index = 0;
+        function showImg() {
+            if (index >= images.length) index = 0;
+            if (index < 0) index = images.length - 1;
+            imagWrap.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        pre.addEventListener('click',()=>{
+            index--;
+            showImg();
+        });
+
+        next.addEventListener('click',()=>{
+            index++;
+            showImg();
+        });
+
+        setInterval(()=>{
+            index++;
+            showImg();
+        },5000);
+        showImg();
+    </script>
+</body>
+</html>
