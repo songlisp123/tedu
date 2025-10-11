@@ -1,0 +1,294 @@
+
+/*全局属性完成！*/
+/*页眉设计*/
+header>.top {
+  height: 60px;
+  background-color:var(--header-color);
+  line-height: 60px;
+}
+header>.top>.center {
+  width: 80%;
+  display: flex;
+  background-color: var(--header-color);
+}
+header>.top>.center li,
+header>.top>.center p {
+  background-color: var(--header-color);
+}
+header>.top>.center> ul {
+  overflow: hidden;
+}
+header>.top>.center p {
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  text-align: left;
+}
+
+header>.top>.center li {
+  float: left;
+  padding-right: 45px;
+}
+
+header .logo {
+  width: 100px;
+  font-size: 25px;
+  padding-right: 20%;
+}
+
+
+/*  这是页眉下部分的css样式表  */
+ header>.bottom {
+  height:75px;
+  background-color: var(--headerbottom-color);
+ }
+
+ header>.bottom>.center {
+  width: 80%;
+  background-color:var(--headerbottom-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 75px;
+ }
+
+ header>.bottom>.center p {
+  color: rgb(201, 238, 210);
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: '楷体';
+  background-color: var(--headerbottom-color);
+ }
+ /* 下面的搜索框 */
+ header>.bottom>.center .searchbar {
+  color: var(--text-color);
+  font-size: 12px;
+  width: 840px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid var(--bord-color);
+  background-color: rgb(14, 17, 23);
+  text-align: left;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .searchbar span {
+  margin-left: 20px;
+ }
+
+ .searchbar a {
+  margin-right: 20px;
+ }
+
+ /****************** 网站主要内容区域******************* */
+ .left {
+  border: 1px solid black;
+ }
+
+ /*************** 网站页脚 *************/
+ footer>.footer_top {
+  height: 300px;
+  background-color:var(--footer-color);
+ }
+ footer>.footer_top>.center {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--footer-color);
+ }
+
+ footer>.footer_top>.center>.item {
+  background-color: var(--footer-color);
+ }
+ footer>.footer_top>.center>.item>.text {
+  margin: 0;
+  text-align: left;
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  padding-top: 20px;
+  background-color: var(--footer-color);
+  padding-bottom: 25px;
+ }
+ footer>.footer_top>.center>.item li {
+  padding-bottom: 10px;
+ }
+ footer>.footer_top>.center>.item li , footer>.footer_top>.center>.item a {
+  background-color: var(--footer-color);
+ }
+ footer .item li a {
+  font-size: var(--font-size);
+  font-weight:var(--font-weight);
+ }
+ footer .item li a:hover {
+  color: var(--text-color);
+  text-decoration-line: underline;
+ }
+
+ /*尾部的声明框*/
+ footer>.footer_buttom {
+  min-height: 150px;
+  background-color: var(--footerbottom-color);
+ }
+ footer>.footer_buttom>.center {
+  width: 80%;
+  background-color: var(--footerbottom-color);
+ }
+  footer>.footer_buttom>.center>p  {
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(24, 127, 88);
+  font-weight: lighter;
+  font-size: small;
+  color: rgb(24, 127, 88);
+  background-color: rgb(12, 75, 51);
+  padding-bottom: 20px;
+ }
+ footer>.footer_buttom>.center>.top  {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(12, 75, 51);
+  padding-top: 20px;
+  padding-bottom: 20px;
+ }
+footer>.footer_buttom>.center>.top p {
+  background-color: rgb(12, 75, 51);
+}
+ footer>.footer_buttom>.center .logo {
+  color: #fff;
+  font-size: 30px;
+ }
+ footer>.footer_buttom>.center .des,footer>.footer_buttom>.center .designers {
+  font-size: 12px;
+  color: rgb(33, 158, 110);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+ }
+ footer>.footer_buttom>.center .des span {
+  font-size: 24px;
+  color: rgb(24, 127, 88);
+  font-family: fantasy;
+  font-weight: 600;
+  background-color: rgb(12, 75, 51);
+ }
+  footer>.footer_buttom>.center .designers span {
+    font-family: 'Curlz MT','HARNGTON';
+    font-size: 20px;
+    color: rgb(29, 171, 117);
+    font-style: italic;
+    background-color: rgb(12, 75, 51);
+    font-weight: lighter;
+  }
+ 
+ /***************中心区域************************/
+ section>p {
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: aquamarine;
+ }
+ #i1 a {
+  background-color: rgb(66, 65, 65);
+  color: lightgray;
+  transition: 0.5s;
+ }
+ #i1 a:hover {
+  color: rgb(29, 171, 117);
+  text-decoration: underline;
+ }
+ #i1 .pictureWall {
+  margin-left: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+ }
+ #i1 .pictureWall>.item {
+  width: 275px;
+  /* height: 300px; */
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: rgb(66, 65, 65);
+  margin-bottom: 20px;
+ }
+ video {
+  width: 100%;
+  margin-bottom: 15px;  
+ }
+ .item>p {
+  background-color: rgb(65,66,65);
+  margin-bottom: 20px;
+ }
+ .item .text {
+  font-weight: 700;
+ }
+ .item .text>a {
+  background-color: rgb(65,66,65);
+  text-decoration: underline;
+  color: aquamarine;
+ }
+ .contributor {
+  padding-top: 10px;
+  border-top: 1px solid #a4a4a4;
+  opacity: 0.5;
+  text-align: left;
+  padding-left: 15px;
+ }
+ .contributor>span {
+  padding-left: 25px;
+  background-color: rgb(66, 65, 65);
+  font-style: italic;
+  font-weight: 600;
+ }
+ #tag {
+  opacity: 0.75;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+ }
+ #score {
+  background-color: rgb(24, 127, 88);
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+ }
+ .section02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .section02 form>input {
+  background-color: #666;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  margin-bottom: 20px;
+ }
+ .section02 form>input:hover {
+  transform: scale(0.90) ;
+  cursor: grab;
+  background-color: rgb(29, 171, 117);
+ }
+ button {
+    color: var(--text-color);
+    font-size: 15px;
+    border: 0;
+    background-color: rgb(12, 75, 51);
+    height: 20px;
+    transition: 0.5s;
+ }
+ button:hover {
+    color: bisque;
+    transform: scale(0.95);
+    cursor:pointer;
+ }

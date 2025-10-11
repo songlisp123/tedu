@@ -1,0 +1,9 @@
+package com._02vue.demo.user.pojo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+public class UserRegPara {
+}

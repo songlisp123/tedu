@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.vehicle.mapper.vehicleMapper">
+    <select id="selectCarByLicenseAndBrand" resultType="com.ivos.demo.vehicle.pojo.vo.VehicleVo">
+        SELECT id,brand,license,model,code,displacement,status,type,
+        color,kilometers,reg_time,buy_time,price,battery_type,
+        create_time,update_time,geofence_bind_status,geofence_id
+        FROM vehicle
+        <where>
+            <if test="id != null ">
+                AND id = #{id}
+            </if>
+            <if test="brand !=null and brand != '' ">
+                AND brand like CONCAT('%',#{brand},'%')
+            </if>
+            <if test="license !=null and license != '' ">
+                AND license like CONCAT('%',#{license},'%')
+            </if>
+            <if test="geofenceBindStatus !=null and geofenceBindStatus != '' ">
+                AND geofenceBindStatus = #{geofenceBindStatus}
+            </if>
+            <if test="geofenceId !=null and geofenceId != '' ">
+                AND geofenceId = #{geofenceId}
+            </if>
+        </where>
+    </select>
 
+    <insert id="save">
+        INSERT INTO  vehicle(brand,license,model,code,displacement,status,type,
+        color,kilometers,reg_time,buy_time,price,battery_type,
+        create_time,update_time,geofence_bind_status,geofence_id)
+        VALUES(
+        #{brand},#{license},#{model},#{code},#{displacement},#{status},
+        #{type},#{color},#{kilometers},#{regTime},#{buyTime},#{price},
+        #{batteryType},#{createTime},#{updateTime},#{geofenceBindStatus},#{geofenceId}
+        )
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM vehicle
+        WHERE id=#{vehicleId}
+    </delete>
+
+    <update id="update">
+        UPDATE vehicle
+        <set>
+            <if test=" brand != null  and brand != '' ">
+                brand = #{brand}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

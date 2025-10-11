@@ -15,4 +15,8 @@ public class vehicleQuery {
     private String brand;
     @Schema(description = "车牌号",example = "豫A00x65")
     private String license;
+    @Schema(description = "电子围栏状态",example = "已占用")
+    private String geofenceBindStatus;
+    @Schema(description = "电子围栏id",example = "15")
+    private Long geofenceId;
 }

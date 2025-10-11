@@ -57,7 +57,7 @@ CREATE TABLE vehicle
     model                varchar(100) null comment '车辆型号',
     code                 varchar(100) null comment '车辆识别码',
     displacement         varchar(20)  null comment '车辆排量',
-    status               varchar(10)  null comment '车辆状态：空闲1 占用2',
+        status               varchar(10)  null comment '车辆状态：空闲1 占用2',
     type                 varchar(50)  null comment '车辆类型',
     color                varchar(10)  null comment '车辆颜色',
     kilometers           varchar(10)  null comment '里程数',

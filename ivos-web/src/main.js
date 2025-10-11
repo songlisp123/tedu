@@ -59,8 +59,18 @@ router.beforeEach((to,from,next) => {
     if (to.path !== '/login' && !user) {
         next({path:'/login'},ElMessage.error('请先登录！'));
     } 
-    //如果用户已经登录，则放行
+    //如果用户已经登录，则放行,
     else {
         next();
     }
 });
+
+
+/**
+ * 设置一个全局的获取用户的方法，该方法会将字符串的user对象
+ * 转换成json对象并赋值给localStorage的用户
+ * @returns user对象如果该对象存在，否则返回{@code null}
+ */
+window.getUser = ()=> {
+    return localStorage.user ? JSON.parse(localStorage.user) : null;
+}
