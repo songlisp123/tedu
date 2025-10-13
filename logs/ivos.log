@@ -1,136 +1,291 @@
-2025-10-11T10:40:08.311+08:00  INFO 42392 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 42392 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T10:40:08.316+08:00 DEBUG 42392 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
-2025-10-11T10:40:08.317+08:00  INFO 42392 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T10:40:09.355+08:00  INFO 42392 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-10-11T10:40:09.366+08:00  INFO 42392 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T10:40:09.367+08:00  INFO 42392 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T10:40:09.431+08:00  INFO 42392 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T10:40:09.431+08:00  INFO 42392 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
-2025-10-11T10:40:10.141+08:00  INFO 42392 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-10-11T10:40:10.149+08:00  INFO 42392 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.137 seconds (process running for 2.421)
-2025-10-11T10:40:18.507+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-11T10:40:18.507+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-11T10:40:18.508+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-10-11T10:40:18.596+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:40:18.598+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:40:18.638+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T10:40:18.928+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b530057
-2025-10-11T10:40:18.931+08:00  INFO 42392 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T10:40:18.947+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE name like CONCAT('%',?,'%')
-2025-10-11T10:40:18.984+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 化(String)
-2025-10-11T10:40:19.118+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 1
-2025-10-11T10:40:19.230+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:19.231+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:19.231+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:40:19.232+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:40:19.235+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:40:31.392+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=)
-2025-10-11T10:40:31.392+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=)
-2025-10-11T10:40:31.394+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:40:31.394+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:40:31.396+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:40:31.401+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:31.401+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:31.402+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:40:31.402+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:40:31.404+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:40:40.871+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:40:40.871+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:40:40.873+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:40:40.874+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 0(String)
-2025-10-11T10:40:40.875+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:40:40.880+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:40.881+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:40.881+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:40:40.882+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:40:40.885+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:40:44.319+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:40:44.319+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:40:44.320+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:40:44.321+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 1(String)
-2025-10-11T10:40:44.323+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:40:44.329+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:44.329+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:40:44.331+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:40:44.332+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:40:44.333+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:40:57.166+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:40:57.166+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:40:57.168+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE name like CONCAT('%',?,'%')
-2025-10-11T10:40:57.168+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 化(String)
-2025-10-11T10:40:57.169+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 1
-2025-10-11T10:41:17.886+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:41:17.887+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:41:17.887+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:41:17.888+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:41:17.889+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:41:23.180+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:41:23.180+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=化, status=)
-2025-10-11T10:41:23.181+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE name like CONCAT('%',?,'%')
-2025-10-11T10:41:23.182+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 化(String)
-2025-10-11T10:41:23.183+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 1
-2025-10-11T10:41:25.271+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=化, status=0)
-2025-10-11T10:41:25.271+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=化, status=0)
-2025-10-11T10:41:25.273+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE name like CONCAT('%',?,'%') AND status = ?
-2025-10-11T10:41:25.273+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 化(String), 0(String)
-2025-10-11T10:41:25.274+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 1
-2025-10-11T10:41:26.678+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=化, status=1)
-2025-10-11T10:41:26.678+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=化, status=1)
-2025-10-11T10:41:26.679+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE name like CONCAT('%',?,'%') AND status = ?
-2025-10-11T10:41:26.679+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 化(String), 1(String)
-2025-10-11T10:41:26.681+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 0
-2025-10-11T10:41:28.835+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:28.835+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:28.836+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:28.837+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 1(String)
-2025-10-11T10:41:28.838+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:31.247+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:31.247+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:31.248+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:31.249+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 0(String)
-2025-10-11T10:41:31.251+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:33.400+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:33.400+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:33.402+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:33.402+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 1(String)
-2025-10-11T10:41:33.405+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-6] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:35.270+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:35.271+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:35.272+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:35.272+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 0(String)
-2025-10-11T10:41:35.275+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:36.960+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:36.960+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=1)
-2025-10-11T10:41:36.961+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:36.961+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 1(String)
-2025-10-11T10:41:36.963+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-9] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:38.078+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:38.079+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=, status=0)
-2025-10-11T10:41:38.080+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence WHERE status = ?
-2025-10-11T10:41:38.080+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 0(String)
-2025-10-11T10:41:38.081+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 2
-2025-10-11T10:41:38.861+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:41:38.862+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:41:38.862+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:41:38.863+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:41:38.864+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:42:00.708+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
-2025-10-11T10:42:00.708+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
-2025-10-11T10:42:00.710+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
-2025-10-11T10:42:00.710+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
-2025-10-11T10:42:00.717+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
-2025-10-11T10:42:03.511+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段
-2025-10-11T10:42:03.512+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……
-2025-10-11T10:42:03.513+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
-2025-10-11T10:42:03.514+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
-2025-10-11T10:42:03.524+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
-2025-10-11T10:42:06.736+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:42:06.741+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:42:06.742+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:42:06.743+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:42:06.744+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
-2025-10-11T10:42:12.732+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:42:12.733+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
-2025-10-11T10:42:12.734+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
-2025-10-11T10:42:12.734+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
-2025-10-11T10:42:12.736+08:00 DEBUG 42392 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
+2025-10-13T10:19:43.265+08:00  INFO 9996 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 9996 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T10:19:43.266+08:00 DEBUG 9996 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T10:19:43.267+08:00  INFO 9996 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T10:19:44.199+08:00  INFO 9996 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-13T10:19:44.211+08:00  INFO 9996 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T10:19:44.211+08:00  INFO 9996 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T10:19:44.271+08:00  INFO 9996 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T10:19:44.271+08:00  INFO 9996 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 971 ms
+2025-10-13T10:19:44.878+08:00  INFO 9996 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-13T10:19:44.883+08:00  INFO 9996 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 1.949 seconds (process running for 2.305)
+2025-10-13T10:19:57.518+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T10:19:57.518+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T10:19:57.519+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-13T10:19:57.598+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
+2025-10-13T10:19:57.598+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
+2025-10-13T10:19:57.640+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T10:19:57.994+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d317618
+2025-10-13T10:19:57.996+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T10:19:58.014+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
+2025-10-13T10:19:58.063+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
+2025-10-13T10:19:58.125+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
+2025-10-13T10:20:59.151+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:20:59.153+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:20:59.161+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:20:59.161+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:20:59.172+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:21:38.781+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:21:38.781+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:21:38.783+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:21:38.783+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:21:38.793+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:21:41.705+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:21:41.708+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:21:41.715+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:21:41.716+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:21:41.723+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:23:28.631+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:23:28.632+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:23:28.634+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:23:28.635+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:23:28.639+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:23:32.136+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
+2025-10-13T10:23:32.137+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
+2025-10-13T10:23:32.137+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
+2025-10-13T10:23:32.138+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
+2025-10-13T10:23:32.143+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
+2025-10-13T10:23:47.773+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
+2025-10-13T10:23:47.774+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
+2025-10-13T10:23:47.774+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
+2025-10-13T10:23:47.775+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
+2025-10-13T10:23:47.777+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
+2025-10-13T10:26:46.319+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:26:46.319+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:26:46.320+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:26:46.320+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:26:46.325+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:27:05.541+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=101, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:27:05.541+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=101, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:27:05.545+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T10:27:05.546+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 101(Long)
+2025-10-13T10:27:05.554+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T10:27:11.454+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=101, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:27:11.455+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=101, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:27:11.456+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T10:27:11.456+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 101(Long)
+2025-10-13T10:27:11.458+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T10:29:25.033+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:25.033+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:25.033+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:29:25.033+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:29:25.040+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:29:27.872+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:27.872+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:27.873+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:29:27.874+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:29:27.876+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:29:33.832+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:33.832+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:33.833+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:29:33.833+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:29:33.836+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:29:36.434+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:36.435+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:29:36.436+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:29:36.436+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:29:36.440+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:31:00.954+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.u.userController.UserController    : 当前参数,UserLoginParam(username=tom, password=123456)
+2025-10-13T10:31:00.954+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.ivos.demo.user.impl.UserServiceImpl    : 接收参数：UserLoginParam(username=tom, password=123456)
+2025-10-13T10:31:00.955+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] .d.u.m.u.selectUserByUserNameAndPassword : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE username=?
+2025-10-13T10:31:00.955+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] .d.u.m.u.selectUserByUserNameAndPassword : ==> Parameters: tom(String)
+2025-10-13T10:31:00.958+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] .d.u.m.u.selectUserByUserNameAndPassword : <==      Total: 1
+2025-10-13T10:31:00.958+08:00  WARN 9996 --- [ivos] [http-nio-8080-exec-10] c.ivos.demo.user.impl.UserServiceImpl    : 用户或者密码错误！
+2025-10-13T10:31:00.963+08:00 ERROR 9996 --- [ivos] [http-nio-8080-exec-10] c.i.demo.base.exception.GlobalException  : 用户名或密码错误
+2025-10-13T10:31:05.606+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.u.userController.UserController    : 当前参数,UserLoginParam(username=lucy, password=123456)
+2025-10-13T10:31:05.607+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.ivos.demo.user.impl.UserServiceImpl    : 接收参数：UserLoginParam(username=lucy, password=123456)
+2025-10-13T10:31:05.607+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] .d.u.m.u.selectUserByUserNameAndPassword : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE username=?
+2025-10-13T10:31:05.608+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] .d.u.m.u.selectUserByUserNameAndPassword : ==> Parameters: lucy(String)
+2025-10-13T10:31:05.610+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] .d.u.m.u.selectUserByUserNameAndPassword : <==      Total: 1
+2025-10-13T10:31:05.611+08:00  INFO 9996 --- [ivos] [http-nio-8080-exec-1] c.ivos.demo.user.impl.UserServiceImpl    : 当前用户,lucy
+2025-10-13T10:31:05.993+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
+2025-10-13T10:31:05.996+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
+2025-10-13T10:31:05.998+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
+2025-10-13T10:31:05.998+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
+2025-10-13T10:31:06.000+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
+2025-10-13T10:31:14.077+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-9] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:14.077+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-9] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:14.078+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-9] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:31:14.078+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-9] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:31:14.081+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-9] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:31:22.107+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:22.107+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:22.108+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:31:22.108+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:31:22.110+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:31:31.201+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.userController.UserController    : 进入到用户查询功能模块……
+2025-10-13T10:31:31.202+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.ivos.demo.user.impl.UserServiceImpl    : 进入到业务层面……
+2025-10-13T10:31:31.203+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user
+2025-10-13T10:31:31.203+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : ==> Parameters: 
+2025-10-13T10:31:31.205+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-7] c.i.d.u.mapper.userMapper.findAllUsers   : <==      Total: 12
+2025-10-13T10:31:54.222+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:54.224+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T10:31:54.224+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle
+2025-10-13T10:31:54.225+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 
+2025-10-13T10:31:54.227+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-1] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 10
+2025-10-13T10:31:56.221+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:31:56.221+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:31:56.223+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T10:31:56.224+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T10:31:56.230+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 3
+2025-10-13T10:32:05.257+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:32:05.257+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:32:05.258+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T10:32:05.258+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T10:32:05.260+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 3
+2025-10-13T10:34:09.688+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:34:09.689+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:34:09.690+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T10:34:09.690+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T10:34:09.691+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 3
+2025-10-13T10:34:11.479+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=101)
+2025-10-13T10:34:11.479+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=101)
+2025-10-13T10:34:11.480+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE geofence_id = ?
+2025-10-13T10:34:11.481+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 101(Long)
+2025-10-13T10:34:11.482+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 3
+2025-10-13T10:37:01.048+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:37:01.048+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:37:01.049+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T10:37:01.049+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T10:37:01.050+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-10] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 3
+2025-10-13T10:43:31.897+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:43:31.897+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T10:43:31.898+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T10:43:31.898+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T10:43:31.899+08:00 DEBUG 9996 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 3
+2025-10-13T14:41:11.416+08:00  INFO 9996 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T14:41:11.430+08:00  INFO 9996 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T14:41:13.236+08:00  INFO 2004 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 2004 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T14:41:13.237+08:00 DEBUG 2004 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T14:41:13.238+08:00  INFO 2004 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T14:41:14.241+08:00  INFO 2004 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-13T14:41:14.250+08:00  INFO 2004 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T14:41:14.250+08:00  INFO 2004 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T14:41:14.310+08:00  INFO 2004 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T14:41:14.311+08:00  INFO 2004 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1034 ms
+2025-10-13T14:41:15.048+08:00  INFO 2004 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-13T14:41:15.056+08:00  INFO 2004 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.151 seconds (process running for 2.498)
+2025-10-13T14:41:45.093+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T14:41:45.096+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T14:41:45.098+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-13T14:41:45.128+08:00  WARN 2004 --- [ivos] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-10-13T14:42:10.846+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.controller.GeofenceController    : 进入到新建围栏阶段
+2025-10-13T14:42:10.846+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-3] c.i.d.g.s.implement.ServeImplement       : 业务层参数：GeofenceSavePara(name=null, position=null)
+2025-10-13T14:42:10.874+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T14:42:11.200+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b18527
+2025-10-13T14:42:11.201+08:00  INFO 2004 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T14:42:11.207+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-3] c.i.demo.geofence.mapper.GeoMapper.save  : ==>  Preparing: INSERT INTO geofence(name,status,position,create_time,update_time) VALUES(?,?,?,?,?)
+2025-10-13T14:42:11.283+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-3] c.i.demo.geofence.mapper.GeoMapper.save  : ==> Parameters: null, 0(String), null, 2025-10-13 14:42:10.85(Timestamp), 2025-10-13 14:42:10.85(Timestamp)
+2025-10-13T14:42:11.341+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-3] c.i.demo.geofence.mapper.GeoMapper.save  : <==    Updates: 1
+2025-10-13T14:42:13.336+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:42:13.337+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:42:13.354+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T14:42:13.355+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T14:42:13.383+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
+2025-10-13T14:43:05.847+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.controller.GeofenceController    : 控制器入参：106
+2025-10-13T14:43:05.848+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.s.implement.ServeImplement       : 业务层参数:106
+2025-10-13T14:43:05.850+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T14:43:05.851+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 106(Long)
+2025-10-13T14:43:05.857+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-5] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T14:43:05.859+08:00 ERROR 2004 --- [ivos] [http-nio-8080-exec-5] c.i.demo.base.exception.GlobalException  : 围栏存在未移除车辆
+2025-10-13T14:43:09.452+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.v.vehicleController              : 进入到车辆查询阶段,参数vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=106)
+2025-10-13T14:43:09.453+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.vehicleImpl.vehicleServiceImp    : 进入到业务层……参数:vehicleQuery(id=null, brand=null, license=null, geofenceBindStatus=null, geofenceId=106)
+2025-10-13T14:43:09.454+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE geofence_id = ?
+2025-10-13T14:43:09.454+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 106(Long)
+2025-10-13T14:43:09.456+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-6] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 0
+2025-10-13T14:43:13.211+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.controller.GeofenceController    : 控制器入参：106
+2025-10-13T14:43:13.211+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.s.implement.ServeImplement       : 业务层参数:106
+2025-10-13T14:43:13.212+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-7] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T14:43:13.213+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-7] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 106(Long)
+2025-10-13T14:43:13.215+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-7] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T14:43:13.215+08:00 ERROR 2004 --- [ivos] [http-nio-8080-exec-7] c.i.demo.base.exception.GlobalException  : 围栏存在未移除车辆
+2025-10-13T14:43:19.795+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.controller.GeofenceController    : 控制器入参：101
+2025-10-13T14:43:19.796+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-8] c.i.d.g.s.implement.ServeImplement       : 业务层参数:101
+2025-10-13T14:43:19.797+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T14:43:19.797+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 101(Long)
+2025-10-13T14:43:19.798+08:00 DEBUG 2004 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T14:43:19.800+08:00 ERROR 2004 --- [ivos] [http-nio-8080-exec-8] c.i.demo.base.exception.GlobalException  : 围栏存在未移除车辆
+2025-10-13T14:43:46.399+08:00  INFO 2004 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T14:43:46.406+08:00  INFO 2004 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T14:43:48.978+08:00  INFO 4736 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 4736 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T14:43:48.979+08:00 DEBUG 4736 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T14:43:48.979+08:00  INFO 4736 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T14:43:50.029+08:00  INFO 4736 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-13T14:43:50.039+08:00  INFO 4736 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T14:43:50.040+08:00  INFO 4736 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T14:43:50.091+08:00  INFO 4736 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T14:43:50.091+08:00  INFO 4736 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-10-13T14:43:50.898+08:00  INFO 4736 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-13T14:43:50.905+08:00  INFO 4736 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.216 seconds (process running for 2.483)
+2025-10-13T14:44:07.350+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T14:44:07.351+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T14:44:07.353+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-13T14:44:07.497+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.controller.GeofenceController    : 进入到新建围栏阶段
+2025-10-13T14:44:07.497+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.s.implement.ServeImplement       : 业务层参数：GeofenceSavePara(name=02矩形, position={"type":"rectangle","recPoints":"116.39536270616622-39.906911039921916,116.42130576929439-39.906911039921916,116.42130576929439-39.898553070344654,116.39536270616622-39.898553070344654"})
+2025-10-13T14:44:07.535+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T14:44:07.954+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@275ad4d
+2025-10-13T14:44:07.957+08:00  INFO 4736 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T14:44:08.004+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-1] c.i.demo.geofence.mapper.GeoMapper.save  : ==>  Preparing: INSERT INTO geofence(name,status,position,create_time,update_time) VALUES(?,?,?,?,?)
+2025-10-13T14:44:08.070+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-1] c.i.demo.geofence.mapper.GeoMapper.save  : ==> Parameters: 02矩形(String), 0(String), {"type":"rectangle","recPoints":"116.39536270616622-39.906911039921916,116.42130576929439-39.906911039921916,116.42130576929439-39.898553070344654,116.39536270616622-39.898553070344654"}(String), 2025-10-13 14:44:07.505(Timestamp), 2025-10-13 14:44:07.505(Timestamp)
+2025-10-13T14:44:08.089+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-1] c.i.demo.geofence.mapper.GeoMapper.save  : <==    Updates: 1
+2025-10-13T14:44:09.411+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:44:09.411+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:44:09.432+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T14:44:09.433+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T14:44:09.459+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 5
+2025-10-13T14:44:14.386+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.controller.GeofenceController    : 控制器入参：106
+2025-10-13T14:44:14.387+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.s.implement.ServeImplement       : 业务层参数:106
+2025-10-13T14:44:14.390+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE id = ?
+2025-10-13T14:44:14.390+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 106(Long)
+2025-10-13T14:44:14.395+08:00 DEBUG 4736 --- [ivos] [http-nio-8080-exec-4] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 1
+2025-10-13T14:44:14.397+08:00 ERROR 4736 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : 围栏存在未移除车辆
+2025-10-13T14:48:46.060+08:00  INFO 4736 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T14:48:46.065+08:00  INFO 4736 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T14:48:48.600+08:00  INFO 29180 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 29180 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T14:48:48.602+08:00 DEBUG 29180 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T14:48:48.603+08:00  INFO 29180 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T14:48:49.576+08:00  INFO 29180 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-13T14:48:49.585+08:00  INFO 29180 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T14:48:49.585+08:00  INFO 29180 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T14:48:49.639+08:00  INFO 29180 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T14:48:49.639+08:00  INFO 29180 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1001 ms
+2025-10-13T14:48:50.424+08:00  INFO 29180 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-13T14:48:50.431+08:00  INFO 29180 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.117 seconds (process running for 2.381)
+2025-10-13T14:48:54.794+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T14:48:54.795+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T14:48:54.798+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-13T14:48:54.878+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:48:54.879+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:48:54.917+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T14:48:55.389+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16f3e1f8
+2025-10-13T14:48:55.393+08:00  INFO 29180 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T14:48:55.403+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T14:48:55.451+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T14:48:55.480+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-1] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 5
+2025-10-13T14:48:57.148+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器入参：106
+2025-10-13T14:48:57.148+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层参数:106
+2025-10-13T14:48:57.151+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==>  Preparing: SELECT id,brand,license,model,code,displacement,status,type, color,kilometers,reg_time,buy_time,price,battery_type, create_time,update_time,geofence_bind_status,geofence_id FROM vehicle WHERE geofence_id = ?
+2025-10-13T14:48:57.151+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : ==> Parameters: 106(Long)
+2025-10-13T14:48:57.153+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.v.m.v.selectCarByLicenseAndBrand   : <==      Total: 0
+2025-10-13T14:48:57.153+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.geofence.mapper.GeoMapper.delete   : ==>  Preparing: DELETE FROM geofence WHERE id=?
+2025-10-13T14:48:57.154+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.geofence.mapper.GeoMapper.delete   : ==> Parameters: 106(Long)
+2025-10-13T14:48:57.157+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.geofence.mapper.GeoMapper.delete   : <==    Updates: 1
+2025-10-13T14:48:57.166+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:48:57.166+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T14:48:57.167+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T14:48:57.167+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T14:48:57.169+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-4] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
+2025-10-13T15:01:08.833+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T15:01:08.834+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T15:01:08.835+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T15:01:08.835+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T15:01:08.840+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-2] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 4
+2025-10-13T15:02:12.475+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.controller.GeofenceController    : 进入到新建围栏阶段
+2025-10-13T15:02:12.476+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-5] c.i.d.g.s.implement.ServeImplement       : 业务层参数：GeofenceSavePara(name=03矩形, position={"type":"rectangle","recPoints":"116.39665626610059-39.91039783598372,116.41900610718884-39.91039783598372,116.41900610718884-39.903811515464454,116.39665626610059-39.903811515464454"})
+2025-10-13T15:02:12.478+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-5] c.i.demo.geofence.mapper.GeoMapper.save  : ==>  Preparing: INSERT INTO geofence(name,status,position,create_time,update_time) VALUES(?,?,?,?,?)
+2025-10-13T15:02:12.481+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-5] c.i.demo.geofence.mapper.GeoMapper.save  : ==> Parameters: 03矩形(String), 0(String), {"type":"rectangle","recPoints":"116.39665626610059-39.91039783598372,116.41900610718884-39.91039783598372,116.41900610718884-39.903811515464454,116.39665626610059-39.903811515464454"}(String), 2025-10-13 15:02:12.478(Timestamp), 2025-10-13 15:02:12.478(Timestamp)
+2025-10-13T15:02:12.487+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-5] c.i.demo.geofence.mapper.GeoMapper.save  : <==    Updates: 1
+2025-10-13T15:02:27.635+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.controller.GeofenceController    : 控制器传参：GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T15:02:27.635+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.s.implement.ServeImplement       : 业务层层面参数:GeofenceQuery(id=null, name=null, status=null)
+2025-10-13T15:02:27.636+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==>  Preparing: SELECT id,name,status,position,create_time,update_time FROM geofence
+2025-10-13T15:02:27.636+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : ==> Parameters: 
+2025-10-13T15:02:27.640+08:00 DEBUG 29180 --- [ivos] [http-nio-8080-exec-7] c.i.d.g.mapper.GeoMapper.selectGeofence  : <==      Total: 5

@@ -1,47 +1,34 @@
-2025-10-11T01:05:09.331+08:00  INFO 5436 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Starting TestUserLogin using Java 17.0.16 with PID 5436 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
-2025-10-11T01:05:09.332+08:00  INFO 5436 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:05:10.106+08:00  INFO 5436 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:05:10.227+08:00  INFO 5436 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@285005b8
-2025-10-11T01:05:10.229+08:00  INFO 5436 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:05:10.669+08:00  INFO 5436 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-11T01:05:10.670+08:00  INFO 5436 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-11T01:05:10.670+08:00  INFO 5436 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-11T01:05:10.701+08:00  INFO 5436 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Started TestUserLogin in 1.583 seconds (process running for 2.53)
-2025-10-11T01:05:11.450+08:00  INFO 5436 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:05:11.455+08:00  INFO 5436 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-11T01:05:25.048+08:00  INFO 22720 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Starting TestUserLogin using Java 17.0.16 with PID 22720 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
-2025-10-11T01:05:25.049+08:00  INFO 22720 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:05:25.819+08:00  INFO 22720 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:05:25.932+08:00  INFO 22720 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49cd946c
-2025-10-11T01:05:25.933+08:00  INFO 22720 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:05:26.390+08:00  INFO 22720 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-11T01:05:26.390+08:00  INFO 22720 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-11T01:05:26.390+08:00  INFO 22720 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-10-11T01:05:26.420+08:00  INFO 22720 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Started TestUserLogin in 1.567 seconds (process running for 2.264)
-2025-10-11T01:05:27.078+08:00  WARN 22720 --- [_02vue] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
-2025-10-11T01:05:27.100+08:00  INFO 22720 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:05:27.106+08:00  INFO 22720 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-11T01:07:50.791+08:00  INFO 8048 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Starting TestUserLogin using Java 17.0.16 with PID 8048 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
-2025-10-11T01:07:50.791+08:00  INFO 8048 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:07:51.593+08:00  INFO 8048 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:07:51.730+08:00  INFO 8048 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7243145f
-2025-10-11T01:07:51.732+08:00  INFO 8048 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:07:52.290+08:00  INFO 8048 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-11T01:07:52.291+08:00  INFO 8048 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-11T01:07:52.292+08:00  INFO 8048 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-10-11T01:07:52.331+08:00  INFO 8048 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Started TestUserLogin in 1.746 seconds (process running for 2.87)
-2025-10-11T01:07:53.174+08:00  WARN 8048 --- [_02vue] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
-2025-10-11T01:09:44.394+08:00  WARN 8048 --- [_02vue] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m52s550ms174µs400ns).
-2025-10-11T01:09:44.417+08:00  INFO 8048 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:09:44.423+08:00  INFO 8048 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-11T01:10:06.364+08:00  INFO 17256 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Starting TestUserLogin using Java 17.0.16 with PID 17256 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
-2025-10-11T01:10:06.365+08:00  INFO 17256 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:10:07.062+08:00  INFO 17256 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:10:07.167+08:00  INFO 17256 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2de6f1bc
-2025-10-11T01:10:07.169+08:00  INFO 17256 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:10:07.584+08:00  INFO 17256 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-11T01:10:07.584+08:00  INFO 17256 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-11T01:10:07.585+08:00  INFO 17256 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-10-11T01:10:07.608+08:00  INFO 17256 --- [_02vue] [main] com._02vue.demo.TestUserLogin            : Started TestUserLogin in 1.449 seconds (process running for 2.145)
-2025-10-11T01:10:08.250+08:00  INFO 17256 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:10:08.255+08:00  INFO 17256 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T00:29:25.540+08:00  INFO 27852 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Starting updateUserPasswordrTest using Java 17.0.16 with PID 27852 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T00:29:25.547+08:00 DEBUG 27852 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:29:25.547+08:00  INFO 27852 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:29:26.243+08:00  INFO 27852 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T00:29:26.348+08:00  INFO 27852 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e002356
+2025-10-13T00:29:26.348+08:00  INFO 27852 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T00:29:26.786+08:00  INFO 27852 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T00:29:26.786+08:00  INFO 27852 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T00:29:26.786+08:00  INFO 27852 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-13T00:29:26.801+08:00  INFO 27852 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Started updateUserPasswordrTest in 1.452 seconds (process running for 2.223)
+2025-10-13T00:29:27.477+08:00 DEBUG 27852 --- [_02vue] [main] c._.demo.user.controller.userController  : 进入到修改密码的模块，参数：UserResetPassword(id=null, password=null)
+2025-10-13T00:29:27.477+08:00 DEBUG 27852 --- [_02vue] [main] c._.demo.user.service.imp.ServiceImp     : 业务层数据接受：UserResetPassword(id=null, password=null)
+2025-10-13T00:29:27.490+08:00 DEBUG 27852 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE users set password = ? WHERE id = ?
+2025-10-13T00:29:27.508+08:00 DEBUG 27852 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: null, null
+2025-10-13T00:29:27.510+08:00 DEBUG 27852 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 0
+2025-10-13T00:29:27.562+08:00  INFO 27852 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T00:29:27.562+08:00  INFO 27852 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T00:30:08.254+08:00  INFO 27920 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Starting updateUserPasswordrTest using Java 17.0.16 with PID 27920 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T00:30:08.254+08:00 DEBUG 27920 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:30:08.254+08:00  INFO 27920 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:30:08.932+08:00  INFO 27920 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T00:30:09.023+08:00  INFO 27920 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34330f77
+2025-10-13T00:30:09.023+08:00  INFO 27920 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T00:30:09.616+08:00  INFO 27920 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T00:30:09.616+08:00  INFO 27920 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T00:30:09.616+08:00  INFO 27920 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-13T00:30:09.643+08:00  INFO 27920 --- [_02vue] [main] c._02vue.demo.updateUserPasswordrTest    : Started updateUserPasswordrTest in 1.573 seconds (process running for 2.339)
+2025-10-13T00:30:10.270+08:00 DEBUG 27920 --- [_02vue] [main] c._.demo.user.controller.userController  : 进入到修改密码的模块，参数：UserResetPassword(id=27, password=A0116658)
+2025-10-13T00:30:10.270+08:00 DEBUG 27920 --- [_02vue] [main] c._.demo.user.service.imp.ServiceImp     : 业务层数据接受：UserResetPassword(id=27, password=A0116658)
+2025-10-13T00:30:10.290+08:00 DEBUG 27920 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE users set password = ? WHERE id = ?
+2025-10-13T00:30:10.308+08:00 DEBUG 27920 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116658(String), 27(Long)
+2025-10-13T00:30:10.310+08:00 DEBUG 27920 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-13T00:30:10.344+08:00  INFO 27920 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T00:30:10.344+08:00  INFO 27920 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

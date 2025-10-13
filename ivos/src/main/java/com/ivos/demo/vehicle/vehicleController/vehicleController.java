@@ -6,7 +6,6 @@ import com.ivos.demo.vehicle.pojo.dto.saveVehiclePara;
 import com.ivos.demo.vehicle.pojo.dto.vehicleQuery;
 import com.ivos.demo.vehicle.pojo.vo.VehicleVo;
 import com.ivos.demo.vehicle.vehicleImpl.vehicleService;
-import io.micrometer.common.lang.Nullable;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +28,7 @@ public class vehicleController {
     @ApiOperationSupport(order = 100)
     public JsonResult query(vehicleQuery vehicleQuery) {
         //测试
-        log.debug("进入到车辆查询阶段");
+        log.debug("进入到车辆查询阶段,参数{}",vehicleQuery);
         List<VehicleVo> vehicleVos = service.selectCarByLicenseAndBrand(vehicleQuery);
         return JsonResult.ok(vehicleVos);
 
@@ -51,6 +50,27 @@ public class vehicleController {
     {
         log.debug("控制器：{}",vehicleId);
         service.delete(vehicleId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("unbind/{id}")
+    @Operation(summary = "移除绑定围栏")
+    @ApiOperationSupport(order = 400)
+    public JsonResult unbind(@PathVariable("id") Long vehicleId) {
+        log.debug("控制器参数：{}",vehicleId);
+        service.unbind(vehicleId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("bind/{geoId}/{vehicleId}")
+    @Operation(summary = "继续绑定车辆")
+    @ApiOperationSupport(order = 500)
+    public JsonResult bind(
+            @PathVariable("geoId") Long geoId,
+            @PathVariable("vehicleId") Long vehicleId
+    ) {
+        log.debug("控制器方法,{},{}",geoId,vehicleId);
+        service.bind(geoId,vehicleId);
         return JsonResult.ok();
     }
 }

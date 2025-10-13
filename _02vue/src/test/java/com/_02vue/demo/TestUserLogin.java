@@ -32,7 +32,7 @@ public class TestUserLogin {
                         .content("""
                                 {
                                 "loginPara":"赵云",
-                                "password":"A0116659"
+                                "password":"19232939235"
                                 }
                                 """)
                         .contentType(MediaType.APPLICATION_JSON)

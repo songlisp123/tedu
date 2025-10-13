@@ -7,7 +7,10 @@
         </el-button>
      </div>
      <!-- 搜索卡片 -->
-      <el-card style="background-color: #fff;margin:10px; height: 70px;box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);">
+      <el-card style="background-color: #fff;
+      margin:10px; 
+      height: 70px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);">
         <el-form :inline="true">
             <el-form-item label="用户:">
                 <el-input placeholder="请输入您的名字" v-model="searchForm.username"
@@ -27,7 +30,9 @@
         </el-form>
       </el-card>
       <!-- 用户视图模块 -->
-       <el-card style="margin: 10px; margin-top: 20px; background-color: #fff;box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);">
+       <el-card style="margin: 10px; margin-top: 20px;
+        background-color: #fff;
+       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);">
         <!-- el-table表示表格组件，其中主要的属性是：
         :data ---  表示要绑定的对象，该对象的状态对应于表格的列
         每一列有一个prop属性与绑定对象的字段一一对应 

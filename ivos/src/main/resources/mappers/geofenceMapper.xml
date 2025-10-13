@@ -16,4 +16,27 @@
             </if>
         </where>
     </select>
+
+    <update id="update">
+        UPDATE geofence
+        <set>
+            <if test="status != null and status != '' ">
+                status = #{status},
+            </if>
+            <if test="updateTime != null ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM geofence
+        WHERE id=#{geoId}
+    </delete>
+
+    <insert id="save">
+        INSERT INTO geofence(name,status,position,create_time,update_time)
+        VALUES(#{name},#{status},#{position},#{createTime},#{updateTime})
+    </insert>
 </mapper>

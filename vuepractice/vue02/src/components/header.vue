@@ -6,7 +6,7 @@
               <nav>
                 <ul>
                   <li><a href="/login">登录</a></li>
-                  <li><a href="#">下载</a></li>
+                  <li><a href="/users">用户列表</a></li>
                   <li><a href="#">文档</a></li>
                   <li><a href="/user">用户</a></li>
                   <li><a href="#">社区</a></li>

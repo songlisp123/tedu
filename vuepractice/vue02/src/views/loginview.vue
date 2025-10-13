@@ -34,11 +34,11 @@
                             <el-form-item>
                                 <label for="password">密码：</label>
                                 <el-input placeholder="输入密码:" id="password" show-password
-                                v-model="userloginpara.password"></el-input>
+                                v-model="userloginpara.password" @keydown.enter="login()"></el-input>
                             </el-form-item>
-                                <p><el-button type="primary" @click="login()">登录</el-button></p>
+                                <p class="p"><el-button type="primary" @click="login()">登录</el-button></p>
                         </el-form>
-                            <p>测试用户：tom,密码或者邮箱：132456(tom@example.org)</p>
+                            <p class="p">测试用户：tom,密码或者邮箱：132456(tom@example.org)</p>
                     </el-card>
                 </el-col>
             </el-row>
@@ -47,7 +47,9 @@
 </template>
 
 <script setup>
+import router from '@/router';
 import axios from 'axios';
+import { ElMessage } from 'element-plus';
 import { ref } from 'vue';
 //定义一个参数接收用户输入的值
 const userloginpara = ref({
@@ -62,8 +64,12 @@ function login() {
     .then((response)=>{
         if (response.data.code == 2000) {
             console.log('登录成功！');
+            console.log(response.data.data);
             localStorage.setItem('user',JSON.stringify(response.data.data));
+
+            ElMessage.success('欢迎您再次归来');
             userloginpara.value = {};
+            router.push('/realhome');
         }else {
             console.log('登录失败');
         }
@@ -78,7 +84,13 @@ function login() {
 <style>
 label {
     font-size: 15px;
+    color: black;
 }
 
+.p {
+    text-align: center;
+    font-size: 20px;
+    color: lightgreen;
+}
 
 </style>

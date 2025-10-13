@@ -23,7 +23,7 @@ public class vehicleServiceImp implements vehicleService {
     @Override
     public List<VehicleVo> selectCarByLicenseAndBrand(vehicleQuery vehicleQuery) {
        //测试
-        log.debug("进入到业务层……");
+        log.debug("进入到业务层……参数:{}",vehicleQuery);
         List<VehicleVo> vehicleVos = mapper.selectCarByLicenseAndBrand(vehicleQuery);
         return vehicleVos;
     }
@@ -51,5 +51,27 @@ public class vehicleServiceImp implements vehicleService {
     public void delete(Long vehicleId) {
         log.debug("业务层：{}",vehicleId);
         mapper.delete(vehicleId);
+    }
+
+    @Override
+    public void unbind(Long vehicleId) {
+        log.debug("业务层参数:{}",vehicleId);
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setGeofenceBindStatus("0");
+        vehicle.setGeofenceId(null);
+        vehicle.setUpdateTime(new Date());
+        mapper.unbind(vehicle);
+    }
+
+    @Override
+    public void bind(Long geoId, Long vehicleId) {
+        log.debug("业务层参数……");
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setGeofenceBindStatus("1");
+        vehicle.setGeofenceId(geoId);
+        vehicle.setUpdateTime(new Date());
+        mapper.bind(vehicle);
     }
 }

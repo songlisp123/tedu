@@ -14,4 +14,8 @@ public interface vehicleService {
     void save(saveVehiclePara saved);
 
     void delete(Long vehicleId);
+
+    void unbind(Long vehicleId);
+
+    void bind(Long geoId, Long vehicleId);
 }

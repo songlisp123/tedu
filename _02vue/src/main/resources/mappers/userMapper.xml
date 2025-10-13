@@ -3,10 +3,94 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com._02vue.demo.user.mapper.userMapper">
-    <select id="login" resultType="com._02vue.demo.user.pojo.entity.User">
-        SELECT id,username,password,email
+
+    <resultMap id="userMap" type="com._02vue.demo.user.pojo.vo.UserVo">
+        <id column="id" property="id"/>
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="gender" property="gender"
+                typeHandler="com._02vue.demo.user.EnumHandler.GenderHandler" />
+        <result column="email" property="email" />
+        <result column="level" property="level"
+                typeHandler="com._02vue.demo.user.EnumHandler.LevelHandler" />
+        <result column="status" property="status"
+                typeHandler="com._02vue.demo.user.EnumHandler.StatusHandler"/>
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+    </resultMap>
+
+    <select id="login" resultMap="userMap">
+        SELECT id,username,password,email,gender,level,status,create_time as createTime,
+        update_time as updateTime
         FROM users
         WHERE (username=#{loginPara} OR email=#{loginPara})
         AND password=#{password}
     </select>
+
+    <select id="selectUsers" resultMap="userMap">
+        SELECT id,username,password,email,gender,level,status,create_time as createTime,
+        update_time as updateTime
+        FROM users
+        <where>
+            <if test="id != null ">
+               AND id = #{id}
+            </if>
+            <if test="username != null and username != '' ">
+                AND username like CONCAT('%',#{username},'%')
+            </if>
+            <if test="email != null and email != '' ">
+                AND email = #{email}
+            </if>
+            <if test="gender != null and gender != '' ">
+                AND gender = #{gender}
+            </if>
+            <if test="level != null and level != '' ">
+                AND level = #{level}
+            </if>
+            <if test="status != null and status != '' ">
+                AND status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <insert id="saved">
+        INSERT INTO users(username,password,email,gender,level,status,create_time,update_time)
+        VALUES(#{username},#{password},#{email},#{gender},#{level},#{status},#{createTime},#{updateTime})
+    </insert>
+
+    <update id="update">
+        UPDATE users
+        <set>
+            <if test="username != null and username != '' ">
+                username = #{username},
+            </if>
+            <if test="email != null and email != '' ">
+                email = #{email},
+            </if>
+            <if test="gender != null and gender != '' ">
+                gender = #{gender},
+            </if>
+            <if test="level != null and level != '' ">
+                level = #{level},
+            </if>
+            <if test="status != null and status != '' ">
+                status = #{status},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM users
+        WHERE id = #{userId}
+    </delete>
+
+    <update id="updatePassword">
+        UPDATE users
+        SET password = #{password}
+        WHERE id = #{id}
+    </update>
 </mapper>

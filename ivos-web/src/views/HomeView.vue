@@ -78,7 +78,7 @@
     <div :style="{width:(isCollapse ? 'calc(100% - 64px)' : 'calc(100% - 208px')}">
         <!-- 右侧菜单栏 -->
          <!-- 一个顶部条框包含菜单按钮和用户显示 -->
-          <el-header style="padding-top: 22px;height: 10%vh;background-color: #fff;">
+          <el-header style="padding-top: 22px;height: 10vh;background-color: #fff;">
             <el-row>
               <el-col :span="18">
                 <el-icon style="font-size: 20px;" @click="changeCollapse()"><Expand /></el-icon>
@@ -160,6 +160,7 @@ let map = {
   '/audit':['调度','审核'],
   '/distribute':['调度','分配'],
   '/dict':['字典','字典列表'],
+  '/geofenceMap':['围栏管理','绘制围栏'],
 
 };
 

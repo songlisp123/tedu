@@ -1,92 +1,300 @@
-2025-10-11T00:46:47.191+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 32096 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T00:46:47.193+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T00:46:47.235+08:00  INFO 32096 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-11T00:46:47.235+08:00  INFO 32096 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-11T00:46:48.073+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
-2025-10-11T00:46:48.083+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T00:46:48.083+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T00:46:48.129+08:00  INFO 32096 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T00:46:48.129+08:00  INFO 32096 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 893 ms
-2025-10-11T00:46:48.578+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T00:46:48.688+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71cdc00
-2025-10-11T00:46:48.689+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T00:46:48.751+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-11T00:46:48.774+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
-2025-10-11T00:46:48.780+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 1.849 seconds (process running for 2.157)
-2025-10-11T01:05:06.614+08:00  INFO 32096 --- [_02vue] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 5 deletions, 1 modification)
-2025-10-11T01:05:06.639+08:00  INFO 32096 --- [_02vue] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:05:06.646+08:00  INFO 32096 --- [_02vue] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-11T01:05:06.685+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 32096 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T01:05:06.685+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:05:06.867+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
-2025-10-11T01:05:06.867+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T01:05:06.867+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T01:05:06.895+08:00  INFO 32096 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T01:05:06.895+08:00  INFO 32096 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 208 ms
-2025-10-11T01:05:06.964+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-10-11T01:05:06.968+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70382a4d
-2025-10-11T01:05:06.968+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-10-11T01:05:07.038+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-11T01:05:07.046+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
-2025-10-11T01:05:07.048+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 0.377 seconds (process running for 1100.426)
-2025-10-11T01:05:07.050+08:00  INFO 32096 --- [_02vue] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-10-11T01:05:08.469+08:00  INFO 32096 --- [_02vue] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (6 additions, 0 deletions, 0 modifications)
-2025-10-11T01:05:08.523+08:00  INFO 32096 --- [_02vue] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-10-11T01:05:08.525+08:00  INFO 32096 --- [_02vue] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-10-11T01:05:08.583+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 32096 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T01:05:08.583+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:05:08.776+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
-2025-10-11T01:05:08.776+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T01:05:08.777+08:00  INFO 32096 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T01:05:08.801+08:00  INFO 32096 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T01:05:08.801+08:00  INFO 32096 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 216 ms
-2025-10-11T01:05:08.833+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-10-11T01:05:08.837+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14d678d6
-2025-10-11T01:05:08.837+08:00  INFO 32096 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-10-11T01:05:08.923+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-11T01:05:08.930+08:00  INFO 32096 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
-2025-10-11T01:05:08.933+08:00  INFO 32096 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 0.372 seconds (process running for 1102.31)
-2025-10-11T01:05:08.934+08:00  INFO 32096 --- [_02vue] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-10-11T01:17:10.769+08:00  INFO 32096 --- [_02vue] [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-11T01:17:10.769+08:00  INFO 32096 --- [_02vue] [http-nio-8060-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-11T01:17:10.771+08:00  INFO 32096 --- [_02vue] [http-nio-8060-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-10-11T01:17:19.717+08:00  INFO 32096 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-10-11T01:17:19.719+08:00  INFO 32096 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2025-10-11T01:17:22.102+08:00  INFO 32076 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 32076 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T01:17:22.104+08:00  INFO 32076 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:17:22.143+08:00  INFO 32076 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-11T01:17:22.143+08:00  INFO 32076 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-11T01:17:23.024+08:00  INFO 32076 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
-2025-10-11T01:17:23.035+08:00  INFO 32076 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T01:17:23.035+08:00  INFO 32076 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T01:17:23.078+08:00  INFO 32076 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T01:17:23.078+08:00  INFO 32076 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 935 ms
-2025-10-11T01:17:23.293+08:00  INFO 32076 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:17:23.393+08:00  INFO 32076 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a08753f
-2025-10-11T01:17:23.394+08:00  INFO 32076 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:17:23.692+08:00  INFO 32076 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-11T01:17:23.719+08:00  INFO 32076 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
-2025-10-11T01:17:23.726+08:00  INFO 32076 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 1.897 seconds (process running for 2.278)
-2025-10-11T01:17:32.162+08:00  INFO 32076 --- [_02vue] [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-11T01:17:32.162+08:00  INFO 32076 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-11T01:17:32.163+08:00  INFO 32076 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-10-11T01:19:54.571+08:00  INFO 32076 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-11T01:19:54.575+08:00  INFO 32076 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-11T01:19:57.509+08:00  INFO 30260 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 30260 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
-2025-10-11T01:19:57.511+08:00  INFO 30260 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
-2025-10-11T01:19:57.549+08:00  INFO 30260 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-11T01:19:57.549+08:00  INFO 30260 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-11T01:19:58.419+08:00  INFO 30260 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
-2025-10-11T01:19:58.429+08:00  INFO 30260 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-11T01:19:58.429+08:00  INFO 30260 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-10-11T01:19:58.471+08:00  INFO 30260 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-11T01:19:58.471+08:00  INFO 30260 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 922 ms
-2025-10-11T01:19:58.687+08:00  INFO 30260 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-11T01:19:58.789+08:00  INFO 30260 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e5823b3
-2025-10-11T01:19:58.790+08:00  INFO 30260 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-11T01:19:59.119+08:00  INFO 30260 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-11T01:19:59.144+08:00  INFO 30260 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
-2025-10-11T01:19:59.150+08:00  INFO 30260 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 1.913 seconds (process running for 2.203)
-2025-10-11T01:20:18.726+08:00  INFO 30260 --- [_02vue] [http-nio-8060-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-11T01:20:18.727+08:00  INFO 30260 --- [_02vue] [http-nio-8060-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-11T01:20:18.729+08:00  INFO 30260 --- [_02vue] [http-nio-8060-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-13T00:00:18.293+08:00  INFO 6644 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T00:00:18.303+08:00  INFO 6644 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T00:00:21.075+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 23236 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T00:00:21.080+08:00 DEBUG 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:00:21.080+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:00:21.118+08:00  INFO 23236 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-13T00:00:21.118+08:00  INFO 23236 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-13T00:00:21.917+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
+2025-10-13T00:00:21.929+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T00:00:21.929+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T00:00:21.972+08:00  INFO 23236 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T00:00:21.972+08:00  INFO 23236 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 854 ms
+2025-10-13T00:00:22.164+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T00:00:22.254+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dd65f04
+2025-10-13T00:00:22.254+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T00:00:22.579+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-13T00:00:22.595+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
+2025-10-13T00:00:22.612+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 1.792 seconds (process running for 2.059)
+2025-10-13T00:01:05.093+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T00:01:05.093+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T00:01:05.093+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-13T00:01:05.224+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.demo.user.controller.userController  : UserRegPara(id=27, username=null, password=A0116658, email=null, gender=null, level=null, status=null)
+2025-10-13T00:01:05.228+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.demo.user.service.imp.ServiceImp     : 参数:UserRegPara(id=27, username=null, password=A0116658, email=null, gender=null, level=null, status=null)
+2025-10-13T00:01:05.232+08:00 ERROR 23236 --- [_02vue] [http-nio-8060-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.function.Supplier.get()" because "supplier" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.function.Supplier.get()" because "supplier" is null
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at com._02vue.demo.user.service.imp.ServiceImp.toGender(ServiceImp.java:76) ~[classes/:na]
+	at com._02vue.demo.user.service.imp.ServiceImp.save(ServiceImp.java:51) ~[classes/:na]
+	at com._02vue.demo.user.controller.userController.save(userController.java:41) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-10-13T00:02:11.762+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-7] c._.demo.user.controller.userController  : UserRegPara(id=27, username=null, password=A0116658, email=null, gender=null, level=null, status=null)
+2025-10-13T00:02:11.762+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-7] c._.demo.user.service.imp.ServiceImp     : 参数:UserRegPara(id=27, username=null, password=A0116658, email=null, gender=null, level=null, status=null)
+2025-10-13T00:02:11.763+08:00 ERROR 23236 --- [_02vue] [http-nio-8060-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.function.Supplier.get()" because "supplier" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.function.Supplier.get()" because "supplier" is null
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at com._02vue.demo.user.service.imp.ServiceImp.toGender(ServiceImp.java:76) ~[classes/:na]
+	at com._02vue.demo.user.service.imp.ServiceImp.save(ServiceImp.java:51) ~[classes/:na]
+	at com._02vue.demo.user.controller.userController.save(userController.java:41) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-10-13T00:29:23.720+08:00  INFO 23236 --- [_02vue] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (1 addition, 0 deletions, 5 modifications)
+2025-10-13T00:29:23.735+08:00  INFO 23236 --- [_02vue] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T00:29:23.750+08:00  INFO 23236 --- [_02vue] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T00:29:23.789+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 23236 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T00:29:23.789+08:00 DEBUG 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:29:23.789+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:29:23.948+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
+2025-10-13T00:29:23.948+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T00:29:23.948+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T00:29:23.975+08:00  INFO 23236 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T00:29:23.975+08:00  INFO 23236 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 179 ms
+2025-10-13T00:29:24.011+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-13T00:29:24.011+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57cb4c2b
+2025-10-13T00:29:24.011+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-13T00:29:24.086+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-13T00:29:24.086+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
+2025-10-13T00:29:24.101+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 0.327 seconds (process running for 1743.547)
+2025-10-13T00:29:24.101+08:00  INFO 23236 --- [_02vue] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-13T00:30:07.293+08:00  INFO 23236 --- [_02vue] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-13T00:30:07.310+08:00  INFO 23236 --- [_02vue] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-13T00:30:07.310+08:00  INFO 23236 --- [_02vue] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-13T00:30:07.355+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 23236 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T00:30:07.355+08:00 DEBUG 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:30:07.358+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:30:07.508+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
+2025-10-13T00:30:07.508+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T00:30:07.508+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T00:30:07.538+08:00  INFO 23236 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T00:30:07.538+08:00  INFO 23236 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 180 ms
+2025-10-13T00:30:07.576+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-13T00:30:07.581+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c127858
+2025-10-13T00:30:07.581+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-13T00:30:07.651+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-13T00:30:07.653+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
+2025-10-13T00:30:07.659+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 0.319 seconds (process running for 1787.105)
+2025-10-13T00:30:07.659+08:00  INFO 23236 --- [_02vue] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-13T00:30:09.069+08:00  INFO 23236 --- [_02vue] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-13T00:30:09.099+08:00  INFO 23236 --- [_02vue] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-13T00:30:09.099+08:00  INFO 23236 --- [_02vue] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-10-13T00:30:09.153+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 23236 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T00:30:09.153+08:00 DEBUG 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:30:09.153+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:30:09.390+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
+2025-10-13T00:30:09.392+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T00:30:09.392+08:00  INFO 23236 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T00:30:09.428+08:00  INFO 23236 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T00:30:09.429+08:00  INFO 23236 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2025-10-13T00:30:09.478+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-13T00:30:09.481+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32ab8f8a
+2025-10-13T00:30:09.481+08:00  INFO 23236 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-13T00:30:09.556+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-13T00:30:09.565+08:00  INFO 23236 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
+2025-10-13T00:30:09.568+08:00  INFO 23236 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 0.438 seconds (process running for 1789.012)
+2025-10-13T00:30:09.569+08:00  INFO 23236 --- [_02vue] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-13T00:31:13.896+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-13T00:31:13.897+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-13T00:31:13.897+08:00  INFO 23236 --- [_02vue] [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-13T00:31:13.907+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.demo.user.controller.userController  : 进入到修改密码的模块，参数：UserResetPassword(id=27, password=A0116658)
+2025-10-13T00:31:13.908+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.demo.user.service.imp.ServiceImp     : 业务层数据接受：UserResetPassword(id=27, password=A0116658)
+2025-10-13T00:31:13.925+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE users set password = ? WHERE id = ?
+2025-10-13T00:31:13.949+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116658(String), 27(Long)
+2025-10-13T00:31:13.967+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-13T00:36:15.300+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.controller.userController  : 控制器层面:UserLoginPara(loginPara=赵云, password=A0116658)
+2025-10-13T00:36:15.301+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.service.imp.ServiceImp     : 业务层:UserLoginPara(loginPara=赵云, password=A0116658)
+2025-10-13T00:36:15.303+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.mapper.userMapper.login    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users WHERE (username=? OR email=?) AND password=?
+2025-10-13T00:36:15.304+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.mapper.userMapper.login    : ==> Parameters: 赵云(String), 赵云(String), A0116658(String)
+2025-10-13T00:36:15.326+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:36:15.326+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:36:15.326+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:36:15.326+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-4] c._.demo.user.mapper.userMapper.login    : <==      Total: 1
+2025-10-13T00:39:45.096+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.controller.userController  : 控制器层面:UserLoginPara(loginPara=赵云, password=A0116658)
+2025-10-13T00:39:45.096+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.service.imp.ServiceImp     : 业务层:UserLoginPara(loginPara=赵云, password=A0116658)
+2025-10-13T00:39:45.096+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.mapper.userMapper.login    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users WHERE (username=? OR email=?) AND password=?
+2025-10-13T00:39:45.096+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.mapper.userMapper.login    : ==> Parameters: 赵云(String), 赵云(String), A0116658(String)
+2025-10-13T00:39:45.101+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:39:45.101+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:39:45.101+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:39:45.101+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.mapper.userMapper.login    : <==      Total: 1
+2025-10-13T00:40:02.756+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.demo.user.controller.userController  : 进入到修改密码的模块，参数：UserResetPassword(id=27, password=A0116659)
+2025-10-13T00:40:02.756+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.demo.user.service.imp.ServiceImp     : 业务层数据接受：UserResetPassword(id=27, password=A0116659)
+2025-10-13T00:40:02.757+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : ==>  Preparing: UPDATE users set password = ? WHERE id = ?
+2025-10-13T00:40:02.758+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : ==> Parameters: A0116659(String), 27(Long)
+2025-10-13T00:40:02.759+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-3] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
+2025-10-13T00:40:21.737+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.controller.userController  : 控制器层面:UserLoginPara(loginPara=赵云, password=A0116659)
+2025-10-13T00:40:21.738+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.service.imp.ServiceImp     : 业务层:UserLoginPara(loginPara=赵云, password=A0116659)
+2025-10-13T00:40:21.739+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.mapper.userMapper.login    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users WHERE (username=? OR email=?) AND password=?
+2025-10-13T00:40:21.739+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.mapper.userMapper.login    : ==> Parameters: 赵云(String), 赵云(String), A0116659(String)
+2025-10-13T00:40:21.740+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:21.741+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:21.741+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:21.741+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-5] c._.demo.user.mapper.userMapper.login    : <==      Total: 1
+2025-10-13T00:40:41.104+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.d.u.mapper.userMapper.selectUsers    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users
+2025-10-13T00:40:41.104+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.d.u.mapper.userMapper.selectUsers    : ==> Parameters: 
+2025-10-13T00:40:41.106+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:41.106+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:41.106+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:41.106+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:41.106+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:41.107+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:41.107+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:41.107+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:41.107+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:40:41.108+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:40:41.109+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-8] c._.d.u.mapper.userMapper.selectUsers    : <==      Total: 5
+2025-10-13T00:41:18.053+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.d.u.mapper.userMapper.selectUsers    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users WHERE username like CONCAT('%',?,'%')
+2025-10-13T00:41:18.058+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.d.u.mapper.userMapper.selectUsers    : ==> Parameters: 曹(String)
+2025-10-13T00:41:18.059+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:18.059+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:18.059+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:18.059+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-10] c._.d.u.mapper.userMapper.selectUsers    : <==      Total: 1
+2025-10-13T00:41:22.034+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.d.u.mapper.userMapper.selectUsers    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users WHERE username like CONCAT('%',?,'%')
+2025-10-13T00:41:22.035+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.d.u.mapper.userMapper.selectUsers    : ==> Parameters: 赵(String)
+2025-10-13T00:41:22.036+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:22.036+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:22.036+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:22.037+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-2] c._.d.u.mapper.userMapper.selectUsers    : <==      Total: 1
+2025-10-13T00:41:25.346+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.d.u.mapper.userMapper.selectUsers    : ==>  Preparing: SELECT id,username,password,email,gender,level,status,create_time as createTime, update_time as updateTime FROM users
+2025-10-13T00:41:25.346+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.d.u.mapper.userMapper.selectUsers    : ==> Parameters: 
+2025-10-13T00:41:25.346+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:25.346+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:25.346+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:25.348+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:25.349+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.GenderHandler  : 调用此方法1……
+2025-10-13T00:41:25.349+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.LevelHandler   : 调用此方法1……
+2025-10-13T00:41:25.349+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.demo.user.EnumHandler.StatusHandler  : 调用此方法1……
+2025-10-13T00:41:25.349+08:00 DEBUG 23236 --- [_02vue] [http-nio-8060-exec-1] c._.d.u.mapper.userMapper.selectUsers    : <==      Total: 5
+2025-10-13T00:50:55.400+08:00  INFO 23236 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-13T00:50:55.400+08:00  INFO 23236 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-10-13T00:50:56.884+08:00  INFO 22288 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Starting Application using Java 17.0.16 with PID 22288 (I:\20250820\jsd2507-ssm-advance\_02vue\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-13T00:50:56.889+08:00 DEBUG 22288 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T00:50:56.889+08:00  INFO 22288 --- [_02vue] [restartedMain] com._02vue.demo.Application              : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T00:50:56.930+08:00  INFO 22288 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-13T00:50:56.930+08:00  INFO 22288 --- [_02vue] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-13T00:50:57.726+08:00  INFO 22288 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8060 (http)
+2025-10-13T00:50:57.737+08:00  INFO 22288 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-13T00:50:57.737+08:00  INFO 22288 --- [_02vue] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-13T00:50:57.782+08:00  INFO 22288 --- [_02vue] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-13T00:50:57.782+08:00  INFO 22288 --- [_02vue] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 852 ms
+2025-10-13T00:50:58.013+08:00  INFO 22288 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T00:50:58.103+08:00  INFO 22288 --- [_02vue] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cb48351
+2025-10-13T00:50:58.103+08:00  INFO 22288 --- [_02vue] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T00:50:58.423+08:00  INFO 22288 --- [_02vue] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-13T00:50:58.446+08:00  INFO 22288 --- [_02vue] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8060 (http) with context path '/'
+2025-10-13T00:50:58.453+08:00  INFO 22288 --- [_02vue] [restartedMain] com._02vue.demo.Application              : Started Application in 1.859 seconds (process running for 2.17)
+2025-10-13T08:35:05.002+08:00  INFO 22288 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T08:35:05.002+08:00  INFO 22288 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

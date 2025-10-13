@@ -17,10 +17,10 @@
                 AND license like CONCAT('%',#{license},'%')
             </if>
             <if test="geofenceBindStatus !=null and geofenceBindStatus != '' ">
-                AND geofenceBindStatus = #{geofenceBindStatus}
+                AND geofence_bind_status = #{geofenceBindStatus}
             </if>
-            <if test="geofenceId !=null and geofenceId != '' ">
-                AND geofenceId = #{geofenceId}
+            <if test="geofenceId !=null ">
+                AND geofence_id = #{geofenceId}
             </if>
         </where>
     </select>
@@ -46,6 +46,38 @@
         <set>
             <if test=" brand != null  and brand != '' ">
                 brand = #{brand}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="unbind">
+        UPDATE vehicle
+        <set>
+            <if test=" geofenceId == null ">
+                geofence_id = #{geofenceId},
+            </if>
+            <if test=" geofenceBindStatus != null and geofenceBindStatus != '' ">
+                geofence_bind_status = #{geofenceBindStatus},
+            </if>
+            <if test=" updateTime != null ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="bind">
+        UPDATE vehicle
+        <set>
+            <if test=" geofenceId != null ">
+                geofence_id = #{geofenceId},
+            </if>
+            <if test=" geofenceBindStatus != null and geofenceBindStatus != '' ">
+                geofence_bind_status = #{geofenceBindStatus},
+            </if>
+            <if test=" updateTime != null ">
+                update_time = #{updateTime}
             </if>
         </set>
         WHERE id = #{id}
