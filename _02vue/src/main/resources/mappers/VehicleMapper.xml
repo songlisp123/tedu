@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com._02vue.demo.vehicle.mapper.VehicleMapper">
+
+    <resultMap id="vehicleMap" type="com._02vue.demo.vehicle.pojo.vo.VehicleVo">
+        <id column="id" property="id" />
+        <result column="brand" property="brand" />
+        <result column="license" property="license" />
+        <result column="model" property="model" />
+        <result column="code" property="code" />
+        <result column="color" property="color" />
+        <result column="kilometers" property="kilometers" />
+        <result column="type" property="type"
+                typeHandler="com._02vue.demo.vehicle.EnumHandler.TypeHandler" />
+        <result column="price" property="price" />
+        <result column="regTime" property="regTime" />
+        <result column="buyTime" property="buyTime" />
+        <result column="batteryType" property="batteryType"
+                typeHandler="com._02vue.demo.vehicle.EnumHandler.BatterryHandler" />
+        <result column="status" property="status"
+                typeHandler="com._02vue.demo.vehicle.EnumHandler.StatusHandler" />
+    </resultMap>
+    <insert id="save">
+        INSERT INTO vehicle(
+        brand,
+        license,
+        model,
+        code,
+        displacement,
+        status,
+        type,
+        color,
+        kilometers,
+        reg_time,
+        buy_time,
+        price,
+        battery_type,
+        create_time,
+        update_time,
+        geofence_bind_status,
+        geofence_id
+        )
+        VALUES(
+        #{brand},
+        #{license},
+        #{model},
+        #{code},
+        #{displacement},
+        #{status},
+        #{type},
+        #{color},
+        #{kilometers},
+        #{regTime},
+        #{buyTime},
+        #{price},
+        #{batteryType},
+        #{createTime},
+        #{updateTime},
+        #{geofenceBindStatus},
+        #{geofenceId}
+        )
+    </insert>
+
+    <select id="select" resultMap="vehicleMap">
+        SELECT id,brand,license,model,color,displacement,code,type,price,reg_time as regTime,
+        buy_time as buyTime,battery_type as batteryType, status,kilometers
+        FROM vehicle
+        <where>
+            <if test=" id != null ">
+               AND id = #{id}
+            </if>
+            <if test=" brand != null and brand != '' ">
+                AND brand like CONCAT('%',#{brand},'%')
+            </if>
+            <if test=" status != null and status != '' ">
+                AND status = #{status}
+            </if>
+            <if test=" license != null and license != '' ">
+                AND license = #{license}
+            </if>
+            <if test=" geofenceBindStatus != null and geofenceBindStatus != '' ">
+                AND geofence_bind_status = #{geofenceBindStatus}
+            </if>
+            <if test=" geofenceId != null ">
+                AND geofence_id = #{geofenceId}
+            </if>
+        </where>
+    </select>
+</mapper>

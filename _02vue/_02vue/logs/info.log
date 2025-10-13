@@ -32,3 +32,172 @@
 2025-10-13T00:30:10.310+08:00 DEBUG 27920 --- [_02vue] [main] c._.d.u.m.userMapper.updatePassword      : <==    Updates: 1
 2025-10-13T00:30:10.344+08:00  INFO 27920 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-13T00:30:10.344+08:00  INFO 27920 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T18:52:13.824+08:00  INFO 21220 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Starting regVehicleTest using Java 17.0.16 with PID 21220 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T18:52:13.826+08:00 DEBUG 21220 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T18:52:13.826+08:00  INFO 21220 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T18:52:14.568+08:00  INFO 21220 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T18:52:14.670+08:00  INFO 21220 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e002356
+2025-10-13T18:52:14.671+08:00  INFO 21220 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T18:52:15.069+08:00  INFO 21220 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T18:52:15.070+08:00  INFO 21220 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T18:52:15.071+08:00  INFO 21220 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T18:52:15.098+08:00  INFO 21220 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Started regVehicleTest in 1.494 seconds (process running for 2.354)
+2025-10-13T18:52:15.899+08:00  WARN 21220 --- [_02vue] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-10-13T18:52:15.924+08:00  INFO 21220 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T18:52:15.926+08:00  INFO 21220 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T18:53:05.457+08:00  INFO 16824 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Starting regVehicleTest using Java 17.0.16 with PID 16824 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T18:53:05.458+08:00 DEBUG 16824 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T18:53:05.458+08:00  INFO 16824 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T18:53:06.150+08:00  INFO 16824 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T18:53:06.248+08:00  INFO 16824 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@230a73f2
+2025-10-13T18:53:06.249+08:00  INFO 16824 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T18:53:06.732+08:00  INFO 16824 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T18:53:06.733+08:00  INFO 16824 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T18:53:06.734+08:00  INFO 16824 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T18:53:06.761+08:00  INFO 16824 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Started regVehicleTest in 1.499 seconds (process running for 2.188)
+2025-10-13T18:53:07.343+08:00  WARN 16824 --- [_02vue] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-10-13T18:53:07.366+08:00  INFO 16824 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T18:53:07.372+08:00  INFO 16824 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T18:53:46.793+08:00  INFO 16780 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Starting regVehicleTest using Java 17.0.16 with PID 16780 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T18:53:46.794+08:00 DEBUG 16780 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T18:53:46.794+08:00  INFO 16780 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T18:53:47.506+08:00  INFO 16780 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T18:53:47.608+08:00  INFO 16780 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7af0affa
+2025-10-13T18:53:47.609+08:00  INFO 16780 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T18:53:48.047+08:00  INFO 16780 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T18:53:48.048+08:00  INFO 16780 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T18:53:48.049+08:00  INFO 16780 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T18:53:48.079+08:00  INFO 16780 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Started regVehicleTest in 1.471 seconds (process running for 2.193)
+2025-10-13T18:53:48.701+08:00 DEBUG 16780 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 接受参数，RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T18:53:48.707+08:00 DEBUG 16780 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 业务层参数：RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T18:53:48.731+08:00  INFO 16780 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T18:53:48.736+08:00  INFO 16780 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T18:54:38.505+08:00  INFO 22444 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Starting regVehicleTest using Java 17.0.16 with PID 22444 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T18:54:38.506+08:00 DEBUG 22444 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T18:54:38.506+08:00  INFO 22444 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T18:54:39.209+08:00  INFO 22444 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T18:54:39.310+08:00  INFO 22444 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22d8f4ed
+2025-10-13T18:54:39.311+08:00  INFO 22444 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T18:54:39.730+08:00  INFO 22444 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T18:54:39.730+08:00  INFO 22444 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T18:54:39.730+08:00  INFO 22444 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-13T18:54:39.758+08:00  INFO 22444 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Started regVehicleTest in 1.446 seconds (process running for 2.142)
+2025-10-13T18:54:40.327+08:00 DEBUG 22444 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 接受参数，RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T18:54:40.334+08:00 DEBUG 22444 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 业务层参数：RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T18:54:40.347+08:00 DEBUG 22444 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : ==>  Preparing: INSERT INTO vehicle( brand, license, model, code, displacement, status, type, color, kilometers, reg_time, buy_time, price, battery_type, create_time, update_time, geofence_bind_status, geofence_id ) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2025-10-13T18:54:40.367+08:00 DEBUG 22444 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : ==> Parameters: 宝马(String), A0116659(String), x5(String), vx01125(String), 10(String), 空闲(String), 轿车(String), 红色(String), 1000(String), 2001-12-08 12:05:06.0(Timestamp), 2001-12-06 12:05:06.0(Timestamp), 10000(String), 铅酸锂电池(String), 2025-10-13 18:54:40.335(Timestamp), 2025-10-13 18:54:40.335(Timestamp), 0(String), null
+2025-10-13T18:54:40.375+08:00 DEBUG 22444 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : <==    Updates: 1
+2025-10-13T18:54:40.413+08:00  INFO 22444 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T18:54:40.418+08:00  INFO 22444 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:06:06.886+08:00  INFO 22560 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 22560 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:06:06.886+08:00 DEBUG 22560 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:06:06.887+08:00  INFO 22560 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:06:07.657+08:00  INFO 22560 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:06:07.783+08:00  INFO 22560 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15986dd5
+2025-10-13T19:06:07.784+08:00  INFO 22560 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:06:08.230+08:00  INFO 22560 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:06:08.230+08:00  INFO 22560 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:06:08.232+08:00  INFO 22560 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-10-13T19:06:08.260+08:00  INFO 22560 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.574 seconds (process running for 2.326)
+2025-10-13T19:06:08.903+08:00 DEBUG 22560 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:06:08.953+08:00  INFO 22560 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:06:08.958+08:00  INFO 22560 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:06:30.189+08:00  INFO 32132 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 32132 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:06:30.191+08:00 DEBUG 32132 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:06:30.191+08:00  INFO 32132 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:06:30.919+08:00  INFO 32132 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:06:31.033+08:00  INFO 32132 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@443a53df
+2025-10-13T19:06:31.035+08:00  INFO 32132 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:06:31.482+08:00  INFO 32132 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:06:31.482+08:00  INFO 32132 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:06:31.482+08:00  INFO 32132 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-13T19:06:31.509+08:00  INFO 32132 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.509 seconds (process running for 2.178)
+2025-10-13T19:06:32.060+08:00 DEBUG 32132 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:06:32.108+08:00  INFO 32132 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:06:32.113+08:00  INFO 32132 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:20:14.489+08:00  INFO 32080 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 32080 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:20:14.489+08:00 DEBUG 32080 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:20:14.491+08:00  INFO 32080 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:20:15.187+08:00  INFO 32080 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:20:15.287+08:00  INFO 32080 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25a1a012
+2025-10-13T19:20:15.288+08:00  INFO 32080 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:20:15.742+08:00  INFO 32080 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:20:15.742+08:00  INFO 32080 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:20:15.743+08:00  INFO 32080 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T19:20:15.772+08:00  INFO 32080 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.474 seconds (process running for 2.208)
+2025-10-13T19:20:16.367+08:00 DEBUG 32080 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:20:16.371+08:00 DEBUG 32080 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 查询参数:VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:20:16.391+08:00 DEBUG 32080 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==>  Preparing: SELECT id,brand,license,model,code,type,price,reg_time as regTime, buy_time as buyTime,battery_type as batteryType, status
+2025-10-13T19:20:16.409+08:00 DEBUG 32080 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==> Parameters: 
+2025-10-13T19:20:16.513+08:00  INFO 32080 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:20:16.520+08:00  INFO 32080 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:21:35.259+08:00  INFO 2520 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 2520 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:21:35.259+08:00 DEBUG 2520 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:21:35.259+08:00  INFO 2520 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:21:35.965+08:00  INFO 2520 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:21:36.062+08:00  INFO 2520 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25a1a012
+2025-10-13T19:21:36.064+08:00  INFO 2520 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:21:36.518+08:00  INFO 2520 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:21:36.518+08:00  INFO 2520 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:21:36.518+08:00  INFO 2520 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-13T19:21:36.547+08:00  INFO 2520 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.486 seconds (process running for 2.2)
+2025-10-13T19:21:37.156+08:00 DEBUG 2520 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:21:37.156+08:00 DEBUG 2520 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 查询参数:VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:21:37.184+08:00 DEBUG 2520 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==>  Preparing: SELECT id,brand,license,model,code,type,price,reg_time as regTime, buy_time as buyTime,battery_type as batteryType, status
+2025-10-13T19:21:37.199+08:00 DEBUG 2520 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==> Parameters: 
+2025-10-13T19:21:37.289+08:00  INFO 2520 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:21:37.297+08:00  INFO 2520 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:22:19.793+08:00  INFO 20860 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 20860 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:22:19.793+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:22:19.794+08:00  INFO 20860 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:22:20.534+08:00  INFO 20860 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:22:20.642+08:00  INFO 20860 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32a72c4
+2025-10-13T19:22:20.642+08:00  INFO 20860 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:22:21.087+08:00  INFO 20860 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:22:21.088+08:00  INFO 20860 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:22:21.091+08:00  INFO 20860 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-10-13T19:22:21.118+08:00  INFO 20860 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.506 seconds (process running for 2.232)
+2025-10-13T19:22:21.664+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:22:21.668+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 查询参数:VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:22:21.689+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==>  Preparing: SELECT id,brand,license,model,code,type,price,reg_time as regTime, buy_time as buyTime,battery_type as batteryType, status FROM vehicle
+2025-10-13T19:22:21.707+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==> Parameters: 
+2025-10-13T19:22:21.725+08:00 DEBUG 20860 --- [_02vue] [main] c._.d.vehicle.EnumHandler.TypeHandler    : 调用此方法:type
+2025-10-13T19:22:21.755+08:00  INFO 20860 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:22:21.756+08:00  INFO 20860 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:29:22.690+08:00  INFO 11924 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Starting regVehicleTest using Java 17.0.16 with PID 11924 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:29:22.690+08:00 DEBUG 11924 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:29:22.690+08:00  INFO 11924 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:29:23.496+08:00  INFO 11924 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:29:23.599+08:00  INFO 11924 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b251fb9
+2025-10-13T19:29:23.599+08:00  INFO 11924 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:29:24.045+08:00  INFO 11924 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:29:24.045+08:00  INFO 11924 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:29:24.046+08:00  INFO 11924 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T19:29:24.076+08:00  INFO 11924 --- [_02vue] [main] com._02vue.demo.vehicle.regVehicleTest   : Started regVehicleTest in 1.583 seconds (process running for 2.309)
+2025-10-13T19:29:24.724+08:00 DEBUG 11924 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 接受参数，RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T19:29:24.731+08:00 DEBUG 11924 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 业务层参数：RegVehiclePara(brand=宝马, license=A0116659, model=x5, code=vx01125, displacement=10, type=10, color=10, kilometers=1000, buyTime=Thu Dec 06 12:05:06 CST 2001, regTime=Sat Dec 08 12:05:06 CST 2001, price=10000, batteryType=10)
+2025-10-13T19:29:24.743+08:00 DEBUG 11924 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : ==>  Preparing: INSERT INTO vehicle( brand, license, model, code, displacement, status, type, color, kilometers, reg_time, buy_time, price, battery_type, create_time, update_time, geofence_bind_status, geofence_id ) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2025-10-13T19:29:24.762+08:00 DEBUG 11924 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : ==> Parameters: 宝马(String), A0116659(String), x5(String), vx01125(String), 10(String), 1(String), 10(String), 10(String), 1000(String), 2001-12-08 12:05:06.0(Timestamp), 2001-12-06 12:05:06.0(Timestamp), 10000(String), 10(String), 2025-10-13 19:29:24.733(Timestamp), 2025-10-13 19:29:24.733(Timestamp), 0(String), null
+2025-10-13T19:29:24.767+08:00 DEBUG 11924 --- [_02vue] [main] c._.d.vehicle.mapper.VehicleMapper.save  : <==    Updates: 1
+2025-10-13T19:29:24.799+08:00  INFO 11924 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:29:24.805+08:00  INFO 11924 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-13T19:29:49.532+08:00  INFO 31192 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Starting FindVehicleByQuertParaTest using Java 17.0.16 with PID 31192 (started by snl19 in I:\20250820\jsd2507-ssm-advance\_02vue)
+2025-10-13T19:29:49.532+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-13T19:29:49.533+08:00  INFO 31192 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : No active profile set, falling back to 1 default profile: "default"
+2025-10-13T19:29:50.299+08:00  INFO 31192 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-13T19:29:50.423+08:00  INFO 31192 --- [_02vue] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b950f82
+2025-10-13T19:29:50.424+08:00  INFO 31192 --- [_02vue] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-13T19:29:50.879+08:00  INFO 31192 --- [_02vue] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-13T19:29:50.879+08:00  INFO 31192 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-13T19:29:50.881+08:00  INFO 31192 --- [_02vue] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-13T19:29:50.906+08:00  INFO 31192 --- [_02vue] [main] c._.d.v.FindVehicleByQuertParaTest       : Started FindVehicleByQuertParaTest in 1.571 seconds (process running for 2.275)
+2025-10-13T19:29:51.460+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.controller.VehicleController     : 产讯参数VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:29:51.464+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.service.impl.ServeImplement      : 查询参数:VehicleQuery(id=null, brand=null, status=null, license=null, geofenceBindStatus=null, geofenceId=null)
+2025-10-13T19:29:51.493+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==>  Preparing: SELECT id,brand,license,model,code,type,price,reg_time as regTime, buy_time as buyTime,battery_type as batteryType, status FROM vehicle
+2025-10-13T19:29:51.516+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : ==> Parameters: 
+2025-10-13T19:29:51.533+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.vehicle.EnumHandler.TypeHandler    : 调用此方法:type
+2025-10-13T19:29:51.533+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.EnumHandler.BatterryHandler      : 调用此方法:batteryType
+2025-10-13T19:29:51.534+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.vehicle.EnumHandler.StatusHandler  : 调用此方法:status
+2025-10-13T19:29:51.535+08:00 DEBUG 31192 --- [_02vue] [main] c._.d.v.mapper.VehicleMapper.select      : <==      Total: 1
+2025-10-13T19:29:51.592+08:00  INFO 31192 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-13T19:29:51.597+08:00  INFO 31192 --- [_02vue] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
