@@ -1,6 +1,5 @@
-package com.ivos.demo.dicOptions.pojo.vo;
+package com.ivos.demo.dicOptions.pojo.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,12 +9,13 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DicOptVo {
+public class DictOpt {
     private Long id;
+    private Long dictId;
     private String label;
     private String value;
     private Integer sort;
     private String remark;
-    @JsonFormat(pattern = "yyyy-MM-dd HH-mm-SS",timezone = "GTM+8")
     private Date createTime;
+    private Date updateTime;
 }

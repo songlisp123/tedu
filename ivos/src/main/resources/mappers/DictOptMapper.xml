@@ -14,4 +14,10 @@
         </where>
     </select>
 
+
+    <insert id="save">
+        INSERT INTO dict_option(label,value,sort,remark,create_time,dict_id,update_time)
+        VALUES(#{label},#{value},#{sort},#{remark},#{createTime},#{dictId},#{updateTime})
+    </insert>
+
 </mapper>

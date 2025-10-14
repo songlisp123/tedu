@@ -75,7 +75,10 @@
 
 <script setup>
 import router from '@/router';
+import axios from 'axios';
 import { onMounted, ref } from 'vue';
+import qs from 'qs';
+import { ElMessage } from 'element-plus';
 
 //定义字典项数组用以保存字典项响应
 const dictOptionArr = ref([]);
@@ -94,7 +97,8 @@ const saveForm = ref({
     label:'',
     value:'',
     sort:'',
-    remark:''
+    remark:'',
+    dictId:dictId
 });
 
 //定义变量保存搜索表单
@@ -104,10 +108,20 @@ const searchForm = ref({
 });
 
 
-
+onMounted(()=>{loadDictOption()});
 
 function loadDictOption() {
     console.log(searchForm.value);
+    let data = qs.stringify(searchForm.value);
+    axios.get(BASE_URL+'/v1/dicOpt/query?'+data)
+    .then((response)=>{
+        if (response.data.code == 2000) {
+            dictOptionArr.value = response.data.data;
+        }
+        else {
+            ElMessage.error('发生错误');
+        }
+    });
 };
 
 
@@ -125,7 +139,9 @@ function close() {
     dialogVisible.value = false;
 };
 
-function submit() {};
+function submit() {
+    console.log(saveForm.value);
+};
 </script>
 
 <style></style>
