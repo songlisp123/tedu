@@ -2,9 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.dicOptions.mapper.DictOptMapper">
     <select id="query" resultType="com.ivos.demo.dicOptions.pojo.vo.DicOptVo">
-        SELECT id,label,value,sort,remark,create_time
+        SELECT id,label,value,sort,remark,create_time,dict_id
         FROM dict_option
         <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
             <if test="dictId != null">
                AND dict_id = #{dictId}
             </if>
@@ -12,6 +15,7 @@
                 AND label like CONCAT('%',#{label},'%')
             </if>
         </where>
+        ORDER BY sort
     </select>
 
 
@@ -20,4 +24,33 @@
         VALUES(#{label},#{value},#{sort},#{remark},#{createTime},#{dictId},#{updateTime})
     </insert>
 
+    <update id="update">
+        UPDATE dict_option
+        <set>
+            <if test=" id == null ">
+                id = #{id},
+            </if>
+            <if test="label !=null and label != '' ">
+                label = #{label},
+            </if>
+            <if test="value !=null and value != '' ">
+                value = #{value},
+            </if>
+            <if test="sort !=null ">
+                sort = #{sort},
+            </if>
+            <if test="remark !=null and remark != '' ">
+                remark = #{remark},
+            </if>
+            <if test="updateTime !=null ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM dict_option
+        WHERE id = #{dicOptId}
+    </delete>
 </mapper>

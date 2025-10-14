@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.dict.mapper.DictMapper">
    <select id="query" resultType="com.ivos.demo.dict.pojo.vo.DictVo">
-       SELECT id,name,code,remark,create_time
+       SELECT id,name,code,remark,create_time,status
        FROM dict
        <where>
            <if test="id != null ">
@@ -15,6 +15,8 @@
                AND code like CONCAT('%',#{code},'%')
            </if>
        </where>
+       HAVING status = '1'
+       ORDER BY create_time DESC
    </select>
 
     <insert id="save">
@@ -40,12 +42,11 @@
             <if test=" updateTime != null  ">
                 update_time =#{updateTime},
             </if>
+            <if test=" status != null and status != ''  ">
+                status =#{status},
+            </if>
         </set>
         WHERE id = #{id}
     </update>
 
-    <delete id="delete">
-        DELETE FROM dict
-        WHERE id = #{dictId}
-    </delete>
 </mapper>

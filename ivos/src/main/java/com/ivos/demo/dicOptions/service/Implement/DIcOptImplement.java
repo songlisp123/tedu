@@ -35,11 +35,17 @@ public class DIcOptImplement implements DicOptService {
         BeanUtils.copyProperties(para,dIcOpt);
         if (dIcOpt.getId() != null) {
             dIcOpt.setUpdateTime(new Date());
-
+            mapper.update(dIcOpt);
         }
         else {
             dIcOpt.setCreateTime(new Date());
             mapper.save(dIcOpt);
         }
+    }
+
+    @Override
+    public void delete(Long dicOptId) {
+        log.debug("业务员参数：{}",dicOptId);
+        mapper.delete(dicOptId);
     }
 }

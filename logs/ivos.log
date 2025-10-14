@@ -1467,3 +1467,893 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2025-10-14T15:29:46.264+08:00 DEBUG 10296 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
 2025-10-14T15:38:40.356+08:00  INFO 10296 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-14T15:38:40.361+08:00  INFO 10296 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T15:43:05.937+08:00  INFO 7904 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 7904 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T15:43:05.939+08:00 DEBUG 7904 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T15:43:05.940+08:00  INFO 7904 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T15:43:08.589+08:00  INFO 7904 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T15:43:08.613+08:00  INFO 7904 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T15:43:08.614+08:00  INFO 7904 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T15:43:08.757+08:00  INFO 7904 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T15:43:08.757+08:00  INFO 7904 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2754 ms
+2025-10-14T15:43:10.976+08:00  INFO 7904 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T15:43:11.155+08:00  INFO 7904 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 5.707 seconds (process running for 6.408)
+2025-10-14T15:43:11.184+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T15:43:11.185+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T15:43:11.187+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-14T15:43:11.248+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T15:43:11.251+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T15:43:11.290+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T15:43:11.454+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@483d5f80
+2025-10-14T15:43:11.455+08:00  INFO 7904 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T15:43:11.462+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T15:43:11.489+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T15:43:11.512+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T15:43:12.945+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T15:43:12.946+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T15:43:12.946+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T15:43:12.947+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T15:43:12.951+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T15:43:14.766+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:43:14.766+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:43:14.768+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:43:14.769+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:43:14.778+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T15:45:56.319+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:45:56.319+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:45:56.321+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:45:56.321+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:45:56.323+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T15:46:41.857+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=null, label=测试01, value=测试01, sort=70, remark=汽车颜色, dictId=101)
+2025-10-14T15:46:41.858+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=null, label=测试01, value=测试01, sort=70, remark=汽车颜色, dictId=101)
+2025-10-14T15:46:41.859+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.save        : ==>  Preparing: INSERT INTO dict_option(label,value,sort,remark,create_time,dict_id,update_time) VALUES(?,?,?,?,?,?,?)
+2025-10-14T15:46:41.862+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.save        : ==> Parameters: 测试01(String), 测试01(String), 70(Integer), 汽车颜色(String), 2025-10-14 15:46:41.859(Timestamp), 101(Long), null
+2025-10-14T15:46:41.869+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.save        : <==    Updates: 1
+2025-10-14T15:46:41.877+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:46:41.877+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:46:41.878+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:46:41.878+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:46:41.884+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:47:00.969+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:47:00.970+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:47:00.970+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:47:00.972+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:47:00.974+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:47:15.318+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:47:15.318+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:47:15.318+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:47:15.318+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:47:15.326+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:48:00.282+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:48:00.283+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:48:00.284+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:48:00.284+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:48:00.287+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:48:19.354+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:48:19.355+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:48:19.356+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:48:19.356+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:48:19.357+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:49:00.388+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:49:00.388+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:49:00.393+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:49:00.394+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:49:00.395+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:51:43.418+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:51:43.418+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:51:43.419+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:51:43.420+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:51:43.422+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:52:22.033+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:52:22.033+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:52:22.034+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:52:22.034+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:52:22.036+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:52:29.476+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:52:29.478+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:52:29.479+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:52:29.479+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:52:29.481+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:55:16.527+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:55:16.527+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:55:16.528+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:55:16.529+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:55:16.530+08:00 DEBUG 7904 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:55:50.984+08:00  INFO 7904 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T15:55:50.991+08:00  INFO 7904 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T15:55:53.553+08:00  INFO 29932 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 29932 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T15:55:53.554+08:00 DEBUG 29932 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T15:55:53.555+08:00  INFO 29932 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T15:55:54.513+08:00  INFO 29932 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T15:55:54.521+08:00  INFO 29932 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T15:55:54.522+08:00  INFO 29932 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T15:55:54.572+08:00  INFO 29932 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T15:55:54.572+08:00  INFO 29932 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 980 ms
+2025-10-14T15:55:55.353+08:00  INFO 29932 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T15:55:55.362+08:00  INFO 29932 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.092 seconds (process running for 2.353)
+2025-10-14T15:56:31.895+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T15:56:31.896+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T15:56:31.897+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-14T15:56:31.962+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:56:31.964+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:56:32.013+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T15:56:32.339+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@578e6109
+2025-10-14T15:56:32.340+08:00  INFO 29932 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T15:56:32.342+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:56:32.432+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:56:32.535+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:02.164+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:02.164+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:02.165+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:02.165+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:02.171+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:15.515+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:15.515+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:15.516+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:15.516+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:15.521+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:26.388+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:26.388+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:26.389+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:26.389+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:26.393+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:28.930+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:28.931+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:28.933+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:28.934+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:28.938+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:32.251+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:32.251+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:32.252+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:32.252+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:32.256+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:57:35.330+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:35.331+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:57:35.331+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:57:35.332+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:57:35.337+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:58:54.642+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=)
+2025-10-14T15:58:54.642+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=)
+2025-10-14T15:58:54.644+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:58:54.644+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:58:54.646+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T15:59:01.092+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:59:01.093+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:59:01.094+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:59:01.094+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:59:01.097+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T15:59:03.755+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, label=null)
+2025-10-14T15:59:03.755+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, label=null)
+2025-10-14T15:59:03.756+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option
+2025-10-14T15:59:03.756+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T15:59:03.759+08:00 DEBUG 29932 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T16:00:15.971+08:00  INFO 29932 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:00:15.976+08:00  INFO 29932 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:00:18.487+08:00  INFO 15292 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 15292 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:00:18.488+08:00 DEBUG 15292 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:00:18.488+08:00  INFO 15292 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:00:19.444+08:00  INFO 15292 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:00:19.453+08:00  INFO 15292 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:00:19.453+08:00  INFO 15292 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:00:19.508+08:00  INFO 15292 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:00:19.508+08:00  INFO 15292 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+2025-10-14T16:00:20.327+08:00  INFO 15292 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:00:20.334+08:00  INFO 15292 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.121 seconds (process running for 2.382)
+2025-10-14T16:00:26.185+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:00:26.185+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:00:26.188+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-14T16:00:26.247+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:00:26.250+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:00:26.290+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:00:26.500+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10581ab8
+2025-10-14T16:00:26.502+08:00  INFO 15292 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:00:26.512+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:00:26.544+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:00:26.574+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:00:30.201+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:00:30.202+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:00:30.203+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:00:30.204+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:00:30.207+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:00:31.482+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:00:31.482+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:00:31.483+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:00:31.483+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:00:31.486+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:00:56.195+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:00:56.196+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:00:56.197+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option
+2025-10-14T16:00:56.197+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 
+2025-10-14T16:00:56.214+08:00 DEBUG 15292 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 35
+2025-10-14T16:01:48.992+08:00  INFO 15292 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:01:48.998+08:00  INFO 15292 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:01:50.337+08:00  INFO 3120 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 3120 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:01:50.338+08:00 DEBUG 3120 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:01:50.338+08:00  INFO 3120 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:01:51.294+08:00  INFO 3120 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:01:51.303+08:00  INFO 3120 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:01:51.303+08:00  INFO 3120 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:01:51.357+08:00  INFO 3120 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:01:51.357+08:00  INFO 3120 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 984 ms
+2025-10-14T16:01:52.188+08:00  INFO 3120 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:01:52.196+08:00  INFO 3120 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.141 seconds (process running for 2.429)
+2025-10-14T16:02:02.698+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:02:02.698+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:02:02.699+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-14T16:02:02.763+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:02.768+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:02.811+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:02:03.135+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42ed1c10
+2025-10-14T16:02:03.144+08:00  INFO 3120 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:02:03.197+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:02:03.263+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:02:03.329+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:02:06.523+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=106, label=null)
+2025-10-14T16:02:06.524+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=106, label=null)
+2025-10-14T16:02:06.524+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:02:06.525+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 106(Long)
+2025-10-14T16:02:06.527+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:02:09.101+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:09.101+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:09.102+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:02:09.103+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:02:09.104+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:02:26.419+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:02:26.419+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:02:26.420+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:02:26.421+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:02:26.424+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:02:33.932+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:33.932+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:02:33.933+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:02:33.934+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:02:33.936+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:02:37.917+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:02:37.918+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:02:37.928+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:02:37.928+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:02:37.929+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:02:37.929+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:02:37.933+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:04:22.548+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:04:22.548+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:04:22.550+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:04:22.550+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:04:22.553+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:04:24.780+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:04:24.781+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:04:24.782+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:04:24.782+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:04:24.784+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:04:28.995+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:04:28.995+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:04:29.007+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:04:29.008+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:04:29.009+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:04:29.009+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:04:29.012+08:00 DEBUG 3120 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:09:24.528+08:00  INFO 3120 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:09:24.536+08:00  INFO 3120 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:09:27.074+08:00  INFO 30404 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 30404 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:09:27.075+08:00 DEBUG 30404 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:09:27.076+08:00  INFO 30404 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:09:28.041+08:00  INFO 30404 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:09:28.049+08:00  INFO 30404 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:09:28.049+08:00  INFO 30404 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:09:28.099+08:00  INFO 30404 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:09:28.099+08:00  INFO 30404 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2025-10-14T16:09:28.972+08:00  INFO 30404 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:09:28.985+08:00  INFO 30404 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.188 seconds (process running for 2.444)
+2025-10-14T16:09:56.402+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:09:56.402+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:09:56.403+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-14T16:09:56.469+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:09:56.471+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:09:56.506+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:09:56.706+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a7c02cc
+2025-10-14T16:09:56.709+08:00  INFO 30404 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:09:56.722+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:09:56.799+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:09:56.832+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:09:57.844+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:09:57.845+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:09:57.846+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:09:57.846+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:09:57.849+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:00.701+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:00.702+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=136, label=测试01, value=测试01, sort=7, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:00.706+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ?
+2025-10-14T16:10:00.707+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 7(Integer), 汽车颜色(String), 2025-10-14 16:10:00.703(Timestamp)
+2025-10-14T16:10:00.718+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 35
+2025-10-14T16:10:00.725+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:00.725+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:00.726+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:00.726+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:00.728+08:00 DEBUG 30404 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:22.941+08:00  INFO 30404 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:10:22.946+08:00  INFO 30404 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:10:24.328+08:00  INFO 28232 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 28232 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:10:24.328+08:00 DEBUG 28232 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:10:24.332+08:00  INFO 28232 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:10:25.280+08:00  INFO 28232 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:10:25.289+08:00  INFO 28232 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:10:25.289+08:00  INFO 28232 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:10:25.340+08:00  INFO 28232 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:10:25.340+08:00  INFO 28232 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
+2025-10-14T16:10:26.120+08:00  INFO 28232 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:10:26.127+08:00  INFO 28232 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.083 seconds (process running for 2.361)
+2025-10-14T16:10:35.141+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:10:35.143+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:10:35.147+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-10-14T16:10:35.235+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=101, label=null)
+2025-10-14T16:10:35.237+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=101, label=null)
+2025-10-14T16:10:35.284+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:10:35.649+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a4e056d
+2025-10-14T16:10:35.654+08:00  INFO 28232 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:10:35.659+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:35.704+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:35.728+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:37.741+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=101, label=测试01, value=测试01, sort=1, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:37.743+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=101, label=测试01, value=测试01, sort=1, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:37.746+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:37.747+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 1(Integer), 汽车颜色(String), 2025-10-14 16:10:37.744(Timestamp), 101(Long)
+2025-10-14T16:10:37.754+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:37.763+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:37.763+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:37.764+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:37.765+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:37.769+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:38.836+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=102, label=null)
+2025-10-14T16:10:38.836+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=102, label=null)
+2025-10-14T16:10:38.837+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:38.837+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 102(Long)
+2025-10-14T16:10:38.838+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:41.059+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=102, label=测试01, value=测试01, sort=2, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:41.060+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=102, label=测试01, value=测试01, sort=2, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:41.061+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:41.061+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 2(Integer), 汽车颜色(String), 2025-10-14 16:10:41.06(Timestamp), 102(Long)
+2025-10-14T16:10:41.064+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:41.071+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:41.072+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:41.072+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:41.073+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:41.079+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:43.028+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=103, label=null)
+2025-10-14T16:10:43.028+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=103, label=null)
+2025-10-14T16:10:43.029+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:43.029+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 103(Long)
+2025-10-14T16:10:43.030+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:45.052+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=103, label=测试01, value=测试01, sort=3, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:45.052+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=103, label=测试01, value=测试01, sort=3, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:45.053+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:45.055+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 3(Integer), 汽车颜色(String), 2025-10-14 16:10:45.052(Timestamp), 103(Long)
+2025-10-14T16:10:45.057+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:45.064+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:45.064+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:45.064+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:45.065+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:45.068+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:46.179+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=104, label=null)
+2025-10-14T16:10:46.179+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=104, label=null)
+2025-10-14T16:10:46.181+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:46.182+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 104(Long)
+2025-10-14T16:10:46.184+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:48.251+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=104, label=测试01, value=测试01, sort=4, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:48.252+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=104, label=测试01, value=测试01, sort=4, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:48.253+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:48.253+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 4(Integer), 汽车颜色(String), 2025-10-14 16:10:48.252(Timestamp), 104(Long)
+2025-10-14T16:10:48.254+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:48.264+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:48.264+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:48.265+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:48.266+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:48.269+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:49.475+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=105, label=null)
+2025-10-14T16:10:49.476+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=105, label=null)
+2025-10-14T16:10:49.476+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:49.477+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 105(Long)
+2025-10-14T16:10:49.478+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:52.010+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=105, label=测试01, value=测试01, sort=5, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:52.011+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=105, label=测试01, value=测试01, sort=5, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:52.012+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:52.012+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 5(Integer), 汽车颜色(String), 2025-10-14 16:10:52.011(Timestamp), 105(Long)
+2025-10-14T16:10:52.013+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:52.025+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:52.025+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:52.026+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:52.026+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:52.028+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:10:53.099+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=106, label=null)
+2025-10-14T16:10:53.099+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=106, label=null)
+2025-10-14T16:10:53.101+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:10:53.102+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 106(Long)
+2025-10-14T16:10:53.103+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:10:55.515+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=106, label=测试01, value=测试01, sort=6, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:55.515+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=106, label=测试01, value=测试01, sort=6, remark=汽车颜色, dictId=101)
+2025-10-14T16:10:55.516+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:10:55.518+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试01(String), 测试01(String), 6(Integer), 汽车颜色(String), 2025-10-14 16:10:55.515(Timestamp), 106(Long)
+2025-10-14T16:10:55.519+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:10:55.528+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:55.528+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:10:55.530+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:10:55.530+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:10:55.532+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:12:48.859+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:12:48.864+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:12:48.868+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:12:48.868+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:12:48.870+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:12:51.304+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:12:51.305+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:12:51.306+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:12:51.306+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:12:51.308+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:13:40.310+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:13:40.310+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:13:40.311+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:13:40.311+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:13:40.312+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:13:42.667+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:13:42.667+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=136, label=null)
+2025-10-14T16:13:42.668+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:13:42.668+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 136(Long)
+2025-10-14T16:13:42.671+08:00 DEBUG 28232 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:16:15.933+08:00  INFO 28232 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:16:15.938+08:00  INFO 28232 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:16:18.503+08:00  INFO 21560 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 21560 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:16:18.505+08:00 DEBUG 21560 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:16:18.505+08:00  INFO 21560 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:16:19.436+08:00  INFO 21560 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:16:19.447+08:00  INFO 21560 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:16:19.447+08:00  INFO 21560 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:16:19.501+08:00  INFO 21560 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:16:19.502+08:00  INFO 21560 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 959 ms
+2025-10-14T16:16:20.379+08:00  INFO 21560 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:16:20.389+08:00  INFO 21560 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.16 seconds (process running for 2.429)
+2025-10-14T16:16:36.524+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:16:36.524+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:16:36.529+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-10-14T16:16:36.602+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器参数:136
+2025-10-14T16:16:36.604+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务员参数：136
+2025-10-14T16:16:36.620+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:16:36.838+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ee690b2
+2025-10-14T16:16:36.841+08:00  INFO 21560 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:16:36.851+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.delete      : ==>  Preparing: DELETE FROM dict_option WHERE id = ?
+2025-10-14T16:16:36.896+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.delete      : ==> Parameters: 136(Long)
+2025-10-14T16:16:36.900+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.delete      : <==    Updates: 1
+2025-10-14T16:16:37.014+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:37.015+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:37.087+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:16:37.092+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:16:37.205+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T16:16:51.716+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=null, label=测试, value=测试, sort=10, remark=测试, dictId=101)
+2025-10-14T16:16:51.718+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=null, label=测试, value=测试, sort=10, remark=测试, dictId=101)
+2025-10-14T16:16:51.721+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.save        : ==>  Preparing: INSERT INTO dict_option(label,value,sort,remark,create_time,dict_id,update_time) VALUES(?,?,?,?,?,?,?)
+2025-10-14T16:16:51.724+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.save        : ==> Parameters: 测试(String), 测试(String), 10(Integer), 测试(String), 2025-10-14 16:16:51.72(Timestamp), 101(Long), null
+2025-10-14T16:16:51.729+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.save        : <==    Updates: 1
+2025-10-14T16:16:51.739+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:51.740+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:51.742+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:16:51.751+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:16:51.757+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:16:53.867+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=137, label=null)
+2025-10-14T16:16:53.868+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=137, label=null)
+2025-10-14T16:16:53.869+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:16:53.869+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 137(Long)
+2025-10-14T16:16:53.871+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:16:56.931+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=137, label=测试, value=测试, sort=8, remark=测试, dictId=101)
+2025-10-14T16:16:56.932+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=137, label=测试, value=测试, sort=8, remark=测试, dictId=101)
+2025-10-14T16:16:56.936+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:16:56.937+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 测试(String), 测试(String), 8(Integer), 测试(String), 2025-10-14 16:16:56.932(Timestamp), 137(Long)
+2025-10-14T16:16:56.938+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:16:56.945+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:56.945+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:56.946+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:16:56.946+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:16:56.953+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:16:58.854+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器参数:137
+2025-10-14T16:16:58.854+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务员参数：137
+2025-10-14T16:16:58.855+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.delete      : ==>  Preparing: DELETE FROM dict_option WHERE id = ?
+2025-10-14T16:16:58.855+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.delete      : ==> Parameters: 137(Long)
+2025-10-14T16:16:58.856+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.delete      : <==    Updates: 1
+2025-10-14T16:16:58.865+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:58.865+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:16:58.866+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:16:58.866+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:16:58.868+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T16:17:32.767+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:32.768+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:32.770+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:32.770+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:32.777+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:34.746+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:17:34.746+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:17:34.748+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:34.748+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 107(Long)
+2025-10-14T16:17:34.749+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:17:37.350+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:37.352+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:37.352+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:37.352+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:37.357+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:38.267+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:17:38.267+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:17:38.268+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:38.269+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 106(Long)
+2025-10-14T16:17:38.270+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:17:39.494+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:39.494+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:39.495+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:39.496+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:39.497+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:40.830+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:17:40.830+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:17:40.831+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:40.832+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 102(Long)
+2025-10-14T16:17:40.833+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:17:44.057+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:44.057+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:44.059+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:44.059+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:44.061+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:44.947+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:17:44.947+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:17:44.949+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:44.951+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:17:44.953+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T16:17:46.099+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:46.099+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:46.099+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:46.101+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:46.103+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:47.304+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:17:47.304+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:17:47.305+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:47.306+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:17:47.307+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 0
+2025-10-14T16:17:48.575+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:48.575+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:48.576+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:48.576+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:48.579+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:17:49.571+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=105, id=null, label=)
+2025-10-14T16:17:49.571+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=105, id=null, label=)
+2025-10-14T16:17:49.572+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:17:49.573+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 105(Long)
+2025-10-14T16:17:49.575+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:17:51.781+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:51.781+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:17:51.781+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:17:51.782+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:17:51.784+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:20:38.335+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:38.335+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:38.337+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:20:38.338+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:20:38.341+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:20:39.924+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:20:39.925+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:20:39.925+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:20:39.926+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:20:39.928+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T16:20:45.116+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:45.116+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:45.118+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:20:45.118+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:20:45.120+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 9
+2025-10-14T16:20:48.795+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器层参数:110
+2025-10-14T16:20:48.795+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:110
+2025-10-14T16:20:48.796+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.delete   : ==>  Preparing: DELETE FROM dict WHERE id = ?
+2025-10-14T16:20:48.796+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.delete   : ==> Parameters: 110(Long)
+2025-10-14T16:20:48.799+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.delete   : <==    Updates: 1
+2025-10-14T16:20:48.804+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:48.804+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:48.805+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:20:48.805+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:20:48.806+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:20:50.424+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:20:50.424+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:20:50.426+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:20:50.426+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 106(Long)
+2025-10-14T16:20:50.427+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:20:52.687+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:52.688+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:20:52.688+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:20:52.689+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:20:52.690+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:20:53.998+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:20:53.999+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:20:54.001+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:20:54.001+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:20:54.002+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T16:21:17.915+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=null, label=沙漠, value=70, sort=7, remark=测试, dictId=101)
+2025-10-14T16:21:17.915+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=null, label=沙漠, value=70, sort=7, remark=测试, dictId=101)
+2025-10-14T16:21:17.916+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.save        : ==>  Preparing: INSERT INTO dict_option(label,value,sort,remark,create_time,dict_id,update_time) VALUES(?,?,?,?,?,?,?)
+2025-10-14T16:21:17.917+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.save        : ==> Parameters: 沙漠(String), 70(String), 7(Integer), 测试(String), 2025-10-14 16:21:17.916(Timestamp), 101(Long), null
+2025-10-14T16:21:17.918+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.save        : <==    Updates: 1
+2025-10-14T16:21:17.926+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:17.926+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:17.928+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:17.928+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:21:17.929+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:21:20.282+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:20.282+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:20.282+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:20.282+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:20.283+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:21.255+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=104, id=null, label=)
+2025-10-14T16:21:21.255+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=104, id=null, label=)
+2025-10-14T16:21:21.256+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:21.257+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 104(Long)
+2025-10-14T16:21:21.258+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 2
+2025-10-14T16:21:22.508+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:22.508+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:22.509+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:22.509+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:22.511+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:24.268+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:24.268+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:24.269+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:24.270+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:21:24.273+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:21:26.771+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=138, label=null)
+2025-10-14T16:21:26.771+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=138, label=null)
+2025-10-14T16:21:26.772+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ?
+2025-10-14T16:21:26.772+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 138(Long)
+2025-10-14T16:21:26.773+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:21:35.778+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=138, label=沙漠, value=70, sort=7, remark=沙漠黄色, dictId=101)
+2025-10-14T16:21:35.779+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=138, label=沙漠, value=70, sort=7, remark=沙漠黄色, dictId=101)
+2025-10-14T16:21:35.780+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : ==>  Preparing: UPDATE dict_option SET label = ?, value = ?, sort = ?, remark = ?, update_time = ? WHERE id = ?
+2025-10-14T16:21:35.781+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : ==> Parameters: 沙漠(String), 70(String), 7(Integer), 沙漠黄色(String), 2025-10-14 16:21:35.779(Timestamp), 138(Long)
+2025-10-14T16:21:35.783+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.update      : <==    Updates: 1
+2025-10-14T16:21:35.790+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:35.790+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:21:35.791+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:35.791+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:21:35.793+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:21:37.647+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:37.647+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:37.647+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:37.648+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:37.650+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:38.524+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=104, id=null, label=)
+2025-10-14T16:21:38.524+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=104, id=null, label=)
+2025-10-14T16:21:38.525+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:38.525+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 104(Long)
+2025-10-14T16:21:38.526+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 2
+2025-10-14T16:21:39.788+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:39.789+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:39.791+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:39.791+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:39.793+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:40.555+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=103, id=null, label=)
+2025-10-14T16:21:40.555+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=103, id=null, label=)
+2025-10-14T16:21:40.556+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:40.557+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 103(Long)
+2025-10-14T16:21:40.557+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:21:41.726+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:41.726+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:41.727+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:41.727+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:41.728+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-10] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:42.492+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:21:42.492+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:21:42.493+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:42.494+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 102(Long)
+2025-10-14T16:21:42.495+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:21:44.021+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:44.021+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:44.022+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:44.022+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:44.023+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:44.883+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:21:44.883+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=106, id=null, label=)
+2025-10-14T16:21:44.884+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:44.884+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 106(Long)
+2025-10-14T16:21:44.886+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:21:46.370+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:46.371+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:46.372+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:46.372+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:46.373+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:47.561+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:21:47.562+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:21:47.564+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:47.565+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:21:47.565+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 0
+2025-10-14T16:21:48.457+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:48.457+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:48.458+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:48.458+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:48.459+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:21:49.348+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:21:49.348+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:21:49.349+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ?
+2025-10-14T16:21:49.349+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 107(Long)
+2025-10-14T16:21:49.351+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-9] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:21:50.869+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:50.869+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:21:50.870+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T16:21:50.870+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:21:50.871+08:00 DEBUG 21560 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:33:05.349+08:00  INFO 21560 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:33:05.355+08:00  INFO 21560 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:33:08.571+08:00  INFO 11844 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 11844 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:33:08.573+08:00 DEBUG 11844 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:33:08.573+08:00  INFO 11844 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:33:09.522+08:00  INFO 11844 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:33:09.529+08:00  INFO 11844 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:33:09.529+08:00  INFO 11844 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:33:09.587+08:00  INFO 11844 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:33:09.588+08:00  INFO 11844 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 985 ms
+2025-10-14T16:33:10.449+08:00  INFO 11844 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:33:10.462+08:00  INFO 11844 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.165 seconds (process running for 2.42)
+2025-10-14T16:35:24.969+08:00  INFO 3728 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 3728 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:35:24.970+08:00 DEBUG 3728 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:35:24.970+08:00  INFO 3728 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:35:25.921+08:00  INFO 3728 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:35:25.931+08:00  INFO 3728 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:35:25.931+08:00  INFO 3728 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:35:25.983+08:00  INFO 3728 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:35:25.983+08:00  INFO 3728 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 977 ms
+2025-10-14T16:35:26.860+08:00  INFO 3728 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:35:26.869+08:00  INFO 3728 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.183 seconds (process running for 2.449)
+2025-10-14T16:35:35.053+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:35:35.057+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:35:35.059+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-14T16:35:35.131+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:35.133+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:35.171+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:35:35.435+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c4ca051
+2025-10-14T16:35:35.438+08:00  INFO 3728 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:35:35.452+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:35:35.489+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:35:35.533+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:35:40.068+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:35:40.069+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=107, id=null, label=)
+2025-10-14T16:35:40.078+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:35:40.078+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 107(Long)
+2025-10-14T16:35:40.081+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 4
+2025-10-14T16:35:42.746+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:42.747+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:42.747+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:35:42.747+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:35:42.752+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:35:45.496+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:35:45.497+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=102, id=null, label=)
+2025-10-14T16:35:45.498+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:35:45.498+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 102(Long)
+2025-10-14T16:35:45.500+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:35:47.313+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:47.314+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-7] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:47.315+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:35:47.315+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:35:47.317+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-7] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:35:48.508+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:35:48.508+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, id=null, label=)
+2025-10-14T16:35:48.509+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:35:48.509+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T16:35:48.515+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-6] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 7
+2025-10-14T16:35:49.789+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:49.790+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-8] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:35:49.791+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:35:49.791+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:35:49.794+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-8] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:38:12.932+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:38:12.933+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:38:12.934+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:38:12.935+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:38:12.936+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 0
+2025-10-14T16:38:24.655+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.controller.dictOptController     : 控制器参数，DictOptSavePara(id=null, label=测试, value=测试, sort=1, remark=10, dictId=109)
+2025-10-14T16:38:24.658+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数,DictOptSavePara(id=null, label=测试, value=测试, sort=1, remark=10, dictId=109)
+2025-10-14T16:38:24.661+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.save        : ==>  Preparing: INSERT INTO dict_option(label,value,sort,remark,create_time,dict_id,update_time) VALUES(?,?,?,?,?,?,?)
+2025-10-14T16:38:24.663+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.save        : ==> Parameters: 测试(String), 测试(String), 1(Integer), 10(String), 2025-10-14 16:38:24.659(Timestamp), 109(Long), null
+2025-10-14T16:38:24.670+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-5] c.i.d.d.mapper.DictOptMapper.save        : <==    Updates: 1
+2025-10-14T16:38:24.677+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:38:24.677+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:38:24.677+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:38:24.677+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:38:24.680+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:40:30.623+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=null, id=139, label=null)
+2025-10-14T16:40:30.623+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=null, id=139, label=null)
+2025-10-14T16:40:30.625+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE id = ? ORDER BY sort
+2025-10-14T16:40:30.625+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 139(Long)
+2025-10-14T16:40:30.626+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-10] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:42:47.342+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:42:47.342+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:42:47.343+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:42:47.344+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:42:47.347+08:00 DEBUG 3728 --- [ivos] [http-nio-8080-exec-4] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:43:04.886+08:00  INFO 3728 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:43:04.891+08:00  INFO 3728 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:43:07.496+08:00  INFO 25368 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 25368 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:43:07.499+08:00 DEBUG 25368 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:43:07.500+08:00  INFO 25368 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:43:08.468+08:00  INFO 25368 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:43:08.477+08:00  INFO 25368 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:43:08.477+08:00  INFO 25368 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:43:08.530+08:00  INFO 25368 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:43:08.530+08:00  INFO 25368 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 991 ms
+2025-10-14T16:43:09.329+08:00  INFO 25368 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:43:09.337+08:00  INFO 25368 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.117 seconds (process running for 2.379)
+2025-10-14T16:43:15.675+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:43:15.675+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:43:15.681+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-10-14T16:43:15.754+08:00 DEBUG 25368 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:43:15.756+08:00 DEBUG 25368 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:43:15.795+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:43:16.171+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cd7b38e
+2025-10-14T16:43:16.173+08:00  INFO 25368 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:43:16.181+08:00 DEBUG 25368 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:43:16.215+08:00 DEBUG 25368 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:43:16.261+08:00 DEBUG 25368 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:43:39.725+08:00  INFO 25368 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:43:39.731+08:00  INFO 25368 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:43:42.279+08:00  INFO 9272 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 9272 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:43:42.280+08:00 DEBUG 9272 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:43:42.281+08:00  INFO 9272 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:43:43.242+08:00  INFO 9272 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:43:43.249+08:00  INFO 9272 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:43:43.250+08:00  INFO 9272 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:43:43.301+08:00  INFO 9272 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:43:43.301+08:00  INFO 9272 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 988 ms
+2025-10-14T16:43:44.118+08:00  INFO 9272 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:43:44.125+08:00  INFO 9272 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.119 seconds (process running for 2.379)
+2025-10-14T16:43:49.715+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:43:49.717+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:43:49.719+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-14T16:43:49.788+08:00 DEBUG 9272 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:43:49.790+08:00 DEBUG 9272 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:43:49.832+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:43:50.073+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@233d01b4
+2025-10-14T16:43:50.075+08:00  INFO 9272 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:43:50.088+08:00 DEBUG 9272 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:43:50.111+08:00 DEBUG 9272 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:43:50.150+08:00 DEBUG 9272 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:44:01.121+08:00  INFO 9272 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T16:44:01.130+08:00  INFO 9272 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T16:44:03.709+08:00  INFO 24568 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 24568 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:44:03.711+08:00 DEBUG 24568 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:44:03.711+08:00  INFO 24568 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:44:04.692+08:00  INFO 24568 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:44:04.697+08:00  INFO 24568 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:44:04.697+08:00  INFO 24568 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:44:04.755+08:00  INFO 24568 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:44:04.755+08:00  INFO 24568 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1008 ms
+2025-10-14T16:44:05.515+08:00  INFO 24568 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:44:05.522+08:00  INFO 24568 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.106 seconds (process running for 2.374)
+2025-10-14T16:44:48.094+08:00  INFO 24612 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 24612 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-14T16:44:48.096+08:00 DEBUG 24612 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T16:44:48.097+08:00  INFO 24612 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T16:44:49.024+08:00  INFO 24612 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-14T16:44:49.036+08:00  INFO 24612 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-14T16:44:49.036+08:00  INFO 24612 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-14T16:44:49.089+08:00  INFO 24612 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-14T16:44:49.089+08:00  INFO 24612 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 956 ms
+2025-10-14T16:44:49.930+08:00  INFO 24612 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-14T16:44:49.937+08:00  INFO 24612 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.125 seconds (process running for 2.378)
+2025-10-14T16:44:53.762+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14T16:44:53.765+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-14T16:44:53.767+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-14T16:44:53.836+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:44:53.837+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=109, id=null, label=)
+2025-10-14T16:44:53.877+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T16:44:54.230+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4eb12b83
+2025-10-14T16:44:54.233+08:00  INFO 24612 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T16:44:54.243+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time,dict_id FROM dict_option WHERE dict_id = ? ORDER BY sort
+2025-10-14T16:44:54.274+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 109(Long)
+2025-10-14T16:44:54.314+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 1
+2025-10-14T16:54:13.087+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:54:13.088+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-2] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:54:13.090+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:54:13.090+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:54:13.093+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-2] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 8
+2025-10-14T16:54:15.429+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.controller.DictController  : 控制器层参数:109
+2025-10-14T16:54:15.429+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:109
+2025-10-14T16:54:15.432+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.update   : ==>  Preparing: UPDATE dict SET update_time =?, status =? WHERE id = ?
+2025-10-14T16:54:15.432+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.update   : ==> Parameters: 2025-10-14 16:54:15.429(Timestamp), 0(String), 109(Long)
+2025-10-14T16:54:15.437+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-1] c.i.demo.dict.mapper.DictMapper.update   : <==    Updates: 1
+2025-10-14T16:54:15.444+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:54:15.444+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-3] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=, code=)
+2025-10-14T16:54:15.444+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time,status FROM dict HAVING status = '1' ORDER BY create_time DESC
+2025-10-14T16:54:15.445+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T16:54:15.448+08:00 DEBUG 24612 --- [ivos] [http-nio-8080-exec-3] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 7

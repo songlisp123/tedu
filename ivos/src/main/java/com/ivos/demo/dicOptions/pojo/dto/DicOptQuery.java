@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DicOptQuery {
     private Long dictId;
+    private Long id;
     private String label;
 }

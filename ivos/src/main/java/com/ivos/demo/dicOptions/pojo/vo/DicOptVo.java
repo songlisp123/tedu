@@ -16,6 +16,7 @@ public class DicOptVo {
     private String value;
     private Integer sort;
     private String remark;
-    @JsonFormat(pattern = "yyyy-MM-dd HH-mm-SS",timezone = "GTM+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:SS",timezone = "GMT+8")
     private Date createTime;
+    private Long dictId;
 }

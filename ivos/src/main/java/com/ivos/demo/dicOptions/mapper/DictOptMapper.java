@@ -12,4 +12,8 @@ public interface DictOptMapper {
     List<DicOptVo> query(DicOptQuery query);
 
     void save(DictOpt dIcOpt);
+
+    void update(DictOpt dIcOpt);
+
+    void delete(Long dicOptId);
 }

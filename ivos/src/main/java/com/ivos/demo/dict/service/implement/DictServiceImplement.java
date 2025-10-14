@@ -44,9 +44,16 @@ public class DictServiceImplement implements DictService {
         }
     }
 
+    /*
+    逻辑删除字典，通过将其状态设置为0修改其状态
+     */
     @Override
     public void delete(Long dictId) {
         log.debug("业务层参数:{}",dictId);
-        mapper.delete(dictId);
+        Dict dict = new Dict();
+        dict.setId(dictId);
+        dict.setStatus("0");
+        dict.setUpdateTime(new Date());
+        mapper.update(dict);
     }
 }

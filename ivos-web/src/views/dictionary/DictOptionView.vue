@@ -130,17 +130,56 @@ function reset() {
     loadDictOption();
 };
 
-function edit(id) {};
+function edit(id) {
+    dialogVisible.value = true;
+    dialogTitle.value = '编辑字典项';
+    axios.get(BASE_URL+'/v1/dicOpt/query?id='+id)
+    .then((response)=>{
+        if (response.data.code == 2000) {
+            saveForm.value = response.data.data[0];
+        }
+        else {
+            ElMessage.error('发生错误！请稍后重试');    
+        }
+    });
+};
 
-function deleteOpt(id) {};
+function deleteOpt(id) {
+    if (confirm('是否要删除此信息？')) {
+        axios.post(BASE_URL+'/v1/dicOpt/delete/'+id)
+        .then((response)=>{
+            if (response.data.code == 2000) {
+                ElMessage.success('删除成功！');
+                loadDictOption();
+            }
+            else {
+                ElMessage.error('删除失败！请稍后重试！');
+            }
+        });
+    }
+};
 
 function close() {
-    saveForm.value = {};
+    saveForm.value ={label:'',value:'',sort:'',remark:'',dictId:dictId};
     dialogVisible.value = false;
+    dialogTitle.value = '新建字典项';
 };
 
 function submit() {
     console.log(saveForm.value);
+    let data = qs.stringify(saveForm.value);
+    axios.post(BASE_URL+'/v1/dicOpt/save',data)
+    .then((response)=>{
+        if (response.data.code == 2000) {
+            ElMessage.success('插入成功！');
+            saveForm.value ={label:'',value:'',sort:'',remark:'',dictId:dictId};
+            dialogVisible.value = false;
+            loadDictOption();
+        }
+        else {
+            ElMessage.error('发生错误！请稍后重试');
+        }
+    });
 };
 </script>
 

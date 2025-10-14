@@ -10,4 +10,6 @@ public interface DicOptService {
     List<DicOptVo> query(DicOptQuery query);
 
     void save(DictOptSavePara para);
+
+    void delete(Long dicOptId);
 }
