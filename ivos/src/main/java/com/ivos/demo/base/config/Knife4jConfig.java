@@ -33,7 +33,9 @@ public class Knife4jConfig {
                 new Tag().name("申请模块").description("用车申请管理相关接口"),
                 new Tag().name("审批模块").description("用车审批管理相关接口"),
                 new Tag().name("字典模块").description("字典管理相关接口"),
-                new Tag().name("字典项模块").description("字典管理相关接口")
+                new Tag().name("字典项模块").description("字典管理相关接口"),
+                new Tag().name("申请单模块").description("字典管理相关接口"),
+                new Tag().name("审核单模块").description("字典管理相关接口")
         );
     }
 }
