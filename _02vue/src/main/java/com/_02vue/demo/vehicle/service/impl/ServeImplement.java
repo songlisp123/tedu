@@ -27,15 +27,27 @@ public class ServeImplement implements Serve {
         log.debug("业务层参数：{}",para);
         Vehicle vehicle = new Vehicle();
         BeanUtils.copyProperties(para,vehicle);
-        vehicle.setCreateTime(new Date());
-        vehicle.setUpdateTime(new Date());
-        vehicle.setStatus(Status.LEISURE);
         vehicle.setBatteryType(battery(para));
         vehicle.setColor(color(para));
         vehicle.setType(type(para));
-        vehicle.setGeofenceBindStatus("0");
-        vehicle.setGeofenceId(null);
-        mapper.save(vehicle);
+        if (vehicle.getId() != null) {
+            vehicle.setUpdateTime(new Date());
+            mapper.update(vehicle);
+
+        }
+        else {
+            vehicle.setCreateTime(new Date());
+            vehicle.setStatus(Status.LEISURE);
+            vehicle.setGeofenceBindStatus("0");
+            vehicle.setGeofenceId(null);
+            mapper.save(vehicle);
+        }
+    }
+
+    @Override
+    public void delete(Long vehicleId) {
+        log.debug("业务层参数:{}",vehicleId);
+        mapper.delete(vehicleId);
     }
 
     @Override

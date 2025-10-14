@@ -33,7 +33,7 @@
                 <el-button type="info" @click="reset()">重置</el-button>
             </div>
             <el-button type="warning" style="padding-right: 20px;"
-                @click="dialogVisible=true">新建车辆</el-button>
+                @click="newCar()">新建车辆</el-button>
         </div>
         <div class="item-wrapper">
             <div class="item p3" v-for="vehicle in vehicles">
@@ -50,9 +50,19 @@
                 <p class="email">购买时间:{{ vehicle.buyTime }}</p>
                 <p class="email">电池类型:{{ vehicle.batteryType }}</p>
                 <p class="email">状态:{{ vehicle.status }}</p>
+                <p v-if="updateStatus">
+                    汽车状态:
+                    <select name="vehicleStatus" id="vehicleStatus" >
+                        <option value="0" >禁用</option>
+                        <option value="1">启用</option>
+                        <option value="2">维修</option>
+                        <option value="3">租赁</option>
+                    </select>
+                </p>
                 <p id="buttons">
                     <el-button type="info" @click="edit(vehicle.id)">编辑</el-button>
-                    <el-button type="primary">修改</el-button>                 
+                    <el-button type="primary" @click="update(vehicle.id)">修改</el-button>
+                    <el-button type="warning" @click="deleteVehicle(vehicle.id)">删除</el-button>                    
                 </p>
             </div>
         </div>
@@ -179,6 +189,7 @@ const searchForm = ref({
 
 //定义变量存放表单内容
 const saveForm = ref({
+    id:'',
     brand:'',
     license:'',
     model:'',
@@ -200,6 +211,8 @@ const vehicles = ref([]);
 
 //定义变量存放标题文本
 const dialogTitle = ref('新建车辆');
+
+const updateStatus = ref(false);
 
 function reset() {
     searchForm.value = {};
@@ -323,6 +336,30 @@ function colorFormatter() {
     }
 
     
+}
+
+function newCar() {
+    dialogVisible.value = true;
+    saveForm.value = {};
+}
+
+function update(id) {
+    updateStatus.value = true;
+}
+setTimeout(loadVehicle(),2000);
+
+
+function deleteVehicle(id) {
+    axios.post(BASE_URL+'/v1/vehicle/delete/'+id)
+    .then((response)=>{
+        if (response.data.code == 2000) {
+            ElMessage.success('删除成功！');
+            loadVehicle();
+        }
+        else {
+            ElMessage.error('删除失败!');
+        }
+    });
 }
 </script>
 
@@ -454,6 +491,11 @@ fieldset {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+#vehicleStatus {
+    background-color: #656565;
+    border: none;
 }
 
 </style>

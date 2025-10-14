@@ -11,4 +11,6 @@ public interface Serve {
     void save(RegVehiclePara para);
 
     List<VehicleVo> select(VehicleQuery query);
+
+    void delete(Long vehicleId);
 }
