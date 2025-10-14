@@ -1,10 +1,9 @@
-package com.ivos.demo;
+package com.ivos.demo.userTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
@@ -15,35 +14,19 @@ import java.util.Arrays;
 import java.util.Map;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class regUserTest {
-
+public class TestUserListMethod {
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     @Transactional
     void test() throws Exception {
-        String url = "/v1/user/reg";
-        mockMvc.perform(post(url)
-                        .content("""
-                                {
-                                "username":"赵云",
-                                "email":"A0116659",
-                                "phone":"19232939235",
-                                "age":"24",
-                                "gender":"男",
-                                "status":"0",
-                                "level":"将军",
-                                "parentId":"105"
-                                }
-                                """)
-                        .contentType(MediaType.APPLICATION_JSON)
-                )
+        String url = "/v1/user/list";
+        mockMvc.perform(get(url))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体
@@ -78,7 +61,7 @@ public class regUserTest {
 
                     //获取请求体的数据格式
                     String contentType = mockHttpServletResponse.getContentType();
-                    System.out.println("返回数据类型："+contentType);
+                    System.out.println(contentType);
 
                     //获取请求体
                     String message = mockHttpServletResponse.getContentAsString(StandardCharsets.UTF_8);

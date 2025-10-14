@@ -12,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class RegVehiclePara {
 
+    private Long id;
     private String brand;
     private String license;
     private String model;

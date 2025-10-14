@@ -1,4 +1,4 @@
-package com.ivos.demo;
+package com.ivos.demo.vehicleTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FindUsersByQuertParaTest {
+public class vehicleTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -26,15 +26,11 @@ public class FindUsersByQuertParaTest {
     @Test
     @Transactional
     void test() throws Exception {
-        String url = "/v1/user/lists";
+        String url = "/v1/vehicle/query";
         mockMvc.perform(get(url)
-//                        .queryParam("username","t")
-//                        .queryParam("status","1")
-//                        .queryParam("id","101")
-//                        .queryParam("parentId","101")
-//                        .queryParam("level","20")
-                                .queryParam("id","103")
-                )
+//                        .queryParam("brand","马")
+                        .queryParam("license","A")
+                        .queryParam("displacement","2"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体
@@ -69,7 +65,7 @@ public class FindUsersByQuertParaTest {
 
                     //获取请求体的数据格式
                     String contentType = mockHttpServletResponse.getContentType();
-                    System.out.println("返回数据类型："+contentType);
+                    System.out.println(contentType);
 
                     //获取请求体
                     String message = mockHttpServletResponse.getContentAsString(StandardCharsets.UTF_8);

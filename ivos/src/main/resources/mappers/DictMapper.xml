@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ivos.demo.dict.mapper.DictMapper">
+   <select id="query" resultType="com.ivos.demo.dict.pojo.vo.DictVo">
+       SELECT id,name,code,remark,create_time
+       FROM dict
+       <where>
+           <if test="id != null ">
+               AND id =#{id}
+           </if>
+           <if test="name !=null and name != '' ">
+               AND name like CONCAT('%',#{name},'%')
+           </if>
+           <if test="code !=null and code != '' ">
+               AND code like CONCAT('%',#{code},'%')
+           </if>
+       </where>
+   </select>
+
+    <insert id="save">
+        INSERT INTO dict(name,code,remark,status,create_time,update_time)
+        VALUES(#{name},#{code},#{remark},#{status},#{createTime},#{updateTime})
+    </insert>
+
+    <update id="update">
+        UPDATE dict
+        <set>
+            <if test=" id == null">
+                id =#{id},
+            </if>
+            <if test=" code != null and code != ''  ">
+                code =#{code},
+            </if>
+            <if test=" name != null and name != ''  ">
+                name =#{name},
+            </if>
+            <if test=" remark != null and remark != ''  ">
+                remark =#{remark},
+            </if>
+            <if test=" updateTime != null  ">
+                update_time =#{updateTime},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM dict
+        WHERE id = #{dictId}
+    </delete>
+</mapper>

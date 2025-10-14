@@ -1,4 +1,4 @@
-package com.ivos.demo;
+package com.ivos.demo.vehicleTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

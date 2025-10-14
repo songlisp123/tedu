@@ -1,4 +1,4 @@
-package com.ivos.demo;
+package com.ivos.demo.userTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class vehicleTest {
+public class FindUsersTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -26,11 +26,8 @@ public class vehicleTest {
     @Test
     @Transactional
     void test() throws Exception {
-        String url = "/v1/vehicle/query";
-        mockMvc.perform(get(url)
-//                        .queryParam("brand","马")
-                        .queryParam("license","A")
-                        .queryParam("displacement","2"))
+        String url = "/v1/user/test";
+        mockMvc.perform(get(url))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体

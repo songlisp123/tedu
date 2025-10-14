@@ -16,6 +16,7 @@
             <ul>
                <li><a href="/users"><img src="../../public/svg/new.svg" alt="New Document" class="menu-icon"><span>用户管理</span></a></li>
                <li><a href="/vehivle"><img src="../../public/svg/recent.svg" alt="Open recent" class="menu-icon"><span>车辆管理</span></a></li>
+               <li><a href="/vehivle"><img src="../../public/svg/recent.svg" alt="Open recent" class="menu-icon"><span>围栏管理</span></a></li>
                <li><a href="#"><img src="../../public/svg/search.svg" alt="Search documents" class="menu-icon"><span>Search</span></a></li>
 
             </ul>

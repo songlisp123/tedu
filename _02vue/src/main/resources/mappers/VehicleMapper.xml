@@ -88,4 +88,55 @@
             </if>
         </where>
     </select>
+
+    <update id="update">
+        UPDATE vehicle
+        <set>
+            <if test="id == null">
+                id = #{id},
+            </if>
+            <if test="brand != null and brand != '' ">
+                brand = #{brand},
+            </if>
+            <if test="license != null and license != '' ">
+                license = #{license},
+            </if>
+            <if test="model != null and model != '' ">
+                model = #{model},
+            </if>
+            <if test="code != null and code != '' ">
+                model = #{model},
+            </if>
+            <if test="displacement != null and displacement != '' ">
+                displacement = #{displacement},
+            </if>
+            <if test="type != null and type != '' ">
+                type = #{type},
+            </if>
+            <if test="color != null and color != '' ">
+                color = #{color},
+            </if>
+            <if test="kilometers != null and kilometers != '' ">
+                kilometers = #{kilometers},
+            </if>
+            <if test="buyTime != null ">
+                buy_time = #{buyTime},
+            </if>
+            <if test="regTime != null ">
+                reg_time = #{regTime},
+            </if>
+            <if test="price != null and price != '' ">
+                price = #{price},
+            </if>
+            <if test="batteryType != null ">
+                battery_type = #{batteryType}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM vehicle
+        WHERE id = #{vehicleId}
+    </delete>
 </mapper>

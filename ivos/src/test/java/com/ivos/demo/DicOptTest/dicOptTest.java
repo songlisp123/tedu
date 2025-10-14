@@ -1,6 +1,5 @@
-package com.ivos.demo;
+package com.ivos.demo.DicOptTest;
 
-import com.ivos.demo.user.mapper.userMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FindUsersTest {
+public class dicOptTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -27,8 +26,9 @@ public class FindUsersTest {
     @Test
     @Transactional
     void test() throws Exception {
-        String url = "/v1/user/test";
-        mockMvc.perform(get(url))
+        String url = "/v1/dicOpt/query";
+        mockMvc.perform(get(url)
+                        .queryParam("dictId","101"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
                     //获取请求体

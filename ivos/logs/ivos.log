@@ -1,30 +1,75 @@
-2025-10-13T14:23:45.669+08:00  INFO 22372 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Starting GeoRegTest using Java 17.0.16 with PID 22372 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
-2025-10-13T14:23:45.673+08:00 DEBUG 22372 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Running with Spring Boot v3.3.3, Spring v6.1.12
-2025-10-13T14:23:45.674+08:00  INFO 22372 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : No active profile set, falling back to 1 default profile: "default"
-2025-10-13T14:23:47.379+08:00  INFO 22372 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-13T14:23:47.379+08:00  INFO 22372 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-13T14:23:47.381+08:00  INFO 22372 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-10-13T14:23:47.410+08:00  INFO 22372 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Started GeoRegTest in 1.947 seconds (process running for 2.813)
-2025-10-13T14:23:47.435+08:00  INFO 22372 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-13T14:23:47.602+08:00  INFO 22372 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6335f04a
-2025-10-13T14:23:47.603+08:00  INFO 22372 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-13T14:23:48.412+08:00 ERROR 22372 --- [ivos] [main] c.i.demo.base.exception.GlobalException  : RuntimeException:Required request body is missing: public com.ivos.demo.base.response.JsonResult com.ivos.demo.geofence.controller.GeofenceController.save(com.ivos.demo.geofence.pojo.dto.GeofenceSavePara)
-2025-10-13T14:23:48.463+08:00  INFO 22372 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-13T14:23:48.470+08:00  INFO 22372 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-13T14:24:22.216+08:00  INFO 9148 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Starting GeoRegTest using Java 17.0.16 with PID 9148 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
-2025-10-13T14:24:22.216+08:00 DEBUG 9148 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Running with Spring Boot v3.3.3, Spring v6.1.12
-2025-10-13T14:24:22.217+08:00  INFO 9148 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : No active profile set, falling back to 1 default profile: "default"
-2025-10-13T14:24:23.721+08:00  INFO 9148 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-13T14:24:23.722+08:00  INFO 9148 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-13T14:24:23.723+08:00  INFO 9148 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-10-13T14:24:23.755+08:00  INFO 9148 --- [ivos] [main] com.ivos.demo.geofenceTest.GeoRegTest    : Started GeoRegTest in 1.73 seconds (process running for 2.513)
-2025-10-13T14:24:23.786+08:00  INFO 9148 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-13T14:24:23.979+08:00  INFO 9148 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a120c88
-2025-10-13T14:24:23.982+08:00  INFO 9148 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-13T14:24:24.517+08:00 DEBUG 9148 --- [ivos] [main] c.i.d.g.controller.GeofenceController    : 进入到新建围栏阶段
-2025-10-13T14:24:24.517+08:00 DEBUG 9148 --- [ivos] [main] c.i.d.g.s.implement.ServeImplement       : 业务层参数：GeofenceSavePara(name=围栏01, position={type: rectangle, recPoints: 116.40165084473607-39.90187424090239,116.416311190…37068651884,116.40165084473607-39.896837068651884)
-2025-10-13T14:24:24.536+08:00 DEBUG 9148 --- [ivos] [main] c.i.demo.geofence.mapper.GeoMapper.save  : ==>  Preparing: INSERT INTO geofence(name,status,position,create_time,update_time) VALUES(?,?,?,?,?)
-2025-10-13T14:24:24.566+08:00 DEBUG 9148 --- [ivos] [main] c.i.demo.geofence.mapper.GeoMapper.save  : ==> Parameters: 围栏01(String), 0(String), {type: rectangle, recPoints: 116.40165084473607-39.90187424090239,116.416311190…37068651884,116.40165084473607-39.896837068651884(String), 2025-10-13 14:24:24.518(Timestamp), 2025-10-13 14:24:24.518(Timestamp)
-2025-10-13T14:24:24.591+08:00 DEBUG 9148 --- [ivos] [main] c.i.demo.geofence.mapper.GeoMapper.save  : <==    Updates: 1
-2025-10-13T14:24:24.649+08:00  INFO 9148 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-13T14:24:24.656+08:00  INFO 9148 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T10:29:28.761+08:00  INFO 29496 --- [ivos] [main] com.ivos.demo.dicTest.dictSelectMethod   : Starting dictSelectMethod using Java 17.0.16 with PID 29496 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
+2025-10-14T10:29:28.764+08:00 DEBUG 29496 --- [ivos] [main] com.ivos.demo.dicTest.dictSelectMethod   : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T10:29:28.764+08:00  INFO 29496 --- [ivos] [main] com.ivos.demo.dicTest.dictSelectMethod   : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T10:29:30.228+08:00  INFO 29496 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-14T10:29:30.229+08:00  INFO 29496 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-14T10:29:30.231+08:00  INFO 29496 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-10-14T10:29:30.258+08:00  INFO 29496 --- [ivos] [main] com.ivos.demo.dicTest.dictSelectMethod   : Started dictSelectMethod in 1.675 seconds (process running for 2.498)
+2025-10-14T10:29:30.284+08:00  INFO 29496 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T10:29:30.457+08:00  INFO 29496 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f06ebe0
+2025-10-14T10:29:30.457+08:00  INFO 29496 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T10:29:30.998+08:00 DEBUG 29496 --- [ivos] [main] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictQuery(id=null, name=null, code=null)
+2025-10-14T10:29:30.998+08:00 DEBUG 29496 --- [ivos] [main] c.i.d.d.s.i.DictServiceImplement         : 业务层参数:DictQuery(id=null, name=null, code=null)
+2025-10-14T10:29:31.022+08:00 DEBUG 29496 --- [ivos] [main] c.i.demo.dict.mapper.DictMapper.query    : ==>  Preparing: SELECT id,name,code,remark,create_time FROM dict
+2025-10-14T10:29:31.037+08:00 DEBUG 29496 --- [ivos] [main] c.i.demo.dict.mapper.DictMapper.query    : ==> Parameters: 
+2025-10-14T10:29:31.054+08:00 DEBUG 29496 --- [ivos] [main] c.i.demo.dict.mapper.DictMapper.query    : <==      Total: 7
+2025-10-14T10:29:31.122+08:00  INFO 29496 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T10:29:31.127+08:00  INFO 29496 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T11:12:17.502+08:00  INFO 25132 --- [ivos] [main] com.ivos.demo.dicTest.dictRegMethod      : Starting dictRegMethod using Java 17.0.16 with PID 25132 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
+2025-10-14T11:12:17.502+08:00 DEBUG 25132 --- [ivos] [main] com.ivos.demo.dicTest.dictRegMethod      : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T11:12:17.503+08:00  INFO 25132 --- [ivos] [main] com.ivos.demo.dicTest.dictRegMethod      : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T11:12:18.894+08:00  INFO 25132 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-14T11:12:18.894+08:00  INFO 25132 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-14T11:12:18.894+08:00  INFO 25132 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-10-14T11:12:18.924+08:00  INFO 25132 --- [ivos] [main] com.ivos.demo.dicTest.dictRegMethod      : Started dictRegMethod in 1.612 seconds (process running for 2.373)
+2025-10-14T11:12:18.947+08:00  INFO 25132 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T11:12:19.100+08:00  INFO 25132 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15186ce0
+2025-10-14T11:12:19.100+08:00  INFO 25132 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T11:12:19.610+08:00 DEBUG 25132 --- [ivos] [main] c.i.demo.dict.controller.DictController  : 控制器接收参数:DictRegPara(id=null, name=测试01, code=测试01, remark=测试01)
+2025-10-14T11:12:19.611+08:00 DEBUG 25132 --- [ivos] [main] c.i.d.d.s.i.DictServiceImplement         : 业务层参数DictRegPara(id=null, name=测试01, code=测试01, remark=测试01)
+2025-10-14T11:12:19.624+08:00 DEBUG 25132 --- [ivos] [main] c.ivos.demo.dict.mapper.DictMapper.save  : ==>  Preparing: INSERT INTO dict(name,code,remark,status,create_time,update_time) VALUES(?,?,?,?,?,?)
+2025-10-14T11:12:19.641+08:00 DEBUG 25132 --- [ivos] [main] c.ivos.demo.dict.mapper.DictMapper.save  : ==> Parameters: 测试01(String), 测试01(String), 测试01(String), 1(String), 2025-10-14 11:12:19.612(Timestamp), null
+2025-10-14T11:12:19.651+08:00 DEBUG 25132 --- [ivos] [main] c.ivos.demo.dict.mapper.DictMapper.save  : <==    Updates: 1
+2025-10-14T11:12:19.702+08:00  INFO 25132 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T11:12:19.705+08:00  INFO 25132 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T15:15:51.873+08:00  INFO 15544 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Starting dicOptTest using Java 17.0.16 with PID 15544 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
+2025-10-14T15:15:51.874+08:00 DEBUG 15544 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T15:15:51.874+08:00  INFO 15544 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T15:15:53.417+08:00  INFO 15544 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-14T15:15:53.417+08:00  INFO 15544 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-14T15:15:53.419+08:00  INFO 15544 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-14T15:15:53.458+08:00  INFO 15544 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Started dicOptTest in 1.779 seconds (process running for 2.599)
+2025-10-14T15:15:53.489+08:00  INFO 15544 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T15:15:53.663+08:00  INFO 15544 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40cf6254
+2025-10-14T15:15:53.663+08:00  INFO 15544 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T15:15:54.420+08:00 DEBUG 15544 --- [ivos] [main] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=null)
+2025-10-14T15:15:54.420+08:00 DEBUG 15544 --- [ivos] [main] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=null)
+2025-10-14T15:15:54.446+08:00 DEBUG 15544 --- [ivos] [main] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dictId = ?
+2025-10-14T15:15:54.460+08:00 DEBUG 15544 --- [ivos] [main] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:15:54.551+08:00 ERROR 15544 --- [ivos] [main] c.i.demo.base.exception.GlobalException  : RuntimeException:
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'dictId' in 'WHERE'
+### The error may exist in file [I:\20250820\jsd2507-ssm-advance\ivos\target\classes\mappers\DictOptMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,label,value,sort,remark,create_time         FROM dict_option          WHERE  dictId = ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'dictId' in 'WHERE'
+; bad SQL grammar []
+2025-10-14T15:15:54.601+08:00  INFO 15544 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T15:15:54.608+08:00  INFO 15544 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-14T15:16:19.926+08:00  INFO 464 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Starting dicOptTest using Java 17.0.16 with PID 464 (started by snl19 in I:\20250820\jsd2507-ssm-advance\ivos)
+2025-10-14T15:16:19.927+08:00 DEBUG 464 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-14T15:16:19.927+08:00  INFO 464 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T15:16:21.440+08:00  INFO 464 --- [ivos] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-14T15:16:21.440+08:00  INFO 464 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-14T15:16:21.442+08:00  INFO 464 --- [ivos] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-14T15:16:21.483+08:00  INFO 464 --- [ivos] [main] com.ivos.demo.DicOptTest.dicOptTest      : Started dicOptTest in 1.746 seconds (process running for 2.545)
+2025-10-14T15:16:21.511+08:00  INFO 464 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-14T15:16:21.673+08:00  INFO 464 --- [ivos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1752e45c
+2025-10-14T15:16:21.674+08:00  INFO 464 --- [ivos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-14T15:16:22.198+08:00 DEBUG 464 --- [ivos] [main] c.i.d.d.controller.dictOptController     : 控制器查询参数,DicOptQuery(dictId=101, label=null)
+2025-10-14T15:16:22.198+08:00 DEBUG 464 --- [ivos] [main] c.i.d.d.s.Implement.DIcOptImplement      : 业务层参数:DicOptQuery(dictId=101, label=null)
+2025-10-14T15:16:22.223+08:00 DEBUG 464 --- [ivos] [main] c.i.d.d.mapper.DictOptMapper.query       : ==>  Preparing: SELECT id,label,value,sort,remark,create_time FROM dict_option WHERE dict_id = ?
+2025-10-14T15:16:22.237+08:00 DEBUG 464 --- [ivos] [main] c.i.d.d.mapper.DictOptMapper.query       : ==> Parameters: 101(Long)
+2025-10-14T15:16:22.258+08:00 DEBUG 464 --- [ivos] [main] c.i.d.d.mapper.DictOptMapper.query       : <==      Total: 6
+2025-10-14T15:16:22.315+08:00  INFO 464 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-14T15:16:22.319+08:00  INFO 464 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

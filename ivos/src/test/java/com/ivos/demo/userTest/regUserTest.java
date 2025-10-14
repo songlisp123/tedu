@@ -1,9 +1,10 @@
-package com.ivos.demo;
+package com.ivos.demo.userTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
@@ -13,25 +14,39 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Map;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class changepasswordTest {
+public class regUserTest {
+
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     @Transactional
-     void add() throws Exception {
-        String urlPath = "/v1/user/update/password/{id}";
-        mockMvc.perform(post(urlPath)
-                        .pathInfo("103"))
+    void test() throws Exception {
+        String url = "/v1/user/reg";
+        mockMvc.perform(post(url)
+                        .content("""
+                                {
+                                "username":"赵云",
+                                "email":"A0116659",
+                                "phone":"19232939235",
+                                "age":"24",
+                                "gender":"男",
+                                "status":"0",
+                                "level":"将军",
+                                "parentId":"105"
+                                }
+                                """)
+                        .contentType(MediaType.APPLICATION_JSON)
+                )
                 .andExpect(status().isOk())
                 .andExpect(result -> {
-                    //springMVC原理
-
+                    //获取请求体
                     MockHttpServletRequest mockHttpServletRequest = result.getRequest();
                     Map<String, String[]> map = mockHttpServletRequest.getParameterMap();
 
@@ -61,9 +76,14 @@ public class changepasswordTest {
                     int status = mockHttpServletResponse.getStatus();
                     System.out.println("状态吗："+status);
 
+                    //获取请求体的数据格式
+                    String contentType = mockHttpServletResponse.getContentType();
+                    System.out.println("返回数据类型："+contentType);
+
                     //获取请求体
                     String message = mockHttpServletResponse.getContentAsString(StandardCharsets.UTF_8);
                     System.out.println("message："+message);
+
                 });
     }
 }

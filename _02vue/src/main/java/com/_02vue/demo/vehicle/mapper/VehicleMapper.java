@@ -12,4 +12,8 @@ public interface VehicleMapper {
     void save(Vehicle vehicle);
 
     List<VehicleVo> select(VehicleQuery query);
+
+    void update(Vehicle vehicle);
+
+    void delete(Long vehicleId);
 }

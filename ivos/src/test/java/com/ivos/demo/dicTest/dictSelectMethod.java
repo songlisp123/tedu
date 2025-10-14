@@ -1,4 +1,4 @@
-package com.ivos.demo;
+package com.ivos.demo.dicTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class TestUserListMethod {
+public class dictSelectMethod {
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     @Transactional
     void test() throws Exception {
-        String url = "/v1/user/list";
+        String url = "/v1/dict/query";
         mockMvc.perform(get(url))
                 .andExpect(status().isOk())
                 .andExpect(result -> {

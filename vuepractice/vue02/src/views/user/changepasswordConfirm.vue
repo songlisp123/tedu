@@ -285,12 +285,12 @@ fieldset>p {
 }
 
 .output {
-     margin: 20px 0;
-     font-size: 1.2em;
-     background: rgba(255, 255, 255, 0.2);
-     padding: 10px;
-     border-radius: 5px;
-     word-wrap: break-word;
+    margin: 20px 0;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
 }
 
 .container button {

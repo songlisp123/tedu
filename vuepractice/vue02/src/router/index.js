@@ -29,6 +29,7 @@ const routes = [
     children:[
       {path: '/home',component: () => import(/* webpackChunkName: "about" */ '../views/home.vue')},
       {path: '/vehivle',component: () => import(/* webpackChunkName: "about" */ '../views/vehicle/vehicle.vue')},
+      {path: '/geofence',component: () => import(/* webpackChunkName: "about" */ '../views/geofence/geofence.vue')},
       {path: '/users',component: () => import(/* webpackChunkName: "about" */ '../views/user/userView.vue')},
       {path: '/change/password/confirm',component: () => import(/* webpackChunkName: "about" */ '../views/user/changepasswordConfirm.vue')},
       {path: '/change/password/complete',component: () => import(/* webpackChunkName: "about" */ '../views/user/changepasswordcomplete.vue')},

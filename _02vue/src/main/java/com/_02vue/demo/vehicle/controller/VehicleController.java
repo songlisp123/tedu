@@ -33,4 +33,12 @@ public class VehicleController {
         List<VehicleVo> cars = serve.select(query);
         return JsonResult.ok(cars);
     }
+
+    @PostMapping("delete/{id}")
+    public JsonResult delete(@PathVariable("id") Long vehicleId)
+    {
+        log.debug("控制器参数:{}",vehicleId);
+        serve.delete(vehicleId);
+        return JsonResult.ok();
+    }
 }

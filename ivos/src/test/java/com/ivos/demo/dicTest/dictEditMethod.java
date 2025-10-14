@@ -1,4 +1,4 @@
-package com.ivos.demo;
+package com.ivos.demo.dicTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,21 +18,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class UserRegTest {
+public class dictEditMethod {
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     @Transactional
-     void add() throws Exception {
-        String urlPath = "/v1/user/login/";
-        mockMvc.perform(post(urlPath)
-                        .param("username","刘备")
-                        .param("password","A0116658"))
+    void test() throws Exception {
+        String url = "/v1/dict/save";
+        mockMvc.perform(post(url)
+                        .queryParam("name","测试01")
+                        .queryParam("code","测试01")
+                        .queryParam("remark","测试01"))
                 .andExpect(status().isOk())
                 .andExpect(result -> {
-                    //springMVC原理
-
+                    //获取请求体
                     MockHttpServletRequest mockHttpServletRequest = result.getRequest();
                     Map<String, String[]> map = mockHttpServletRequest.getParameterMap();
 
@@ -62,9 +62,14 @@ public class UserRegTest {
                     int status = mockHttpServletResponse.getStatus();
                     System.out.println("状态吗："+status);
 
+                    //获取请求体的数据格式
+                    String contentType = mockHttpServletResponse.getContentType();
+                    System.out.println(contentType);
+
                     //获取请求体
                     String message = mockHttpServletResponse.getContentAsString(StandardCharsets.UTF_8);
                     System.out.println("message："+message);
+
                 });
     }
 }
