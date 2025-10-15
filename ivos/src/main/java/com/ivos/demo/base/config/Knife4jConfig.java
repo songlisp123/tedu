@@ -35,7 +35,8 @@ public class Knife4jConfig {
                 new Tag().name("字典模块").description("字典管理相关接口"),
                 new Tag().name("字典项模块").description("字典管理相关接口"),
                 new Tag().name("申请单模块").description("字典管理相关接口"),
-                new Tag().name("审核单模块").description("字典管理相关接口")
+                new Tag().name("图片上传模块").description("字典管理相关接口"),
+                new Tag().name("审核单模块").description("图片处理相关接口")
         );
     }
 }

@@ -15,6 +15,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -116,5 +117,24 @@ public class UserServiceImpl implements UserServe  {
     public void delete(Long userId) {
         log.debug("业务层参数：{}",userId);
         userMapper.delete(userId);
+    }
+
+    @Override
+    public List<UserVo> selectByID(Long parentId) {
+        log.debug("业务层参数:{}",parentId);
+        //先定义一个列表存放查询数据
+        ArrayList<UserVo> auditList = new ArrayList<>();
+        //根据领导id查询领导
+        UserVo audit01 = userMapper.selectById(parentId);
+        //将一级领导添加到列表中
+        auditList.add(audit01);
+        //增加判断逻辑，判断一级领导是否有上级领导
+        //如果有，继续遍历
+        //如果没有，跳过此代码块
+        if (audit01.getParentId() != null ) {
+            UserVo audit02 = userMapper.selectById(audit01.getParentId());
+            auditList.add(audit02);
+        }
+        return auditList;
     }
 }

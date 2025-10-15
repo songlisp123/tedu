@@ -26,4 +26,6 @@ public interface UserServe {
     void changeStatus(Long userId, String status);
 
     void delete(Long userId);
+
+    List<UserVo> selectByID(Long parentId);
 }

@@ -108,4 +108,13 @@ public class UserController {
         userService.delete(userId);
         return JsonResult.ok();
     }
+
+    @GetMapping("audit/{parentId}")
+    @Operation(summary = "查询上级领导")
+    @ApiOperationSupport(order = 900)
+    public JsonResult auditList(@PathVariable Long parentId) {
+        log.debug("控制器接收参数:{}",parentId);
+        List<UserVo> auditList = userService.selectByID(parentId);
+        return JsonResult.ok(auditList);
+    }
 }

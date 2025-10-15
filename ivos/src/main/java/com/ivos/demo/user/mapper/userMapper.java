@@ -24,4 +24,6 @@ public interface userMapper {
     int updateUser(User newUser);
 
     void delete(Long userId);
+
+    UserVo selectById(Long parentId);
 }

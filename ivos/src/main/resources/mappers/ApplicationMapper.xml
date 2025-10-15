@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.application.mapper.ApplicationMapper">
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO application (user_id, username, start_time, end_time, img_url, departure_addr,
+        destination_addr, reason, remark, status, vehicle_id, reject_reason, create_time, update_time)
+        VALUES(#{userId},#{username},#{startTime},#{endTime},#{imgUrl},#{departureAddr},#{destinationAddr},
+        #{reason},#{remark},#{status},#{vehicleId},#{rejectReason},#{createTime},#{updateTime})
+    </insert>
+
+    <select id="query" resultType="com.ivos.demo.application.pojo.vo.ApplicationVo">
+        SELECT id,username,start_time,end_time,departure_addr,destination_addr,
+        reason,status
+        FROM application
+        <where>
+            <if test=" id !=null ">
+               AND id = #{id}
+            </if>
+            <if test=" departureAddr !=null and departureAddr != '' ">
+                AND departure_addr like CONCAT('%',#{departureAddr},'%')
+            </if>
+            <if test=" destinationAddr !=null and destinationAddr != '' ">
+                AND destination_addr LIKE CONCAT('%',#{destinationAddr},'%')
+            </if>
+            <if test=" status !=null and status != '' ">
+                AND status = #{status}
+            </if>
+        </where>
+    </select>
+    <update id="update">
+        UPDATE application
+        <set>
+            <if test="id == null">
+                id = #{id},
+            </if>
+            <if test=" status != null and status != '' ">
+                status = #{status},
+            </if>
+            <if test=" updateTime != null ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

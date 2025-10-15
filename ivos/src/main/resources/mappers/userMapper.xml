@@ -101,4 +101,9 @@
         WHERE id=#{userId}
     </delete>
 
+    <select id="selectById" resultType="com.ivos.demo.user.pojo.vo.UserVo">
+        SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id
+        FROM user WHERE id=#{parentId}
+    </select>
+
 </mapper>

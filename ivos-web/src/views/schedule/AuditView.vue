@@ -8,11 +8,13 @@
   <el-card style="margin:20px;height: 70px;">
     <el-form :inline="true">
       <el-form-item label="用车人">
-        <el-input placeholder="请输入用车人" style="width:220px;"></el-input>
+        <el-input placeholder="请输入用车人" v-model="searchForm.username"
+        @keydown.enter.prevent="loadAudit()"
+        style="width:220px;"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="info">重置</el-button>
-        <el-button type="primary">查询</el-button>
+        <el-button type="info" @click="reset()">重置</el-button>
+        <el-button type="primary" @click="loadAudit()">查询</el-button>
       </el-form-item>
     </el-form>
   </el-card>
@@ -20,14 +22,14 @@
   <!-- 审批单主体 -->
   <el-card style="margin:20px;">
     <!--  审批状态项  -->
-    <el-radio-group style="margin-bottom: 15px;">
+    <el-radio-group style="margin-bottom: 15px;" v-model="type" @change="loadAudit()">
       <el-radio-button value="10" size="large">待我审核</el-radio-button>
       <el-radio-button value="20" size="large">待他人审核</el-radio-button>
       <el-radio-button value="30" size="large">已审核</el-radio-button>
       <el-radio-button value="40" size="large">驳回</el-radio-button>
     </el-radio-group>
     <!--  审批列表  -->
-    <el-table>
+    <el-table :data="auditArray">
       <el-table-column label="编号" prop="id" align="center" width="55" type="index"></el-table-column>
       <el-table-column label="用车人" prop="username" align="center" width="110"></el-table-column>
       <el-table-column label="开始时间" prop="startTime"  align="center"></el-table-column>
@@ -86,7 +88,10 @@
 
 
 <script setup>
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+import qs from 'qs';
+import axios from "axios";
+import { ElMessage } from "element-plus";
 
 //控制审批弹窗标题
 const dialogTitle = ref("待审批详情");
@@ -94,6 +99,44 @@ const dialogTitle = ref("待审批详情");
 const auditDialogVisible = ref(false);
 //控制驳回原因弹窗是否显示
 const rejectInnerDialogVisible = ref(false);
+
+//定义变量存放搜索表单得到值
+const searchForm = ref({
+    username:''
+});
+
+//定义数组来保存审核单数据
+const auditArray = ref([]);
+
+//定义变量存放当前用户值
+const currentUser = ref(window.getUser());
+
+//定义变量存放审批单状态
+const type = ref('10'); //默认为待我审核
+
+onMounted(()=>{loadAudit()});
+function loadAudit() {
+  searchForm.value.auditUserId = currentUser.value.id;
+  searchForm.value.auditStatus = type.value;
+  console.log(searchForm.value);
+  let data = qs.stringify(searchForm.value);
+  axios.get(BASE_URL+'/v1/audit/query?'+data)
+  .then((response)=>{
+    if (response.data.code == 2000) {
+      ElMessage.success('查询成功！');
+      auditArray.value = response.data.data;
+    }
+    else {
+      ElMessage.error('查训失败');
+    }
+  });
+  
+}
+
+function reset() {
+  searchForm.value.username = '';
+  loadAudit();
+}
 </script>
 
 <style></style>

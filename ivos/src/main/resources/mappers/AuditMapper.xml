@@ -1,4 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.audit.mapper.AuditMapper">
+    <insert id="save">
+        INSERT INTO audit (application_id, audit_user_id, audit_status,
+        audit_sort, create_time, update_time)
+        VALUES(#{applicationId},#{auditUserId},#{auditStatus},#{auditSort},
+        #{createTime},#{updateTime})
+    </insert>
+
+    <select id="selectAuditByApplicationId" resultType="com.ivos.demo.audit.pojo.vo.AuditVo">
+        SELECT a.id,a.application_id,a.audit_user_id,
+        a.audit_status,a.audit_sort,app.user_id,app.username,
+        app.start_time,app.end_time,app.img_url,app.departure_addr,
+        app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id,
+        app.reject_reason
+        FROM audit AS a INNER JOIN application AS app
+        ON a.application_id = app.id
+        WHERE a.application_id = #{id}
+    </select>
+
+    <delete id="deleteAuditByApplicationId">
+        DELETE FROM audit
+        WHERE application_id = #{id}
+    </delete>
+
+    <select id="query" resultType="com.ivos.demo.audit.pojo.vo.AuditVo">
+        SELECT a.id,a.application_id,a.audit_user_id,a.audit_status,a.audit_sort,
+        v.id,v.user_id,v.username,v.start_time,v.end_time,v.img_url,v.departure_addr,v.destination_addr,
+        v.reason,v.remark,v.status,v.vehicle_id,v.reject_reason
+        FROM audit a INNER JOIN application v ON a.application_id = v.id
+        <where>
+            <if test="id != null">
+                AND a.id = #{id}
+            </if>
+            <if test="applicationId != null">
+                AND a.application_id = #{applicationId}
+            </if>
+            <if test="auditUserId != null">
+                AND a.audit_user_id = #{auditUserId}
+            </if>
+            <if test="auditStatus != null">
+                AND a.audit_status = #{auditStatus}
+            </if>
+            <if test="auditSort != null">
+                AND a.audit_sort = #{auditSort}
+            </if>
+            <if test="username != null">
+                AND v.username LIKE CONCAT('%',#{username},'%')
+            </if>
+        </where>
+    </select>
 </mapper>
