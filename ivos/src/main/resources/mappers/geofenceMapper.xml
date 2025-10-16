@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ivos.demo.geofence.mapper.GeoMapper">
+<!--    <select id="selectGeofence" resultType="com.ivos.demo.geofence.pojo.vo.GeofenceVo">-->
+<!--        SELECT id,name,status,position,create_time,update_time-->
+<!--        FROM geofence-->
+<!--        <where>-->
+<!--            <if test="id != null">-->
+<!--                AND id = #{id}-->
+<!--            </if>-->
+<!--            <if test="name != null and name != '' ">-->
+<!--                AND name like CONCAT('%',#{name},'%')-->
+<!--            </if>-->
+<!--            <if test="status != null and status != ''  ">-->
+<!--                AND status = #{status}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
     <select id="selectGeofence" resultType="com.ivos.demo.geofence.pojo.vo.GeofenceVo">
-        SELECT id,name,status,position,create_time,update_time
+        SELECT id,name,status,position,
+        create_time,update_time
         FROM geofence
         <where>
             <if test="id != null">

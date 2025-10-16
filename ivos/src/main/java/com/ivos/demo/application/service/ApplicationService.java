@@ -13,4 +13,8 @@ public interface ApplicationService {
     List<ApplicationVo> query(ApplicationQuery query);
 
     void cancel(Long id);
+
+    void update(Long applicationId, Long vehicleId);
+
+    void back(Long applicationId, Long vehicleId);
 }

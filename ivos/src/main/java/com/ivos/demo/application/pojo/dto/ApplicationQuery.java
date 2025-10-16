@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApplicationQuery {
-
     private Long id;
     private String departureAddr;
     private String destinationAddr;
     private String status;
+    private String username;
 }

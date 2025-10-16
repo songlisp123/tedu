@@ -14,4 +14,6 @@ public interface ApplicationMapper {
     List<ApplicationVo> query(ApplicationQuery query);
 
     void update(Application id);
+
+    void back(Application application);
 }

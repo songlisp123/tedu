@@ -15,6 +15,8 @@ public class ApplicationVo {
     private Date startTime;//用车开始时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date endTime;//用车结束时间
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date createTime;
     private String imgUrl;//驾照图片
     private String departureAddr;//出发地
     private String destinationAddr;//目的地

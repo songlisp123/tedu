@@ -12,6 +12,8 @@ import com.ivos.demo.audit.service.AuditService;
 import com.ivos.demo.base.enums.ApplicationStatusEnum;
 import com.ivos.demo.user.mapper.userMapper;
 import com.ivos.demo.user.pojo.vo.UserVo;
+import com.ivos.demo.vehicle.mapper.vehicleMapper;
+import com.ivos.demo.vehicle.pojo.entity.Vehicle;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +41,9 @@ public class ApplicationServiceImplement implements ApplicationService {
 
     @Autowired
     private userMapper userMapper;
+
+    @Autowired
+    private vehicleMapper vehicleMapper;;
 
     @Override
     public void save(ApplicationSavePara para) {
@@ -107,5 +112,40 @@ public class ApplicationServiceImplement implements ApplicationService {
 
     }
 
+    @Override
+    public void update(Long applicationId, Long vehicleId) {
+        log.debug("业务层参数：申请单id={}，汽车id={}",applicationId,vehicleId);
+        Application application = new Application();
+        application.setId(applicationId);
+        application.setVehicleId(vehicleId);
+        application.setStatus(ApplicationStatusEnum.ALLOCATION.getCode());
+        application.setUpdateTime(new Date());
+        mapper.update(application);
 
+        //更新汽车
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setUpdateTime(new Date());
+        vehicle.setStatus("2");
+        vehicleMapper.update(vehicle);
+
+    }
+
+    @Override
+    public void back(Long applicationId, Long vehicleId) {
+        log.debug("业务层参数:申请单id={}，汽车id={}",applicationId,vehicleId);
+        Application application = new Application();
+        application.setId(applicationId);
+        application.setUpdateTime(new Date());
+        application.setStatus(ApplicationStatusEnum.END.getCode());
+        application.setVehicleId(null);
+        mapper.back(application);
+
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setStatus("1");
+        vehicle.setUpdateTime(new Date());
+        vehicleMapper.update(vehicle);
+    }
 }

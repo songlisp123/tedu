@@ -44,8 +44,17 @@
     <update id="update">
         UPDATE vehicle
         <set>
+            <if test=" id == null">
+                id = #{id},
+            </if>
             <if test=" brand != null  and brand != '' ">
-                brand = #{brand}
+                brand = #{brand},
+            </if>
+            <if test=" status != null  and status != '' ">
+                status = #{status},
+            </if>
+            <if test=" updateTime != null  ">
+                update_time = #{updateTime}
             </if>
         </set>
         WHERE id = #{id}

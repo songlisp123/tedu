@@ -49,4 +49,27 @@ public class ApplicationController {
         service.cancel(id);
         return JsonResult.ok();
     }
+
+    @PostMapping("allocate/{applicationId}/{id}")
+    @Operation(summary = "分配用车")
+    @ApiOperationSupport(order = 40)
+    public JsonResult allocate(
+            @PathVariable("applicationId") Long applicationId,
+            @PathVariable("id") Long vehicleId
+    ) {
+        log.debug("申请单id={}，汽车id={}",applicationId,vehicleId);
+        service.update(applicationId,vehicleId);
+        return JsonResult.ok();
+    }
+
+
+    @PostMapping("back/{id}/{vehicleId}")
+    @Operation(summary = "还车模块")
+    @ApiOperationSupport(order = 50)
+    public JsonResult back(@PathVariable("id") Long applicationId,
+                           @PathVariable("vehicleId") Long vehicleId) {
+        log.debug("申请单id={}，汽车id={}",applicationId,vehicleId);
+        service.back(applicationId,vehicleId);
+        return JsonResult.ok();
+    }
 }

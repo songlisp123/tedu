@@ -32,7 +32,23 @@ public class ServeImplement implements Serve {
     @Override
     public List<GeofenceVo> selectGeofence(GeofenceQuery query) {
         log.debug("业务层层面参数:{}",query);
+
         List<GeofenceVo> response = mapper.selectGeofence(query);
+        for (GeofenceVo vo : response) {
+            vehicleQuery vehicleQuery = new vehicleQuery();
+            vehicleQuery.setGeofenceId(vo.getId());
+            List<VehicleVo> vehicleVos =
+                    vehicleMapper.selectCarByLicenseAndBrand(vehicleQuery);
+            int availableNum = vehicleVos.size();
+            vo.setTotalNum(vehicleVos.size());
+            for (VehicleVo vehicleVo : vehicleVos) {
+                if (!vehicleVo.getStatus().equals("1")) {
+                    availableNum = vehicleVos.size() - 1;
+                }
+            }
+            vo.setAvailableNum(availableNum);
+            vo.setVoList(vehicleVos);
+        }
         return response;
     }
 

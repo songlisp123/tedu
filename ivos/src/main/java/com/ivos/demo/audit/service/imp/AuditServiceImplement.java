@@ -83,6 +83,8 @@ public class AuditServiceImplement implements AuditService {
 
     @Override
     public void update(AuditSavePara para) {
+
+        /****************** 修改当前审批单（通过、驳回） **************/
         log.debug("业务层参数:{}",para);
         Audit audit = new Audit();
         BeanUtils.copyProperties(para,audit);
