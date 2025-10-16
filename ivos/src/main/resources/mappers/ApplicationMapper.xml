@@ -10,7 +10,7 @@
 
     <select id="query" resultType="com.ivos.demo.application.pojo.vo.ApplicationVo">
         SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr,
-        reason,status
+        reason,status,vehicle_id
         FROM application
         <where>
             <if test=" id !=null ">

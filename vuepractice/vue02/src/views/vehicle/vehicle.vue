@@ -255,7 +255,8 @@ function loadVehicle() {
 
 function save() {
     console.log(saveForm.value);
-    axios.post(BASE_URL+'/v1/vehicle/save',saveForm.value)
+    let data = qs.stringify(saveForm.value);
+    axios.post(BASE_URL+'/v1/vehicle/save',data)
     .then((response)=>{
         if (response.data.code == 2000) {
             ElMessage.success('车辆新建成功！');

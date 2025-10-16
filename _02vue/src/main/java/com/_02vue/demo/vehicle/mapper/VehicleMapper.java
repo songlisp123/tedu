@@ -16,4 +16,6 @@ public interface VehicleMapper {
     void update(Vehicle vehicle);
 
     void delete(Long vehicleId);
+
+    void unbind(Vehicle vehicle);
 }

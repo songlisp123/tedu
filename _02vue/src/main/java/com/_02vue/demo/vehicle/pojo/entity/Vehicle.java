@@ -17,33 +17,18 @@ public class Vehicle {
     private String model;
     private String code;
     private String displacement;
-    private Status status;
-    private Type type;
-    private Color color;
+    private String status;
+    private String type;
+    private String color;
     private String kilometers;
     private Date regTime;
     private Date buyTime;
     private String price;
-    private Battery batteryType;
+    private String batteryType;
     private Date createTime;
     private Date updateTime;
     private String geofenceBindStatus;
-    private String geofenceId;
+    private Long geofenceId;
 
 
-    public String getStatus() {
-        return status.getCode();
-    }
-
-    public String getType() {
-        return type.getCode();
-    }
-
-    public String getColor() {
-        return color.getCode();
-    }
-
-    public String getBatteryType() {
-        return batteryType.getCode();
-    }
 }

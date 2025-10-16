@@ -12,15 +12,12 @@
         <result column="code" property="code" />
         <result column="color" property="color" />
         <result column="kilometers" property="kilometers" />
-        <result column="type" property="type"
-                typeHandler="com._02vue.demo.vehicle.EnumHandler.TypeHandler" />
+        <result column="type" property="type"/>
         <result column="price" property="price" />
         <result column="regTime" property="regTime" />
         <result column="buyTime" property="buyTime" />
-        <result column="batteryType" property="batteryType"
-                typeHandler="com._02vue.demo.vehicle.EnumHandler.BatterryHandler" />
-        <result column="status" property="status"
-                typeHandler="com._02vue.demo.vehicle.EnumHandler.StatusHandler" />
+        <result column="batteryType" property="batteryType"/>
+        <result column="status" property="status"/>
     </resultMap>
     <insert id="save">
         INSERT INTO vehicle(
@@ -132,7 +129,13 @@
                 battery_type = #{batteryType},
             </if>
             <if test="updateTime != null ">
-                update_time = #{updateTime}
+                update_time = #{updateTime},
+            </if>
+            <if test="geofenceId != null ">
+                geofence_id = #{geofenceId},
+            </if>
+            <if test="geofenceBindStatus != null and geofenceBindStatus !='' ">
+                geofence_bind_status = #{geofenceBindStatus}
             </if>
         </set>
         WHERE id = #{id}
@@ -142,4 +145,20 @@
         DELETE FROM vehicle
         WHERE id = #{vehicleId}
     </delete>
+
+    <update id="unbind">
+        UPDATE vehicle
+        <set>
+            <if test="geofenceId == null ">
+                geofence_id = #{geofenceId},
+            </if>
+            <if test="updateTime != null ">
+                update_time = #{updateTime},
+            </if>
+            <if test="geofenceBindStatus != null and geofenceBindStatus !='' ">
+                geofence_bind_status = #{geofenceBindStatus}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

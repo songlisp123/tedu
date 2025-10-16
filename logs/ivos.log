@@ -4210,3 +4210,573 @@
 2025-10-16T12:27:34.314+08:00 DEBUG 24908 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
 2025-10-16T12:27:34.314+08:00 DEBUG 24908 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
 2025-10-16T12:27:35.777+08:00 ERROR 24908 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:35:29.733+08:00  INFO 4344 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 4344 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T12:35:29.733+08:00 DEBUG 4344 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T12:35:29.733+08:00  INFO 4344 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T12:35:30.723+08:00  INFO 4344 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T12:35:30.732+08:00  INFO 4344 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T12:35:30.732+08:00  INFO 4344 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T12:35:30.783+08:00  INFO 4344 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T12:35:30.783+08:00  INFO 4344 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1012 ms
+2025-10-16T12:35:31.569+08:00  INFO 4344 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T12:35:31.580+08:00  INFO 4344 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.13 seconds (process running for 2.397)
+2025-10-16T12:38:14.520+08:00  INFO 4344 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T12:38:14.520+08:00  INFO 4344 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T12:38:14.520+08:00  INFO 4344 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-16T12:38:14.595+08:00 ERROR 4344 --- [ivos] [http-nio-8080-exec-2] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:42:24.241+08:00  INFO 14216 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 14216 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T12:42:24.242+08:00 DEBUG 14216 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T12:42:24.242+08:00  INFO 14216 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T12:42:25.200+08:00  INFO 14216 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T12:42:25.200+08:00  INFO 14216 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T12:42:25.200+08:00  INFO 14216 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T12:42:25.265+08:00  INFO 14216 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T12:42:25.265+08:00  INFO 14216 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 985 ms
+2025-10-16T12:42:26.134+08:00  INFO 14216 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T12:42:26.151+08:00  INFO 14216 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.217 seconds (process running for 2.478)
+2025-10-16T12:42:29.791+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T12:42:29.795+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T12:42:29.801+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-16T12:42:29.901+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:42:29.909+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T12:42:30.388+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27906086
+2025-10-16T12:42:30.390+08:00  INFO 14216 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T12:42:30.395+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:42:30.459+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:42:30.512+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:42:30.538+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:42:31.528+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:42:31.529+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:42:31.530+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:42:31.530+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:42:31.538+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:42:31.539+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:42:31.542+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:42:31.542+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:42:31.547+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:42:31.549+08:00 DEBUG 14216 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:42:33.140+08:00 ERROR 14216 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:44:03.922+08:00  INFO 14216 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T12:44:03.929+08:00  INFO 14216 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T12:44:06.525+08:00  INFO 10192 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 10192 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T12:44:06.525+08:00 DEBUG 10192 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T12:44:06.531+08:00  INFO 10192 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T12:44:07.500+08:00  INFO 10192 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T12:44:07.513+08:00  INFO 10192 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T12:44:07.513+08:00  INFO 10192 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T12:44:07.573+08:00  INFO 10192 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T12:44:07.573+08:00  INFO 10192 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1008 ms
+2025-10-16T12:44:08.423+08:00  INFO 10192 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T12:44:08.423+08:00  INFO 10192 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.183 seconds (process running for 2.452)
+2025-10-16T12:44:13.822+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T12:44:13.825+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T12:44:13.827+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-16T12:44:13.895+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:44:13.902+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T12:44:14.324+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60435cd9
+2025-10-16T12:44:14.327+08:00  INFO 10192 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T12:44:14.332+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:44:14.415+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:44:14.470+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:44:14.503+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:44:14.783+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:44:14.784+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:44:14.785+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:44:14.785+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:44:14.790+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:44:14.791+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:44:14.792+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:44:14.795+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:44:14.799+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:44:14.799+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:44:14.800+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:44:14.802+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:44:14.802+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:44:14.802+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:44:14.804+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:44:14.804+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:44:14.804+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:44:14.804+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:44:14.804+08:00 DEBUG 10192 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:44:15.986+08:00 ERROR 10192 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:49:18.303+08:00  INFO 10192 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T12:49:18.303+08:00  INFO 10192 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T12:49:21.385+08:00  INFO 28240 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 28240 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T12:49:21.388+08:00 DEBUG 28240 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T12:49:21.388+08:00  INFO 28240 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T12:49:22.335+08:00  INFO 28240 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T12:49:22.351+08:00  INFO 28240 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T12:49:22.351+08:00  INFO 28240 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T12:49:22.402+08:00  INFO 28240 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T12:49:22.402+08:00  INFO 28240 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 980 ms
+2025-10-16T12:49:23.239+08:00  INFO 28240 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T12:49:23.243+08:00  INFO 28240 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.131 seconds (process running for 2.392)
+2025-10-16T12:49:30.039+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T12:49:30.039+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T12:49:30.039+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-16T12:49:30.103+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:49:30.110+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T12:49:30.532+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c421f51
+2025-10-16T12:49:30.535+08:00  INFO 28240 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T12:49:30.540+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:49:30.591+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:49:30.650+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:49:30.686+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:49:31.422+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:49:31.423+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:49:31.424+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:49:31.424+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:49:31.428+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:49:31.428+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:49:31.429+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:49:31.430+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:49:31.437+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:49:31.438+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:49:31.439+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:49:31.443+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:49:31.447+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:49:33.545+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:51:11.997+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:51:11.998+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:51:11.999+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:51:11.999+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:51:12.000+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:51:14.673+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:51:14.674+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:51:14.675+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:51:14.676+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:51:14.676+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:51:15.799+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:51:15.800+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:51:15.800+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:51:15.801+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:51:15.804+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:51:15.804+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:51:15.804+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:51:15.805+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:51:15.807+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:51:15.807+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:51:15.808+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:51:15.809+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:51:15.809+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:51:15.809+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:51:15.810+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:51:15.810+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:51:15.810+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:51:15.811+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:51:15.813+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:51:17.174+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-10] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:52:14.771+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:52:14.771+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:52:14.771+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:52:14.771+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:52:14.771+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:52:17.342+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:52:17.344+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:52:17.344+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:52:17.345+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:52:17.346+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:52:17.346+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:52:17.347+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:52:17.347+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:52:17.351+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:52:17.354+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:52:17.355+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:52:17.358+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:52:17.358+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:52:17.359+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:52:17.360+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:52:17.360+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:52:17.360+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:52:17.361+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:52:17.362+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:52:18.301+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-3] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:57:29.320+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:57:29.321+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:57:29.322+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:57:29.323+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:57:29.324+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:57:31.880+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:31.880+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:31.881+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:57:31.881+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:57:31.883+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:57:31.883+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:57:31.885+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:31.886+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:57:31.888+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:57:31.889+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:31.889+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:57:31.890+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:31.891+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:31.891+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:57:31.892+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:31.892+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:57:31.892+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:31.893+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:57:31.894+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:57:32.895+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:32.895+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-2] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:57:32.896+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:32.896+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:57:32.897+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:57:32.898+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:57:32.899+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:57:32.899+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:32.899+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:57:32.902+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:57:32.902+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:32.903+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:57:32.904+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:32.904+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:32.904+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:57:32.905+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:32.905+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:57:32.906+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:32.906+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:57:32.907+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:57:37.935+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:37.935+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-6] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:57:37.936+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:57:37.937+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:57:37.937+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:57:37.938+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:57:37.938+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:57:37.939+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:37.939+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:57:37.943+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:57:37.944+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:37.944+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:57:37.946+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:37.947+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:57:37.947+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:57:37.949+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:57:37.949+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:57:37.950+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:57:37.950+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:57:37.951+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:57:54.829+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:57:54.830+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:57:54.830+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:57:54.831+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:57:54.831+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:58:50.099+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:58:50.099+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T12:58:50.099+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:58:50.099+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T12:58:50.099+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-10] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T12:58:53.040+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:58:53.041+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:58:53.042+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:58:53.042+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:58:53.043+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:58:53.044+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:58:53.044+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:58:53.044+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:58:53.046+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:58:53.047+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:58:53.047+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:58:53.048+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:58:53.048+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:58:53.048+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:58:53.049+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:58:53.049+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:58:53.049+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:58:53.049+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:58:53.050+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T12:58:53.880+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:58:53.880+08:00 ERROR 28240 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T12:58:53.881+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T12:58:53.882+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T12:58:53.882+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T12:58:53.886+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T12:58:53.886+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T12:58:53.887+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:58:53.887+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T12:58:53.889+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T12:58:53.890+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:58:53.890+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T12:58:53.891+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:58:53.892+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T12:58:53.892+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T12:58:53.895+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T12:58:53.895+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T12:58:53.895+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T12:58:53.896+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T12:58:53.898+08:00 DEBUG 28240 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:01:10.605+08:00  INFO 28240 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T13:01:10.622+08:00  INFO 28240 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T13:01:13.245+08:00  INFO 16852 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 16852 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T13:01:13.246+08:00 DEBUG 16852 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T13:01:13.247+08:00  INFO 16852 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T13:01:14.240+08:00  INFO 16852 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T13:01:14.257+08:00  INFO 16852 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T13:01:14.257+08:00  INFO 16852 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T13:01:14.305+08:00  INFO 16852 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T13:01:14.305+08:00  INFO 16852 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1024 ms
+2025-10-16T13:01:15.171+08:00  INFO 16852 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T13:01:15.174+08:00  INFO 16852 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.209 seconds (process running for 2.485)
+2025-10-16T13:01:23.805+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T13:01:23.805+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T13:01:23.805+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-16T13:01:23.863+08:00 ERROR 16852 --- [ivos] [http-nio-8080-exec-1] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T13:01:23.863+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:01:23.873+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T13:01:24.351+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ab85584
+2025-10-16T13:01:24.351+08:00  INFO 16852 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T13:01:24.351+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:01:24.401+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:01:24.451+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:01:24.485+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:01:24.501+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:01:24.501+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:01:24.501+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:01:24.524+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:01:24.525+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:01:24.528+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:01:24.531+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:01:24.532+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:01:24.533+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:01:24.535+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:01:24.535+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:01:24.537+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:01:24.537+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:01:24.542+08:00 DEBUG 16852 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:03:25.426+08:00  INFO 16852 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T13:03:25.431+08:00  INFO 16852 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T13:03:26.778+08:00  INFO 14688 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 14688 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T13:03:26.782+08:00 DEBUG 14688 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T13:03:26.783+08:00  INFO 14688 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T13:03:27.775+08:00  INFO 14688 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T13:03:27.784+08:00  INFO 14688 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T13:03:27.784+08:00  INFO 14688 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T13:03:27.834+08:00  INFO 14688 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T13:03:27.834+08:00  INFO 14688 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
+2025-10-16T13:03:28.682+08:00  INFO 14688 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T13:03:28.684+08:00  INFO 14688 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.233 seconds (process running for 2.492)
+2025-10-16T13:03:34.918+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T13:03:34.918+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T13:03:34.920+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-16T13:03:34.989+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:03:35.001+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T13:03:35.433+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a13603c
+2025-10-16T13:03:35.434+08:00  INFO 14688 --- [ivos] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T13:03:35.441+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:03:35.509+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:03:35.548+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T13:03:35.580+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-2] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T13:03:35.860+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:03:35.861+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:03:35.862+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:03:35.862+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:03:35.869+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:03:35.870+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:03:35.871+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:03:35.872+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:03:35.876+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:03:35.877+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:03:35.877+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:03:35.881+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:03:35.883+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:03:35.883+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:03:35.885+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:03:35.886+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:03:35.886+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:03:35.887+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:03:35.889+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:03:37.311+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:03:37.314+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:03:37.315+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:03:37.315+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:03:37.317+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:03:37.317+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:03:37.317+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:03:37.318+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:03:37.318+08:00 ERROR 14688 --- [ivos] [http-nio-8080-exec-4] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T13:03:37.320+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:03:37.320+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:03:37.321+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:03:37.322+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:03:37.322+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:03:37.322+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:03:37.323+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:03:37.323+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:03:37.324+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:03:37.324+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:03:37.325+08:00 DEBUG 14688 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:05:13.490+08:00  INFO 14688 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T13:05:13.493+08:00  INFO 14688 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T13:05:16.093+08:00  INFO 6408 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 6408 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T13:05:16.100+08:00 DEBUG 6408 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T13:05:16.100+08:00  INFO 6408 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T13:05:17.053+08:00  INFO 6408 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T13:05:17.062+08:00  INFO 6408 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T13:05:17.062+08:00  INFO 6408 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T13:05:17.109+08:00  INFO 6408 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T13:05:17.109+08:00  INFO 6408 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 973 ms
+2025-10-16T13:05:17.982+08:00  INFO 6408 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T13:05:17.988+08:00  INFO 6408 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.184 seconds (process running for 2.465)
+2025-10-16T13:05:24.490+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T13:05:24.494+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T13:05:24.501+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-10-16T13:05:24.572+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:05:24.579+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T13:05:25.034+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c6ba9ec
+2025-10-16T13:05:25.034+08:00  INFO 6408 --- [ivos] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T13:05:25.050+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:05:25.104+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:05:25.151+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T13:05:25.185+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-1] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T13:05:25.306+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:05:25.307+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:05:25.308+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status FROM application WHERE status = ?
+2025-10-16T13:05:25.308+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:05:25.315+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:05:25.315+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:05:25.317+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:05:25.318+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:05:25.323+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:05:25.323+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:05:25.324+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:05:25.326+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:05:25.326+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:05:25.326+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:05:25.328+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:05:25.328+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:05:25.328+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:05:25.329+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:05:25.332+08:00 DEBUG 6408 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:06:14.470+08:00  INFO 6408 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T13:06:14.470+08:00  INFO 6408 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T13:06:15.961+08:00  INFO 12696 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 12696 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T13:06:15.961+08:00 DEBUG 12696 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T13:06:15.961+08:00  INFO 12696 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T13:06:16.966+08:00  INFO 12696 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T13:06:16.970+08:00  INFO 12696 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T13:06:16.970+08:00  INFO 12696 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T13:06:17.026+08:00  INFO 12696 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T13:06:17.026+08:00  INFO 12696 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1022 ms
+2025-10-16T13:06:17.796+08:00  INFO 12696 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T13:06:17.803+08:00  INFO 12696 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.153 seconds (process running for 2.476)
+2025-10-16T13:06:21.623+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-16T13:06:21.625+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-16T13:06:21.629+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-16T13:06:21.684+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:21.687+08:00 ERROR 12696 --- [ivos] [http-nio-8080-exec-2] c.i.demo.base.exception.GlobalException  : RuntimeException:Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
+2025-10-16T13:06:21.693+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-16T13:06:22.135+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4129b741
+2025-10-16T13:06:22.135+08:00  INFO 12696 --- [ivos] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-16T13:06:22.135+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:22.195+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE status = ?
+2025-10-16T13:06:22.252+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:06:22.294+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:06:22.300+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:06:22.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:22.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:06:22.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:06:22.318+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:22.319+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:06:22.326+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:22.327+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:22.327+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:06:22.329+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:22.330+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:06:22.331+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:22.331+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:06:22.335+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-3] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:06:24.905+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:06:24.908+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=50, username=)
+2025-10-16T13:06:24.909+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE status = ?
+2025-10-16T13:06:24.909+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 50(String)
+2025-10-16T13:06:24.911+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-6] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 0
+2025-10-16T13:06:26.185+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:26.187+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:26.188+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE status = ?
+2025-10-16T13:06:26.188+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:06:26.190+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:06:26.190+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:06:26.190+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:26.190+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:06:26.192+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:06:26.192+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:26.193+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:06:26.193+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:26.194+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:26.194+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:06:26.195+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:26.195+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:06:26.195+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:26.196+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:06:26.197+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-7] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:06:27.271+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.c.ApplicationController          : 申请单id=106，汽车id=104
+2025-10-16T13:06:27.271+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:27.272+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:27.272+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:申请单id=106，汽车id=104
+2025-10-16T13:06:27.272+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE status = ?
+2025-10-16T13:06:27.273+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:06:27.273+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE id = ?
+2025-10-16T13:06:27.273+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 106(Long)
+2025-10-16T13:06:27.274+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 2
+2025-10-16T13:06:27.274+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 1
+2025-10-16T13:06:27.275+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:06:27.275+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:27.275+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:06:27.279+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:06:27.281+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.back    : ==>  Preparing: UPDATE application SET update_time = ?, status = ?, vehicle_id = ? WHERE id =?
+2025-10-16T13:06:27.282+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:27.282+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:06:27.283+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.back    : ==> Parameters: 2025-10-16 13:06:27.275(Timestamp), 70(String), null, 106(Long)
+2025-10-16T13:06:27.284+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:27.284+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:27.285+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:06:27.287+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:27.288+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:106
+2025-10-16T13:06:27.288+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:27.289+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 106(Long)
+2025-10-16T13:06:27.290+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-5] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 1
+2025-10-16T13:06:27.291+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.a.mapper.ApplicationMapper.back    : <==    Updates: 1
+2025-10-16T13:06:27.292+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.mapper.vehicleMapper.update      : ==>  Preparing: UPDATE vehicle SET status = ?, update_time = ? WHERE id = ?
+2025-10-16T13:06:27.294+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.mapper.vehicleMapper.update      : ==> Parameters: 1(String), 2025-10-16 13:06:27.291(Timestamp), 104(Long)
+2025-10-16T13:06:27.295+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-8] c.i.d.v.mapper.vehicleMapper.update      : <==    Updates: 1
+2025-10-16T13:06:27.305+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.c.ApplicationController          : 控制器参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:27.305+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.s.i.ApplicationServiceImplement  : 业务层参数:ApplicationQuery(id=null, departureAddr=null, destinationAddr=null, status=60, username=)
+2025-10-16T13:06:27.306+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : ==>  Preparing: SELECT id,username,create_time,start_time,end_time,departure_addr,destination_addr, reason,status,vehicle_id FROM application WHERE status = ?
+2025-10-16T13:06:27.306+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : ==> Parameters: 60(String)
+2025-10-16T13:06:27.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.mapper.ApplicationMapper.query   : <==      Total: 1
+2025-10-16T13:06:27.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.s.imp.AuditServiceImplement      : 业务层参数:105
+2025-10-16T13:06:27.307+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==>  Preparing: SELECT a.id,a.application_id,a.audit_user_id, a.audit_status,a.audit_sort,app.user_id,app.username, app.start_time,app.end_time,app.img_url,app.departure_addr, app.destination_addr,app.reason,app.remark,app.status,app.vehicle_id, app.reject_reason FROM audit AS a INNER JOIN application AS app ON a.application_id = app.id WHERE a.application_id = ?
+2025-10-16T13:06:27.309+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : ==> Parameters: 105(Long)
+2025-10-16T13:06:27.311+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.a.m.A.selectAuditByApplicationId   : <==      Total: 2
+2025-10-16T13:06:27.312+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:27.312+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 103(Long)
+2025-10-16T13:06:27.313+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:06:27.313+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==>  Preparing: SELECT id,username,password,email,phone,age,gender,create_time,update_time,status,level,parent_id FROM user WHERE id=?
+2025-10-16T13:06:27.313+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : ==> Parameters: 101(Long)
+2025-10-16T13:06:27.314+08:00 DEBUG 12696 --- [ivos] [http-nio-8080-exec-9] c.i.d.user.mapper.userMapper.selectById  : <==      Total: 1
+2025-10-16T13:07:15.291+08:00  INFO 12696 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T13:07:15.291+08:00  INFO 12696 --- [ivos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T13:07:17.987+08:00  INFO 24476 --- [ivos] [main] com.ivos.demo.IvosApplication            : Starting IvosApplication using Java 17.0.16 with PID 24476 (I:\20250820\jsd2507-ssm-advance\ivos\target\classes started by snl19 in I:\20250820\jsd2507-ssm-advance)
+2025-10-16T13:07:17.990+08:00 DEBUG 24476 --- [ivos] [main] com.ivos.demo.IvosApplication            : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-10-16T13:07:17.990+08:00  INFO 24476 --- [ivos] [main] com.ivos.demo.IvosApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-16T13:07:18.949+08:00  INFO 24476 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-16T13:07:18.959+08:00  INFO 24476 --- [ivos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-16T13:07:18.960+08:00  INFO 24476 --- [ivos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-10-16T13:07:19.010+08:00  INFO 24476 --- [ivos] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-16T13:07:19.010+08:00  INFO 24476 --- [ivos] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
+2025-10-16T13:07:19.972+08:00  INFO 24476 --- [ivos] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-16T13:07:19.980+08:00  INFO 24476 --- [ivos] [main] com.ivos.demo.IvosApplication            : Started IvosApplication in 2.284 seconds (process running for 2.548)

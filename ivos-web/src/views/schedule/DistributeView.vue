@@ -170,7 +170,6 @@ function loadApplication() {
     axios.get(BASE_URL+'/v1/app/query?'+data)
     .then((response)=>{
         if (response.data.code === 2000) {
-            ElMessage.success('查询成功！');
             applicationArray.value = response.data.data;
         }
 
@@ -241,8 +240,13 @@ function allocate(id) {
 
 
 function back(obj) {
+    loadApplication();
     console.log(obj);
-    axios.post(BASE_URL+'/v1/app/back/'+obj.id+'/'+obj.vehicleId)
+    let applicationId = obj.id;
+    let vehicleId= obj.vehicleId;
+    console.log(applicationId);
+    console.log(vehicleId);
+    axios.post(BASE_URL+'/v1/app/back/'+applicationId+'/'+vehicleId)
     .then((response)=>{
         if (response.data.code == 2000) {
             ElMessage.success('还车成功！');

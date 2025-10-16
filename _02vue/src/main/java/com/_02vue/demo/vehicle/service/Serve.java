@@ -13,4 +13,8 @@ public interface Serve {
     List<VehicleVo> select(VehicleQuery query);
 
     void delete(Long vehicleId);
+
+    void bind(Long vehicleId, Long geofenceId);
+
+    void unbind(Long vehicleId);
 }

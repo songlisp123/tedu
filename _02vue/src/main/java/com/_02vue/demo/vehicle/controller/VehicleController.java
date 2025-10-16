@@ -20,7 +20,7 @@ public class VehicleController {
     private Serve serve;
 
     @PostMapping("save")
-    public JsonResult save(@RequestBody RegVehiclePara para)
+    public JsonResult save(RegVehiclePara para)
     {
         log.debug("接受参数，{}",para);
         serve.save(para);
@@ -39,6 +39,23 @@ public class VehicleController {
     {
         log.debug("控制器参数:{}",vehicleId);
         serve.delete(vehicleId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("bind/{id}/{geofenceId}")
+    public JsonResult bind(@PathVariable("id") Long vehicleId,
+                           @PathVariable("geofenceId") Long geofenceId)
+    {
+        log.debug("汽车id：{},围栏id{}",vehicleId,geofenceId);
+        serve.bind(vehicleId,geofenceId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("unbind/{id}")
+    public JsonResult unbind(@PathVariable("id") Long vehicleId)
+    {
+        log.debug("当前参数：{}",vehicleId);
+        serve.unbind(vehicleId);
         return JsonResult.ok();
     }
 }

@@ -27,9 +27,6 @@ public class ServeImplement implements Serve {
         log.debug("业务层参数：{}",para);
         Vehicle vehicle = new Vehicle();
         BeanUtils.copyProperties(para,vehicle);
-        vehicle.setBatteryType(battery(para));
-        vehicle.setColor(color(para));
-        vehicle.setType(type(para));
         if (vehicle.getId() != null) {
             vehicle.setUpdateTime(new Date());
             mapper.update(vehicle);
@@ -37,7 +34,7 @@ public class ServeImplement implements Serve {
         }
         else {
             vehicle.setCreateTime(new Date());
-            vehicle.setStatus(Status.LEISURE);
+            vehicle.setStatus("1");
             vehicle.setGeofenceBindStatus("0");
             vehicle.setGeofenceId(null);
             mapper.save(vehicle);
@@ -57,23 +54,45 @@ public class ServeImplement implements Serve {
         return cars;
     }
 
-    private Battery battery(RegVehiclePara para) {
-        return Arrays.stream(Battery.values())
-                .filter(g->g.getCode().equals(para.getBatteryType()))
-                .findFirst().orElseGet(null);
+    @Override
+    public void bind(Long vehicleId, Long geofenceId) {
+        log.debug("业务层参数！");
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setGeofenceId(geofenceId);
+        vehicle.setGeofenceBindStatus("1");
+        vehicle.setUpdateTime(new Date());
+        mapper.update(vehicle);
     }
 
-    private Color color(RegVehiclePara para) {
-        return Arrays.stream(Color.values())
-                .filter(g->g.getCode().equals(para.getColor()))
-                .findFirst()
-                .orElseGet(null);
+    @Override
+    public void unbind(Long vehicleId) {
+        log.debug("业务层参数-汽车id号位={}",vehicleId);
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(vehicleId);
+        vehicle.setGeofenceId(null);
+        vehicle.setGeofenceBindStatus("0");
+        vehicle.setUpdateTime(new Date());
+        mapper.unbind(vehicle);
     }
 
-    private Type type(RegVehiclePara para) {
-        return Arrays.stream(Type.values())
-                .filter(g->g.getCode().equals(para.getType()))
-                .findFirst()
-                .orElseGet(null);
-    }
+    //    private Battery battery(RegVehiclePara para) {
+//        return Arrays.stream(Battery.values())
+//                .filter(g->g.getCode().equals(para.getBatteryType()))
+//                .findFirst().orElseGet(null);
+//    }
+//
+//    private Color color(RegVehiclePara para) {
+//        return Arrays.stream(Color.values())
+//                .filter(g->g.getCode().equals(para.getColor()))
+//                .findFirst()
+//                .orElseGet(null);
+//    }
+//
+//    private Type type(RegVehiclePara para) {
+//        return Arrays.stream(Type.values())
+//                .filter(g->g.getCode().equals(para.getType()))
+//                .findFirst()
+//                .orElseGet(null);
+//    }
 }

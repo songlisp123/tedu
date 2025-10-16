@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface GeofenceService {
     List<GeofenceVo> query(GeofenceQuery query);
+
+    void update(Long geofenceId, String status);
+
+    void delete(Long geoId);
 }
