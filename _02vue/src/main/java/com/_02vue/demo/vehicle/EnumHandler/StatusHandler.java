@@ -46,7 +46,7 @@ public class StatusHandler extends BaseTypeHandler<String> {
        if (value == null) return null;
        for (Status s : Status.values()) {
            if (s.getCode().equals(value))
-               return s.getMessage();
+               return s.getCode();
        }
        throw new IllegalArgumentException("参数不匹配");
     }

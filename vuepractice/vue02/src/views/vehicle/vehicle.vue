@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div style="height: 6vh;background-color:rgb(12, 75, 51);padding:10px 10%;">
+            <span style="line-height:60px;font-size:20px;">申请单列表</span>
+            <el-button type="primary" style="float:right;margin-top:13px;">申请用车</el-button>
+        </div>
         <div class="vehicleSearchCard">
             <div>
                 <label for="brand">品牌：</label>
@@ -40,29 +44,33 @@
                 <div  class="touxiang" >
                     <img src="/svg/documents.svg" alt="咋还能weizhaodaoz">
                 </div>
-                <p class="text">{{ vehicle.brand }}</p>
+                <p class="text">品牌:{{ vehicle.brand }}</p>
                 <p class="tag">车牌号:{{ vehicle.license }}</p>
                 <p class="email">模型:{{ vehicle.model }}</p>
-                <p class="email">车辆校验码:{{ vehicle.code }}</p>
-                <p class="email">类型:{{ vehicle.type }}</p>
-                <p class="email">价格:{{ vehicle.price }}</p>
-                <p class="email">上牌时间:{{ vehicle.regTime }}</p>
-                <p class="email">购买时间:{{ vehicle.buyTime }}</p>
-                <p class="email">电池类型:{{ vehicle.batteryType }}</p>
+                <!-- <p class="email">车辆校验码:{{ vehicle.code }}</p> -->
+                <!-- <p class="email">类型:{{ vehicle.type }}</p> -->
+                <!-- <p class="email">价格:{{ vehicle.price }}</p> -->
+                <!-- <p class="email">上牌时间:{{ vehicle.regTime }}</p> -->
+                <!-- <p class="email">购买时间:{{ vehicle.buyTime }}</p> -->
+                <!-- <p class="email">电池类型:{{ vehicle.batteryType }}</p> -->
                 <p class="email">状态:{{ vehicle.status }}</p>
                 <p v-if="updateStatus">
                     汽车状态:
-                    <select name="vehicleStatus" id="vehicleStatus" >
+                    <select name="vehicleStatus" id="vehicleStatus" v-model="vehicle.status"
+                    @change="updateVehicleStatus()"
+                    >
                         <option value="0" >禁用</option>
                         <option value="1">启用</option>
                         <option value="2">维修</option>
                         <option value="3">租赁</option>
                     </select>
                 </p>
-                <p id="buttons">
+                <p id="buttons" v-if="currentUser.level === '经理'">
                     <el-button type="info" @click="edit(vehicle.id)">编辑</el-button>
                     <el-button type="primary" @click="update(vehicle.id)">修改</el-button>
-                    <el-button type="warning" @click="deleteVehicle(vehicle.id)">删除</el-button>                    
+                    <el-button type="warning"
+                    
+                    @click="deleteVehicle(vehicle.id)">删除</el-button>                    
                 </p>
             </div>
         </div>
@@ -187,6 +195,9 @@ const searchForm = ref({
     status:''
 });
 
+//获取当前用户
+const currentUser = ref(window.getUser());
+
 //定义变量存放表单内容
 const saveForm = ref({
     id:'',
@@ -212,6 +223,7 @@ const vehicles = ref([]);
 //定义变量存放标题文本
 const dialogTitle = ref('新建车辆');
 
+//定义更新状态的布尔值
 const updateStatus = ref(false);
 
 function reset() {
@@ -247,6 +259,7 @@ function save() {
     .then((response)=>{
         if (response.data.code == 2000) {
             ElMessage.success('车辆新建成功！');
+            saveForm.value = {};
             dialogVisible.value =false;
             loadVehicle();
         }
@@ -346,7 +359,6 @@ function newCar() {
 function update(id) {
     updateStatus.value = true;
 }
-setTimeout(loadVehicle(),2000);
 
 
 function deleteVehicle(id) {
@@ -361,6 +373,10 @@ function deleteVehicle(id) {
         }
     });
 }
+
+function updateVehicleStatus() {};
+
+
 </script>
 
 <style>

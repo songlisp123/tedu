@@ -12,4 +12,6 @@ public interface DicOptService {
     void save(DictOptSavePara para);
 
     void delete(Long dicOptId);
+
+    List<DicOptVo> selectDictOptionByDictCode(String code);
 }

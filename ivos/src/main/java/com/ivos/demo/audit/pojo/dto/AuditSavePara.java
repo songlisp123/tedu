@@ -1,20 +1,16 @@
-package com.ivos.demo.audit.pojo.entity;
+package com.ivos.demo.audit.pojo.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
-public class Audit {
+public class AuditSavePara {
     private Long id;//审批单id
     private Long applicationId;//申请单id
     private Long auditUserId;//审批人id
     private String auditStatus;//审批状态
-    private String rejectReason;//审批驳回
     private Integer auditSort;//审批排序
-    private Date createTime;//创建时间
-    private Date updateTime;//更新时间
+    private String rejectReason;//驳回原因
 
 }

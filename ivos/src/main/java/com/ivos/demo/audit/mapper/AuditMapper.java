@@ -16,4 +16,10 @@ public interface AuditMapper {
     void deleteAuditByApplicationId(Long id);
 
     List<AuditVo> query(AudioQuery query);
+
+    void update(Audit audit);
+
+    Integer selectRestAuditController(AudioQuery audioQuery);
+
+    void delete(Long id);
 }

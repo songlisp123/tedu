@@ -9,6 +9,7 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 //6.1修改elementPlus默认中文
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import axios from 'axios'
 
 const app = createApp(App)/* 创建vue实例,并起名为app */
 
@@ -74,3 +75,21 @@ router.beforeEach((to,from,next) => {
 window.getUser = ()=> {
     return localStorage.user ? JSON.parse(localStorage.user) : null;
 }
+
+
+/**
+ * 调用后端根据字典code查看对应的字典项的方法
+ * @param {*} obj 存放字典项数据
+ * @param {*} dictCode 查询参数
+ */
+window.loadDictOption = (obj,dictCode)=>{
+    axios.get(BASE_URL+'/v1/dicOpt/select/'+dictCode)
+    .then((response)=>{
+        if (response.data.code == 2000) {
+            obj.value = response.data.data;
+        }
+        else {
+            ElMessage.error('操作失败！');
+        }
+    });
+};

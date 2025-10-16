@@ -12,7 +12,7 @@
                AND name like CONCAT('%',#{name},'%')
            </if>
            <if test="code !=null and code != '' ">
-               AND code like CONCAT('%',#{code},'%')
+               AND code = #{code}
            </if>
        </where>
        HAVING status = '1'

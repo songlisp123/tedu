@@ -49,4 +49,16 @@ public class dictOptController {
         service.delete(dicOptId);
         return JsonResult.ok();
     }
+
+    //定义一个根据字典的code查询该字典的所有字典项的方法
+    @Operation(summary = "根据字典code查询字典项")
+    @ApiOperationSupport(order = 40)
+    @GetMapping("select/{dictCode}")
+    public JsonResult selectDictOptionByDictCode(@PathVariable String dictCode)
+    {
+        log.debug("控制器方法参数:{}",dictCode);
+        List<DicOptVo> list =
+                service.selectDictOptionByDictCode(dictCode);
+        return JsonResult.ok(list);
+    }
 }

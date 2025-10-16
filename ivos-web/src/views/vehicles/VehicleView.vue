@@ -2,7 +2,8 @@
     
     <div style="height: 6vh;background-color: #fff; padding: 10px 20px;overflow: hidden;">
         <p style="position: relative; margin: 0; float: left; margin-top: 25px;">车辆管理</p>
-        <el-button type="primary" style="float: right; margin-right: 20px;margin-top: 20px;" @click="beforeAndVehicle">新增车辆</el-button>
+        <el-button type="primary" style="float: right; margin-right: 20px;margin-top: 20px;" 
+        @click="beforeAndVehicle">新增车辆</el-button>
     </div>
 
     <!-- 搜索卡片 -->
@@ -46,12 +47,11 @@
             </el-table-column>
         </el-table>
     </el-card>
+    <!-- 保存、跟新车辆表单弹窗 -->
     <el-dialog
     v-model="dialogVisible"
     :title="diglogTitle"
-    style="padding: 20px;width: 1000px;"
-    
-    >
+    style="padding: 20px;width: 1000px;">
         <el-form  label-position="top">
             <el-row :gutter="15">
                 <el-col :span="12">
@@ -90,9 +90,14 @@
                 <el-col :span="12">
                     <el-form-item label="车辆类型">
                         <el-select v-model="savaPara.type">
-                            <el-option label="轿车" value="10"></el-option>
+                            <!-- <el-option label="轿车" value="10"></el-option>
                             <el-option label="客车" value="20"></el-option>
-                            <el-option label="货车" value="30"></el-option>
+                            <el-option label="货车" value="30"></el-option> -->
+                            <el-option v-for="type in carType"
+                            :label="type.label"
+                            :value="type.value"
+                            ></el-option>
+                            
                         </el-select>
                     </el-form-item>
                 </el-col>
@@ -101,9 +106,14 @@
                 <el-col :span="12">
                     <el-form-item label="车辆颜色">
                         <el-select v-model="savaPara.color">
-                            <el-option label="黄色" value="10"></el-option>
+                            <!-- <el-option label="黄色" value="10"></el-option>
                             <el-option label="绿色" value="20"></el-option>
-                            <el-option label="蓝色" value="30"></el-option>
+                            <el-option label="蓝色" value="30"></el-option> -->
+                            <el-option v-for="color in dicOptArray"
+                            :label="color.label"
+                            :value="color.value"
+                            >
+                            </el-option>
                         </el-select>
                     </el-form-item>
                 </el-col>
@@ -134,13 +144,17 @@
                 <el-col :span="12">
                     <el-form-item label="电池类型">
                         <el-select v-model="savaPara.batteryType">
-                            <el-option label="铅酸锂电池" value="10"></el-option>
+                            <!-- <el-option label="铅酸锂电池" value="10"></el-option>
                             <el-option label="镍氢电池" value="20"></el-option>
                             <el-option label="钠硫电池" value="30"></el-option>
                             <el-option label="二次锂电池" value="40"></el-option>
                             <el-option label="空气电池" value="50"></el-option>
                             <el-option label="三元锂电池" value="60"></el-option>
-                            <el-option label="碱性燃料电池" value="70"></el-option>
+                            <el-option label="碱性燃料电池" value="70"></el-option> -->
+                            <el-option v-for="batter in batters"
+                            :label="batter.label"
+                            :value="batter.value"
+                            ></el-option>
 
                         </el-select>
                     </el-form-item>
@@ -155,6 +169,8 @@
 </template>
 
 <script setup>
+
+
 import axios from 'axios';
 import { ElMessage } from 'element-plus';
 import qs from 'qs';
@@ -164,6 +180,54 @@ const vehicleArray = ref([
     // {brand:'小米',license:'空车',code:'2015',type:'纯电',price:'12500',regTime:'20225',batteryType:'锂电池',status:'1'},
     // {brand:'小米',license:'空车',code:'2015',type:'纯电',price:'12500',regTime:'20225',batteryType:'锂电池',status:'0'}
 ]);
+
+/**
+ * 定义变量保存表单的数据提供给后端
+ */
+const savaPara = ref({
+    brand:'',
+    license:'',
+    model:'',
+    code:'',
+    displacement:'',
+    type:'',
+    color:'',
+    kilometers:'',
+    buyTime:'',
+    regTime:'',
+    price:'',
+    batteryType:''
+
+});
+
+//定义数组存放字典项列表
+const dicOptArray = ref([]);
+
+//定义变量存放汽车类型字典项
+const carType = ref([]);
+
+//定义变量存放汽车电池字典项
+const batters = ref([]);
+
+//定义变量保存弹窗的标题
+const diglogTitle = ref('新建车辆');
+
+//定义变量接收数据
+const queryPara = ref({
+    brand:'',
+    license:''
+});
+
+const dialogVisible = ref(false);
+
+
+onMounted(()=>{
+    window.loadDictOption(dicOptArray,'vehicle_color');
+    window.loadDictOption(carType,'vehicle_type');
+    window.loadDictOption(batters,'battery_type');
+});
+
+onMounted(()=>{loadVehicle()});
 
 function loadVehicle() {
     axios.get(BASE_URL+'/v1/vehicle/query')
@@ -177,14 +241,13 @@ function loadVehicle() {
     });
 };
 
-onMounted(()=>{loadVehicle()});
 
-//定义变量接收数据
-const queryPara = ref({
-    brand:'',
-    license:''
-});
 
+
+
+/**
+ * 表单数据提交到后端用以查询当前车辆
+ */
 function submit() {
    let data = qs.stringify(queryPara.value);
    axios.get(BASE_URL+'/v1/vehicle/query?'+data)
@@ -202,28 +265,35 @@ function submit() {
    });
 };
 
+/**
+ * 搜索卡片充值方法
+ */
 function reset() {
     queryPara.value = {};
+    loadVehicle();
 }
 
-const dialogVisible = ref(false);
-
-function showDialog() {
-    dialogVisible.value = true;
-}
 
 //定义显示文字转换:
 const vehicleTypeFormatter =(row,column,cellValue,index)=>{
     // console.log(row,column);
-  if(cellValue == 10){
-    cellValue = '轿车';
-  }else if(cellValue == 20){
-    cellValue = '客车';
-  }else if(cellValue == 30){
-    cellValue = '货车';
-  }else if(cellValue == 40) {
-    cellValue = '挂车';
-  }
+//   if(cellValue == 10){
+//     cellValue = '轿车';
+//   }else if(cellValue == 20){
+//     cellValue = '客车';
+//   }else if(cellValue == 30){
+//     cellValue = '货车';
+//   }else if(cellValue == 40) {
+//     cellValue = '挂车';
+//   }
+    if (!dicOptArray.value) {
+        return;
+    }
+    for (let item of dicOptArray.value) {
+        if (item.value === cellValue) {
+            cellValue = item.label;
+        }
+    }
   return cellValue;
 }
 
@@ -239,40 +309,38 @@ const vehicleStatusFormatter = (row,column,cellValue,index)=>{
 
 //对电池类型显示内容进行文字转换
 const batteryTypeFormatter = (row,column,cellValue,index)=>{
-  if(cellValue == 10){
-    cellValue = '铅酸蓄电池';
-  }else if(cellValue == 20){
-    cellValue = '镍氢电池';
-  }else if(cellValue == 30){
-    cellValue = '钠硫电池';
-  }else if(cellValue == 40){
-    cellValue = '二次锂电池';
-  }else if(cellValue == 50){
-    cellValue = '空气电池';
-  }else if(cellValue == 60){
-    cellValue = '三元锂电池';
-  }else if(cellValue == 70){
-    cellValue = '碱性燃料电池';
-  }
+//   if(cellValue == 10){
+//     cellValue = '铅酸蓄电池';
+//   }else if(cellValue == 20){
+//     cellValue = '镍氢电池';
+//   }else if(cellValue == 30){
+//     cellValue = '钠硫电池';
+//   }else if(cellValue == 40){
+//     cellValue = '二次锂电池';
+//   }else if(cellValue == 50){
+//     cellValue = '空气电池';
+//   }else if(cellValue == 60){
+//     cellValue = '三元锂电池';
+//   }else if(cellValue == 70){
+//     cellValue = '碱性燃料电池';
+//   }
+
+    if (!batters.value) {
+        return;
+    }
+
+    for (let item of batters.value) {
+        if (item.value === cellValue) {
+            cellValue = item.label;
+        }
+    }
   return cellValue;
 }
 
-const savaPara = ref({
-    brand:'',
-    license:'',
-    model:'',
-    code:'',
-    displacement:'',
-    type:'',
-    color:'',
-    kilometers:'',
-    buyTime:'',
-    regTime:'',
-    price:'',
-    batteryType:''
 
-});
-
+/**
+ * 定义提交保存按钮的事件
+ */
 function savaVehicle() {
     if(confirm('你确定提交此表单吗？')) {
         // console.log(savaPara.value);
@@ -290,13 +358,20 @@ function savaVehicle() {
     }
 };
 
+
+/**
+ * 处理弹窗关闭的函数，清空表单，设置布尔值为false
+ */
 function handlerClose() {
     savaPara.value = {};
     dialogVisible.value = false;
 }
 
-const diglogTitle = ref('新建车辆');
 
+/**
+ * 编辑当前车辆的信息
+ * @param id 当前车辆的id号码
+ */
 function edit(id) {
     diglogTitle.value = '编辑车辆';
     dialogVisible.value = true;
@@ -308,12 +383,23 @@ function edit(id) {
     });
 }
 
+
+/**
+ * 定义函数在添加车辆前的操作：
+ * 修改弹窗标题
+ * 将表单数据清空
+ * 设置弹窗可见
+ */
 function beforeAndVehicle() {
     diglogTitle.value = '新建车辆';
     savaPara.value = {};
     dialogVisible.value = true;
 }
 
+/**
+ * 删除指定车辆
+ * @param id 当前车辆id号码
+ */
 function deleteVehicle(id) {
     if (confirm('你是否想要删除此车辆？')) {
         axios.post(BASE_URL+'/v1/vehicle/delete/'+id)
@@ -327,8 +413,6 @@ function deleteVehicle(id) {
         });
     }
 }
-
-
 
 </script>
 

@@ -16,7 +16,7 @@
             <ul>
                <li><a href="/users"><img src="../../public/svg/new.svg" alt="New Document" class="menu-icon"><span>用户管理</span></a></li>
                <li><a href="/vehivle"><img src="../../public/svg/recent.svg" alt="Open recent" class="menu-icon"><span>车辆管理</span></a></li>
-               <li><a href="/vehivle"><img src="../../public/svg/recent.svg" alt="Open recent" class="menu-icon"><span>围栏管理</span></a></li>
+               <li><a href="/geofence"><img src="../../public/svg/recent.svg" alt="Open recent" class="menu-icon"><span>围栏管理</span></a></li>
                <li><a href="#"><img src="../../public/svg/search.svg" alt="Search documents" class="menu-icon"><span>Search</span></a></li>
 
             </ul>
@@ -30,6 +30,7 @@
                <a href="/change/password/confirm">重置密码</a>  | <button @click="logout()" id="logout">退出登录</button>
                  | <a href="/">注销此用户</a>
             </p>
+            <div style="padding: 0 10%; border-bottom: 1px solid #fff;"></div>
             <div>
                <router-view />
             </div>

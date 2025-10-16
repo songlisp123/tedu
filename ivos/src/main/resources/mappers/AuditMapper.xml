@@ -50,4 +50,28 @@
             </if>
         </where>
     </select>
+
+    <update id="update">
+        UPDATE audit
+        <set>
+            <if test=" auditStatus != null and auditStatus != '' ">
+                audit_status = #{auditStatus},
+            </if>
+            <if test=" updateTime != null ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectRestAuditController" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM audit
+        WHERE application_id = #{applicationId}
+        AND audit_status != 30
+    </select>
+
+    <delete id="delete" >
+        DELETE FROM audit
+        WHERE id = #{id}
+    </delete>
 </mapper>

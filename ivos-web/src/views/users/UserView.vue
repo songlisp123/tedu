@@ -6,7 +6,12 @@
             新建用户
         </el-button>
      </div>
-     <!-- 搜索卡片 -->
+     <!-- 搜索卡片
+      box-shadow:边框阴影
+      @keydown.enter:enter按钮备案下时候会触发的事件
+      @change:多选框,下拉框,修改状态的字段一旦被更改就会调用此事件
+     -->
+
       <el-card style="background-color: #fff;
       margin:10px; 
       height: 70px;
@@ -41,6 +46,7 @@
         type属性表示该列具有其他类型，比如index列具有递增的编号
         align属性要求内容居中显示
         prop属性将会绑定到对象
+        template标签代表着将会从vue框架内插入一段预设模板
         -->
         <el-table :data="userA">
             <el-table-column label="编号" type="index" align="center" width="80"></el-table-column>
@@ -49,14 +55,18 @@
             <el-table-column label="加入时间" prop="createTime" align="center"></el-table-column>
             <el-table-column label="用户状态" align="center">
                 <template #default="scope">
-                    <el-switch  v-model="scope.row.status" active-value="1" inactive-value="0"
-                        @change="updateUserStatus(scope.row.id,scope.row.status)" :disabled="scope.row.level == 40"></el-switch>
+                    <el-switch  v-model="scope.row.status" 
+                    active-value="1" inactive-value="0"
+                        @change="updateUserStatus(scope.row.id,scope.row.status)" 
+                        :disabled="scope.row.level == 40"></el-switch>
                 </template>
             </el-table-column>
             <el-table-column label="操作"  align="center">
                 <template #default="scope">
-                    <el-button type="primary" link :disabled="scope.row.level == 40" @click="resetpassword(scope.row.id)">重置密码</el-button>
-                    <el-button type="primary" link :disabled="scope.row.level == 40" @click="deleteUser(scope.row.id)">删除 </el-button>
+                    <el-button type="primary" link :disabled="scope.row.level == 40" 
+                    @click="resetpassword(scope.row.id)">重置密码</el-button>
+                    <el-button type="primary" link :disabled="scope.row.level == 40" 
+                    @click="deleteUser(scope.row.id)">删除 </el-button>
                     <el-button type="primary" link 
                     @click="edit(scope.row.id)" :disabled="scope.row.level == 40">
                         编辑
@@ -74,6 +84,10 @@
        1、点击关闭按钮
        2、点击取消按钮
        3、点击弹窗外的区域
+       title:此弹窗的标题
+       label-position:设置标题的位置,一般来说,有上下左右等
+       gutter:间距,当前行元素之间的间距
+       span:次元素占据的宽度
        -->
        <el-dialog v-model="dialogVisible"
        :title="dialogTitle" style="width: 1000px; padding: 40px;">
@@ -105,15 +119,22 @@
                 <el-row>
                     <el-col :span="6">
                         <el-form-item label="职级:">
-                            <el-select placeholder="请选择职级:" v-model="regPara.level"  @change="leaderOption()">
-                                <el-option v-for="level in levelArray" :label="level.label" :value="level.value"></el-option>
+                            <el-select placeholder="请选择职级:" 
+                            v-model="regPara.level"  
+                            @change="leaderOption()">
+                                <el-option v-for="level in levelArray" 
+                                :label="level.label" 
+                                :value="level.value"></el-option>
                             </el-select>
                         </el-form-item>
                     </el-col>
                     <el-col :span="6">
                         <el-form-item label="上级领导:">
-                            <el-select placeholder="请选择领导:" v-model="regPara.parentId">
-                                <el-option v-for="item in lingdao" :label="item.username" :value="item.id"></el-option>
+                            <el-select placeholder="请选择领导:" 
+                            v-model="regPara.parentId">
+                                <el-option v-for="item in lingdao" 
+                                :label="item.username" 
+                                :value="item.id"></el-option>
                             </el-select>
                         </el-form-item>
                     </el-col>
@@ -162,40 +183,6 @@ const searchForm = ref({
     status:''
 });
 
-//随后为input空间和button绑定函数
-const loadUser = () => {
-    console.log(searchForm.value);
-    //获得数据后向后端发送请求
-    let data = qs.stringify(searchForm.value);
-    console.log(data);
-    axios.get(BASE_URL+'/v1/user/lists?'+data)
-    .then((response)=>{
-        if(response.data.code == 2000) {
-            userA.value = response.data.data;
-            if (userA.value.length == 0) {
-                ElMessage.warning("暂无更多数据！");
-            }
-            else {
-            ElMessage.success("搜索成功！")
-            }
-        }else {
-            ElMessage.error(response.data.message);
-        }
-    });
-
-
-};
-//onMounted函数的意义是：当页面第一次被挂载完毕的时候会触发该事件
-//该事件只用于第一次进入页面的时候被使用
-onMounted(()=>{loadUser()});
-
-function reset() {
-    searchForm.value.username = '';
-    searchForm.value.status = '';
-    loadUser();
-}
-
-
 
 //定义数组用来查询员工职级
 const levelArray = ref([
@@ -222,6 +209,54 @@ const regPara = ref({
     status:''
 });
 
+
+//新建变量控制弹窗是否出现
+//这个变量会绑定到新建按钮上
+const dialogVisible = ref(false);
+
+//定义变量保存当前弹窗标题
+const dialogTitle = ref('新增员工');
+
+//随后为input空间和button绑定函数
+const loadUser = () => {
+    console.log(searchForm.value);
+    //获得数据后向后端发送请求
+    let data = qs.stringify(searchForm.value);
+    console.log(data);
+    axios.get(BASE_URL+'/v1/user/lists?'+data)
+    .then((response)=>{
+        if(response.data.code == 2000) {
+            userA.value = response.data.data;
+            if (userA.value.length == 0) {
+                ElMessage.warning("暂无更多数据！");
+            }
+            else {
+            ElMessage.success("搜索成功！")
+            }
+        }else {
+            ElMessage.error(response.data.message);
+        }
+    });
+
+
+};
+
+
+//onMounted函数的意义是：当页面第一次被挂载完毕的时候会触发该事件
+//该事件只用于第一次进入页面的时候被使用
+onMounted(()=>{loadUser()});
+
+/**
+ * 定义重置搜索表单的方法
+ */
+function reset() {
+    searchForm.value.username = '';
+    searchForm.value.status = '';
+    loadUser();
+}
+
+
+/*****************  用户注册功能 *************/
 
 function reguser() {
     console.log(regPara.value);
@@ -251,6 +286,10 @@ function handlerClose() {
     }
 };
 
+/**
+ * 这是一个搜索上级领导的函数,主要是使用了level+10的
+ * 技巧,查找上级领导
+ */
 const leaderOption = () => {
     regPara.value.parentId = '';
     lingdao.value = [];
@@ -268,13 +307,6 @@ const leaderOption = () => {
 };
 
 /******************       用户编辑模块     *******************/
-
-//新建变量控制弹窗是否出现
-//这个变量会绑定到新建按钮上
-const dialogVisible = ref(false);
-
-//定义变量保存当前弹窗标题
-const dialogTitle = ref('新增员工');
 
 /**
  * 定义新建员工的方法，修改弹窗的标题和可见性

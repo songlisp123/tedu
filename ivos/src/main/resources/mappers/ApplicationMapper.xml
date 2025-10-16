@@ -37,7 +37,10 @@
                 status = #{status},
             </if>
             <if test=" updateTime != null ">
-                update_time = #{updateTime}
+                update_time = #{updateTime},
+            </if>
+            <if test="rejectReason != null and rejectReason != '' ">
+                reject_reason = #{rejectReason}
             </if>
         </set>
         WHERE id = #{id}

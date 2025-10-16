@@ -2,6 +2,7 @@ package com.ivos.demo.audit.controller;
 
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.ivos.demo.audit.pojo.dto.AudioQuery;
+import com.ivos.demo.audit.pojo.dto.AuditSavePara;
 import com.ivos.demo.audit.pojo.vo.AuditVo;
 import com.ivos.demo.audit.service.AuditService;
 import com.ivos.demo.base.response.JsonResult;
@@ -10,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,5 +33,14 @@ public class AuditController {
         log.debug("当前控制层参数:{}",query);
         List<AuditVo> list = service.query(query);
         return JsonResult.ok(list);
+    }
+
+    @PostMapping("update")
+    @Operation(summary = "更新查询单状态")
+    @ApiOperationSupport(order = 20)
+    public JsonResult update(AuditSavePara para) {
+        log.debug("控制器参数:{}",para);
+        service.update(para);
+        return JsonResult.ok();
     }
 }
