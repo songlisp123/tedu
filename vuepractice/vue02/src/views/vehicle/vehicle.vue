@@ -32,6 +32,7 @@
 
             </div>
 
+
             <div>
                 <el-button type="primary" @click="submit()">提交</el-button>
                 <el-button type="info" @click="reset()">重置</el-button>
@@ -54,6 +55,13 @@
                 <!-- <p class="email">购买时间:{{ vehicle.buyTime }}</p> -->
                 <!-- <p class="email">电池类型:{{ vehicle.batteryType }}</p> -->
                 <p class="email">状态:{{ vehicle.status }}</p>
+                <!-- <div>
+                    <el-radio-group>
+                        <el-radio>你好</el-radio>
+                        <el-radio>你好</el-radio>
+                        <el-radio>你好</el-radio>
+                    </el-radio-group>
+                </div> -->
                 <p v-if="updateStatus">
                     汽车状态:
                     <select name="vehicleStatus" id="vehicleStatus" v-model="vehicle.status"

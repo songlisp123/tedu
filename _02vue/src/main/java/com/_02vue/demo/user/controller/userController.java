@@ -32,6 +32,7 @@ public class userController {
 
     @GetMapping("query")
     public JsonResult query(UserQuery query) {
+        log.debug("控制器:{}",query);
         List<UserVo> users = service.selectUsers(query);
         return JsonResult.ok(users);
     }

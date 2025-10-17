@@ -2,6 +2,7 @@ package com._02vue.demo.geofence.service.impl;
 
 import com._02vue.demo.geofence.mapper.GeofenceMapper;
 import com._02vue.demo.geofence.pojo.dto.GeofenceQuery;
+import com._02vue.demo.geofence.pojo.dto.GeofenceSave;
 import com._02vue.demo.geofence.pojo.entity.Geofence;
 import com._02vue.demo.geofence.pojo.vo.GeofenceVo;
 import com._02vue.demo.geofence.service.GeofenceService;
@@ -9,6 +10,7 @@ import com._02vue.demo.vehicle.mapper.VehicleMapper;
 import com._02vue.demo.vehicle.pojo.dto.VehicleQuery;
 import com._02vue.demo.vehicle.pojo.vo.VehicleVo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -54,5 +56,15 @@ public class GeofenceImplement implements GeofenceService {
         else  {
             geofenceMapper.delete(geoId);
         }
+    }
+
+    @Override
+    public void save(GeofenceSave save) {
+        log.debug("业务层参数:{}",save);
+        Geofence geofence = new Geofence();
+        BeanUtils.copyProperties(save,geofence);
+        geofence.setCreateTime(new Date());
+        geofence.setStatus("1");
+        geofenceMapper.save(geofence);
     }
 }

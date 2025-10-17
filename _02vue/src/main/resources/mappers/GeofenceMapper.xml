@@ -38,4 +38,9 @@
     <delete id="delete">
         DELETE FROM geofence WHERE id = #{geoId}
     </delete>
+
+    <insert id="save" >
+        INSERT INTO geofence(name,position,status,create_time)
+        VALUES(#{name},#{position},#{status},#{createTime})
+    </insert>
 </mapper>

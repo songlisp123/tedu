@@ -66,7 +66,7 @@
             <p id="buttons">
                 <el-button type="primary" link size="small"
                  @click="edit(geofence.id)">查看绑定车辆</el-button>
-                <el-button type="parimary" link size="small">查看围栏</el-button>
+                <el-button type="parimary" link size="small" @click="router.push('/geofencemapShow?id='+geofence.id)">查看围栏</el-button>
                 <el-button type="parimary" link size="small"
                 @click="deleteGeo(geofence.id)"
                 >删除</el-button>

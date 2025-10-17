@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com._02vue.demo.dicOpt.mapper.DictOptMapper">
+    <select id="query">
+        SELECT id,label,value,sort,remark,create_time as createTime,dict_id as dictId
+        FROM dict_option
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="dictId != null">
+                AND dict_id = #{dictId}
+            </if>
+            <if test="label != null and label != '' ">
+                AND label = #{label}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+        INSERT INTO dict_option(dict_id,label,value,sort,remark,create_time)
+        VALUES(#{dictId},#{label},#{value},#{sort},#{remark},#{createTime})
+    </insert>
+
+    <update id="update">
+        UPDATE dict_option
+        <set>
+            <if test="id == null">
+                id = #{id},
+            </if>
+            <if test=" label != null and label != '' ">
+                label = #{label},
+            </if>
+            <if test=" value != null and value != '' ">
+                value = #{value},
+            </if>
+            <if test=" sort != null ">
+                sort = #{sort},
+            </if>
+            <if test=" remark != null and remark != '' ">
+                remark = #{remark},
+            </if>
+            <if test=" updateTime != null ">
+                update_time = #{updateTime},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM dict_option
+        WHERE id = #{optionID}
+    </delete>
+</mapper>

@@ -97,6 +97,25 @@
             </div>
         </fieldset>
     </div>
+
+    <div style="margin:30px;float: right;" >
+      <!--layout="total(总数), sizes(每页总数), prev(上一页), pager(当前页), next(下一页), jumper(跳转页)"
+       :pager-count="4" 表示显示4个页码
+       :page-sizes="[5, 10, 15, 20]" 表示一共有几个"每页显示多少条"选项
+       current-page当前页码 page-size当前页码的条数 total总条数 这三个变量需要和实际数据双向绑定
+       :total="400" 表示总条数，需要双向绑定
+       @size-change="handleSizeChange" 表示每页显示多少条改变时触发的事件
+       @current-change="handleCurrentChange" 表示当前页码改变时触发的事件 -->
+      <el-pagination
+          layout="prev, pager, next"
+          background
+          v-model:current-page="currentPage"
+          v-model:page-size="pageSize"
+          v-model:total="total"
+          @current-change="handlerCurrentChange"
+          @size-change="handlerSizeChange"
+          size="large"/>
+    </div>
 </template>
 
 <script setup>
@@ -106,16 +125,27 @@ import { onMounted, ref } from 'vue';
 import qs from 'qs'
 
 
+//定义当亲页码变量
+const currentPage = ref(1);
+//定义当前页面展示大小
+const pageSize = ref(4);
+//定义总天目
+const total = ref(50);
+
+const dialogToEditUserVisible = ref(false);
+
+
+var currentUser = window.getUser();
+const users = ref([]);
+
 const searchForm = ref({
    username:'',
    status:'' 
 });
 
 
-var currentUser = window.getUser();
-const users = ref([]);
+onMounted(()=>{submit()});
 
-const dialogToEditUserVisible = ref(false);
 
 function submit() {
    console.log(searchForm.value);
@@ -132,21 +162,21 @@ function submit() {
    });
 }
 
-function loadUsers() {
-    axios.get(BASE_URL+'/v1/user/query')
-    .then((response)=>{
-        if (response.data.code == 2000) {
-            ElMessage.success('操作成功！');
-            users.value = response.data.data;
-            console.log(users.value);
-        }
-        else {
-            ElMessage.error('错误操作！');
-        }
-    });
-}
+// function loadUsers() {
+//     axios.get(BASE_URL+'/v1/user/query')
+//     .then((response)=>{
+//         if (response.data.code == 2000) {
+//             ElMessage.success('操作成功！');
+//             users.value = response.data.data;
+//             console.log(users.value);
+//         }
+//         else {
+//             ElMessage.error('错误操作！');
+//         }
+//     });
+// }
 
-onMounted(()=>{loadUsers()});
+
 
 function edit(id) {
     console.log(id);
@@ -160,7 +190,7 @@ function detemine() {
         if (response.data.code == 2000) {
             ElMessage.success('更新成功！');
             dialogToEditUserVisible.value = false;
-            loadUsers();
+            submit();
         }else {
             ElMessage.error('错误！');
         }
@@ -173,7 +203,7 @@ function deleteUser(id) {
         .then((response)=>{
             if (response.data.code == 2000) {
                 ElMessage.success('删除成功');
-                loadUsers();
+                submit();
             }
             else {
                 ElMessage.error('删除失败');
@@ -186,9 +216,19 @@ function deleteUser(id) {
 
 function reset() {
     searchForm.value = {};
-    loadUsers();
+    submit();
 }
 
+function handlerCurrentChange(number) {
+    console.log(number);
+    searchForm.value.pageSize = pageSize.value;
+    searchForm.value.currentPage = currentPage.value;
+    submit();
+}
+
+function handlerSizeChange(number) {
+    console.log(number);
+}
 </script>
 
 <style>

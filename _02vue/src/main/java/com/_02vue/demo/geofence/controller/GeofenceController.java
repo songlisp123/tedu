@@ -2,6 +2,7 @@ package com._02vue.demo.geofence.controller;
 
 import com._02vue.demo.base.response.JsonResult;
 import com._02vue.demo.geofence.pojo.dto.GeofenceQuery;
+import com._02vue.demo.geofence.pojo.dto.GeofenceSave;
 import com._02vue.demo.geofence.pojo.vo.GeofenceVo;
 import com._02vue.demo.geofence.service.GeofenceService;
 import lombok.extern.slf4j.Slf4j;
@@ -37,6 +38,13 @@ public class GeofenceController {
     public JsonResult delete(@PathVariable("id") Long geoId) {
         log.debug("控制器层入参：{}",geoId);
         geofenceService.delete(geoId);
+        return JsonResult.ok();
+    }
+
+    @PostMapping("save")
+    public JsonResult save(GeofenceSave save) {
+        log.debug("控制器参数:{}",save);
+        geofenceService.save(save);
         return JsonResult.ok();
     }
 }

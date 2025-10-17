@@ -5,7 +5,12 @@ import store from './store'
 //你必须导入这两样才能使用该库
 import ElementPlus, { ElMessage } from 'element-plus'
 import 'element-plus/dist/index.css'
-createApp(App).use(ElementPlus).use(store).use(router).mount('#app')
+//2.引入element-plus图标库,并起别名为ElementPlusIconsVue
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+//6.1修改elementPlus默认中文
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+
+createApp(App).use(ElementPlus,{ locale: zhCn }).use(store).use(router).mount('#app')
 
 
 const BASE_URL = 'http://localhost:8060'

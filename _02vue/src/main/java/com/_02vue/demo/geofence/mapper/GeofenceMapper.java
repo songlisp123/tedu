@@ -14,4 +14,6 @@ public interface GeofenceMapper {
     void update(Geofence geofence);
 
     void delete(Long geoId);
+
+    void save(Geofence geofence);
 }

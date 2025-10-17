@@ -14,4 +14,7 @@ public class UserQuery {
     private String gender;
     private String level;
     private String status;
+
+    private Integer currentPage;
+    private Integer pageSize;
 }

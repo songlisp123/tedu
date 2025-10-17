@@ -38,6 +38,11 @@ public class ServiceImp implements Service {
 
     @Override
     public List<UserVo> selectUsers(UserQuery query) {
+        log.debug("查询参数:{}",query);
+        int pageSize = query.getPageSize()==null?4: query.getPageSize();
+        int currentPage = query.getCurrentPage() == null ?1: query.getCurrentPage();
+        query.setCurrentPage((currentPage-1)*pageSize);
+        query.setPageSize(pageSize);
         List<UserVo> users = mapper.selectUsers(query);
         return users;
     }
